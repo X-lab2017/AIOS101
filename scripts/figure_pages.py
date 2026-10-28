@@ -25,6 +25,11 @@ def build_figure_pages(root, out, commit):
             if re.search(r'<script|<foreignObject|\bon\w+\s*=|(?:href|url)=["\']https?:',svg,re.I):
                 raise ValueError('Non-local SVG content '+vector)
             svg=re.sub(r'<\?xml[^>]*>|<!DOCTYPE[^>]*>', '',svg)
+            # Name even imported report SVGs from the same canonical figure record.
+            def name_svg(match):
+                attributes=re.sub(r'\s+(?:role|aria-label)="[^"]*"', '',match[1])
+                return '<svg'+attributes+' role="img" aria-label="'+html.escape(title,quote=True)+'">'
+            svg=re.sub(r'<svg([^>]*)>',name_svg,svg,count=1)
             if snapshot:
                 # Exported report controls are pixels/text, not working course controls.
                 svg=re.sub(r'\s+(?:tabindex|aria-pressed|aria-expanded|aria-controls|aria-haspopup)="[^"]*"', '', svg)

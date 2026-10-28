@@ -95,7 +95,10 @@ def source_metadata() -> dict:
     expected = {entry["id"] for entry in manifest}
     if set(figures) != expected or len(figures) != len(expected):
         raise RuntimeError("Source/manifest figure parity failed")
-    return {"versions": versions, "sourceHashes": hashes, "chapterFigures": len(figures)}
+    chapter_figures = sum(bool(re.fullmatch(r"[1-6]-[0-9]+", figure)) for figure in figures)
+    return {"versions": versions, "sourceHashes": hashes, "chapterFigures": chapter_figures,
+            "prefaceAndAppendixFigures": len(figures) - chapter_figures,
+            "totalFigures": len(figures)}
 
 
 def register_fonts() -> None:
@@ -912,8 +915,9 @@ def build_book() -> dict:
         "sourceCommit": source_commit,
         "pages": page_count,
         "chapters": renderer.chapter_count,
-        "chapterFigures": len(renderer.figure_ids),
-        "prefaceAndAppendixFigures": 0,
+        "chapterFigures": metadata["chapterFigures"],
+        "prefaceAndAppendixFigures": metadata["prefaceAndAppendixFigures"],
+        "totalFigures": len(renderer.figure_ids),
         "versions": metadata["versions"],
         "sourceHashes": metadata["sourceHashes"],
         "tables": renderer.table_count,
