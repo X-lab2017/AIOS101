@@ -1,0 +1,101 @@
+version: v2
+title: AI 开源通识｜3 小时全校授课课件
+size:
+- 960
+- 540
+customFonts:
+- family: MiSans
+  src: https://statics.kimi.ai/neo-design-static/p-font/MiSans.ttf
+- family: QuattrocentoSans
+  src: https://statics.kimi.ai/neo-design-static/p-font/QuattrocentoSans.ttf
+theme:
+  colors:
+    paper: '#F6F3EB'
+    ink: '#1D2433'
+    indigo: '#5146D9'
+    coral: '#F27A59'
+    lavender: '#E7E3FC'
+    teal: '#3F958D'
+    muted: '#656577'
+    line: '#DCD9E1'
+    white: '#FFFFFF'
+    softcoral: '#FBE7DE'
+    softteal: '#E0EFEA'
+    softgray: '#ECE9E1'
+  textStyles:
+    title:
+      fontSize: 30
+      fontFamily: &id001
+        latin: QuattrocentoSans
+        ea: MiSans
+      color: $ink
+      bold: true
+      lineHeight: 1.15
+    body:
+      fontSize: 19
+      fontFamily: *id001
+      color: $ink
+      lineHeight: 1.35
+pages:
+- pages/01.page
+- pages/02.page
+- pages/03.page
+- pages/04.page
+- pages/05.page
+- pages/06.page
+- pages/07.page
+- pages/08.page
+- pages/09.page
+- pages/10.page
+- pages/11.page
+- pages/12.page
+- pages/13.page
+- pages/14.page
+- pages/15.page
+- pages/16.page
+- pages/17.page
+- pages/18.page
+- pages/19.page
+- pages/20.page
+- pages/21.page
+- pages/22.page
+- pages/23.page
+- pages/24.page
+- pages/25.page
+- pages/26.page
+- pages/27.page
+- pages/28.page
+- pages/29.page
+- pages/30.page
+- pages/31.page
+- pages/32.page
+- pages/33.page
+- pages/34.page
+- pages/35.page
+- pages/36.page
+- pages/37.page
+- pages/38.page
+- pages/39.page
+- pages/40.page
+- pages/41.page
+- pages/42.page
+- pages/43.page
+- pages/44.page
+- pages/45.page
+- pages/46.page
+- pages/47.page
+- pages/48.page
+- pages/49.page
+- pages/50.page
+- pages/51.page
+- pages/52.page
+- pages/53.page
+- pages/54.page
+- pages/55.page
+- pages/56.page
+- pages/57.page
+- pages/58.page
+- pages/59.page
+- pages/60.page
+- pages/61.page
+- pages/62.page

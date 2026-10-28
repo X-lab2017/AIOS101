@@ -1,0 +1,197 @@
+pageType: chapter
+background:
+  type: solid
+  color: '#1D2433'
+elements:
+- elementId: part
+  elementType: text
+  bounds:
+  - 56
+  - 38
+  - 300
+  - 22
+  content:
+    text: 第二篇｜理解 AI
+    fontSize: 11
+    fontFamily: &id001
+      latin: QuattrocentoSans
+      ea: MiSans
+    color: '#B4AAFF'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: chapter-no
+  elementType: text
+  bounds:
+  - 56
+  - 93
+  - 180
+  - 92
+  content:
+    text: '04'
+    fontSize: 78
+    fontFamily: *id001
+    color: '#F27A59'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: chapter-title
+  elementType: text
+  bounds:
+  - 240
+  - 102
+  - 664
+  - 88
+  content:
+    text: 从数据到模型：智能如何形成
+    fontSize: 34
+    fontFamily: *id001
+    color: '#FFFFFF'
+    bold: true
+    lineHeight: 1.15
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: chapter-rule
+  elementType: shape
+  bounds:
+  - 56
+  - 212
+  - 848
+  - 1
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#4C5260'
+  border:
+    width: 0
+    color: '#4C5260'
+- elementId: question
+  elementType: text
+  bounds:
+  - 56
+  - 242
+  - 848
+  - 66
+  content:
+    text: 资料怎样经过训练，变成能够生成回答的模型？
+    fontSize: 25
+    fontFamily: *id001
+    color: '#FFFFFF'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: gno0
+  elementType: text
+  bounds:
+  - 56
+  - 338
+  - 36
+  - 28
+  content:
+    text: '01'
+    fontSize: 13
+    fontFamily: *id001
+    color: '#B4AAFF'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: goal0
+  elementType: text
+  bounds:
+  - 104
+  - 336
+  - 800
+  - 36
+  content:
+    text: 区分数据、结构、算法、参数与算力
+    fontSize: 18
+    fontFamily: *id001
+    color: '#E4E3EB'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: gno1
+  elementType: text
+  bounds:
+  - 56
+  - 386
+  - 36
+  - 28
+  content:
+    text: '02'
+    fontSize: 13
+    fontFamily: *id001
+    color: '#B4AAFF'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: goal1
+  elementType: text
+  bounds:
+  - 104
+  - 384
+  - 800
+  - 36
+  content:
+    text: 用预测、损失和参数更新解释最小训练循环
+    fontSize: 18
+    fontFamily: *id001
+    color: '#E4E3EB'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: footer-rule
+  elementType: shape
+  bounds:
+  - 56
+  - 508
+  - 848
+  - 1
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#4C5260'
+  border:
+    width: 0
+    color: '#4C5260'
+- elementId: page-no
+  elementType: text
+  bounds:
+  - 852
+  - 512
+  - 52
+  - 18
+  content:
+    text: 32 / 62
+    fontSize: 10
+    fontFamily: *id001
+    color: '#C8C8D4'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - right
+    - top
+    wrap: false

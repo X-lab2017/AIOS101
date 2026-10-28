@@ -1,0 +1,125 @@
+pageType: content
+background:
+  type: solid
+  color: '#1D2433'
+elements:
+- elementId: break-label
+  elementType: text
+  bounds:
+  - 56
+  - 72
+  - 848
+  - 24
+  content:
+    text: 第 2 次休息
+    fontSize: 14
+    fontFamily: &id001
+      latin: QuattrocentoSans
+      ea: MiSans
+    color: '#B4AAFF'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: break-title
+  elementType: text
+  bounds:
+  - 56
+  - 142
+  - 848
+  - 88
+  content:
+    text: 休息 10 分钟
+    fontSize: 52
+    fontFamily: *id001
+    color: '#FFFFFF'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: break-note
+  elementType: text
+  bounds:
+  - 56
+  - 260
+  - 848
+  - 34
+  content:
+    text: 离开屏幕，也让问题沉淀一下。
+    fontSize: 22
+    fontFamily: *id001
+    color: '#D8D8E2'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: break-rule
+  elementType: shape
+  bounds:
+  - 56
+  - 340
+  - 848
+  - 1
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#4C5260'
+  border:
+    width: 0
+    color: '#4C5260'
+- elementId: next
+  elementType: text
+  bounds:
+  - 56
+  - 372
+  - 848
+  - 56
+  content:
+    text: 回来后：第 5 章｜从训练到推理
+    fontSize: 24
+    fontFamily: *id001
+    color: '#F27A59'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: footer-rule
+  elementType: shape
+  bounds:
+  - 56
+  - 508
+  - 848
+  - 1
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#4C5260'
+  border:
+    width: 0
+    color: '#4C5260'
+- elementId: page-no
+  elementType: text
+  bounds:
+  - 852
+  - 512
+  - 52
+  - 18
+  content:
+    text: 41 / 62
+    fontSize: 10
+    fontFamily: *id001
+    color: '#C8C8D4'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - right
+    - top
+    wrap: false

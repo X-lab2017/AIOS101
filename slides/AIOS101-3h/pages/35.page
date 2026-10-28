@@ -1,0 +1,135 @@
+pageType: content
+background:
+  type: solid
+  color: '#F6F3EB'
+elements:
+- elementId: section
+  elementType: text
+  bounds:
+  - 56
+  - 24
+  - 600
+  - 18
+  content:
+    text: 第 4 章｜FineWeb 消融
+    fontSize: 10
+    fontFamily: &id001
+      latin: QuattrocentoSans
+      ea: MiSans
+    color: '#5146D9'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: title
+  elementType: text
+  bounds:
+  - 56
+  - 56
+  - 848
+  - 72
+  content:
+    text: 读消融曲线：改变一个环节，保留结论边界
+    fontSize: 30
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: true
+    lineHeight: 1.14
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: footer-rule
+  elementType: shape
+  bounds:
+  - 56
+  - 508
+  - 848
+  - 1
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#DCD9E1'
+  border:
+    width: 0
+    color: '#DCD9E1'
+- elementId: source
+  elementType: text
+  bounds:
+  - 56
+  - 514
+  - 770
+  - 16
+  content:
+    text: FineWeb 论文 v2 图 9（CC BY 4.0）；课程未独立复算。
+    fontSize: 9
+    fontFamily: *id001
+    color: '#656577'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: page-no
+  elementType: text
+  bounds:
+  - 852
+  - 512
+  - 52
+  - 18
+  content:
+    text: 35 / 62
+    fontSize: 10
+    fontFamily: *id001
+    color: '#656577'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - right
+    - top
+    wrap: false
+- elementId: image-field
+  elementType: shape
+  bounds:
+  - 56
+  - 148
+  - 848
+  - 326
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#FFFFFF'
+  border:
+    width: 1
+    color: '#DCD9E1'
+- elementId: figure
+  elementType: image
+  bounds:
+  - 64
+  - 154
+  - 832
+  - 314
+  src: media/fig-4_3.jpg
+  fit:
+    mode: contain
+- elementId: caption
+  elementType: text
+  bounds:
+  - 56
+  - 480
+  - 848
+  - 22
+  content:
+    text: 图 4-3　FineWeb 论文 v2 图 9 原图｜17.1 亿参数模型上的特定对照；比较数据处理条件，不是所有模型的普遍排名。
+    fontSize: 11
+    fontFamily: *id001
+    color: '#656577'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true

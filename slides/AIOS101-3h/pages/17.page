@@ -1,0 +1,135 @@
+pageType: content
+background:
+  type: solid
+  color: '#F6F3EB'
+elements:
+- elementId: section
+  elementType: text
+  bounds:
+  - 56
+  - 24
+  - 600
+  - 18
+  content:
+    text: 第 2 章｜AIInfra
+    fontSize: 10
+    fontFamily: &id001
+      latin: QuattrocentoSans
+      ea: MiSans
+    color: '#5146D9'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: title
+  elementType: text
+  bounds:
+  - 56
+  - 56
+  - 848
+  - 72
+  content:
+    text: 真实社区记录要按各自证据阅读
+    fontSize: 30
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: true
+    lineHeight: 1.14
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: footer-rule
+  elementType: shape
+  bounds:
+  - 56
+  - 508
+  - 848
+  - 1
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#DCD9E1'
+  border:
+    width: 0
+    color: '#DCD9E1'
+- elementId: source
+  elementType: text
+  bounds:
+  - 56
+  - 514
+  - 770
+  - 16
+  content:
+    text: 'AIInfra Issue #386（2026-10-28 读取时开放）；PR #364（2025-12-22 合并，b97c038）。'
+    fontSize: 9
+    fontFamily: *id001
+    color: '#656577'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: page-no
+  elementType: text
+  bounds:
+  - 852
+  - 512
+  - 52
+  - 18
+  content:
+    text: 17 / 62
+    fontSize: 10
+    fontFamily: *id001
+    color: '#656577'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - right
+    - top
+    wrap: false
+- elementId: image-field
+  elementType: shape
+  bounds:
+  - 56
+  - 148
+  - 848
+  - 326
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#FFFFFF'
+  border:
+    width: 1
+    color: '#DCD9E1'
+- elementId: figure
+  elementType: image
+  bounds:
+  - 64
+  - 154
+  - 832
+  - 314
+  src: media/fig-2_3.jpg
+  fit:
+    mode: contain
+- elementId: caption
+  elementType: text
+  bounds:
+  - 56
+  - 480
+  - 848
+  - 22
+  content:
+    text: '图 2-3　AIInfra Issue #386 与 PR #364｜Issue #386 与 PR #364 是独立记录，不能拼接成同一修复故事。'
+    fontSize: 11
+    fontFamily: *id001
+    color: '#656577'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true

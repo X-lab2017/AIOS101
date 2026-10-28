@@ -1,0 +1,269 @@
+pageType: content
+background:
+  type: solid
+  color: '#F6F3EB'
+elements:
+- elementId: section
+  elementType: text
+  bounds:
+  - 56
+  - 24
+  - 600
+  - 18
+  content:
+    text: 第 4 章｜形成阶段
+    fontSize: 10
+    fontFamily: &id001
+      latin: QuattrocentoSans
+      ea: MiSans
+    color: '#5146D9'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: title
+  elementType: text
+  bounds:
+  - 56
+  - 56
+  - 848
+  - 72
+  content:
+    text: 预训练、后训练、蒸馏：回答不同问题
+    fontSize: 30
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: true
+    lineHeight: 1.14
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: footer-rule
+  elementType: shape
+  bounds:
+  - 56
+  - 508
+  - 848
+  - 1
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#DCD9E1'
+  border:
+    width: 0
+    color: '#DCD9E1'
+- elementId: page-no
+  elementType: text
+  bounds:
+  - 852
+  - 512
+  - 52
+  - 18
+  content:
+    text: 38 / 62
+    fontSize: 10
+    fontFamily: *id001
+    color: '#656577'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - right
+    - top
+    wrap: false
+- elementId: head0
+  elementType: text
+  bounds:
+  - 56.0
+  - 164
+  - 269.3333333333333
+  - 44
+  content:
+    text: 预训练
+    fontSize: 23
+    fontFamily: *id001
+    color: '#5146D9'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: rule0
+  elementType: shape
+  bounds:
+  - 56.0
+  - 214
+  - 269.3333333333333
+  - 3
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#5146D9'
+  border:
+    width: 0
+    color: '#5146D9'
+- elementId: body0
+  elementType: text
+  bounds:
+  - 56.0
+  - 232
+  - 269.3333333333333
+  - 198
+  content:
+    text: '在广泛数据上形成基础能力。
+
+
+      常见目标：下一 token 预测。
+
+
+      产物常称基座模型。'
+    fontSize: 19
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: false
+    lineHeight: 1.38
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: head1
+  elementType: text
+  bounds:
+  - 345.3333333333333
+  - 164
+  - 269.3333333333333
+  - 44
+  content:
+    text: 后训练
+    fontSize: 23
+    fontFamily: *id001
+    color: '#3F958D'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: rule1
+  elementType: shape
+  bounds:
+  - 345.3333333333333
+  - 214
+  - 269.3333333333333
+  - 3
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#3F958D'
+  border:
+    width: 0
+    color: '#3F958D'
+- elementId: body1
+  elementType: text
+  bounds:
+  - 345.3333333333333
+  - 232
+  - 269.3333333333333
+  - 198
+  content:
+    text: '继续适配指令、偏好与任务。
+
+
+      SFT 学示范；RL 依据奖励信号调整行为。'
+    fontSize: 19
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: false
+    lineHeight: 1.38
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: head2
+  elementType: text
+  bounds:
+  - 634.6666666666666
+  - 164
+  - 269.3333333333333
+  - 44
+  content:
+    text: 蒸馏
+    fontSize: 23
+    fontFamily: *id001
+    color: '#F27A59'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: rule2
+  elementType: shape
+  bounds:
+  - 634.6666666666666
+  - 214
+  - 269.33333333333337
+  - 3
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#F27A59'
+  border:
+    width: 0
+    color: '#F27A59'
+- elementId: body2
+  elementType: text
+  bounds:
+  - 634.6666666666666
+  - 232
+  - 269.3333333333333
+  - 198
+  content:
+    text: '利用已有模型产生的样本或信号训练另一模型。
+
+
+      不是简单复制参数。'
+    fontSize: 19
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: false
+    lineHeight: 1.38
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: takeaway
+  elementType: shape
+  bounds:
+  - 56
+  - 444
+  - 848
+  - 42
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#E7E3FC'
+  border:
+    width: 0
+    color: '#E7E3FC'
+- elementId: takeaway-text
+  elementType: text
+  bounds:
+  - 72
+  - 451
+  - 816
+  - 28
+  content:
+    text: 真实项目可组合多种路线；术语不能替代具体训练说明。
+    fontSize: 17
+    fontFamily: *id001
+    color: '#5146D9'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - middle
+    wrap: true

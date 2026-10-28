@@ -1,0 +1,277 @@
+pageType: content
+background:
+  type: solid
+  color: '#F6F3EB'
+elements:
+- elementId: section
+  elementType: text
+  bounds:
+  - 56
+  - 24
+  - 600
+  - 18
+  content:
+    text: 综合回顾
+    fontSize: 10
+    fontFamily: &id001
+      latin: QuattrocentoSans
+      ea: MiSans
+    color: '#5146D9'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: title
+  elementType: text
+  bounds:
+  - 56
+  - 56
+  - 848
+  - 72
+  content:
+    text: 六章连成一条主线：从开放材料到可检查行动
+    fontSize: 30
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: true
+    lineHeight: 1.14
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: footer-rule
+  elementType: shape
+  bounds:
+  - 56
+  - 508
+  - 848
+  - 1
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#DCD9E1'
+  border:
+    width: 0
+    color: '#DCD9E1'
+- elementId: page-no
+  elementType: text
+  bounds:
+  - 852
+  - 512
+  - 52
+  - 18
+  content:
+    text: 61 / 62
+    fontSize: 10
+    fontFamily: *id001
+    color: '#656577'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - right
+    - top
+    wrap: false
+- elementId: head0
+  elementType: text
+  bounds:
+  - 56.0
+  - 164
+  - 269.3333333333333
+  - 44
+  content:
+    text: 认识开源
+    fontSize: 23
+    fontFamily: *id001
+    color: '#5146D9'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: rule0
+  elementType: shape
+  bounds:
+  - 56.0
+  - 214
+  - 269.3333333333333
+  - 3
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#5146D9'
+  border:
+    width: 0
+    color: '#5146D9'
+- elementId: body0
+  elementType: text
+  bounds:
+  - 56.0
+  - 232
+  - 269.3333333333333
+  - 198
+  content:
+    text: '第 1—3 章
+
+
+      对象与材料
+
+      开放与协作
+
+      资产与生态关系'
+    fontSize: 19
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: false
+    lineHeight: 1.38
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: head1
+  elementType: text
+  bounds:
+  - 345.3333333333333
+  - 164
+  - 269.3333333333333
+  - 44
+  content:
+    text: 理解 AI
+    fontSize: 23
+    fontFamily: *id001
+    color: '#3F958D'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: rule1
+  elementType: shape
+  bounds:
+  - 345.3333333333333
+  - 214
+  - 269.3333333333333
+  - 3
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#3F958D'
+  border:
+    width: 0
+    color: '#3F958D'
+- elementId: body1
+  elementType: text
+  bounds:
+  - 345.3333333333333
+  - 232
+  - 269.3333333333333
+  - 198
+  content:
+    text: '第 4—6 章
+
+
+      训练形成参数
+
+      推理生成输出
+
+      检索与工具推进行动'
+    fontSize: 19
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: false
+    lineHeight: 1.38
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: head2
+  elementType: text
+  bounds:
+  - 634.6666666666666
+  - 164
+  - 269.3333333333333
+  - 44
+  content:
+    text: 贯穿方法
+    fontSize: 23
+    fontFamily: *id001
+    color: '#F27A59'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: rule2
+  elementType: shape
+  bounds:
+  - 634.6666666666666
+  - 214
+  - 269.33333333333337
+  - 3
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#F27A59'
+  border:
+    width: 0
+    color: '#F27A59'
+- elementId: body2
+  elementType: text
+  bounds:
+  - 634.6666666666666
+  - 232
+  - 269.3333333333333
+  - 198
+  content:
+    text: '对象与版本
+
+      配置与过程
+
+      证据与边界
+
+      权限与责任'
+    fontSize: 19
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: false
+    lineHeight: 1.38
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: takeaway
+  elementType: shape
+  bounds:
+  - 56
+  - 444
+  - 848
+  - 42
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#E7E3FC'
+  border:
+    width: 0
+    color: '#E7E3FC'
+- elementId: takeaway-text
+  elementType: text
+  bounds:
+  - 72
+  - 451
+  - 816
+  - 28
+  content:
+    text: 使用—理解—探究—贡献—创造：开源让每一步都有可观察、可核查的入口。
+    fontSize: 17
+    fontFamily: *id001
+    color: '#5146D9'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - middle
+    wrap: true

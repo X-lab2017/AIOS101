@@ -1,0 +1,135 @@
+pageType: content
+background:
+  type: solid
+  color: '#F6F3EB'
+elements:
+- elementId: section
+  elementType: text
+  bounds:
+  - 56
+  - 24
+  - 600
+  - 18
+  content:
+    text: 第 5 章｜最小评价
+    fontSize: 10
+    fontFamily: &id001
+      latin: QuattrocentoSans
+      ea: MiSans
+    color: '#5146D9'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: title
+  elementType: text
+  bounds:
+  - 56
+  - 56
+  - 848
+  - 72
+  content:
+    text: 评价从任务开始，而不是从分数开始
+    fontSize: 30
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: true
+    lineHeight: 1.14
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: footer-rule
+  elementType: shape
+  bounds:
+  - 56
+  - 508
+  - 848
+  - 1
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#DCD9E1'
+  border:
+    width: 0
+    color: '#DCD9E1'
+- elementId: source
+  elementType: text
+  bounds:
+  - 56
+  - 514
+  - 770
+  - 16
+  content:
+    text: 教材图 5-8；基线可以是现有流程、简单规则、人工结果或另一模型。
+    fontSize: 9
+    fontFamily: *id001
+    color: '#656577'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: page-no
+  elementType: text
+  bounds:
+  - 852
+  - 512
+  - 52
+  - 18
+  content:
+    text: 48 / 62
+    fontSize: 10
+    fontFamily: *id001
+    color: '#656577'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - right
+    - top
+    wrap: false
+- elementId: image-field
+  elementType: shape
+  bounds:
+  - 56
+  - 148
+  - 848
+  - 326
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#FFFFFF'
+  border:
+    width: 1
+    color: '#DCD9E1'
+- elementId: figure
+  elementType: image
+  bounds:
+  - 64
+  - 154
+  - 832
+  - 314
+  src: media/fig-5_8.jpg
+  fit:
+    mode: contain
+- elementId: caption
+  elementType: text
+  bounds:
+  - 56
+  - 480
+  - 848
+  - 22
+  content:
+    text: 图 5-8　最小评价的证据链｜任务 → 样本 → 基线 → 指标 → 配置 → 重复与失败 → 有限结论。
+    fontSize: 11
+    fontFamily: *id001
+    color: '#656577'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true

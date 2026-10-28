@@ -1,0 +1,297 @@
+pageType: content
+background:
+  type: solid
+  color: '#F6F3EB'
+elements:
+- elementId: section
+  elementType: text
+  bounds:
+  - 56
+  - 24
+  - 600
+  - 18
+  content:
+    text: 第 5 章｜课堂互动
+    fontSize: 10
+    fontFamily: &id001
+      latin: QuattrocentoSans
+      ea: MiSans
+    color: '#5146D9'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: title
+  elementType: text
+  bounds:
+  - 56
+  - 56
+  - 848
+  - 72
+  content:
+    text: 对照练习｜怎样比较两种生成配置？
+    fontSize: 30
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: true
+    lineHeight: 1.14
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: footer-rule
+  elementType: shape
+  bounds:
+  - 56
+  - 508
+  - 848
+  - 1
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#DCD9E1'
+  border:
+    width: 0
+    color: '#DCD9E1'
+- elementId: page-no
+  elementType: text
+  bounds:
+  - 852
+  - 512
+  - 52
+  - 18
+  content:
+    text: 50 / 62
+    fontSize: 10
+    fontFamily: *id001
+    color: '#656577'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - right
+    - top
+    wrap: false
+- elementId: time
+  elementType: text
+  bounds:
+  - 56
+  - 154
+  - 110
+  - 24
+  content:
+    text: 4 分钟
+    fontSize: 13
+    fontFamily: *id001
+    color: '#F27A59'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: task
+  elementType: text
+  bounds:
+  - 56
+  - 190
+  - 848
+  - 64
+  content:
+    text: 研究生成温度对“AIInfra 新生导言”的影响。请设计一个无需编写代码的对照方案。
+    fontSize: 25
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: true
+    lineHeight: 1.22
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: n0
+  elementType: text
+  bounds:
+  - 56
+  - 278
+  - 42
+  - 36
+  content:
+    text: '01'
+    fontSize: 16
+    fontFamily: *id001
+    color: '#F27A59'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: item0
+  elementType: text
+  bounds:
+  - 104
+  - 278
+  - 532
+  - 51
+  content:
+    text: <p>固定对象：模型版本、完整提示、top-p、长度与运行环境</p>
+    fontSize: 18
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: false
+    lineHeight: 1.3
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: sep0
+  elementType: shape
+  bounds:
+  - 104
+  - 327
+  - 532
+  - 1
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#DCD9E1'
+  border:
+    width: 0
+    color: '#DCD9E1'
+- elementId: n1
+  elementType: text
+  bounds:
+  - 56
+  - 333
+  - 42
+  - 36
+  content:
+    text: '02'
+    fontSize: 16
+    fontFamily: *id001
+    color: '#F27A59'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: item1
+  elementType: text
+  bounds:
+  - 104
+  - 333
+  - 532
+  - 51
+  content:
+    text: <p>只改变预先声明的温度；每个条件重复生成</p>
+    fontSize: 18
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: false
+    lineHeight: 1.3
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: sep1
+  elementType: shape
+  bounds:
+  - 104
+  - 382
+  - 532
+  - 1
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#DCD9E1'
+  border:
+    width: 0
+    color: '#DCD9E1'
+- elementId: n2
+  elementType: text
+  bounds:
+  - 56
+  - 388
+  - 42
+  - 36
+  content:
+    text: '03'
+    fontSize: 16
+    fontFamily: *id001
+    color: '#F27A59'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: item2
+  elementType: text
+  bounds:
+  - 104
+  - 388
+  - 532
+  - 51
+  content:
+    text: <p>记录准确性、必要信息、可读性、截断与失败</p>
+    fontSize: 18
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: false
+    lineHeight: 1.3
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: output-field
+  elementType: shape
+  bounds:
+  - 674
+  - 274
+  - 230
+  - 158
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#FBE7DE'
+  border:
+    width: 0
+    color: '#FBE7DE'
+- elementId: output-label
+  elementType: text
+  bounds:
+  - 694
+  - 294
+  - 190
+  - 24
+  content:
+    text: 完成标准
+    fontSize: 15
+    fontFamily: *id001
+    color: '#F27A59'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: output
+  elementType: text
+  bounds:
+  - 694
+  - 330
+  - 190
+  - 82
+  content:
+    text: 一张变量表＋统一评价标准＋失败栏
+    fontSize: 18
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: false
+    lineHeight: 1.32
+    align:
+    - left
+    - top
+    wrap: true

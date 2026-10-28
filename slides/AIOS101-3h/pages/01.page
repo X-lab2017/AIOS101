@@ -1,0 +1,121 @@
+pageType: cover
+background:
+  type: solid
+  color: '#1D2433'
+elements:
+- elementId: logo
+  elementType: image
+  bounds:
+  - 56
+  - 38
+  - 200
+  - 50
+  src: media/logo-light.png
+  fit:
+    mode: contain
+- elementId: cover-title
+  elementType: text
+  bounds:
+  - 56
+  - 138
+  - 848
+  - 72
+  content:
+    text: AI 开源通识
+    fontSize: 54
+    fontFamily: &id001
+      latin: QuattrocentoSans
+      ea: MiSans
+    color: '#FFFFFF'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: cover-subtitle
+  elementType: text
+  bounds:
+  - 56
+  - 226
+  - 848
+  - 44
+  content:
+    text: 打开黑盒，理解智能，共同创造
+    fontSize: 28
+    fontFamily: *id001
+    color: '#D8D8E2'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: cover-rule
+  elementType: shape
+  bounds:
+  - 56
+  - 306
+  - 848
+  - 1
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#4C5260'
+  border:
+    width: 0
+    color: '#4C5260'
+- elementId: cover-scope
+  elementType: text
+  bounds:
+  - 56
+  - 338
+  - 848
+  - 32
+  content:
+    text: 全校通识授课｜序言与第 1—6 章
+    fontSize: 19
+    fontFamily: *id001
+    color: '#F27A59'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: cover-meta
+  elementType: text
+  bounds:
+  - 56
+  - 392
+  - 848
+  - 28
+  content:
+    text: 180 分钟 · 真实案例 · 四次互动 · 无需编程先修
+    fontSize: 17
+    fontFamily: *id001
+    color: '#C8C8D4'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: cover-version
+  elementType: text
+  bounds:
+  - 56
+  - 470
+  - 848
+  - 20
+  content:
+    text: AIOS101 · 课程讲义 v0.1 · 2026-10-29
+    fontSize: 11
+    fontFamily: *id001
+    color: '#A8A8B8'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true

@@ -1,0 +1,287 @@
+pageType: content
+background:
+  type: solid
+  color: '#F6F3EB'
+elements:
+- elementId: section
+  elementType: text
+  bounds:
+  - 56
+  - 24
+  - 600
+  - 18
+  content:
+    text: 第 3 章｜生态框架
+    fontSize: 10
+    fontFamily: &id001
+      latin: QuattrocentoSans
+      ea: MiSans
+    color: '#5146D9'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: title
+  elementType: text
+  bounds:
+  - 56
+  - 56
+  - 848
+  - 72
+  content:
+    text: 生态不是项目名单，而是四个观察维度
+    fontSize: 30
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: true
+    lineHeight: 1.14
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: footer-rule
+  elementType: shape
+  bounds:
+  - 56
+  - 508
+  - 848
+  - 1
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#DCD9E1'
+  border:
+    width: 0
+    color: '#DCD9E1'
+- elementId: page-no
+  elementType: text
+  bounds:
+  - 852
+  - 512
+  - 52
+  - 18
+  content:
+    text: 24 / 62
+    fontSize: 10
+    fontFamily: *id001
+    color: '#656577'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - right
+    - top
+    wrap: false
+- elementId: image-field
+  elementType: shape
+  bounds:
+  - 56
+  - 162
+  - 486
+  - 318
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#FFFFFF'
+  border:
+    width: 1
+    color: '#DCD9E1'
+- elementId: figure
+  elementType: image
+  bounds:
+  - 64
+  - 170
+  - 470
+  - 302
+  src: media/fig-3_1.jpg
+  fit:
+    mode: contain
+- elementId: dot0
+  elementType: shape
+  bounds:
+  - 573
+  - 180
+  - 9
+  - 9
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#5146D9'
+  border:
+    width: 0
+    color: '#5146D9'
+- elementId: item0
+  elementType: text
+  bounds:
+  - 598
+  - 170
+  - 306
+  - 68
+  content:
+    text: <p><strong>资产</strong>　数据、模型、代码、文档</p>
+    fontSize: 18
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: false
+    lineHeight: 1.3
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: sep0
+  elementType: shape
+  bounds:
+  - 598
+  - 236
+  - 306
+  - 1
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#DCD9E1'
+  border:
+    width: 0
+    color: '#DCD9E1'
+- elementId: dot1
+  elementType: shape
+  bounds:
+  - 573
+  - 252
+  - 9
+  - 9
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#5146D9'
+  border:
+    width: 0
+    color: '#5146D9'
+- elementId: item1
+  elementType: text
+  bounds:
+  - 598
+  - 242
+  - 306
+  - 68
+  content:
+    text: <p><strong>活动</strong>　开发、评测、分发、使用</p>
+    fontSize: 18
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: false
+    lineHeight: 1.3
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: sep1
+  elementType: shape
+  bounds:
+  - 598
+  - 308
+  - 306
+  - 1
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#DCD9E1'
+  border:
+    width: 0
+    color: '#DCD9E1'
+- elementId: dot2
+  elementType: shape
+  bounds:
+  - 573
+  - 324
+  - 9
+  - 9
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#5146D9'
+  border:
+    width: 0
+    color: '#5146D9'
+- elementId: item2
+  elementType: text
+  bounds:
+  - 598
+  - 314
+  - 306
+  - 68
+  content:
+    text: <p><strong>关系</strong>　依赖、派生、协作、治理</p>
+    fontSize: 18
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: false
+    lineHeight: 1.3
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: sep2
+  elementType: shape
+  bounds:
+  - 598
+  - 380
+  - 306
+  - 1
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#DCD9E1'
+  border:
+    width: 0
+    color: '#DCD9E1'
+- elementId: dot3
+  elementType: shape
+  bounds:
+  - 573
+  - 396
+  - 9
+  - 9
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#5146D9'
+  border:
+    width: 0
+    color: '#5146D9'
+- elementId: item3
+  elementType: text
+  bounds:
+  - 598
+  - 386
+  - 306
+  - 68
+  content:
+    text: <p><strong>影响</strong>　学习、创新、公共价值与风险</p>
+    fontSize: 18
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: false
+    lineHeight: 1.3
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: caption
+  elementType: text
+  bounds:
+  - 64
+  - 484
+  - 470
+  - 16
+  content:
+    text: 图 3-1　AI 开源生态的四个观察维度
+    fontSize: 10
+    fontFamily: *id001
+    color: '#656577'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false

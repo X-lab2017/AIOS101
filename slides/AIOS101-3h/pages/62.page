@@ -1,0 +1,301 @@
+pageType: final
+background:
+  type: solid
+  color: '#1D2433'
+elements:
+- elementId: logo
+  elementType: image
+  bounds:
+  - 56
+  - 38
+  - 200
+  - 50
+  src: media/logo-light.png
+  fit:
+    mode: contain
+- elementId: final-title
+  elementType: text
+  bounds:
+  - 56
+  - 122
+  - 848
+  - 56
+  content:
+    text: 课后，用四步核查一个 AI 对象
+    fontSize: 34
+    fontFamily: &id001
+      latin: QuattrocentoSans
+      ea: MiSans
+    color: '#FFFFFF'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: final-n0
+  elementType: text
+  bounds:
+  - 56
+  - 208
+  - 40
+  - 28
+  content:
+    text: '01'
+    fontSize: 15
+    fontFamily: *id001
+    color: '#F27A59'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: final-h0
+  elementType: text
+  bounds:
+  - 110
+  - 205
+  - 220
+  - 32
+  content:
+    text: 选定对象与版本
+    fontSize: 19
+    fontFamily: *id001
+    color: '#FFFFFF'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: final-b0
+  elementType: text
+  bounds:
+  - 342
+  - 206
+  - 562
+  - 32
+  content:
+    text: 一个模型、数据集、仓库或智能体流程
+    fontSize: 17
+    fontFamily: *id001
+    color: '#D8D8E2'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: final-n1
+  elementType: text
+  bounds:
+  - 56
+  - 262
+  - 40
+  - 28
+  content:
+    text: '02'
+    fontSize: 15
+    fontFamily: *id001
+    color: '#F27A59'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: final-h1
+  elementType: text
+  bounds:
+  - 110
+  - 259
+  - 220
+  - 32
+  content:
+    text: 收集材料与许可
+    fontSize: 19
+    fontFamily: *id001
+    color: '#FFFFFF'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: final-b1
+  elementType: text
+  bounds:
+  - 342
+  - 260
+  - 562
+  - 32
+  content:
+    text: 区分公开事实、项目主张与未知项
+    fontSize: 17
+    fontFamily: *id001
+    color: '#D8D8E2'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: final-n2
+  elementType: text
+  bounds:
+  - 56
+  - 316
+  - 40
+  - 28
+  content:
+    text: '03'
+    fontSize: 15
+    fontFamily: *id001
+    color: '#F27A59'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: final-h2
+  elementType: text
+  bounds:
+  - 110
+  - 313
+  - 220
+  - 32
+  content:
+    text: 记录配置与证据
+    fontSize: 19
+    fontFamily: *id001
+    color: '#FFFFFF'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: final-b2
+  elementType: text
+  bounds:
+  - 342
+  - 314
+  - 562
+  - 32
+  content:
+    text: 保留样本、过程、失败和结论边界
+    fontSize: 17
+    fontFamily: *id001
+    color: '#D8D8E2'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: final-n3
+  elementType: text
+  bounds:
+  - 56
+  - 370
+  - 40
+  - 28
+  content:
+    text: '04'
+    fontSize: 15
+    fontFamily: *id001
+    color: '#F27A59'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: final-h3
+  elementType: text
+  bounds:
+  - 110
+  - 367
+  - 220
+  - 32
+  content:
+    text: 形成可复用产物
+    fontSize: 19
+    fontFamily: *id001
+    color: '#FFFFFF'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: final-b3
+  elementType: text
+  bounds:
+  - 342
+  - 368
+  - 562
+  - 32
+  content:
+    text: 一张核查表、一幅生态图或一个低风险流程
+    fontSize: 17
+    fontFamily: *id001
+    color: '#D8D8E2'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: final-rule
+  elementType: shape
+  bounds:
+  - 56
+  - 438
+  - 848
+  - 1
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#4C5260'
+  border:
+    width: 0
+    color: '#4C5260'
+- elementId: repo
+  elementType: text
+  bounds:
+  - 56
+  - 458
+  - 848
+  - 28
+  content:
+    text: github.com/X-lab2017/AIOS101
+    fontSize: 17
+    fontFamily: *id001
+    color: '#B4AAFF'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: thanks
+  elementType: text
+  bounds:
+  - 700
+  - 482
+  - 204
+  - 20
+  content:
+    text: 谢谢参与 · 继续共同创造
+    fontSize: 12
+    fontFamily: *id001
+    color: '#C8C8D4'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - right
+    - top
+    wrap: false

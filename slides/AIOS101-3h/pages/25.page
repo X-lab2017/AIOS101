@@ -1,0 +1,219 @@
+pageType: content
+background:
+  type: solid
+  color: '#F6F3EB'
+elements:
+- elementId: section
+  elementType: text
+  bounds:
+  - 56
+  - 24
+  - 600
+  - 18
+  content:
+    text: 第 3 章｜观察视角
+    fontSize: 10
+    fontFamily: &id001
+      latin: QuattrocentoSans
+      ea: MiSans
+    color: '#5146D9'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: title
+  elementType: text
+  bounds:
+  - 56
+  - 56
+  - 848
+  - 72
+  content:
+    text: 供应链与生态：相关，但不是同一张图
+    fontSize: 30
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: true
+    lineHeight: 1.14
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: footer-rule
+  elementType: shape
+  bounds:
+  - 56
+  - 508
+  - 848
+  - 1
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#DCD9E1'
+  border:
+    width: 0
+    color: '#DCD9E1'
+- elementId: page-no
+  elementType: text
+  bounds:
+  - 852
+  - 512
+  - 52
+  - 18
+  content:
+    text: 25 / 62
+    fontSize: 10
+    fontFamily: *id001
+    color: '#656577'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - right
+    - top
+    wrap: false
+- elementId: head0
+  elementType: text
+  bounds:
+  - 56.0
+  - 164
+  - 414.0
+  - 44
+  content:
+    text: 供应链视角
+    fontSize: 23
+    fontFamily: *id001
+    color: '#5146D9'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: rule0
+  elementType: shape
+  bounds:
+  - 56.0
+  - 214
+  - 414.0
+  - 3
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#5146D9'
+  border:
+    width: 0
+    color: '#5146D9'
+- elementId: body0
+  elementType: text
+  bounds:
+  - 56.0
+  - 232
+  - 414.0
+  - 198
+  content:
+    text: '追踪一个成果从哪里来
+
+
+      关注输入、加工、依赖、发布与责任
+
+
+      适合问：这个模型由什么构成？'
+    fontSize: 19
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: false
+    lineHeight: 1.38
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: head1
+  elementType: text
+  bounds:
+  - 490.0
+  - 164
+  - 414.0
+  - 44
+  content:
+    text: 生态视角
+    fontSize: 23
+    fontFamily: *id001
+    color: '#3F958D'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: rule1
+  elementType: shape
+  bounds:
+  - 490.0
+  - 214
+  - 414.0
+  - 3
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#3F958D'
+  border:
+    width: 0
+    color: '#3F958D'
+- elementId: body1
+  elementType: text
+  bounds:
+  - 490.0
+  - 232
+  - 414.0
+  - 198
+  content:
+    text: '观察多主体怎样共同演化
+
+
+      关注协作、复用、派生、治理与影响
+
+
+      适合问：谁与谁怎样连接？'
+    fontSize: 19
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: false
+    lineHeight: 1.38
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: takeaway
+  elementType: shape
+  bounds:
+  - 56
+  - 444
+  - 848
+  - 42
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#E7E3FC'
+  border:
+    width: 0
+    color: '#E7E3FC'
+- elementId: takeaway-text
+  elementType: text
+  bounds:
+  - 72
+  - 451
+  - 816
+  - 28
+  content:
+    text: 一条连线必须说明关系类型；节点靠近不自动代表依赖或因果。
+    fontSize: 17
+    fontFamily: *id001
+    color: '#5146D9'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - middle
+    wrap: true

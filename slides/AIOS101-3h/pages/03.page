@@ -1,0 +1,319 @@
+pageType: content
+background:
+  type: solid
+  color: '#F6F3EB'
+elements:
+- elementId: section
+  elementType: text
+  bounds:
+  - 56
+  - 24
+  - 600
+  - 18
+  content:
+    text: 课程学习成果
+    fontSize: 10
+    fontFamily: &id001
+      latin: QuattrocentoSans
+      ea: MiSans
+    color: '#5146D9'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: title
+  elementType: text
+  bounds:
+  - 56
+  - 56
+  - 848
+  - 72
+  content:
+    text: 今天不是学更多按钮，而是获得四种能力
+    fontSize: 30
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: true
+    lineHeight: 1.14
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: footer-rule
+  elementType: shape
+  bounds:
+  - 56
+  - 508
+  - 848
+  - 1
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#DCD9E1'
+  border:
+    width: 0
+    color: '#DCD9E1'
+- elementId: page-no
+  elementType: text
+  bounds:
+  - 852
+  - 512
+  - 52
+  - 18
+  content:
+    text: 03 / 62
+    fontSize: 10
+    fontFamily: *id001
+    color: '#656577'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - right
+    - top
+    wrap: false
+- elementId: head0
+  elementType: text
+  bounds:
+  - 56.0
+  - 164
+  - 197.0
+  - 44
+  content:
+    text: 辨认
+    fontSize: 23
+    fontFamily: *id001
+    color: '#5146D9'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: rule0
+  elementType: shape
+  bounds:
+  - 56.0
+  - 214
+  - 197.0
+  - 3
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#5146D9'
+  border:
+    width: 0
+    color: '#5146D9'
+- elementId: body0
+  elementType: text
+  bounds:
+  - 56.0
+  - 232
+  - 197.0
+  - 198
+  content:
+    text: '分清模型、产品、系统与开放材料。
+
+
+      知道自己在观察什么。'
+    fontSize: 19
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: false
+    lineHeight: 1.38
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: head1
+  elementType: text
+  bounds:
+  - 273.0
+  - 164
+  - 197.0
+  - 44
+  content:
+    text: 解释
+    fontSize: 23
+    fontFamily: *id001
+    color: '#5146D9'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: rule1
+  elementType: shape
+  bounds:
+  - 273.0
+  - 214
+  - 197.0
+  - 3
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#5146D9'
+  border:
+    width: 0
+    color: '#5146D9'
+- elementId: body1
+  elementType: text
+  bounds:
+  - 273.0
+  - 232
+  - 197.0
+  - 198
+  content:
+    text: '说明训练、推理、检索与工具调用怎样衔接。
+
+
+      不停在名词。'
+    fontSize: 19
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: false
+    lineHeight: 1.38
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: head2
+  elementType: text
+  bounds:
+  - 490.0
+  - 164
+  - 197.0
+  - 44
+  content:
+    text: 核查
+    fontSize: 23
+    fontFamily: *id001
+    color: '#3F958D'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: rule2
+  elementType: shape
+  bounds:
+  - 490.0
+  - 214
+  - 197.0
+  - 3
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#3F958D'
+  border:
+    width: 0
+    color: '#3F958D'
+- elementId: body2
+  elementType: text
+  bounds:
+  - 490.0
+  - 232
+  - 197.0
+  - 198
+  content:
+    text: '追问对象、版本、配置、样本、许可与证据。
+
+
+      不把宣传当结论。'
+    fontSize: 19
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: false
+    lineHeight: 1.38
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: head3
+  elementType: text
+  bounds:
+  - 707.0
+  - 164
+  - 197.0
+  - 44
+  content:
+    text: 设计
+    fontSize: 23
+    fontFamily: *id001
+    color: '#F27A59'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: rule3
+  elementType: shape
+  bounds:
+  - 707.0
+  - 214
+  - 197.0
+  - 3
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#F27A59'
+  border:
+    width: 0
+    color: '#F27A59'
+- elementId: body3
+  elementType: text
+  bounds:
+  - 707.0
+  - 232
+  - 197.0
+  - 198
+  content:
+    text: '组合开放组件，加入权限、评价和人工节点。
+
+
+      让创造可复用。'
+    fontSize: 19
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: false
+    lineHeight: 1.38
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: takeaway
+  elementType: shape
+  bounds:
+  - 56
+  - 444
+  - 848
+  - 42
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#E7E3FC'
+  border:
+    width: 0
+    color: '#E7E3FC'
+- elementId: takeaway-text
+  elementType: text
+  bounds:
+  - 72
+  - 451
+  - 816
+  - 28
+  content:
+    text: 最终目标：从“会得到答案”走向“能解释、会验证、可创造”。
+    fontSize: 17
+    fontFamily: *id001
+    color: '#5146D9'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - middle
+    wrap: true

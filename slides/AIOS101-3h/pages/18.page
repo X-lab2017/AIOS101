@@ -1,0 +1,221 @@
+pageType: content
+background:
+  type: solid
+  color: '#F6F3EB'
+elements:
+- elementId: section
+  elementType: text
+  bounds:
+  - 56
+  - 24
+  - 600
+  - 18
+  content:
+    text: 第 2 章｜参与方式
+    fontSize: 10
+    fontFamily: &id001
+      latin: QuattrocentoSans
+      ea: MiSans
+    color: '#5146D9'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: title
+  elementType: text
+  bounds:
+  - 56
+  - 56
+  - 848
+  - 72
+  content:
+    text: 贡献不等于代码量，维护也不只是合并
+    fontSize: 30
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: true
+    lineHeight: 1.14
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: footer-rule
+  elementType: shape
+  bounds:
+  - 56
+  - 508
+  - 848
+  - 1
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#DCD9E1'
+  border:
+    width: 0
+    color: '#DCD9E1'
+- elementId: page-no
+  elementType: text
+  bounds:
+  - 852
+  - 512
+  - 52
+  - 18
+  content:
+    text: 18 / 62
+    fontSize: 10
+    fontFamily: *id001
+    color: '#656577'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - right
+    - top
+    wrap: false
+- elementId: head0
+  elementType: text
+  bounds:
+  - 56.0
+  - 164
+  - 414.0
+  - 44
+  content:
+    text: 多样贡献
+    fontSize: 23
+    fontFamily: *id001
+    color: '#5146D9'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: rule0
+  elementType: shape
+  bounds:
+  - 56.0
+  - 214
+  - 414.0
+  - 3
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#5146D9'
+  border:
+    width: 0
+    color: '#5146D9'
+- elementId: body0
+  elementType: text
+  bounds:
+  - 56.0
+  - 232
+  - 414.0
+  - 198
+  content:
+    text: '文档与翻译
+
+      数据与评测
+
+      设计与教学
+
+      问题报告与讨论
+
+      代码与工具'
+    fontSize: 19
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: false
+    lineHeight: 1.38
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: head1
+  elementType: text
+  bounds:
+  - 490.0
+  - 164
+  - 414.0
+  - 44
+  content:
+    text: 维护劳动
+    fontSize: 23
+    fontFamily: *id001
+    color: '#3F958D'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: rule1
+  elementType: shape
+  bounds:
+  - 490.0
+  - 214
+  - 414.0
+  - 3
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#3F958D'
+  border:
+    width: 0
+    color: '#3F958D'
+- elementId: body1
+  elementType: text
+  bounds:
+  - 490.0
+  - 232
+  - 414.0
+  - 198
+  content:
+    text: '复现问题与澄清需求
+
+      评审兼容性与风险
+
+      处理重复与冲突
+
+      版本发布与长期回应'
+    fontSize: 19
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: false
+    lineHeight: 1.38
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: takeaway
+  elementType: shape
+  bounds:
+  - 56
+  - 444
+  - 848
+  - 42
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#E7E3FC'
+  border:
+    width: 0
+    color: '#E7E3FC'
+- elementId: takeaway-text
+  elementType: text
+  bounds:
+  - 72
+  - 451
+  - 816
+  - 28
+  content:
+    text: 有价值的贡献让公共成果更准确、更可用、更容易继续维护。
+    fontSize: 17
+    fontFamily: *id001
+    color: '#5146D9'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - middle
+    wrap: true

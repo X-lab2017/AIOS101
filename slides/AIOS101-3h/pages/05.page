@@ -1,0 +1,199 @@
+pageType: chapter
+background:
+  type: solid
+  color: '#1D2433'
+elements:
+- elementId: part
+  elementType: text
+  bounds:
+  - 56
+  - 38
+  - 300
+  - 22
+  content:
+    text: 第一篇｜认识开源
+    fontSize: 11
+    fontFamily: &id001
+      latin: QuattrocentoSans
+      ea: MiSans
+    color: '#B4AAFF'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: chapter-no
+  elementType: text
+  bounds:
+  - 56
+  - 93
+  - 180
+  - 92
+  content:
+    text: '01'
+    fontSize: 78
+    fontFamily: *id001
+    color: '#F27A59'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: chapter-title
+  elementType: text
+  bounds:
+  - 240
+  - 102
+  - 664
+  - 88
+  content:
+    text: '智能时代为什么需要
+
+      AI 开源通识'
+    fontSize: 34
+    fontFamily: *id001
+    color: '#FFFFFF'
+    bold: true
+    lineHeight: 1.15
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: chapter-rule
+  elementType: shape
+  bounds:
+  - 56
+  - 212
+  - 848
+  - 1
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#4C5260'
+  border:
+    width: 0
+    color: '#4C5260'
+- elementId: question
+  elementType: text
+  bounds:
+  - 56
+  - 242
+  - 848
+  - 66
+  content:
+    text: 会使用 AI，为什么还不等于理解 AI？
+    fontSize: 25
+    fontFamily: *id001
+    color: '#FFFFFF'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: gno0
+  elementType: text
+  bounds:
+  - 56
+  - 338
+  - 36
+  - 28
+  content:
+    text: '01'
+    fontSize: 13
+    fontFamily: *id001
+    color: '#B4AAFF'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: goal0
+  elementType: text
+  bounds:
+  - 104
+  - 336
+  - 800
+  - 36
+  content:
+    text: 分清模型、产品与 AI 系统
+    fontSize: 18
+    fontFamily: *id001
+    color: '#E4E3EB'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: gno1
+  elementType: text
+  bounds:
+  - 56
+  - 386
+  - 36
+  - 28
+  content:
+    text: '02'
+    fontSize: 13
+    fontFamily: *id001
+    color: '#B4AAFF'
+    bold: true
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: goal1
+  elementType: text
+  bounds:
+  - 104
+  - 384
+  - 800
+  - 36
+  content:
+    text: 用开放材料把黑盒变成学习对象
+    fontSize: 18
+    fontFamily: *id001
+    color: '#E4E3EB'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: footer-rule
+  elementType: shape
+  bounds:
+  - 56
+  - 508
+  - 848
+  - 1
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#4C5260'
+  border:
+    width: 0
+    color: '#4C5260'
+- elementId: page-no
+  elementType: text
+  bounds:
+  - 852
+  - 512
+  - 52
+  - 18
+  content:
+    text: 05 / 62
+    fontSize: 10
+    fontFamily: *id001
+    color: '#C8C8D4'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - right
+    - top
+    wrap: false
