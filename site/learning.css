@@ -13,3 +13,5 @@
 .reader-toc{align-items:stretch;margin-left:0;height:auto}.reader-toc a{height:auto}
 .chapter-pagination{position:static;flex-direction:row;align-items:stretch;height:auto;margin-left:0;background:transparent;box-shadow:none}.chapter-pagination a{height:auto;align-items:flex-start}.chapter-pagination a:last-child{align-items:flex-end}
 .mobile-toc nav{border:0;margin-left:0;align-items:stretch}.mobile-toc nav a{height:auto}
+/* Keep the three 40px header controls reachable at 320px, including scrollbars. */
+@media(max-width:360px){.header-inner .brand{flex:1 1 auto;min-width:0;width:auto}.header-inner .brand .theme-logo{width:100%;max-width:172px}.header-tools{flex-shrink:0}}
