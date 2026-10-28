@@ -15,6 +15,10 @@ REQUIRED_FILES = (
     "CONTRIBUTING.md",
     "CHANGELOG.md",
     "README.md",
+    "docs/STATUS.md",
+    "docs/README.md",
+    "docs/content-iteration-guide.md",
+    "docs/decisions/ADR-0001-reading-and-evidence-baseline.md",
     "specs/README.md",
     "specs/course-spec.md",
     "specs/chapter-spec-template.md",
@@ -96,7 +100,7 @@ REQUIRED_SECTIONS = {
 }
 
 LINK_RE = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
-EXCLUDED_DIRS = {".git", "node_modules", "__pycache__"}
+EXCLUDED_DIRS = {".git", "node_modules", "__pycache__", "dist", ".review-book-assets"}
 
 
 def relative_name(path: Path) -> str:

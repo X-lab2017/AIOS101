@@ -66,41 +66,15 @@
 
 ## 6. 文件组织
 
-```text
-CONSTITUTION.md
-AGENTS.md
-CONTRIBUTING.md
-CHANGELOG.md
-specs/
-  README.md
-  course-spec.md
-  preface-spec.md
-  chapter-spec-template.md
-  activity-spec-template.md
-  chapters/
-    CH01-ai-open-source-literacy-spec.md
-  content-evidence-spec.md
-  assessment-spec.md
-  presentation-spec.md
-  acceptance-spec.md
-  collaboration-spec.md
-  source-register.md
-  decision-record-template.md
-  change-request-template.md
-textbook/
-  preface.md
-  chapters/
-  assets/
-activities/
-slides/
-online/
-interactive/
-deliverables/
-scripts/
-  check_repo.py
-```
+- `textbook/`：序言、章节与附录唯一正本；图版清单和来源位于其 `assets/figures/`。
+- `specs/chapters/`：各章开发与验收规格；本目录保存现行支撑规范和模板。
+- `site/`：在线版源码；`scripts/`：构建与检查；`dist/` 仅为生成结果。
+- `activities/`：教学活动；`interactive/`：暂停上线的交互设计与兼容参考。
+- `brand/`：固定视觉资产；`slides/`：独立课件评审稿；`deliverables/`：导出约定。
+- `docs/STATUS.md`：自动核对的版本、现行范围与待办；`docs/decisions/`：长期决定。
+- `docs/history/` 与 `specs/history/`：已结束轮次的记录、历史规格和证据，不作为现行需求。
 
-`textbook/chapters/` 是章节正文唯一正本；`online/` 保存在线版配置与组件；`interactive/` 保存交互实现与回退资源。新目录必须在相应规格中说明用途，不得形成无人维护的重复正本。
+新目录须说明用途，不得形成无人维护的重复正本。现状入口与职责见[当前状态](../docs/STATUS.md)。
 
 ## 7. 变更与验收原则
 
@@ -110,26 +84,14 @@ scripts/
 - 所有“已完成”声明必须对应[验收规范](acceptance-spec.md)中的证据。
 - 未验证、未覆盖、待核实和真实为零必须分别记录，不得用确定语气掩盖缺口。
 
-## 8. 在线学习资源评审
+## 8. 现行数字教材基线
 
-本轮经维护者授权，同步设计有限范围的评审原型，规格保持评审中。
+- [网站规格](website-spec.md)与[阅读体验规格](learning-experience-spec.md)：当前公开页面与发布契约。
+- [课程视觉规格](course-identity-spec.md)与[品牌资产](../brand/CURRENT.md)：已批准的 Open Folio v1.0.0。
+- [当前状态与交接](../docs/STATUS.md)、[内容维护指南](../docs/content-iteration-guide.md)。
+- [ADR-0001](../docs/decisions/ADR-0001-reading-and-evidence-baseline.md)：阅读优先、单一正本与图像证据保真。
+- [本轮仓库维护规格](repository-maintenance-2026-10-29.md)。
 
-- [VIS-AIOS101 课程专属视觉](course-identity-spec.md)
-- [WEB-AIOS101 网站建设规格](website-spec.md)
-- [WEB-LEARN-AIOS101 学习体验与交互资源规格](learning-experience-spec.md)
-- [学习版核验与评审记录](learning-review-record.md)
-- [WEB-ACT-01／02 序言及系统探索活动](website-activities.md)
-- [技术核验与未决事项](website-review-record.md)
+## 9. 历史规格与评审
 
-- [Pages 公开预览发布记录](pages-release-record.md)：维护者授权范围、优化核验与部署状态。
-
-- [AIOS101 视觉基线 v1.0.0](../brand/README.md)：已批准的课程识别、复用示例、版本包与校验清单。
-
-## 9. 自学教材评审
-
-- [序言与前六章自学教材评审规格](self-study-textbook-review.md)
-- [逐章评审与修订记录](../docs/self-study-review-2026-10-29.md)
-
-## 10. 自学教材图版修订
-
-- [序言与前六章图版修订规格](visual-learning-review-2026-10-29.md)：内容需求、逐章取舍、统一编号题名与线上验收。
+历次自学修订、图版精审、OpenDipper 双图、早期交互与 Pages 发布的规格和证据统一见[历史索引](../docs/history/README.md)。其中的日期、版本和检查结果仅对应当轮材料。当前状态不能由历史文件中的“当前”“下一步”推断。

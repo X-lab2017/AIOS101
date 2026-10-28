@@ -1,5 +1,7 @@
 # 交互开发需求：我的 AI 开源学习问题地图
 
+> 状态：历史交互设计，当前暂停上线。教学目标仍可复用；当前 app.js 已是纯阅读实现。恢复前按[交互入口](../README.md)重新对齐，不把下文 v0.4 状态当作现行网站。
+
 > 活动 ID：`ACT-CH01-02`
 >
 > 学习证据：`EVD-CH01-02`
@@ -103,7 +105,7 @@ ai_disclosure: {used, description}
 ## 当前实现挂载（v0.4）
 
 - 在线入口：[#/activity/ACT-CH01-02](https://www.x-lab.info/AIOS101/#/activity/ACT-CH01-02)。
-- 字段与流程：[learning-data.js](../../site/learning-data.js)；本地数据、迁移和导出：[learning-core.js](../../site/learning-core.js)；统一页面：[app.js](../../site/app.js)。
+- 字段与流程：[learning-data.js](../../site/learning-data.js)；本地数据、迁移和导出：[learning-core.js](../../site/learning-core.js)；统一页面：[v0.4 页面实现](https://github.com/X-lab2017/AIOS101/blob/8a529d1bfc74c62995d83787823770a059059d3d/site/app.js)。
 - 使用 schema 2 的 activities[活动 ID] 保存 fields、step、status、history；教学字段按本页要求映射，原建议结构不作为已经发布的数据格式。
 - 自动检查只提示缺项；反馈由本人、同伴或教师填写，完成状态不等于学习评价。静态回退使用上方学生任务单。
-- 实际核验范围与限制见[学习版核验记录](../../specs/learning-review-record.md)。
+- 实际核验范围与限制见[学习版核验记录](../../specs/history/learning-review-record.md)。

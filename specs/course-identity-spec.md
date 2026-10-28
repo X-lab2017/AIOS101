@@ -5,7 +5,7 @@
 
 ## 1. 定位与本轮授权
 
-维护者要求为 AIOS101 搜索匹配的 GitHub 视觉与设计资源，并建立课程专属 Logo 和视觉方案。维护者已认可上线方案，并明确要求将其固化为基线、存入仓库供后续复用。当前以 v1.0.0 固定识别规则、生产资产与复用契约，统一入口见 [brand/README.md](../brand/README.md)。
+维护者要求为 AIOS101 搜索匹配的 GitHub 视觉与设计资源，并建立课程专属 Logo 和视觉方案。维护者已认可上线方案，并明确要求将其固化为基线、存入仓库供后续复用。当前以 v1.0.0 固定识别规则、生产资产与复用契约，统一入口见 [brand/README.md](../brand/CURRENT.md)。
 
 课程名称仍为“AI 开源通识”，短名称 AIOS101；英文描述为 AI & Open Source Literacy。面向所有专业，表达好奇、证据意识、开放协作与创造。X-lab AI 保留为出品方，课程拥有独立的主标志、色彩和图形语言。
 
@@ -66,9 +66,9 @@
 - `site/assets/course/`：浅底、深底、黑白标志，简化 favicon、头像、四篇封面、社交预览和设计 tokens。
 - `site/assets/fonts/`：本地 WOFF2 与 OFL。
 - `site/assets/icons/`：四枚 Phosphor 原始 SVG 与 MIT 许可。
-- `site/brand.js`、`site/brand.css`：品牌展示页及课程界面应用。
+- `site/brand.css`：当前界面中的品牌样式；`site/brand.js` 为未部署的历史展示页源码。
 - `scripts/generate_course_brand.py`：生产资产的生成源码；日常网站构建使用已提交的 SVG，无需安装字体处理依赖。
-- `#/identity`：双语在线视觉评审页，包括标志、深浅应用、配色、封面、资源来源与下载。
+- 当前复用入口为 `brand/README.md` 和离线品牌示例；旧 `#/identity` 已随阅读版收拢而回退到目录。
 
 压缩包包含可直接使用的 SVG、色彩 tokens、来源及使用说明，不将生成式概念图当成可编辑矢量文件。
 
@@ -78,10 +78,10 @@
 
 后续将同一套标志和四篇图形延伸至教材封面、课件、视频片头和活动任务单；每次新增用途记录版本与调整理由。
 
-本轮执行记录见[课程视觉核验记录](course-identity-review-record.md)。维护者已认可“开卷”方案和 X-lab 联合署名，并在公开站上线后要求建立可复用基线。
+本轮执行记录见[课程视觉核验记录](history/course-identity-review-record.md)。维护者已认可“开卷”方案和 X-lab 联合署名，并在公开站上线后要求建立可复用基线。
 
 ## 9. 固定版本与变更
 
-[当前基线](../brand/baseline.json)记录版本、批准范围及已认可的设计来源提交；[固定清单](../brand/releases/v1.0.0.manifest.json)记录每个生产文件的 SHA-256。生产 SVG 正本保留原路径，v0.1 提案包与评审板保留为历史，不覆盖。v1.0.0 包含 16 份生产 SVG、X-lab 原版署名、字体与图标及许可、明暗语义 tokens 和离线组合示例。
+[当前基线](../brand/baseline.json)记录版本、批准范围及已认可的设计来源提交；[固定清单](../brand/releases/v1.0.0.manifest.json)记录每个生产文件的 SHA-256。生产 SVG 正本保留原路径，v0.1 提案包已移出当前树，可从整理前固定提交恢复；评审板作为设计历史保留。v1.0.0 包含 16 份生产 SVG、X-lab 原版署名、字体与图标及许可、明暗语义 tokens 和离线组合示例。
 
 已认可的图形轮廓、六种品牌色、X-lab 原图与四篇封面不因基线整理而重绘。构建通过 `python scripts/package_course_brand.py --check` 防止当前资产与固定包漂移。版本规则、跨载体复用和使用边界见 brand 入口；修改核心识别需维护者确认，历史版本不覆写。

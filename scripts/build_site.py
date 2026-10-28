@@ -12,8 +12,17 @@ from figure_pages import build_figure_pages
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT/'dist'
 if OUT.exists(): shutil.rmtree(OUT)
-shutil.copytree(ROOT/'site', OUT)
-shutil.copytree(ROOT/'textbook/assets/figures', OUT/'textbook/assets/figures')
+shutil.copytree(ROOT/'site', OUT, ignore=shutil.ignore_patterns(
+    'README.md', 'brand.js', 'learning-data.js', 'learning-core.js'))
+# Publish the current reading assets only. Historical evidence and production
+# inputs stay in the repository; they are not another public figure catalogue.
+figure_records=json.loads((ROOT/'textbook/assets/figures/manifest.json').read_text())
+for name in sorted({f[key] for f in figure_records for key in ('file','zoomFile','originalFile') if f.get(key)}):
+    if Path(name).is_absolute() or '..' in Path(name).parts:
+        raise SystemExit('Unsafe figure asset path: '+name)
+    target=OUT/'textbook/assets/figures'/name
+    target.parent.mkdir(parents=True,exist_ok=True)
+    shutil.copyfile(ROOT/'textbook/assets/figures'/name,target)
 commit = os.environ.get('GITHUB_SHA') or subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
 if not re.fullmatch(r'[0-9a-f]{40}', commit): raise SystemExit('Invalid source commit')
 # Keep content and styles on the same release even when a reader has cached an older visit.
@@ -51,11 +60,10 @@ for key,u in units.items():
     for sec in u['sections']:
         if sec['title']=='关键术语':
             for term,meaning in re.findall(r'^- \*\*(.+?)\*\*：(.+)$',sec['markdown'],re.M):glossary.append({'term':term,'meaning':meaning,'unit':key,'section':sec['id']})
-figure_records=json.loads((ROOT/'textbook/assets/figures/manifest.json').read_text())
 content = dict(figureCount=len(figure_records),figureCatalog={r["id"]: {k:r[k] for k in ("file","title","width","height")} for r in figure_records},version='0.7.0-self-study',date='2026-10-29',sourceCommit=commit,visualVersion='1.0.0',brandCommit='373d61f0d6e334f0b85af0dd5d8ef9b9095bcc37',chapters=chapters,units=units,worksheets=worksheets,glossary=glossary,preface=units['PREFACE']['markdown'],sources=(ROOT/'specs/source-register.md').read_text())
 (OUT/'content.json').write_text(json.dumps(content,ensure_ascii=False),encoding='utf-8')
 (OUT/'resources').mkdir()
-resources = [(u['sourcePath'],key+'.md') for key,u in units.items()] + [(v['path'],key+'.md') for key,v in worksheets.items()] + [('specs/'+x+'.md',x+'.md') for x in ['website-spec','website-activities','learning-experience-spec','course-identity-spec','source-register']]
+resources = [(u['sourcePath'],key+'.md') for key,u in units.items()] + [(v['path'],key+'.md') for key,v in worksheets.items()] + [('specs/'+x+'.md',x+'.md') for x in ['website-spec','learning-experience-spec','course-identity-spec','source-register']]
 for path,name in resources:
     raw = (ROOT/path).read_text()
     # Downloads point to the matching source commit, independent of local app routes.

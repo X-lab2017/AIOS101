@@ -2,9 +2,7 @@ name: Course website
 on:
   push:
     branches: [main]
-    paths: ['site/**', 'brand/**', 'textbook/**', 'activities/student/**', 'specs/**', 'CONSTITUTION.md', 'scripts/**', '.github/workflows/course-pages.yml']
   pull_request:
-    paths: ['site/**', 'brand/**', 'textbook/**', 'activities/student/**', 'specs/**', 'CONSTITUTION.md', 'scripts/**', '.github/workflows/course-pages.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -22,16 +20,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: python scripts/package_course_brand.py --check
-      - run: python scripts/build_site.py
-      - run: node --check site/app.js
-      - run: node --check site/brand.js
-      - run: node --check site/learning-data.js
-      - run: node --check site/learning-core.js
-      - run: node scripts/check_learning.js
-      - run: python scripts/check_course_markdown.py
-      - run: python scripts/check_repo.py
-      - run: python scripts/check_site.py
+      - run: python scripts/check_all.py
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

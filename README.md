@@ -1,85 +1,44 @@
-# AIOS101
+# AIOS101 · AI 开源通识
 
-《AI 开源通识》课程与配套教材、讲义、实践活动及评价资源的协作仓库。
+X-lab 出品，面向所有学科大学生的 AI 与开源通识课程。以 AI 为学习对象，以开源为认识论、方法论和实践方式，沿“使用—理解—探究—贡献—创造”展开。
 
-课程以 AI 为学习对象，以开源为认识论、方法论和实践方式，引导学习者沿“使用—理解—探究—贡献—创造”的主线，从理解 AI 走向开放协作与负责任创造。
+**[在线阅读](https://www.x-lab.info/AIOS101/) · [教材目录](textbook/README.md) · [当前状态与交接](docs/STATUS.md) · [参与建设](CONTRIBUTING.md)**
 
-## 从这里开始
+序言、前六章与附录 A 已形成公开的自学图文评审版。后六章仍按四篇十二章蓝图建设；公开阅读与工程检查通过，不等于整门课程已通过教学或出版验收。
 
-课程建设采用规格驱动开发（SDD）：先明确目标、证据和验收条件，再生产教材、讲义、活动、评价与数字资源。
+## 新协作者从这里开始
 
-1. [课程宪法](CONSTITUTION.md)：课程定位、学习成果、十二章目录与不可偏离的质量门禁；
-2. [规格体系](specs/README.md)：规格层级、标识规则、状态流转和标准开发流程；
-3. [课程总规格](specs/course-spec.md)：十二章、六项学习成果和最低学习证据的对齐关系；
-4. [参与建设](CONTRIBUTING.md)：人类与 AI 贡献者的协作入口；
-5. [AI 协作者工作指南](AGENTS.md)：AI 工作顺序、证据硬规则与交付要求；
-6. [教材全书目录](textbook/README.md)：按四篇十二章组织的书目导航与正文入口；
-7. [教材序言 v0.4](textbook/preface.md)：从一次 AI 提问进入模型供应链与开源生态的清爽内容评审稿；
-8. [第 1 章 v0.6](textbook/chapters/CH01-why-ai-open-source-literacy.md)：从 AI 使用经验进入 GNU、Linux、OSI 的历史，再转向 AI 开源通识的理解与创造；
-9. [第 2 章 v0.6](textbook/chapters/CH02-open-source-mechanisms.md)：以真实仓库和社区记录解释开放、复用、协作与公共价值；
-10. [第 3 章 v0.3](textbook/chapters/CH03-ai-open-source-ecosystem.md)：以资产、关系、参与者与规则建立 AI 开源生态全景；
-11. [第 4 章 v0.3](textbook/chapters/CH04-data-to-models.md)：以 FineWeb 和 DeepSeek-R1 解释数据、训练过程与模型能力的形成；
-12. [第 5 章 v0.4](textbook/chapters/CH05-training-to-inference.md)：以通识化解释、生成过程、推理系统与最小评价理解模型运行及证据；
-13. [第 6 章 v0.3](textbook/chapters/CH06-model-to-agents.md)：以真实材料和模拟轨迹理解 RAG、工具调用、智能体循环与人机责任；
-14. [第二篇统一视觉清单](textbook/assets/ch04-ch06/README.md)：第四章至第六章 22 幅结构图与 6 项真实材料配图的绘制要求；
-15. [附录 A](textbook/appendices/APP-A-repository-snapshots.md)：仓库、提交号与固定版本的共同访问指南。
-
-当前规格和章节处于草稿或实施阶段，不代表教材内容或课程实施已经完成验收。
-
-## 仓库结构
-
-```text
-CONSTITUTION.md             课程最高基线
-AGENTS.md                   AI 协作者工作指南
-CONTRIBUTING.md             贡献流程
-CHANGELOG.md                版本与变更记录
-specs/                      课程、序言与跨产物规范
-specs/chapters/             各章开发与验收规格
-textbook/README.md          教材全书目录与正文导航
-textbook/preface.md         教材序言正本
-textbook/chapters/          各章教材正文唯一正本
-textbook/appendices/        跨章节共享的访问指南与知识支架
-textbook/assets/            图片、地图及视觉资产索引
-activities/                 探究活动、学习证据与评价规格
-slides/                     配套讲义入口与派生资源
-online/                     在线版配置、组件与构建入口
-interactive/                交互活动配置、组件与回退资源
-deliverables/               Word 等评审交付稿
-scripts/check_repo.py       仓库基础结构与 Markdown 静态检查
-```
-
-在线版直接读取教材正本，交互版通过章节、活动和学习证据 ID 挂载。后续内容必须依据相应规格在明确目录中建设，不另立相互冲突的正本。
-
-## 基础检查
-
-安装 Python 3 后，在仓库根目录运行：
+1. 阅读[课程宪法](CONSTITUTION.md)、[规格体系](specs/README.md)和[课程总规格](specs/course-spec.md)，理解课程定位与学习成果。
+2. 查看[当前状态](docs/STATUS.md)与[关键决策](docs/decisions/ADR-0001-reading-and-evidence-baseline.md)，确认当前版本、未决事项及已暂停功能。
+3. 按[内容迭代指南](docs/content-iteration-guide.md)找到唯一正本，修改相关规格、教材或图版。
+4. 运行统一检查，记录验证范围，再按已有授权提交或发起 PR；AI 协作者还须遵守 [AGENTS.md](AGENTS.md)。
 
 ```bash
-python scripts/check_repo.py
+python scripts/check_all.py
 ```
 
-该命令仅使用 Python 标准库，检查必需文件、核心规格章节、CH01—CH12 的完整顺序、Markdown 行尾空白及相对链接目标。通过此检查只代表基础结构合规，不等于内容、教学或技术验收全部通过。
+常规检查使用 Python 与 Node.js，无第三方构建依赖。图版再生成与 PDF 排版需要的额外环境见[脚本说明](scripts/README.md)。
 
-完整验收要求见[验收与发布规范](specs/acceptance-spec.md)，重要变更记录见[更新日志](CHANGELOG.md)。
+## 正本与目录
 
-## 在线学习资源
+| 入口 | 职责 |
+|---|---|
+| [CONSTITUTION.md](CONSTITUTION.md) | 课程最高基线 |
+| [specs/](specs/README.md) | 课程、章节、活动、证据、展现和验收规范 |
+| [textbook/](textbook/README.md) | 序言、章节和附录的唯一正文 |
+| [textbook/assets/figures/](textbook/assets/figures/README.md) | 当前图版清单、统一图号、矢量源、截图来源和保留的历史图号 |
+| [brand/](brand/CURRENT.md) | 已批准的 Open Folio v1.0.0 品牌与 X-lab 联合署名 |
+| [site/](site/README.md) | 当前图文阅读网站源码，构建结果不手改 |
+| [activities/](activities/README.md) | 活动规格与学生、教师材料，独立于正文阅读 |
+| [interactive/](interactive/README.md) | 暂停上线的交互需求和兼容性材料 |
+| [slides/](slides/README.md) | 独立授课评审稿，尚未与最新图文逐页对齐 |
+| [docs/](docs/README.md) | 当前状态、维护指南、决策和历史验收证据 |
+| [deliverables/](deliverables/README.md) | 导出约定，不保留容易被误认为最新版的过时二进制 |
 
-- [交互学习体验基线 v0.4](docs/learning-experience-baseline.md)
-- [内容迭代与工程维护指南](docs/content-iteration-guide.md)
-- [网站建设规格 v0.4](specs/website-spec.md)
-- [课程专属视觉识别 v1.0.0](specs/course-identity-spec.md)
-- [序言与系统探索活动设计](specs/website-activities.md)
-- [网站开发与 GitHub Pages 发布说明](site/README.md)
-- [图文阅读体验规格 v1.0](specs/learning-experience-spec.md)
-- [学习版核验记录](specs/learning-review-record.md)
-- [早期原型核验记录](specs/website-review-record.md)
+## 阅读与视觉基线
 
-[进入 AIOS101 课程网站](https://www.x-lab.info/AIOS101/) · [课程视觉方案](https://www.x-lab.info/AIOS101/#/identity)
+当前网站聚焦完整正文、目录、字号、主题、章节导航和图片放大。已撤下已读标记、页边手账、想法按钮、工坊与活动表单；后续有明确学习需要时再设计。界面提供中英切换，教材尚无审定英文译本。
 
-当前为 v0.5 图文阅读版。首页聚焦前三章及 16 幅附图，绪论、已有后续章节和附录可从目录阅读。暂撤下已读标记、手账、工坊与活动引导，优先优化完整图文内容和阅读体验；任务单及历史交互实现保留在仓库与版本历史中。
+插图采用有明确教学用途的科技出版插画：概念可用手绘隐喻，精确数字与关系用可校验排版，真实证据保持原始材料。图号、图题与插入位置以[当前图版索引](textbook/assets/figures/INDEX.md)为准。视觉资产从[品牌基线](brand/CURRENT.md)复用。
 
-公开预览发布范围与实际核验记录见 [Pages 发布记录](specs/pages-release-record.md)。
-
-## 视觉基线与复用
-
-[AIOS101 视觉基线 v1.0.0](brand/README.md)已固化：包含 Logo、配色与字体、X-lab 联合署名、四篇图形、离线示例和带 SHA-256 清单的资产包。后续教材、课件、网站及课程传播统一从此入口取用。
+[更新日志](CHANGELOG.md)记录重要变化；[历史记录索引](docs/history/README.md)保留过去轮次的决定、发布证据与恢复入口，不作为当前功能清单。

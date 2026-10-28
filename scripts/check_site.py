@@ -23,7 +23,7 @@ for chapter in data['chapters']:
 # Resolve literal references as if hosted under a repository subpath.
 base = 'https://example.test/AIOS101/'
 checked = set()
-for filename in ['index.html', 'styles.css', 'brand.css', 'app.js', 'brand.js', 'learning.css', 'learning-core.js', 'learning-data.js']:
+for filename in ['index.html', 'styles.css', 'brand.css', 'app.js', 'learning.css', 'figure-viewer.css', 'figure-viewer.js']:
     text = (OUT/filename).read_text()
     refs = re.findall(r'''(?:src|href)=["']([^"']+)["']''', text)
     refs += re.findall(r'''url\(["']?([^)'"\s]+)''', text)
@@ -41,4 +41,10 @@ for theme in ['light', 'dark']:
 with zipfile.ZipFile(OUT/'assets/course/aios101-identity-kit-v1.0.0.zip') as archive:
     assert archive.testzip() is None, 'Corrupt identity asset package'
 assert (OUT/'.nojekyll').is_file()
+for legacy in ['brand.js','learning-core.js','learning-data.js','README.md','assets/course/aios101-identity-kit-v0.1.zip','resources/website-activities.md']:
+    assert not (OUT/legacy).exists(), 'Retired public resource: '+legacy
+figures=json.loads((ROOT/'textbook/assets/figures/manifest.json').read_text())
+expected={f[key] for f in figures for key in ('file','zoomFile','originalFile') if f.get(key)}
+actual={p.relative_to(OUT/'textbook/assets/figures').as_posix() for p in (OUT/'textbook/assets/figures').rglob('*') if p.is_file()}
+assert actual == expected, 'Published assets must match current figure manifest'
 print(f'PASS: 12 chapter IDs, canonical preface, draft sources, {len(checked)} static references, theme assets and ZIP')

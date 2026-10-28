@@ -1,0 +1,150 @@
+{
+  "basisCommit": "b17a9b8ecfb973d53c970a55e93c1341f568e60b",
+  "removed": [
+    {
+      "path": "deliverables/AI开源通识_序言_v0.2_专家评审稿.docx",
+      "bytes": 180481,
+      "reason": "序言 v0.2 交付已被当前 Markdown 与 Pages 替代。"
+    },
+    {
+      "path": "deliverables/AI开源通识_序言_v0.3_清爽内容评审稿.docx",
+      "bytes": 17899,
+      "reason": "序言 v0.3 无图 Word 已过时。"
+    },
+    {
+      "path": "deliverables/AI开源通识_序言与前六章_图文评审版_2026-10-29.pdf",
+      "bytes": 19044005,
+      "reason": "早期 127 页合并稿，不含本轮自学与图版修订；避免误认成当前打印版。"
+    },
+    {
+      "path": "deliverables/AI开源通识_序言与前六章_排版核验.json",
+      "bytes": 390,
+      "reason": "仅对应已移除的旧 PDF，不能证明当前排版。"
+    },
+    {
+      "path": "scripts/create_preface_docx.js",
+      "bytes": 31895,
+      "reason": "硬编码 v0.2 正文与旧视觉，形成第二份正本。"
+    },
+    {
+      "path": "scripts/create_preface_clean_docx.js",
+      "bytes": 5338,
+      "reason": "固定 v0.3 文案并忽略当前插图和表格，不适用于现行序言。"
+    },
+    {
+      "path": "scripts/package.json",
+      "bytes": 50,
+      "reason": "仅服务已删除的旧 Word 生成脚本。"
+    },
+    {
+      "path": "scripts/package-lock.json",
+      "bytes": 2060,
+      "reason": "仅服务已删除的旧 Word 生成脚本。"
+    },
+    {
+      "path": "site/assets/course/aios101-identity-kit-v0.1.zip",
+      "bytes": 103295,
+      "reason": "被已批准、校验固定的 v1.0.0 品牌包替代。"
+    },
+    {
+      "path": "online/README.md",
+      "bytes": 1919,
+      "reason": "空壳目录且描述失效交互，开发入口统一到 site/README.md。"
+    },
+    {
+      "path": "textbook/assets/ch01/README.md",
+      "bytes": 890,
+      "reason": "错误图号和待设计占位，统一由当前图版索引替代。"
+    }
+  ],
+  "moved": [
+    {
+      "from": "docs/learning-experience-baseline.md",
+      "to": "docs/history/learning-experience-baseline.md"
+    },
+    {
+      "from": "docs/learning-v0.4-release.md",
+      "to": "docs/history/learning-v0.4-release.md"
+    },
+    {
+      "from": "docs/reading-first-review.md",
+      "to": "docs/history/reading-first-review.md"
+    },
+    {
+      "from": "docs/figures-pages-verification.md",
+      "to": "docs/history/figures-pages-verification.md"
+    },
+    {
+      "from": "docs/ch04-ch06-pages-review-2026-10-28.md",
+      "to": "docs/history/ch04-ch06-pages-review-2026-10-28.md"
+    },
+    {
+      "from": "docs/first-six-review-2026-10-29.md",
+      "to": "docs/history/first-six-review-2026-10-29.md"
+    },
+    {
+      "from": "docs/self-study-review-2026-10-29.md",
+      "to": "docs/history/self-study-review-2026-10-29.md"
+    },
+    {
+      "from": "docs/visual-learning-review-2026-10-29.md",
+      "to": "docs/history/visual-learning-review-2026-10-29.md"
+    },
+    {
+      "from": "docs/preface-opendipper-review-2026-10-29.md",
+      "to": "docs/history/preface-opendipper-review-2026-10-29.md"
+    },
+    {
+      "from": "specs/website-activities.md",
+      "to": "specs/history/website-activities.md"
+    },
+    {
+      "from": "specs/website-review-record.md",
+      "to": "specs/history/website-review-record.md"
+    },
+    {
+      "from": "specs/learning-review-record.md",
+      "to": "specs/history/learning-review-record.md"
+    },
+    {
+      "from": "specs/course-identity-review-record.md",
+      "to": "specs/history/course-identity-review-record.md"
+    },
+    {
+      "from": "specs/pages-release-record.md",
+      "to": "specs/history/pages-release-record.md"
+    },
+    {
+      "from": "specs/figures-pages-review.md",
+      "to": "specs/history/figures-pages-review.md"
+    },
+    {
+      "from": "specs/ch04-ch06-figures-review.md",
+      "to": "specs/history/ch04-ch06-figures-review.md"
+    },
+    {
+      "from": "specs/first-six-visual-review.md",
+      "to": "specs/history/first-six-visual-review.md"
+    },
+    {
+      "from": "specs/self-study-textbook-review.md",
+      "to": "specs/history/self-study-textbook-review.md"
+    },
+    {
+      "from": "specs/visual-learning-review-2026-10-29.md",
+      "to": "specs/history/visual-learning-review-2026-10-29.md"
+    },
+    {
+      "from": "specs/preface-opendipper-figures.md",
+      "to": "specs/history/preface-opendipper-figures.md"
+    },
+    {
+      "from": "textbook/assets/ch04-ch06/README.md",
+      "to": "docs/history/ch04-ch06-figure-brief.md"
+    }
+  ],
+  "preservedProductionLog": {
+    "from": "textbook/assets/figures/README.md",
+    "to": "docs/history/figure-production.md"
+  }
+}

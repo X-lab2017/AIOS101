@@ -3,4 +3,8 @@ __pycache__/
 *.log
 textbook/assets/preface/map-qa/
 deliverables/*-qa/
+deliverables/*.pdf
+deliverables/*.docx
+deliverables/*核验.json
+deliverables/.review-book-assets/
 dist/

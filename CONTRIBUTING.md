@@ -7,6 +7,7 @@
 贡献前请阅读：
 
 - [课程宪法](CONSTITUTION.md)；
+- [当前状态与交接](docs/STATUS.md)及[关键决策](docs/decisions/ADR-0001-reading-and-evidence-baseline.md)；
 - [规格体系](specs/README.md)；
 - [人类与 AI 协作规范](specs/collaboration-spec.md)；
 - 与贡献内容相关的章节或活动规格。
@@ -32,6 +33,8 @@ AI 协作者还必须阅读 [AI 协作者工作指南](AGENTS.md)。
 4. 小步提交，避免混入无关修改；
 5. 在说明中列出变更、来源、验证和遗留问题；
 6. 根据评审意见修订，并完成相应验收。
+
+编辑入口和发布步骤见[维护指南](docs/content-iteration-guide.md)。提交前运行 `python scripts/check_all.py`；正文版本或图版变更时更新自动状态表和图版索引。历史记录在 `docs/history/`、`specs/history/`，不得将当年的“当前状态”用于描述现行网站。
 
 ## 4. 提交说明要求
 

@@ -9,8 +9,9 @@
 1. `CONSTITUTION.md`：课程最高基线；
 2. `specs/README.md`：规格层级、ID 与状态；
 3. `specs/course-spec.md`：十二章与学习成果对齐；
-4. 工作项相关章节、活动和支撑规范；
-5. `AGENTS.md` 与 `specs/collaboration-spec.md`：协作和变更要求。
+4. `docs/STATUS.md`、`docs/decisions/ADR-0001-reading-and-evidence-baseline.md`：现行版本、决定和未决项；
+5. 工作项相关章节、活动和支撑规范；
+6. `AGENTS.md` 与 `specs/collaboration-spec.md`：协作和变更要求。
 
 不得只根据用户的一句话或已有正文推断全部课程规则。
 
@@ -69,6 +70,10 @@
 - 验收记录是否说明未执行的检查。
 
 不得把“文件已生成”作为“全部验收通过”的证据。验收标准见 `specs/acceptance-spec.md`。
+
+常规修改统一运行 `python scripts/check_all.py`，与 Actions 使用同一入口。正文版本或图版变更后先更新图版索引和 `scripts/sync_status.py --write` 自动区。素材再生成和 PDF 排版的额外依赖见 `scripts/README.md`。
+
+`docs/history/` 与 `specs/history/` 只记录当时事实，不是现行需求。不得依据旧记录恢复已撤下的手账、已读标记或活动表单，也不得把旧 PDF／课件当作当前正文正本。结束工作时更新当前状态与对应工作项，记录提交、部署证据及未完成项；不要把关键输入只留在聊天或临时目录。
 
 ## 7. 外部行为与版本控制
 

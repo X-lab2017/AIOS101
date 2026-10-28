@@ -57,5 +57,4 @@ assert.equal(C.fieldsOf(definitions[2]).filter(f=>/^collaboration_.+_(evidence|m
 assert.ok(C.fieldsOf(definitions[3]).some(f=>f.id==='proposal'));
 console.log('PASS: migration/reload, four complete worksheets, snapshots, safe imports, merge recovery and full exports');
 
-// The public site is now reading-first; retained activity modules remain recoverable.
-require('./check_reading.js');
+// Current reading UI checks run separately through scripts/check_all.py.
