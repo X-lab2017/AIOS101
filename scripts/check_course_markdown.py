@@ -33,6 +33,6 @@ assert '<summary>查看 Mermaid 图源码</summary>' in mermaid
 unsafe_mermaid = render('```mermaid\nflowchart LR\n A["<img src=x>"] --> B["结果"]\n```', source, commit, {})
 assert '<img src=x>' not in unsafe_mermaid and '&lt;img src=x&gt;' in unsafe_mermaid
 assert '#/learn/APP-A' in ''.join(s['html'] for s in data['units']['CH01']['sections'])
-assert sum(s['html'].count('textbook-diagram') for key in ('CH01', 'CH02', 'CH03') for s in data['units'][key]['sections']) == 9
+assert sum(s['html'].count('textbook-diagram') for key in ('CH01', 'CH02', 'CH03', 'CH04') for s in data['units'][key]['sections']) == 13
 assert len(data['worksheets']) == 4
 print('PASS: canonical full text, stable sections, source digests, safe rendering, Mermaid fallbacks and internal appendix links')
