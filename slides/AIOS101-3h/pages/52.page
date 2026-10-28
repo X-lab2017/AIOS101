@@ -117,7 +117,7 @@ elements:
   - 598
   - 170
   - 306
-  - 68
+  - 59
   content:
     text: <p><strong>模型</strong>　生成回答、计划或调用请求</p>
     fontSize: 18
@@ -133,7 +133,7 @@ elements:
   elementType: shape
   bounds:
   - 598
-  - 236
+  - 227
   - 306
   - 1
   shapeName: rect
@@ -147,7 +147,7 @@ elements:
   elementType: shape
   bounds:
   - 573
-  - 252
+  - 243
   - 9
   - 9
   shapeName: rect
@@ -161,9 +161,9 @@ elements:
   elementType: text
   bounds:
   - 598
-  - 242
+  - 233
   - 306
-  - 68
+  - 59
   content:
     text: <p><strong>检索</strong>　从外部资料找到候选片段</p>
     fontSize: 18
@@ -179,7 +179,7 @@ elements:
   elementType: shape
   bounds:
   - 598
-  - 308
+  - 290
   - 306
   - 1
   shapeName: rect
@@ -193,7 +193,7 @@ elements:
   elementType: shape
   bounds:
   - 573
-  - 324
+  - 306
   - 9
   - 9
   shapeName: rect
@@ -207,9 +207,9 @@ elements:
   elementType: text
   bounds:
   - 598
-  - 314
+  - 296
   - 306
-  - 68
+  - 59
   content:
     text: <p><strong>工具</strong>　由外部程序执行查询、计算或读写</p>
     fontSize: 18
@@ -225,7 +225,7 @@ elements:
   elementType: shape
   bounds:
   - 598
-  - 380
+  - 353
   - 306
   - 1
   shapeName: rect
@@ -239,7 +239,7 @@ elements:
   elementType: shape
   bounds:
   - 573
-  - 396
+  - 369
   - 9
   - 9
   shapeName: rect
@@ -253,11 +253,57 @@ elements:
   elementType: text
   bounds:
   - 598
-  - 386
+  - 359
   - 306
-  - 68
+  - 59
   content:
     text: <p><strong>状态与人</strong>　保存进度、设定权限并核验</p>
+    fontSize: 18
+    fontFamily: *id001
+    color: '#1D2433'
+    bold: false
+    lineHeight: 1.3
+    align:
+    - left
+    - top
+    wrap: true
+- elementId: sep3
+  elementType: shape
+  bounds:
+  - 598
+  - 416
+  - 306
+  - 1
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#DCD9E1'
+  border:
+    width: 0
+    color: '#DCD9E1'
+- elementId: dot4
+  elementType: shape
+  bounds:
+  - 573
+  - 432
+  - 9
+  - 9
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#5146D9'
+  border:
+    width: 0
+    color: '#5146D9'
+- elementId: item4
+  elementType: text
+  bounds:
+  - 598
+  - 422
+  - 306
+  - 59
+  content:
+    text: <p><strong>按需组合</strong>　任务不缺的能力不必强行加入</p>
     fontSize: 18
     fontFamily: *id001
     color: '#1D2433'

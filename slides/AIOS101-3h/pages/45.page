@@ -165,7 +165,7 @@ elements:
   - 306
   - 68
   content:
-    text: <p><strong>top-k</strong>　按固定数量保留候选</p>
+    text: <p><strong>top-k</strong>　按数量截取；0.55／0.80＝68.75%</p>
     fontSize: 18
     fontFamily: *id001
     color: '#1D2433'
@@ -257,7 +257,7 @@ elements:
   - 306
   - 68
   content:
-    text: <p><strong>别误读</strong>　top-p＝0.95 不是 95% 正确率</p>
+    text: <p><strong>别误读</strong>　归一化概率或 top-p＝0.95 都不是正确率</p>
     fontSize: 18
     fontFamily: *id001
     color: '#1D2433'

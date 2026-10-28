@@ -165,7 +165,7 @@ elements:
   - 306
   - 68
   content:
-    text: <p><strong>容量</strong>　上下文通常同时容纳输入与新输出</p>
+    text: <p><strong>容量</strong>　输入＋新输出共用；1000－780＝220 token</p>
     fontSize: 18
     fontFamily: *id001
     color: '#1D2433'
@@ -211,7 +211,7 @@ elements:
   - 306
   - 68
   content:
-    text: <p><strong>上限</strong>　最大生成长度只限制新输出</p>
+    text: <p><strong>上限</strong>　生成上限设为 300，也最多容纳 220 个新 token</p>
     fontSize: 18
     fontFamily: *id001
     color: '#1D2433'

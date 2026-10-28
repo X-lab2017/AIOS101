@@ -119,7 +119,7 @@ elements:
   - 306
   - 92
   content:
-    text: <p><strong>有什么</strong>　数据、代码、模型、文档、评测、协作记录</p>
+    text: <p><strong>有什么</strong>　数据信息、代码、参数、文档与版本</p>
     fontSize: 18
     fontFamily: *id001
     color: '#1D2433'
@@ -165,7 +165,7 @@ elements:
   - 306
   - 92
   content:
-    text: <p><strong>怎么用</strong>　分别支持理解、运行、比较、核查与贡献</p>
+    text: <p><strong>还有什么</strong>　评测与协作记录、许可与使用条件</p>
     fontSize: 18
     fontFamily: *id001
     color: '#1D2433'

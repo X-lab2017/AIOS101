@@ -109,7 +109,7 @@ elements:
   - 848
   - 20
   content:
-    text: AIOS101 · 课程讲义 v0.1 · 2026-10-29
+    text: AIOS101 · 课程讲义 v0.2 · 2026-10-29
     fontSize: 11
     fontFamily: *id001
     color: '#A8A8B8'

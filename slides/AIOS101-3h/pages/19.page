@@ -119,7 +119,7 @@ elements:
   - 306
   - 59
   content:
-    text: <p><strong>可获得</strong>　能否找到并使用</p>
+    text: <p><strong>受益与用途</strong>　谁在什么情境中实际受益</p>
     fontSize: 18
     fontFamily: *id001
     color: '#1D2433'
@@ -165,7 +165,7 @@ elements:
   - 306
   - 59
   content:
-    text: <p><strong>可理解</strong>　文档是否支持学习</p>
+    text: <p><strong>成果质量</strong>　是否准确、适用并经过验证</p>
     fontSize: 18
     fontFamily: *id001
     color: '#1D2433'
@@ -211,7 +211,7 @@ elements:
   - 306
   - 59
   content:
-    text: <p><strong>可复用</strong>　许可与材料是否允许继续建设</p>
+    text: <p><strong>成本与维护</strong>　谁投入时间、设备与长期支持</p>
     fontSize: 18
     fontFamily: *id001
     color: '#1D2433'
@@ -257,7 +257,7 @@ elements:
   - 306
   - 59
   content:
-    text: <p><strong>可协作</strong>　反馈和贡献是否被回应</p>
+    text: <p><strong>风险与分配</strong>　谁承担伤害或被排除</p>
     fontSize: 18
     fontFamily: *id001
     color: '#1D2433'
@@ -303,7 +303,7 @@ elements:
   - 306
   - 59
   content:
-    text: <p><strong>可持续</strong>　维护、版本与治理是否清楚</p>
+    text: <p><strong>持续性</strong>　人员与需求变化后能否继续</p>
     fontSize: 18
     fontFamily: *id001
     color: '#1D2433'

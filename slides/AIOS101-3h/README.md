@@ -4,6 +4,7 @@
 - 两次休息各 10 分钟；四次主要课堂互动。
 - 主文件：`AIOS101_3h.pptd`；页面与媒体均在本目录内。
 - 正文来源：`textbook/chapters/`；图表来源与边界见教材图注。
+- 课件版本：v0.2；内容同步基线：`ca055b5`（专家自学教材修订）。
 - 生成脚本：`scripts/create_aios101_3h_deck.py`。
 - 校验：`kimi-slides check slides/AIOS101-3h --level keep`。
 - 截图：`kimi-slides screenshot slides/AIOS101-3h -o slides/AIOS101-3h-screenshots`。

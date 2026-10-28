@@ -135,7 +135,7 @@ elements:
   - 532
   - 51
   content:
-    text: <p>限定范围：只读公开资料，只写指定草稿目录</p>
+    text: <p>任务开始授权：限定可读公开资料与可写草稿目录</p>
     fontSize: 18
     fontFamily: *id001
     color: '#1D2433'
@@ -185,7 +185,7 @@ elements:
   - 532
   - 51
   content:
-    text: <p>设置节点：保存前显示路径、内容与影响，由人确认</p>
+    text: <p>本任务保存前确认；范围、对象或后果变化时重新授权</p>
     fontSize: 18
     fontFamily: *id001
     color: '#1D2433'
@@ -285,7 +285,7 @@ elements:
   - 190
   - 82
   content:
-    text: 一张流程图：资料＋工具＋人工确认＋停止条件
+    text: 流程图：范围授权＋确认节点＋停止条件
     fontSize: 18
     fontFamily: *id001
     color: '#1D2433'

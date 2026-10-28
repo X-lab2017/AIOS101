@@ -429,16 +429,18 @@ elements:
   elementType: text
   bounds:
   - 72
-  - 440
+  - 437
   - 816
-  - 30
+  - 36
   content:
-    text: 不同任务、样本与指标不能横向相减，也不能合成“能力点”。
-    fontSize: 18
+    text: '不同任务与指标不能混算；pass@1 看单次通过比例。
+
+      10 次中 6 次通过，估计为 6／10；“至少成功一次”不等于单次通过率 100%。'
+    fontSize: 16
     fontFamily: *id001
     color: '#F27A59'
     bold: true
-    lineHeight: 1.25
+    lineHeight: 1.1
     align:
     - left
     - top

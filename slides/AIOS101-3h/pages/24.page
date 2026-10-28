@@ -119,7 +119,7 @@ elements:
   - 306
   - 68
   content:
-    text: <p><strong>资产</strong>　数据、模型、代码、文档</p>
+    text: <p><strong>资产</strong>　数据、代码、参数、文档与评测</p>
     fontSize: 18
     fontFamily: *id001
     color: '#1D2433'
@@ -165,7 +165,7 @@ elements:
   - 306
   - 68
   content:
-    text: <p><strong>活动</strong>　开发、评测、分发、使用</p>
+    text: <p><strong>关系</strong>　形成、组合、交付与演化</p>
     fontSize: 18
     fontFamily: *id001
     color: '#1D2433'
@@ -211,7 +211,7 @@ elements:
   - 306
   - 68
   content:
-    text: <p><strong>关系</strong>　依赖、派生、协作、治理</p>
+    text: <p><strong>参与者</strong>　开发、发布、维护、评估与使用</p>
     fontSize: 18
     fontFamily: *id001
     color: '#1D2433'
@@ -257,7 +257,7 @@ elements:
   - 306
   - 68
   content:
-    text: <p><strong>影响</strong>　学习、创新、公共价值与风险</p>
+    text: <p><strong>规则</strong>　许可、版本、贡献与风险说明</p>
     fontSize: 18
     fontFamily: *id001
     color: '#1D2433'

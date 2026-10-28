@@ -165,7 +165,7 @@ elements:
   - 306
   - 68
   content:
-    text: <p><strong>复用</strong>　在许可条件下修改与再发布</p>
+    text: <p><strong>复用</strong>　在新情境中使用、适配与验证</p>
     fontSize: 18
     fontFamily: *id001
     color: '#1D2433'
@@ -257,7 +257,7 @@ elements:
   - 306
   - 68
   content:
-    text: <p><strong>公共价值</strong>　成果被他人学习、验证和继续建设</p>
+    text: <p><strong>公共价值</strong>　结合实际受益、成本与风险判断</p>
     fontSize: 18
     fontFamily: *id001
     color: '#1D2433'

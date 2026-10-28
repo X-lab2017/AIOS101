@@ -119,7 +119,7 @@ elements:
   - 800
   - 36
   content:
-    text: 从资产、活动、关系与影响四个维度看生态
+    text: 从资产、关系、参与者与规则四个维度看生态
     fontSize: 18
     fontFamily: *id001
     color: '#E4E3EB'

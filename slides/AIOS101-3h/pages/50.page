@@ -235,7 +235,7 @@ elements:
   - 532
   - 51
   content:
-    text: <p>记录准确性、必要信息、可读性、截断与失败</p>
+    text: <p>保留全部输出、失败与重试，不只挑最好一次；分别评价含义、完整性和格式</p>
     fontSize: 18
     fontFamily: *id001
     color: '#1D2433'
@@ -285,7 +285,7 @@ elements:
   - 190
   - 82
   content:
-    text: 一张变量表＋统一评价标准＋失败栏
+    text: 变量表＋全部输出＋统一标准＋失败栏
     fontSize: 18
     fontFamily: *id001
     color: '#1D2433'
