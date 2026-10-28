@@ -47,6 +47,31 @@ def inline(text, source, commit, routes):
     return text
 
 
+def mermaid_block(code):
+    """Render the textbook's simple node/edge subset as an accessible fallback."""
+    nodes = {}; edges = []
+    for raw in code.splitlines():
+        line = raw.strip()
+        node = re.fullmatch(r'([A-Za-z]\w*)\s*\["([^"]*)"\]', line)
+        if node:
+            nodes[node[1]] = node[2]; continue
+        edge = re.fullmatch(r'([A-Za-z]\w*)(?:\["([^"]*)"\])?\s*(-\.->|-->)\s*(?:\|([^|]*)\|\s*)?([A-Za-z]\w*)(?:\["([^"]*)"\])?', line)
+        if edge:
+            if edge[2]: nodes[edge[1]] = edge[2]
+            if edge[6]: nodes[edge[5]] = edge[6]
+            edges.append((edge[1], edge[5], edge[3], edge[4] or ''))
+    if not edges:
+        return '<pre><code>' + html.escape(code) + '</code></pre>'
+    relations = []
+    for start, end, arrow, label in edges:
+        relation = '<span class="diagram-arrow">' + ('⇢' if arrow == '-.->' else '→') + '</span>'
+        if label:
+            relation += '<span class="diagram-label">' + html.escape(label) + '</span>'
+        relations.append('<li><span class="diagram-node">' + html.escape(nodes.get(start, start)) + '</span>' + relation + '<span class="diagram-node">' + html.escape(nodes.get(end, end)) + '</span></li>')
+    source = html.escape(code)
+    return '<div class="textbook-diagram" role="group" aria-label="结构关系图"><ul class="diagram-relations">' + ''.join(relations) + '</ul><details class="diagram-source"><summary>查看 Mermaid 图源码</summary><pre><code>' + source + '</code></pre></details></div>'
+
+
 def render(text, source, commit, routes):
     lines = text.splitlines(); result = []; i = 0
     fmt = lambda value: inline(value, source, commit, routes)
@@ -55,10 +80,11 @@ def render(text, source, commit, routes):
         if not line:
             i += 1; continue
         if line.startswith('```'):
-            code = []; i += 1
+            language = line[3:].strip().lower(); code = []; i += 1
             while i < len(lines) and not lines[i].startswith('```'):
                 code.append(lines[i]); i += 1
-            result.append('<pre><code>' + html.escape('\n'.join(code)) + '</code></pre>'); i += 1; continue
+            source_code = '\n'.join(code)
+            result.append(mermaid_block(source_code) if language == 'mermaid' else '<pre><code>' + html.escape(source_code) + '</code></pre>'); i += 1; continue
         heading = re.match(r'^(#{1,6})\s+(.+)', line)
         if heading:
             level = min(6, max(2, len(heading[1])))

@@ -51,7 +51,9 @@ for path,name in resources:
     # Downloads point to the matching source commit, independent of local app routes.
     raw = re.sub(r'\[([^\]]+)\]\(([^)]+)\)',lambda m:'['+m[1]+']('+destination(m[2],path,commit,{})+')',raw)
     (OUT/'resources'/name).write_text(raw,encoding='utf-8')
-# Historical download path remains valid.
-shutil.copyfile(OUT/'resources/PREFACE.md',OUT/'resources/preface.md')
+# Historical download path remains valid; Windows treats these names as one file.
+legacy_preface = OUT/'resources/preface.md'
+if not legacy_preface.exists() or not os.path.samefile(OUT/'resources/PREFACE.md', legacy_preface):
+    shutil.copyfile(OUT/'resources/PREFACE.md', legacy_preface)
 (OUT/'.nojekyll').write_text('')
 print(f'Built {len(units)} complete reading units, {len(worksheets)} worksheets and {len(chapters)} course chapters')
