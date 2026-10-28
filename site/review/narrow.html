@@ -8,6 +8,9 @@
 const params=new URLSearchParams(location.search);
 const chapter=/^CH0[1-6]$/.test(params.get('chapter'))?params.get('chapter'):'CH04';
 const figure=/^[1-6]-[0-9]{1,2}$/.test(params.get('figure'))?params.get('figure'):'';
+const revision=/^[a-f0-9]{7,40}$/.test(params.get('revision'))?params.get('revision'):'';
+const cacheKey=revision?'?review='+revision:'';
 document.querySelector('select').value=chapter;document.querySelector('input').value=figure;
-for(const width of [320,390]){const section=document.createElement('section');const label=document.createElement('p');label.textContent=`${figure?'图 '+figure:chapter} · ${width}px`;const frame=document.createElement('iframe');frame.width=width;frame.id='w'+width;frame.title=label.textContent;frame.src=figure?'../figures/'+figure+'.html':'../#/learn/'+chapter;section.append(label,frame);document.querySelector('.frames').append(section);}
+if(revision){const input=document.createElement('input');input.type='hidden';input.name='revision';input.value=revision;document.querySelector('form').append(input);}
+for(const width of [320,390]){const section=document.createElement('section');const label=document.createElement('p');label.textContent=`${figure?'图 '+figure:chapter} · ${width}px`;const frame=document.createElement('iframe');frame.width=width;frame.id='w'+width;frame.title=label.textContent;frame.src=figure?'../figures/'+figure+'.html'+cacheKey:'../'+cacheKey+'#/learn/'+chapter;section.append(label,frame);document.querySelector('.frames').append(section);}
 </script></body></html>
