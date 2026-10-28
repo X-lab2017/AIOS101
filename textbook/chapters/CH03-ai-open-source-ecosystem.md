@@ -1,8 +1,8 @@
 # 第 3 章　AI 开源生态全景：数据、模型、代码、工具链与社区
 
-> 版本：v0.2
+> 版本：v0.3
 >
-> 状态：打印教材草稿
+> 状态：前六章图文评审版（2026-10-29）
 >
 > 对应规格：[CH03](../../specs/chapters/CH03-ai-open-source-ecosystem-spec.md)
 
@@ -46,7 +46,7 @@
 
 ![图 3-1　AI 开源生态的四个观察维度](../assets/figures/AIOS101_Fig-03-01_ecosystem-dimensions_v01.webp)
 
-图 3-1　AI 开源生态的四个观察维度。四类要素共同进入观察框架；箭头只表示“构成分析维度”，不表达具体项目依赖。
+图 3-1　AI 开源生态的四个观察维度。资产、关系、参与者与规则构成观察框架；材料并列不表示两个项目存在依赖。材料来源与固定版本见[附图来源记录](../assets/figures/README.md)。
 
 <details>
 <summary>结构关系与 Mermaid 源码</summary>
@@ -108,11 +108,11 @@ AI 资产既包括数据、代码和模型参数，也包括文档、评测、�
 
 ![图 3-2　Agent Infra 技术全景](../assets/figures/AIOS101_Fig-03-02_agent-infra-landscape_v01.webp)
 
-图 3-2　GOSD 2026 图 4-1-1“Agent Infra 技术全景”：任务入口、构建与编排、运行支撑三组及 86 个精选项目。分类布局不表示依赖。
+图 3-2　Agent Infra 技术全景。任务入口、构建与编排、运行支撑三组，共 86 个精选项目；分类布局不表示依赖。来源：[GOSD 2026 图 4-1-1](https://www.x-lab.info/2026-Global-Open-Source-Development-Report/2026/zh/chapters/04/)（2026-10-28 导出）。
 
 ![图 3-3　Model Infra 技术全景](../assets/figures/AIOS101_Fig-03-03_model-infra-landscape_v01.webp)
 
-图 3-3　GOSD 2026 图 4-1-2“Model Infra 技术全景”：模型服务与后训练、预训练与加速、数据与计算三组及 59 个精选项目。
+图 3-3　Model Infra 技术全景。模型服务与后训练、预训练与加速、数据与计算三组，共 59 个精选项目；不是生态普查。来源：[GOSD 2026 图 4-1-2](https://www.x-lab.info/2026-Global-Open-Source-Development-Report/2026/zh/chapters/04/)（2026-10-28 导出）。
 
 这里有三个边界必须随图一起阅读：145 个项目是精选样本，不是全球项目普查；图中的位置表示功能分层，不表示项目之间已经存在依赖关系；项目数量也不自动代表该类能力更完整、采用更广或质量更高。报告中的技术分类观察窗口为 2025 年 3 月至 2026 年 8 月，该时间范围不代表每个项目在整个期间都有观测值。
 
@@ -204,7 +204,7 @@ DeepSeek-R1 README 说明，六个蒸馏模型使用 DeepSeek-R1 生成的样本
 
 ![图 3-4　区分生态关系与证据](../assets/figures/AIOS101_Fig-03-04_ecosystem-relations_v01.webp)
 
-图 3-4　功能分层与五类生态关系。各组连线回答不同问题，需要不同证据；功能分层使用虚线，表示“分类观察”而不是实际依赖。
+图 3-4　区分生态关系与证据。各组连线回答不同问题，需要不同证据；虚线表示功能分类，不表示实际依赖。
 
 <details>
 <summary>结构关系与 Mermaid 源码</summary>
@@ -272,7 +272,7 @@ AI 开源生态中的参与者不只是模型作者和程序员。常见角色�
 
 ![图 3-5　DeepSeek-R1 的资产与关系](../assets/figures/AIOS101_Fig-03-05_deepseek-asset-relations_v01.webp)
 
-图 3-5　以 DeepSeek-R1 固定 README 为证据起点的资产与关系。实线表示文档说明的上游、样本或分发联系；虚线表示运行示例和产品服务入口。该图没有声称 vLLM 与 SGLang 必须同时使用，也不表示在线产品与可下载模型是同一交付对象。
+图 3-5　DeepSeek-R1 的资产与关系。实线表示文档说明的上游、样本与分发联系，虚线表示运行示例和产品入口；不要求同时使用 vLLM 与 SGLang。在线产品与可下载模型不是同一交付对象。依据：[DeepSeek-R1 README](https://github.com/deepseek-ai/DeepSeek-R1/blob/0cf78561f1d51c84a21b2190626b21116d5c68bb/README.md)（0cf7856）；文档说明不等于完整复现证据。
 
 <details>
 <summary>结构关系与 Mermaid 源码</summary>
@@ -310,7 +310,7 @@ GOSD 2026 的 4.2 节把视线从软件项目转向模型任务。它使用 2026
 
 ![图 3-6　AI 大模型任务与能力全景](../assets/figures/AIOS101_Fig-03-06_model-task-landscape_v01.webp)
 
-图 3-6　GOSD 2026 图 4-2-1“AI 大模型任务与能力全景”：六类任务、每类 16 个模型；2026-10-02 取样，下载次序不等于能力排名。
+图 3-6　AI 大模型任务与能力全景。六类任务各取 16 个模型，2026-10-02 取样；下载次序不等于能力排名。来源：[GOSD 2026 图 4-2-1](https://www.x-lab.info/2026-Global-Open-Source-Development-Report/2026/zh/chapters/04/)（2026-10-28 导出）。
 
 4.6 节的 PyTorch 生态全景采用另一种组织方式。**PyTorch** 是常用的机器学习框架，但围绕它形成的不只是一个核心代码库，还有模型任务、训练执行、工程支撑和社区协作材料。报告把 83 条相关项目记录组织为 13 个技术类别及一个待核区：计算机视觉、音频、强化学习、领域应用、数据、隐私、训练、分布式训练、编译器与运行时、优化、MLOps、核心基础设施、文档与社区。MLOps 指支持机器学习开发、部署、监测和维护的工程实践。另有一条记录的分类或样本适用性待核，报告没有把它强行归入确定类别。
 
@@ -318,7 +318,7 @@ GOSD 2026 的 4.2 节把视线从软件项目转向模型任务。它使用 2026
 
 ![图 3-7　PyTorch 开发与工程生态全景](../assets/figures/AIOS101_Fig-03-07_pytorch-ecosystem_v01.webp)
 
-图 3-7　GOSD 2026 图 4-6-1“PyTorch 开发与工程生态全景”：13 个技术类别、待核区及 83 条项目记录。
+图 3-7　PyTorch 开发与工程生态全景。13 个技术类别、待核区及 83 条项目记录；分类不表示基金会成员或软件依赖。来源：[GOSD 2026 图 4-6-1](https://www.x-lab.info/2026-Global-Open-Source-Development-Report/2026/zh/chapters/04/)（2026-10-28 导出）。
 
 ### 2. 图上的一条边，必须说明是什么边
 
@@ -337,7 +337,7 @@ Open Galaxy 把**记录关系**与**模型推断关系**分开：前者来自数
 
 ![图 3-8　OpenDipper 开源星系界面](../assets/figures/AIOS101_Fig-03-08_opendipper-open-galaxy_v01.webp)
 
-图 3-8　OpenDipper 开源星系的模型网络、记录／推断关系控制与局部关系说明。截图日期为 2026-10-28，模型数据日期为 2026-08-05；当前界面不冒充教材引用的旧提交界面。
+图 3-8　OpenDipper 开源星系界面。保留记录／推断关系控制与局部关系说明；当前界面不冒充教材引用的旧提交界面，页面刷新不代表数据更新。来源：[OpenDipper](https://www.x-lab.info/open-dipper/)（界面截图 2026-10-28；模型数据 2026-08-05）。
 
 一张负责任的生态图至少应让读者看见：
 

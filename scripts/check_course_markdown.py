@@ -66,3 +66,32 @@ print('PASS: 44 registered images, dimensions, local assets, portable downloads,
 # Decision-node labels and branches must survive the text fallback.
 decision = render('```mermaid\nflowchart TD\n A["开始"] --> D{"继续？"}\n D -->|否| E["结束"]\n```', source, commit, {})
 assert "继续？" in decision and "开始" in decision and "结束" in decision and "否" in decision
+
+# Labeled dotted edges carry essential leakage and context-limit boundaries.
+dotted = render('```mermaid\nflowchart LR\n X["近重复测试样本"] -. "不当泄漏" .-> T["训练集"]\n```', source, commit, {})
+assert '<span class="diagram-label">不当泄漏</span>' in dotted
+assert '<span class="diagram-node">近重复测试样本</span>' in dotted and '⇢' in dotted
+
+# Every current figure gets a captioned zoom page. Main reading never loads SVGs.
+import re
+for f in figures:
+    page = (root/'dist/figures'/ (f['id']+'.html')).read_text()
+    assert f'data-width="{f["width"]}"' in page
+    assert 'data-scale="fit"' in page and 'data-scale="2"' in page
+    assert 'maximum-scale' not in page and 'user-scalable=no' not in page
+    assert '<p class="figure-caption">图 '+f['id']+'　' in page
+    if f.get('zoomFile'):
+        assert '<svg' in page and (root/'dist/textbook/assets/figures'/f['zoomFile']).is_file()
+    assert (root/'textbook/assets/figures'/f['file']).stat().st_size == f['bytes']
+for ch in range(1,7):
+    path = next((root/'textbook/chapters').glob(f'CH{ch:02}-*.md'))
+    raw = path.read_text()
+    blocks=re.findall(r'!\[图 (\d+-\d+)　[^\]]+\]\([^)]+\)[\s\S]*?<details>\n<summary>结构关系与 Mermaid 源码</summary>\n\n```mermaid\n([\s\S]*?)```',raw)
+    # Match each block to the immediately preceding figure (real-material figures
+    # between structural ones must not be associated with a later Mermaid block).
+    for match in re.finditer(r'```mermaid\n([\s\S]*?)```',raw):
+        number=re.findall(r'!\[图 (\d+-\d+)　',raw[:match.start()])[-1]
+        assert match[1].strip() == (root/'textbook/assets/figures/mermaid'/f'Fig-{number}.mmd').read_text().strip(),number
+    assert not any(old in raw for old in ['正式绘制可用','真实截图占位'])
+assert (root/'dist/figure-fonts/figure-sans.woff').is_file()
+print('PASS: 44 captioned zoom pages, source parity and labeled dotted edges')

@@ -1,8 +1,8 @@
 # 第 2 章　开源的本质：开放、复用、协作与公共价值
 
-> 版本：v0.5
+> 版本：v0.6
 >
-> 状态：打印教材修订稿
+> 状态：前六章图文评审版（2026-10-29）
 >
 > 对应规格：[CH02](../../specs/chapters/CH02-open-source-mechanisms-spec.md)
 
@@ -33,7 +33,7 @@ AIInfra 是一个在 GitHub 上公开维护的 AI 基础设施课程项目。本
 
 ![图 2-1　开放、复用、协作与公共价值](../assets/figures/AIOS101_Fig-02-01_open-source-mechanism_v01.webp)
 
-图 2-1　开放、复用、协作与公共价值相互关联，但每个箭头都有额外条件，不能理解为自动升级；虚线表示公共价值目标对开放方式的反向约束。
+图 2-1　开放、复用、协作与公共价值。每个箭头都有额外条件，不能理解为自动升级；虚线表示公共价值目标对开放方式的反向约束。
 
 <details>
 <summary>结构关系与 Mermaid 源码</summary>
@@ -179,7 +179,7 @@ GitHub 官方文档把 PR 描述为提出、讨论、评审和合并更改的协
 
 ![图 2-2　Issue 与 PR：两种协作入口](../assets/figures/AIOS101_Fig-02-02_issue-pr-workflow_v01.webp)
 
-图 2-2　Issue 与 PR 是两种可以独立存在的协作记录，不以“每个 Issue 必然产生 PR”或“每个 PR 都来自同一 Issue”为前提；是否修改和合并由具体项目过程决定。
+图 2-2　Issue 与 PR：两种协作入口。两种记录可以独立存在；不表示每个 Issue 必然产生 PR，是否修改与合并取决于项目过程。
 
 <details>
 <summary>结构关系与 Mermaid 源码</summary>
@@ -214,7 +214,7 @@ AIInfra 的 [PR #364](https://github.com/Infrasys-AI/AIInfra/pull/364) 于 2025 
 
 ![图 2-3　AIInfra Issue #386 与 PR #364](../assets/figures/AIOS101_Fig-02-03_aiinfra-evidence_v01.webp)
 
-图 2-3　AIInfra Issue #386 与 PR #364 的真实记录：问题标题、开放状态、证据链接，以及单文件差异与合并状态。两条记录独立，不属于同一修复过程。
+图 2-3　AIInfra Issue #386 与 PR #364。保留标题、状态、证据入口、单文件差异与合并信息；两条记录独立，不属于同一修复过程。来源：[AIInfra Issue #386](https://github.com/Infrasys-AI/AIInfra/issues/386) 与 [PR #364 文件差异](https://github.com/Infrasys-AI/AIInfra/pull/364/files)（截图 2026-10-28；PR 合并于 2025-12-22）。
 
 ### 3. 贡献与维护都不只等于代码数量
 
@@ -252,7 +252,7 @@ Star、下载量、浏览量和贡献者数量可以提供关注或活动信号�
 
 ![图 2-4　公共价值的五类证据](../assets/figures/AIOS101_Fig-02-04_public-value-evidence_v01.webp)
 
-图 2-4　公共价值需要多类证据共同判断；关注量、下载量或许可证名称都不能替代这五个观察维度。
+图 2-4　公共价值的五类证据。关注量、下载量或许可证名称不能代替受益者、成果质量、风险分配、成本维护与持续性的证据。
 
 <details>
 <summary>结构关系与 Mermaid 源码</summary>

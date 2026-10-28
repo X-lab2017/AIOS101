@@ -70,13 +70,14 @@ def figure_image(label, target, source):
     if not record or not (root/path).is_file():
         raise ValueError('Unregistered or missing figure: ' + path)
     url = html.escape(quote(path), quote=True)
+    viewer = 'figures/' + record['id'] + '.html'
     alt = html.escape(label, quote=True)
     display_width = max(520, min(920, int(record.get('displayWidth', 780))))
-    return ('<figure class="textbook-figure" style="max-width:' + str(display_width) + 'px"><a class="figure-open" href="' + url +
+    return ('<figure class="textbook-figure" id="fig-' + record['id'] + '" style="max-width:' + str(display_width) + 'px"><a class="figure-open" href="' + viewer +
             '" target="_blank" rel="noopener noreferrer" aria-label="' + alt + ' · 查看大图 / Open full size">' +
             '<img src="' + url + '" alt="' + alt + '" width="' + str(record['width']) +
             '" height="' + str(record['height']) + '" loading="lazy" decoding="async"></a>' +
-            '<figcaption><a href="' + url + '" target="_blank" rel="noopener noreferrer">查看大图 / Open full size ↗</a></figcaption></figure>')
+            '<figcaption><a href="' + viewer + '" target="_blank" rel="noopener noreferrer">放大查看 ↗</a></figcaption></figure>')
 
 
 def mermaid_block(code):
@@ -84,6 +85,9 @@ def mermaid_block(code):
     nodes = {}; edges = []
     for raw in code.splitlines():
         line = raw.strip()
+        # Mermaid permits labels between the two halves of a dotted arrow.
+        # Normalize that form so the accessible relationship list keeps the edge.
+        line = re.sub(r'-\.\s*"([^"]*)"\s*\.->', r'-.->|\1|', line)
         node = re.fullmatch(r'([A-Za-z]\w*)\s*[\[{]"([^"]*)"[\]}]', line)
         if node:
             nodes[node[1]] = node[2]; continue

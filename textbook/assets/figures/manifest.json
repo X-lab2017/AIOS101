@@ -7,7 +7,10 @@
     "height": 1024,
     "bytes": 391360,
     "originalBytes": 3016294,
-    "insertion": "第一章／一／1"
+    "insertion": "第一章／一／1",
+    "alt": "使用、理解与创造：三种学习位置",
+    "displayWidth": 780,
+    "sourceUrls": []
   },
   {
     "id": "1-2",
@@ -17,7 +20,10 @@
     "height": 1024,
     "bytes": 526716,
     "originalBytes": 3373619,
-    "insertion": "第一章／三／3 后"
+    "insertion": "第一章／三／3 后",
+    "alt": "软件开源的三个历史坐标",
+    "displayWidth": 780,
+    "sourceUrls": []
   },
   {
     "id": "1-3",
@@ -27,7 +33,10 @@
     "height": 1024,
     "bytes": 361344,
     "originalBytes": 2914591,
-    "insertion": "第一章／四／1"
+    "insertion": "第一章／四／1",
+    "alt": "理解 AI 开放的六类材料",
+    "displayWidth": 780,
+    "sourceUrls": []
   },
   {
     "id": "1-4",
@@ -37,7 +46,12 @@
     "height": 1560,
     "bytes": 352918,
     "originalBytes": 1173893,
-    "insertion": "第一章／四／2"
+    "insertion": "第一章／四／2",
+    "alt": "DeepSeek-R1 固定 README 证据",
+    "displayWidth": 780,
+    "sourceUrls": [
+      "https://github.com/deepseek-ai/DeepSeek-R1/blob/0cf78561f1d51c84a21b2190626b21116d5c68bb/README.md"
+    ]
   },
   {
     "id": "2-1",
@@ -47,7 +61,10 @@
     "height": 1024,
     "bytes": 483434,
     "originalBytes": 3149725,
-    "insertion": "第二章／一"
+    "insertion": "第二章／一",
+    "alt": "开放、复用、协作与公共价值",
+    "displayWidth": 780,
+    "sourceUrls": []
   },
   {
     "id": "2-2",
@@ -57,7 +74,10 @@
     "height": 1024,
     "bytes": 343592,
     "originalBytes": 2883739,
-    "insertion": "第二章／四／3"
+    "insertion": "第二章／四／3",
+    "alt": "Issue 与 PR：两种协作入口",
+    "displayWidth": 780,
+    "sourceUrls": []
   },
   {
     "id": "2-3",
@@ -67,7 +87,13 @@
     "height": 2190,
     "bytes": 489786,
     "originalBytes": 1934003,
-    "insertion": "第二章／五／2"
+    "insertion": "第二章／五／2",
+    "alt": "AIInfra Issue #386 与 PR #364",
+    "displayWidth": 780,
+    "sourceUrls": [
+      "https://github.com/Infrasys-AI/AIInfra/issues/386",
+      "https://github.com/Infrasys-AI/AIInfra/pull/364/files"
+    ]
   },
   {
     "id": "2-4",
@@ -77,7 +103,10 @@
     "height": 1024,
     "bytes": 500164,
     "originalBytes": 3227289,
-    "insertion": "第二章／六"
+    "insertion": "第二章／六",
+    "alt": "公共价值的五类证据",
+    "displayWidth": 780,
+    "sourceUrls": []
   },
   {
     "id": "3-1",
@@ -87,7 +116,10 @@
     "height": 1815,
     "bytes": 349480,
     "originalBytes": 1131684,
-    "insertion": "第三章／一"
+    "insertion": "第三章／一",
+    "alt": "AI 开源生态的四个观察维度",
+    "displayWidth": 780,
+    "sourceUrls": []
   },
   {
     "id": "3-2",
@@ -97,7 +129,12 @@
     "height": 1718,
     "bytes": 371260,
     "originalBytes": 660736,
-    "insertion": "第三章／二／2"
+    "insertion": "第三章／二／2",
+    "alt": "Agent Infra 技术全景",
+    "displayWidth": 780,
+    "sourceUrls": [
+      "https://www.x-lab.info/2026-Global-Open-Source-Development-Report/2026/zh/chapters/04/"
+    ]
   },
   {
     "id": "3-3",
@@ -107,7 +144,12 @@
     "height": 1718,
     "bytes": 319740,
     "originalBytes": 549624,
-    "insertion": "第三章／二／2"
+    "insertion": "第三章／二／2",
+    "alt": "Model Infra 技术全景",
+    "displayWidth": 780,
+    "sourceUrls": [
+      "https://www.x-lab.info/2026-Global-Open-Source-Development-Report/2026/zh/chapters/04/"
+    ]
   },
   {
     "id": "3-4",
@@ -117,7 +159,12 @@
     "height": 1680,
     "bytes": 198912,
     "originalBytes": 306288,
-    "insertion": "第三章／四"
+    "insertion": "第三章／四",
+    "vector": "vector/AIOS101_Fig-03-04_ecosystem-relations_v01.svg",
+    "zoomFile": "vector/AIOS101_Fig-03-04_ecosystem-relations_v01.svg",
+    "alt": "区分生态关系与证据",
+    "displayWidth": 780,
+    "sourceUrls": []
   },
   {
     "id": "3-5",
@@ -127,7 +174,14 @@
     "height": 1620,
     "bytes": 190576,
     "originalBytes": 277022,
-    "insertion": "第三章／六"
+    "insertion": "第三章／六",
+    "vector": "vector/AIOS101_Fig-03-05_deepseek-asset-relations_v01.svg",
+    "zoomFile": "vector/AIOS101_Fig-03-05_deepseek-asset-relations_v01.svg",
+    "alt": "DeepSeek-R1 的资产与关系",
+    "displayWidth": 780,
+    "sourceUrls": [
+      "https://github.com/deepseek-ai/DeepSeek-R1/blob/0cf78561f1d51c84a21b2190626b21116d5c68bb/README.md"
+    ]
   },
   {
     "id": "3-6",
@@ -137,7 +191,12 @@
     "height": 2018,
     "bytes": 440386,
     "originalBytes": 687718,
-    "insertion": "第三章／七／1"
+    "insertion": "第三章／七／1",
+    "alt": "AI 大模型任务与能力全景",
+    "displayWidth": 780,
+    "sourceUrls": [
+      "https://www.x-lab.info/2026-Global-Open-Source-Development-Report/2026/zh/chapters/04/"
+    ]
   },
   {
     "id": "3-7",
@@ -147,7 +206,12 @@
     "height": 2018,
     "bytes": 317558,
     "originalBytes": 527217,
-    "insertion": "第三章／七／1"
+    "insertion": "第三章／七／1",
+    "alt": "PyTorch 开发与工程生态全景",
+    "displayWidth": 780,
+    "sourceUrls": [
+      "https://www.x-lab.info/2026-Global-Open-Source-Development-Report/2026/zh/chapters/04/"
+    ]
   },
   {
     "id": "3-8",
@@ -157,21 +221,27 @@
     "height": 2670,
     "bytes": 506272,
     "originalBytes": 2304447,
-    "insertion": "第三章／七／2"
+    "insertion": "第三章／七／2",
+    "alt": "OpenDipper 开源星系界面",
+    "displayWidth": 780,
+    "sourceUrls": [
+      "https://www.x-lab.info/open-dipper/"
+    ]
   },
   {
     "id": "4-1",
     "title": "模型形成的基本要素",
-    "file": "AIOS101_Fig-04-01_v01.webp",
+    "file": "AIOS101_Fig-04-01_v02.webp",
     "width": 1600,
     "height": 1100,
-    "bytes": 97516,
-    "originalBytes": 423516,
+    "bytes": 100956,
     "insertion": "第 4 章 / 二、模型形成需要哪些要素 / 5. 算力：让学习过程实际发生",
-    "alt": "数据、模型结构、学习算法与目标、算力与软件环境共同进入训练；训练形成或更新模型参数，结构与参数共同构成可运行模型的核心。",
+    "alt": "数据、结构、学习算法与算力共同支持训练；图中突出训练形成或更新的参数。训练也会使用初始参数或已有参数。",
     "displayWidth": 780,
     "sourceUrls": [],
-    "vector": "vector/AIOS101_Fig-04-01_v01.svg"
+    "vector": "vector/AIOS101_Fig-04-01_v02.svg",
+    "revision": "2026-10-29",
+    "zoomFile": "vector/AIOS101_Fig-04-01_v02.svg"
   },
   {
     "id": "4-2",
@@ -187,7 +257,8 @@
     "sourceUrls": [
       "https://arxiv.org/html/2406.17557v2"
     ],
-    "vector": "vector/AIOS101_Fig-04-02_v01.svg"
+    "vector": "vector/AIOS101_Fig-04-02_v01.svg",
+    "zoomFile": "vector/AIOS101_Fig-04-02_v01.svg"
   },
   {
     "id": "4-3",
@@ -206,7 +277,7 @@
   },
   {
     "id": "4-4",
-    "title": "分词、下一 token 候选分布与训练目标的简化关系",
+    "title": "分词、下一 token 候选分布与训练目标",
     "file": "AIOS101_Fig-04-04_v01.webp",
     "width": 1600,
     "height": 1450,
@@ -216,7 +287,8 @@
     "alt": "两个独立教学示例：我爱开源 AI 被假想切成四个 token；前文开源社区鼓励共同的候选概率分别为创造 0.55、协作 0.30、讨论 0.10、其他 0.05。实际后续 token 与候选分布比较形成损失。数字不是实测或事实正确率。",
     "displayWidth": 780,
     "sourceUrls": [],
-    "vector": "vector/AIOS101_Fig-04-04_v01.svg"
+    "vector": "vector/AIOS101_Fig-04-04_v01.svg",
+    "zoomFile": "vector/AIOS101_Fig-04-04_v01.svg"
   },
   {
     "id": "4-5",
@@ -230,21 +302,23 @@
     "alt": "读取一批样本，使用当前参数处理输入，得到候选分布，计算损失，通过反向传播估计梯度，由优化器按学习率等设置更新参数，再进入下一批样本，形成循环。",
     "displayWidth": 780,
     "sourceUrls": [],
-    "vector": "vector/AIOS101_Fig-04-05_v01.svg"
+    "vector": "vector/AIOS101_Fig-04-05_v01.svg",
+    "zoomFile": "vector/AIOS101_Fig-04-05_v01.svg"
   },
   {
     "id": "4-6",
-    "title": "批次、迭代、训练轮次与检查点的关系",
-    "file": "AIOS101_Fig-04-06_v01.webp",
+    "title": "批次、迭代、训练轮次与检查点",
+    "file": "AIOS101_Fig-04-06_v02.webp",
     "width": 1600,
-    "height": 1440,
-    "bytes": 84160,
-    "originalBytes": 374049,
+    "height": 1520,
+    "bytes": 116160,
     "insertion": "第 4 章 / 四、模型怎样从数据中学习 / 3. 梯度与反向传播：怎样确定参数调整方向",
-    "alt": "训练集分成批次，每批对应一次迭代；完整处理一轮训练集构成一个 epoch。可以继续下一轮，或按设定步骤保存参数与相关状态为检查点，用于恢复、比较或后续适配。检查点不自动等于最佳模型。",
+    "alt": "一轮完整处理训练集构成一个 epoch；检查点可按训练步骤等策略保存，不必等到一轮结束，也不自动等于最佳模型。图中按一批一次更新简化说明。",
     "displayWidth": 780,
     "sourceUrls": [],
-    "vector": "vector/AIOS101_Fig-04-06_v01.svg"
+    "vector": "vector/AIOS101_Fig-04-06_v02.svg",
+    "revision": "2026-10-29",
+    "zoomFile": "vector/AIOS101_Fig-04-06_v02.svg"
   },
   {
     "id": "4-7",
@@ -260,11 +334,12 @@
     "sourceUrls": [
       "https://github.com/deepseek-ai/DeepSeek-R1/blob/0cf78561f1d51c84a21b2190626b21116d5c68bb/README.md"
     ],
-    "vector": "vector/AIOS101_Fig-04-07_v01.svg"
+    "vector": "vector/AIOS101_Fig-04-07_v01.svg",
+    "zoomFile": "vector/AIOS101_Fig-04-07_v01.svg"
   },
   {
     "id": "4-8",
-    "title": "DeepSeek-R1 固定 README 的 Model Summary 与 Model Downloads 局部截图",
+    "title": "DeepSeek-R1 形成路径的原始证据",
     "file": "AIOS101_Fig-04-08_v01.webp",
     "width": 1600,
     "height": 2460,
@@ -289,11 +364,12 @@
     "alt": "样本分为训练、验证和保留测试集。训练更新参数，验证比较与监测，候选选择完成后接触测试。虚线提示测试样本的转载、裁剪或近重复不当进入训练或选择，以及测试只支持有限结论。",
     "displayWidth": 780,
     "sourceUrls": [],
-    "vector": "vector/AIOS101_Fig-04-09_v01.svg"
+    "vector": "vector/AIOS101_Fig-04-09_v01.svg",
+    "zoomFile": "vector/AIOS101_Fig-04-09_v01.svg"
   },
   {
     "id": "5-1",
-    "title": "上下文容量与最大生成长度的区别",
+    "title": "上下文容量与最大生成长度",
     "file": "AIOS101_Fig-05-01_v01.webp",
     "width": 1600,
     "height": 1600,
@@ -303,7 +379,8 @@
     "alt": "系统提示、历史对话、用户材料和任务组成输入上下文。上下文容量同时约束输入和新输出，最大生成长度只限制新输出，实际回答可能更短。容器面积不代表固定分配比例。",
     "displayWidth": 700,
     "sourceUrls": [],
-    "vector": "vector/AIOS101_Fig-05-01_v01.svg"
+    "vector": "vector/AIOS101_Fig-05-01_v01.svg",
+    "zoomFile": "vector/AIOS101_Fig-05-01_v01.svg"
   },
   {
     "id": "5-2",
@@ -317,21 +394,23 @@
     "alt": "提示与上下文经过分词和预填充，模型计算下一 token 候选分布，生成策略选择一个 token，将其加入输出与后续上下文；未达到结束条件则继续，达到则完成返回。普通推理不更新参数。",
     "displayWidth": 780,
     "sourceUrls": [],
-    "vector": "vector/AIOS101_Fig-05-02_v01.svg"
+    "vector": "vector/AIOS101_Fig-05-02_v01.svg",
+    "zoomFile": "vector/AIOS101_Fig-05-02_v01.svg"
   },
   {
     "id": "5-3",
     "title": "生成 top-k 与 top-p 的简化对照",
-    "file": "AIOS101_Fig-05-03_v01.webp",
+    "file": "AIOS101_Fig-05-03_v02.webp",
     "width": 1600,
-    "height": 1420,
-    "bytes": 85090,
-    "originalBytes": 363946,
+    "height": 1400,
+    "bytes": 104362,
     "insertion": "第 5 章 / 三、从候选分布到具体文字：生成策略怎样影响输出 / 3. top-k 与 top-p：用不同方式缩小候选范围",
     "alt": "教学候选晴朗、寒冷、温暖、潮湿、安静的概率为 0.55、0.25、0.12、0.05、0.03。top-k 等于 2 保留前两项，top-p 等于 0.90 保留累计达到 0.92 的前三项，再在保留集合内选择。",
     "displayWidth": 780,
     "sourceUrls": [],
-    "vector": "vector/AIOS101_Fig-05-03_v01.svg"
+    "vector": "vector/AIOS101_Fig-05-03_v02.svg",
+    "revision": "2026-10-29",
+    "zoomFile": "vector/AIOS101_Fig-05-03_v02.svg"
   },
   {
     "id": "5-4",
@@ -345,11 +424,12 @@
     "alt": "候选概率、温度、top-k、top-p、随机种子与实现环境共同影响生成策略与 token 选择；最大生成长度与停止条件影响何时结束。任何单个参数都不能保证真实性。",
     "displayWidth": 780,
     "sourceUrls": [],
-    "vector": "vector/AIOS101_Fig-05-04_v01.svg"
+    "vector": "vector/AIOS101_Fig-05-04_v01.svg",
+    "zoomFile": "vector/AIOS101_Fig-05-04_v01.svg"
   },
   {
     "id": "5-5",
-    "title": "DeepSeek-R1 固定 README 的 Usage Recommendations 截图",
+    "title": "DeepSeek-R1 的生成与测试建议",
     "file": "AIOS101_Fig-05-05_v01.webp",
     "width": 1600,
     "height": 1280,
@@ -365,16 +445,17 @@
   {
     "id": "5-6",
     "title": "模型推理的系统分层",
-    "file": "AIOS101_Fig-05-06_v01.webp",
+    "file": "AIOS101_Fig-05-06_v02.webp",
     "width": 1600,
     "height": 1500,
-    "bytes": 80838,
-    "originalBytes": 361274,
+    "bytes": 83438,
     "insertion": "第 5 章 / 五、模型之外：推理系统怎样运行 / 1. 一个回答经过多个系统层",
     "alt": "任务经过客户端与网络、服务与队列、推理引擎，结合模型及配置和硬件软件环境形成结果，再经服务返回客户端。图为概念分层，不是对某个产品内部架构的测量。",
     "displayWidth": 780,
     "sourceUrls": [],
-    "vector": "vector/AIOS101_Fig-05-06_v01.svg"
+    "vector": "vector/AIOS101_Fig-05-06_v02.svg",
+    "revision": "2026-10-29",
+    "zoomFile": "vector/AIOS101_Fig-05-06_v02.svg"
   },
   {
     "id": "5-7",
@@ -388,54 +469,57 @@
     "alt": "单请求沿网络与排队、预填充、首 token 出现、继续解码到完整回答结束；首 token 延迟和完整响应时间用不同括号标出。同时段其他请求共同构成整个服务的吞吐统计。时间不按比例。",
     "displayWidth": 700,
     "sourceUrls": [],
-    "vector": "vector/AIOS101_Fig-05-07_v01.svg"
+    "vector": "vector/AIOS101_Fig-05-07_v01.svg",
+    "zoomFile": "vector/AIOS101_Fig-05-07_v01.svg"
   },
   {
     "id": "5-8",
     "title": "最小评价的证据链",
-    "file": "AIOS101_Fig-05-08_v01.webp",
+    "file": "AIOS101_Fig-05-08_v02.webp",
     "width": 1600,
     "height": 1430,
-    "bytes": 106402,
-    "originalBytes": 457368,
+    "bytes": 108192,
     "insertion": "第 5 章 / 七、从一次回答走向最小评价 / 1. 先定义任务，再讨论模型好坏",
     "alt": "评价证据链依次为定义任务和使用者、固定样本范围、确定基线、选择指标、记录完整配置、重复运行并保留失败、解释有限结论和后续改进。",
     "displayWidth": 780,
     "sourceUrls": [],
-    "vector": "vector/AIOS101_Fig-05-08_v01.svg"
+    "vector": "vector/AIOS101_Fig-05-08_v02.svg",
+    "revision": "2026-10-29",
+    "zoomFile": "vector/AIOS101_Fig-05-08_v02.svg"
   },
   {
     "id": "5-9",
-    "title": "DeepSeek-R1 固定 README 的 Evaluation Results 设置与主评测表局部截图",
-    "file": "AIOS101_Fig-05-09_v01.webp",
+    "title": "DeepSeek-R1 的评测设置与主评测表",
+    "file": "AIOS101_Fig-05-09_v02.webp",
     "width": 1600,
     "height": 2410,
-    "bytes": 215986,
-    "originalBytes": 2699327,
+    "bytes": 224716,
     "insertion": "第 5 章 / 八、怎样阅读 DeepSeek-R1 的公开评测 / 3. 用几个真实数值练习“有限结论”",
-    "alt": "DeepSeek-R1 固定 README 的评测设置与主表：最大生成 32768、温度 0.6、top-p 0.95、每题 64 个回答；表中保留 English、Code、Math、Chinese 四类任务与包括 AIME、MATH-500、SimpleQA、C-SimpleQA、LiveCodeBench 在内的项目自报数字。",
+    "alt": "先读适用条件，再按各任务指标解释项目自报结果。其模型最大生成长度为 32,768 token；需采样的基准使用温度 0.6、top-p 0.95，每题生成 64 个回答估计 pass@1。课程未独立复算。",
     "displayWidth": 780,
     "sourceUrls": [
       "https://github.com/deepseek-ai/DeepSeek-R1/blob/0cf78561f1d51c84a21b2190626b21116d5c68bb/README.md"
-    ]
+    ],
+    "revision": "2026-10-29"
   },
   {
     "id": "6-1",
     "title": "从模型到任务系统的基本组成",
-    "file": "AIOS101_Fig-06-01_v01.webp",
+    "file": "AIOS101_Fig-06-01_v02.webp",
     "width": 1600,
-    "height": 1360,
-    "bytes": 75008,
-    "originalBytes": 343062,
+    "height": 1440,
+    "bytes": 84898,
     "insertion": "第 6 章 / 二、从模型到任务系统：每个组件分别做什么 / 1. 模型不是整个系统",
     "alt": "人设定目标、约束、授权并核验，任务编排与状态连接模型、检索器和工具。外部文档进入索引，检索片段进入模型上下文；模型请求返回编排，经权限检查后工具才执行并返回结果或错误。",
     "displayWidth": 780,
     "sourceUrls": [],
-    "vector": "vector/AIOS101_Fig-06-01_v01.svg"
+    "vector": "vector/AIOS101_Fig-06-01_v02.svg",
+    "revision": "2026-10-29",
+    "zoomFile": "vector/AIOS101_Fig-06-01_v02.svg"
   },
   {
     "id": "6-2",
-    "title": "长文档切分、元数据与检索的简化示意",
+    "title": "长文档切分、元数据与检索",
     "file": "AIOS101_Fig-06-02_v01.webp",
     "width": 1600,
     "height": 1490,
@@ -447,21 +531,23 @@
     "sourceUrls": [
       "https://github.com/Infrasys-AI/AIInfra/blob/b97c0385ba07a62a717d82a0e7aed2927f12fc35/README.md"
     ],
-    "vector": "vector/AIOS101_Fig-06-02_v01.svg"
+    "vector": "vector/AIOS101_Fig-06-02_v01.svg",
+    "zoomFile": "vector/AIOS101_Fig-06-02_v01.svg"
   },
   {
     "id": "6-3",
-    "title": "查询与文档片段的语义近邻简化示意",
-    "file": "AIOS101_Fig-06-03_v01.webp",
+    "title": "查询与文档片段的语义近邻",
+    "file": "AIOS101_Fig-06-03_v02.webp",
     "width": 1600,
     "height": 1220,
-    "bytes": 78546,
-    "originalBytes": 366352,
+    "bytes": 81930,
     "insertion": "第 6 章 / 三、给模型一座可查阅的资料库：检索与 RAG / 2. 关键词之外，为什么还需要嵌入",
     "alt": "二维教学散点中，查询这个项目主要学什么与两条课程定位片段相近，与年度发布日期说明较远。坐标没有人工语义名称，位置与距离不是实际嵌入结果。",
     "displayWidth": 780,
     "sourceUrls": [],
-    "vector": "vector/AIOS101_Fig-06-03_v01.svg"
+    "vector": "vector/AIOS101_Fig-06-03_v02.svg",
+    "revision": "2026-10-29",
+    "zoomFile": "vector/AIOS101_Fig-06-03_v02.svg"
   },
   {
     "id": "6-4",
@@ -475,7 +561,8 @@
     "alt": "资料准备通道将外部文档切分并索引；问题通道形成查询，检索 top-k 带来源片段，经筛选排序进入上下文，与问题一起供模型生成可核查的回答。索引不进入训练参数。",
     "displayWidth": 780,
     "sourceUrls": [],
-    "vector": "vector/AIOS101_Fig-06-04_v01.svg"
+    "vector": "vector/AIOS101_Fig-06-04_v01.svg",
+    "zoomFile": "vector/AIOS101_Fig-06-04_v01.svg"
   },
   {
     "id": "6-5",
@@ -489,36 +576,40 @@
     "alt": "编排组织上下文与工具说明，模型可直接返回文本或提出调用请求。请求接受格式、参数和权限检查；获准后外部程序执行并返回结果或错误，不获准则拒绝或等待人工确认。",
     "displayWidth": 780,
     "sourceUrls": [],
-    "vector": "vector/AIOS101_Fig-06-05_v01.svg"
+    "vector": "vector/AIOS101_Fig-06-05_v01.svg",
+    "zoomFile": "vector/AIOS101_Fig-06-05_v01.svg"
   },
   {
     "id": "6-6",
-    "title": "《深入理解 AI Agent》固定第 2 章“带工具调用的多轮交互”局部截图",
-    "file": "AIOS101_Fig-06-06_v01.webp",
+    "title": "一次工具调用的消息与执行角色",
+    "file": "AIOS101_Fig-06-06_v02.webp",
     "width": 1600,
-    "height": 1630,
-    "bytes": 175896,
-    "originalBytes": 2027310,
+    "height": 1947,
+    "bytes": 181178,
     "insertion": "第 6 章 / 五、让模型使用外部能力：工具调用 / 2. 一次工具调用经过哪些角色",
-    "alt": "李博杰教材固定第二章的三段原文截图：第一次请求中的工具定义、模型返回的工具调用请求、框架加入 tool 结果并发起第二次请求。天气与时间为预设教学内容；请求不等于执行。",
+    "alt": "固定原文的天气分支字段节选与换行重排，依次展示工具定义、assistant 调用请求、tool 结果。省略时间分支、其他字段与重复历史，不构成完整可执行请求；天气为预设教学内容。",
     "displayWidth": 780,
     "sourceUrls": [
       "https://github.com/bojieli/ai-agent-book/blob/dbc046eb896ac4e39aa19c7774c8bf49583b89a6/book/chapter2.md"
-    ]
+    ],
+    "vector": "vector/AIOS101_Fig-06-06_v02.svg",
+    "revision": "2026-10-29",
+    "zoomFile": "vector/AIOS101_Fig-06-06_v02.svg"
   },
   {
     "id": "6-7",
     "title": "智能体的基本任务循环",
-    "file": "AIOS101_Fig-06-07_v01.webp",
+    "file": "AIOS101_Fig-06-07_v02.webp",
     "width": 1600,
     "height": 1690,
-    "bytes": 83962,
-    "originalBytes": 378444,
+    "bytes": 86010,
     "insertion": "第 6 章 / 六、从一次调用到多轮任务：智能体循环 / 1. 观察、规划、行动与反馈",
     "alt": "目标与约束进入观察、规划、经权限检查的行动和反馈，随后检查停止条件。未停止则回到观察，停止则交付结果、证据和未完成事项。",
     "displayWidth": 700,
     "sourceUrls": [],
-    "vector": "vector/AIOS101_Fig-06-07_v01.svg"
+    "vector": "vector/AIOS101_Fig-06-07_v02.svg",
+    "revision": "2026-10-29",
+    "zoomFile": "vector/AIOS101_Fig-06-07_v02.svg"
   },
   {
     "id": "6-8",
@@ -532,7 +623,8 @@
     "alt": "模拟轨迹依次标注用户查询、检索器返回证据、模型草稿、核验者指出仓库体积被误写为模型大小、模型修订、模型请求保存、核验者批准指定路径模拟写入、模拟工具返回假设成功。没有真实文件写入。",
     "displayWidth": 700,
     "sourceUrls": [],
-    "vector": "vector/AIOS101_Fig-06-08_v01.svg"
+    "vector": "vector/AIOS101_Fig-06-08_v01.svg",
+    "zoomFile": "vector/AIOS101_Fig-06-08_v01.svg"
   },
   {
     "id": "6-9",
@@ -553,15 +645,16 @@
   {
     "id": "6-10",
     "title": "人机协作中的关键检查点",
-    "file": "AIOS101_Fig-06-10_v01.webp",
+    "file": "AIOS101_Fig-06-10_v02.webp",
     "width": 1600,
-    "height": 1830,
-    "bytes": 101760,
-    "originalBytes": 441202,
+    "height": 2260,
+    "bytes": 140442,
     "insertion": "第 6 章 / 八、能力越强，边界越要清楚：风险与人机协作 / 3. 隐私、错误传播与费用",
-    "alt": "任务必要性决定是否需要工具；检索与生成配合最小权限、输入检查，敏感、对外或不可逆动作进入人工确认或禁止，之后核验证据与停止条件，最终交付来源、日志和责任说明。禁止的动作不执行。",
+    "alt": "拟执行动作先经过必要性判断；敏感操作先获得人工决定，再通过技术检查。拒绝或检查未通过时不执行该动作，后续只说明状态或调整方案。",
     "displayWidth": 700,
     "sourceUrls": [],
-    "vector": "vector/AIOS101_Fig-06-10_v01.svg"
+    "vector": "vector/AIOS101_Fig-06-10_v02.svg",
+    "revision": "2026-10-29",
+    "zoomFile": "vector/AIOS101_Fig-06-10_v02.svg"
   }
 ]

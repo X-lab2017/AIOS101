@@ -1,0 +1,23 @@
+{
+  "source": "https://github.com/bojieli/ai-agent-book/blob/dbc046eb896ac4e39aa19c7774c8bf49583b89a6/book/chapter2.md",
+  "author": "李博杰",
+  "license": "Apache-2.0",
+  "modification": "只展示天气分支的字段；省略其他字段。长字符串仅视觉换行，非独立可执行请求。",
+  "panels": [
+    [
+      "01  第一次请求：开发者提供工具定义",
+      "\"name\": \"get_weather\",\n\"parameters\": {\n  \"type\": \"object\",\n  \"properties\": {\n    \"city\": {\"type\":\"string\",\"description\":\"City name\"},\n    \"unit\": {\"type\":\"string\",\"enum\":[\"celsius\",\"fahrenheit\"]}\n  }\n}",
+      "工具说明由开发者提供；模型据此决定是否提出调用请求。"
+    ],
+    [
+      "02  模型响应：assistant 提出调用请求",
+      "\"role\": \"assistant\",\n\"tool_calls\": [{\n  \"id\": \"call_def456\",\n  \"function\": {\n    \"name\": \"get_weather\",\n    \"arguments\": \"{\\\"city\\\": \\\"Vancouver\\\", \\\"unit\\\": \\\"celsius\\\"}\"\n  }\n}]",
+      "call_def456 标识这次调用；请求本身不证明工具已执行。"
+    ],
+    [
+      "03  第二次请求：框架加入 tool 结果",
+      "\"role\": \"tool\",\n\"tool_call_id\": \"call_def456\",\n\"content\":\n  \"{\\\"city\\\": \\\"Vancouver\\\", \\\"temperature\\\": 13.2, \\\"unit\\\": \\\"celsius\\\", \n\\\"conditions\\\": \\\"clear\\\", \\\"humidity\\\": 93}\"",
+      "通过相同的 tool_call_id 对应调用；框架将完整历史与结果再发给模型。"
+    ]
+  ]
+}

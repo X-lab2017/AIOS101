@@ -22,7 +22,7 @@ README：https://github.com/deepseek-ai/DeepSeek-R1/blob/0cf78561f1d51c84a21b219
 
 许可：Apache License 2.0；同提交 LICENSE：https://github.com/bojieli/ai-agent-book/blob/dbc046eb896ac4e39aa19c7774c8bf49583b89a6/LICENSE 。全文见 licenses/AgentBook-LICENSE.txt。
 
-改动仅为原页面三个位置的裁剪、缩放及局部组合，并加入编号和中文导读。三处原文并非彼此相邻。截图保留网页可见代码；原页面长代码行在横向滚动区内，完整文本须从固定链接回查。原教材时间与天气为预设教学内容，不能作为实时天气或真实执行证据。
+2026-10-29 修订：改为固定原文天气分支的代码字段节选、换行重排与中文导读；省略时间分支、其他字段和重复历史，不构成完整可执行请求。字段内容见 sources/agent-book-tool-excerpts.json；原截图版由 Git 历史保留。原教材时间与天气为预设教学内容，不能作为实时天气或真实执行证据。
 
 ## 图 6-9：Model Context Protocol
 
@@ -37,3 +37,5 @@ README：https://github.com/deepseek-ai/DeepSeek-R1/blob/0cf78561f1d51c84a21b219
 ## 截图范围
 
 本仓库只发布压缩图及必要矢量源，不含整页浏览器界面。原始局部 PNG 随独立出版交付包保留。各复用材料的许可与署名不被课程新增版式替代；发布时须随图或相邻来源记录保留。
+
+图 5-9 的采样配置适用于 README 所指“需要采样的基准”；并非整张表所有模型和任务的统一配置。修订只调整课程中文注释，未改变原截图中的数值。

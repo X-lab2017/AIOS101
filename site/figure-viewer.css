@@ -1,0 +1,15 @@
+@font-face{font-family:"Figure Sans";src:url("figure-fonts/figure-sans.woff") format("woff");font-weight:400;font-style:normal;font-display:swap}
+:root{font-family:Inter,"PingFang SC","Microsoft YaHei",sans-serif;color:#1d2433;background:#f6f3eb;line-height:1.8;color-scheme:light}
+*{box-sizing:border-box}body{margin:0}a{color:#5146d9;text-underline-offset:3px;overflow-wrap:anywhere}
+header{display:flex;justify-content:space-between;gap:12px;padding:15px 24px;border-bottom:1px solid #d7d3c9;font-size:14px;flex-wrap:wrap}
+main{max-width:1648px;margin:0 auto;padding:24px}h1{font-size:24px;line-height:1.5;margin:0 0 18px}.figure-controls{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+button{font:inherit;font-size:14px;min-height:44px;padding:8px 15px;color:#5146d9;border:1px solid #b8b1e5;border-radius:6px;background:#fff;cursor:pointer}
+button[aria-pressed="true"]{background:#5146d9;color:white}button:focus-visible,a:focus-visible,.figure-stage:focus-visible{outline:3px solid #327f78;outline-offset:3px}
+#zoom-status{font-size:13px;color:#565e69}.view-hint{font-size:13px;color:#565e69;margin:14px 0}
+.figure-stage{width:100%;max-height:75vh;overflow:auto;border:1px solid #d7d3c9;border-radius:7px;background:#f6f3eb;overscroll-behavior:contain}
+.figure-stage>svg,.figure-stage>img{display:block;width:100%;height:auto;max-width:100%}
+.figure-stage svg{font-family:"Figure Sans","PingFang SC","Microsoft YaHei",sans-serif!important}
+.figure-stage svg text{font-family:inherit}.figure-stage svg text[font-family*="Mono"]{font-family:"DejaVu Sans Mono",Consolas,monospace}
+.figure-caption{font-size:15px;line-height:1.9;overflow-wrap:anywhere;margin:20px 0 12px}.figure-download{font-size:13px}
+@media(max-width:600px){header{padding:12px 16px;font-size:12px}main{padding:20px 16px}h1{font-size:20px}.figure-controls{gap:8px}button{padding:8px 12px}#zoom-status{width:100%}}
+@media print{header,.figure-controls,.view-hint,.figure-download{display:none}main{padding:0}.figure-stage{max-height:none;overflow:visible;border:0}.figure-stage>svg,.figure-stage>img{width:100%!important;max-width:100%!important}.figure-caption{font-size:10pt}}

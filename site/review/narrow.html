@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AIOS101 阅读版式评审</title>
+<style>body{margin:0;padding:20px;background:#eeece6;color:#1d2433;font:14px/1.7 sans-serif}h1{font-size:20px}form{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:20px 0}select,button,input{font:inherit;min-height:40px}input{width:90px}.frames{display:flex;gap:24px;align-items:flex-start}iframe{display:block;height:820px;border:1px solid #aaa;background:white}section{flex:none}a{color:#5146d9}</style></head>
+<body><h1>AIOS101 阅读版式评审</h1><p>同一正式页面在 320px 与 390px 容器中显示；用于窄屏布局检查，不等同于实体手机测试。</p>
+<form><label>章节 <select name="chapter"><option>CH01</option><option>CH02</option><option>CH03</option><option selected>CH04</option><option>CH05</option><option>CH06</option></select></label>
+<label>或指定图号 <input name="figure" placeholder="例如 6-10" pattern="[1-6]-[0-9]{1,2}"></label><button>查看</button><a href="../">返回课程</a></form><div class="frames"></div>
+<script>
+const params=new URLSearchParams(location.search);
+const chapter=/^CH0[1-6]$/.test(params.get('chapter'))?params.get('chapter'):'CH04';
+const figure=/^[1-6]-[0-9]{1,2}$/.test(params.get('figure'))?params.get('figure'):'';
+document.querySelector('select').value=chapter;document.querySelector('input').value=figure;
+for(const width of [320,390]){const section=document.createElement('section');const label=document.createElement('p');label.textContent=`${figure?'图 '+figure:chapter} · ${width}px`;const frame=document.createElement('iframe');frame.width=width;frame.id='w'+width;frame.title=label.textContent;frame.src=figure?'../figures/'+figure+'.html':'../#/learn/'+chapter;section.append(label,frame);document.querySelector('.frames').append(section);}
+</script></body></html>

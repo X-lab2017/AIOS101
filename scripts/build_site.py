@@ -6,6 +6,7 @@ import re
 import shutil
 from pathlib import Path
 from course_markdown import unit, destination, image_path
+from figure_pages import build_figure_pages
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT/'dist'
@@ -49,7 +50,7 @@ for key,u in units.items():
     for sec in u['sections']:
         if sec['title']=='关键术语':
             for term,meaning in re.findall(r'^- \*\*(.+?)\*\*：(.+)$',sec['markdown'],re.M):glossary.append({'term':term,'meaning':meaning,'unit':key,'section':sec['id']})
-content = dict(version='0.5.0-reading',date='2026-10-28',sourceCommit=commit,visualVersion='1.0.0',brandCommit='373d61f0d6e334f0b85af0dd5d8ef9b9095bcc37',chapters=chapters,units=units,worksheets=worksheets,glossary=glossary,preface=units['PREFACE']['markdown'],sources=(ROOT/'specs/source-register.md').read_text())
+content = dict(version='0.6.0-review',date='2026-10-29',sourceCommit=commit,visualVersion='1.0.0',brandCommit='373d61f0d6e334f0b85af0dd5d8ef9b9095bcc37',chapters=chapters,units=units,worksheets=worksheets,glossary=glossary,preface=units['PREFACE']['markdown'],sources=(ROOT/'specs/source-register.md').read_text())
 (OUT/'content.json').write_text(json.dumps(content,ensure_ascii=False),encoding='utf-8')
 (OUT/'resources').mkdir()
 resources = [(u['sourcePath'],key+'.md') for key,u in units.items()] + [(v['path'],key+'.md') for key,v in worksheets.items()] + [('specs/'+x+'.md',x+'.md') for x in ['website-spec','website-activities','learning-experience-spec','course-identity-spec','source-register']]
@@ -67,4 +68,5 @@ legacy_preface = OUT/'resources/preface.md'
 if not legacy_preface.exists() or not os.path.samefile(OUT/'resources/PREFACE.md', legacy_preface):
     shutil.copyfile(OUT/'resources/PREFACE.md', legacy_preface)
 (OUT/'.nojekyll').write_text('')
+build_figure_pages(ROOT, OUT, commit)
 print(f'Built {len(units)} complete reading units, {len(worksheets)} worksheets and {len(chapters)} course chapters')

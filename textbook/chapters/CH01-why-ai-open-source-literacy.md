@@ -1,8 +1,8 @@
 # 第 1 章　智能时代为什么需要 AI 开源通识
 
-> 版本：v0.5
+> 版本：v0.6
 >
-> 状态：打印教材修订稿
+> 状态：前六章图文评审版（2026-10-29）
 >
 > 对应规格：[CH01](../../specs/chapters/CH01-ai-open-source-literacy-spec.md)
 
@@ -41,7 +41,7 @@
 
 ![图 1-1　使用、理解与创造：三种学习位置](../assets/figures/AIOS101_Fig-01-01_learning-positions_v01.webp)
 
-图 1-1　使用、理解与创造是三种学习位置，而非由低到高的能力等级；同一个人可以随任务转换位置。
+图 1-1　使用、理解与创造：三种学习位置。使用、理解与创造是三种学习位置，而非由低到高的能力等级；同一个人可以随任务转换位置。
 
 <details>
 <summary>结构关系与 Mermaid 源码</summary>
@@ -150,7 +150,7 @@ GNU 的历史意义不只是启动一个大型软件工程，更在于把软件�
 
 ![图 1-2　软件开源的三个历史坐标](../assets/figures/AIOS101_Fig-01-02_open-source-history_v02.webp)
 
-图 1-2　三个历史坐标分别突出自由、协作和开放定义。它们不是完整编年史，也不表示后一个事件由前一个事件单独造成。
+图 1-2　软件开源的三个历史坐标。三个坐标分别突出自由、协作和开放定义；不是完整编年史，也不表示单线因果。人物参照及署名见[肖像来源记录](../assets/figures/portrait-sources.md)。
 
 <details>
 <summary>结构关系与 Mermaid 源码</summary>
@@ -189,7 +189,7 @@ OSI 发布的《开源 AI 定义》1.0 将使用、研究、修改和分享的�
 
 ![图 1-3　理解 AI 开放的六类材料](../assets/figures/AIOS101_Fig-01-03_ai-open-materials_v01.webp)
 
-图 1-3　六类材料从不同方向支持对 AI 系统的观察。缺少其中任何一类，都不宜用剩余材料推出整个系统已经开放或可复现。
+图 1-3　理解 AI 开放的六类材料。六类材料从不同方向支持对 AI 系统的观察，不能用其中一类推出整个系统已经开放或可复现。
 
 <details>
 <summary>结构关系与 Mermaid 源码</summary>
@@ -220,7 +220,7 @@ flowchart TD
 
 ![图 1-4　DeepSeek-R1 固定 README 证据](../assets/figures/AIOS101_Fig-01-04_deepseek-readme_v01.webp)
 
-图 1-4　DeepSeek-R1 固定 README 的 Model Downloads、How to Run Locally 与 License。对照模型获取、运行说明和不同资产的许可线索；固定提交不冻结外部模型文件。
+图 1-4　DeepSeek-R1 固定 README 证据。并列 Model Downloads、How to Run Locally 与 License，分别观察获取、运行和许可；固定 README 不冻结外部模型文件。来源：[DeepSeek-R1 README](https://github.com/deepseek-ai/DeepSeek-R1/blob/0cf78561f1d51c84a21b2190626b21116d5c68bb/README.md)（0cf7856，MIT License）。
 
 这里，GitHub 主要承载项目文档与协作材料，Hugging Face 页面承载相应模型文件。平台不同，材料与权利也需要分别核查。即使不访问外部网页，只阅读上面的材料清单，也可以继续理解本章；固定链接用于希望亲自核对原文的读者。
 
