@@ -124,3 +124,8 @@ scripts/
 - [Pages 公开预览发布记录](pages-release-record.md)：维护者授权范围、优化核验与部署状态。
 
 - [AIOS101 视觉基线 v1.0.0](../brand/README.md)：已批准的课程识别、复用示例、版本包与校验清单。
+
+## 9. 自学教材评审
+
+- [序言与前六章自学教材评审规格](self-study-textbook-review.md)
+- [逐章评审与修订记录](../docs/self-study-review-2026-10-29.md)
