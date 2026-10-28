@@ -102,3 +102,9 @@ for ch in range(1,7):
     assert not any(old in raw for old in ['正式绘制可用','真实截图占位'])
 assert (root/'dist/figure-fonts/figure-sans.woff').is_file()
 print(f'PASS: {len(figures)} captioned zoom pages, source parity and labeled dotted edges')
+
+# One identity for the canonical caption, catalogue and large-figure page.
+from figures.catalog import catalogue
+index_text, figure_count, retired_count = catalogue()
+assert (root/"textbook/assets/figures/INDEX.md").read_text() == index_text
+print(f"PASS: {figure_count} figure titles and delivery index; {retired_count} retired IDs")

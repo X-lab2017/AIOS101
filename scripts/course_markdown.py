@@ -71,7 +71,7 @@ def figure_image(label, target, source):
         raise ValueError('Unregistered or missing figure: ' + path)
     url = html.escape(quote(path), quote=True)
     viewer = 'figures/' + record['id'] + '.html'
-    alt = html.escape(label, quote=True)
+    alt = html.escape('图 '+record['id']+'　'+record['title']+'。'+record.get('alt', ''), quote=True)
     display_width = max(520, min(920, int(record.get('displayWidth', 780))))
     return ('<figure class="textbook-figure" id="fig-' + record['id'] + '" style="max-width:' + str(display_width) + 'px"><a class="figure-open" href="' + viewer +
             '" target="_blank" rel="noopener noreferrer" aria-label="' + alt + ' · 查看大图 / Open full size">' +
