@@ -58,6 +58,8 @@ python scripts/check_repo.py
 
 ## 在线学习资源
 
+- [交互学习体验基线 v0.4](docs/learning-experience-baseline.md)
+- [内容迭代与工程维护指南](docs/content-iteration-guide.md)
 - [网站建设规格 v0.4](specs/website-spec.md)
 - [课程专属视觉识别 v1.0.0](specs/course-identity-spec.md)
 - [序言与系统探索活动设计](specs/website-activities.md)
