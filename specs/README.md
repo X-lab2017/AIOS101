@@ -77,6 +77,8 @@ specs/
   preface-spec.md
   chapter-spec-template.md
   activity-spec-template.md
+  chapters/
+    CH01-ai-open-source-literacy-spec.md
   content-evidence-spec.md
   assessment-spec.md
   presentation-spec.md
@@ -85,11 +87,20 @@ specs/
   source-register.md
   decision-record-template.md
   change-request-template.md
+textbook/
+  preface.md
+  chapters/
+  assets/
+activities/
+slides/
+online/
+interactive/
+deliverables/
 scripts/
   check_repo.py
 ```
 
-后续可建立 `chapters/`、`activities/`、`textbook/`、`slides/`、`assets/` 等产物目录。新目录必须在相应规格中说明用途，不得形成无人维护的重复正本。
+`textbook/chapters/` 是章节正文唯一正本；`online/` 保存在线版配置与组件；`interactive/` 保存交互实现与回退资源。新目录必须在相应规格中说明用途，不得形成无人维护的重复正本。
 
 ## 7. 变更与验收原则
 
