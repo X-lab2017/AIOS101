@@ -1,0 +1,356 @@
+{
+  "deployment": "04ddd7444bed195e74d3d0c6f4df1e303045e0e1",
+  "environment": "Chromium desktop browser with 320px and 390px iframe containers; not physical phone testing",
+  "narrowChapters": [
+    {
+      "chapter": "CH01",
+      "containerWidth": 320,
+      "figures": 4,
+      "pageWidth": 305,
+      "title": "第 1 章　智能时代为什么需要 AI 开源通识",
+      "viewport": 305
+    },
+    {
+      "chapter": "CH01",
+      "containerWidth": 390,
+      "figures": 4,
+      "pageWidth": 375,
+      "title": "第 1 章　智能时代为什么需要 AI 开源通识",
+      "viewport": 375
+    },
+    {
+      "chapter": "CH02",
+      "containerWidth": 320,
+      "figures": 4,
+      "pageWidth": 305,
+      "title": "第 2 章　开源的本质：开放、复用、协作与公共价值",
+      "viewport": 305
+    },
+    {
+      "chapter": "CH02",
+      "containerWidth": 390,
+      "figures": 4,
+      "pageWidth": 375,
+      "title": "第 2 章　开源的本质：开放、复用、协作与公共价值",
+      "viewport": 375
+    },
+    {
+      "chapter": "CH03",
+      "containerWidth": 320,
+      "figures": 8,
+      "pageWidth": 305,
+      "title": "第 3 章　AI 开源生态全景：数据、模型、代码、工具链与社区",
+      "viewport": 305
+    },
+    {
+      "chapter": "CH03",
+      "containerWidth": 390,
+      "figures": 8,
+      "pageWidth": 375,
+      "title": "第 3 章　AI 开源生态全景：数据、模型、代码、工具链与社区",
+      "viewport": 375
+    },
+    {
+      "chapter": "CH04",
+      "containerWidth": 320,
+      "figures": 9,
+      "pageWidth": 305,
+      "title": "第 4 章　从数据到模型：智能如何形成",
+      "viewport": 305
+    },
+    {
+      "chapter": "CH04",
+      "containerWidth": 390,
+      "figures": 9,
+      "pageWidth": 375,
+      "title": "第 4 章　从数据到模型：智能如何形成",
+      "viewport": 375
+    },
+    {
+      "chapter": "CH05",
+      "containerWidth": 320,
+      "figures": 9,
+      "pageWidth": 305,
+      "title": "第 5 章　从训练到推理：AI 系统如何运行与评估",
+      "viewport": 305
+    },
+    {
+      "chapter": "CH05",
+      "containerWidth": 390,
+      "figures": 9,
+      "pageWidth": 375,
+      "title": "第 5 章　从训练到推理：AI 系统如何运行与评估",
+      "viewport": 375
+    },
+    {
+      "chapter": "CH06",
+      "containerWidth": 320,
+      "figures": 10,
+      "pageWidth": 305,
+      "title": "第 6 章　从模型到智能体：检索、工具与人机协作",
+      "viewport": 305
+    },
+    {
+      "chapter": "CH06",
+      "containerWidth": 390,
+      "figures": 10,
+      "pageWidth": 375,
+      "title": "第 6 章　从模型到智能体：检索、工具与人机协作",
+      "viewport": 375
+    }
+  ],
+  "largeFiguresAt320": [
+    {
+      "figure": "4-1",
+      "caption": true,
+      "imageReady": true,
+      "mediaWidth": 3200,
+      "overflow": false,
+      "title": "图 4-1　模型形成的基本要素",
+      "zoom": "放大 2 倍"
+    },
+    {
+      "figure": "4-2",
+      "caption": true,
+      "imageReady": true,
+      "mediaWidth": 3200,
+      "overflow": false,
+      "title": "图 4-2　FineWeb 论文报告的主要数据处理链",
+      "zoom": "放大 2 倍"
+    },
+    {
+      "figure": "4-3",
+      "caption": true,
+      "imageReady": true,
+      "mediaWidth": 3200,
+      "overflow": false,
+      "title": "图 4-3　FineWeb 论文 v2 图 9 原图",
+      "zoom": "放大 2 倍"
+    },
+    {
+      "figure": "4-4",
+      "caption": true,
+      "imageReady": true,
+      "mediaWidth": 3200,
+      "overflow": false,
+      "title": "图 4-4　分词、下一 token 候选分布与训练目标",
+      "zoom": "放大 2 倍"
+    },
+    {
+      "figure": "4-5",
+      "caption": true,
+      "imageReady": true,
+      "mediaWidth": 3200,
+      "overflow": false,
+      "title": "图 4-5　一次训练迭代的基本循环",
+      "zoom": "放大 2 倍"
+    },
+    {
+      "figure": "4-6",
+      "caption": true,
+      "imageReady": true,
+      "mediaWidth": 3200,
+      "overflow": false,
+      "title": "图 4-6　批次、迭代、训练轮次与检查点",
+      "zoom": "放大 2 倍"
+    },
+    {
+      "figure": "4-7",
+      "caption": true,
+      "imageReady": true,
+      "mediaWidth": 3200,
+      "overflow": false,
+      "title": "图 4-7　DeepSeek-R1 固定 README 公开的形成路径",
+      "zoom": "放大 2 倍"
+    },
+    {
+      "figure": "4-8",
+      "caption": true,
+      "imageReady": true,
+      "mediaWidth": 3200,
+      "overflow": false,
+      "title": "图 4-8　DeepSeek-R1 形成路径的原始证据",
+      "zoom": "放大 2 倍"
+    },
+    {
+      "figure": "4-9",
+      "caption": true,
+      "imageReady": true,
+      "mediaWidth": 3200,
+      "overflow": false,
+      "title": "图 4-9　训练、验证、测试及近重复泄漏的边界",
+      "zoom": "放大 2 倍"
+    },
+    {
+      "figure": "5-1",
+      "caption": true,
+      "imageReady": true,
+      "mediaWidth": 3200,
+      "overflow": false,
+      "title": "图 5-1　上下文容量与最大生成长度",
+      "zoom": "放大 2 倍"
+    },
+    {
+      "figure": "5-2",
+      "caption": true,
+      "imageReady": true,
+      "mediaWidth": 3200,
+      "overflow": false,
+      "title": "图 5-2　语言模型推理的最小生成循环",
+      "zoom": "放大 2 倍"
+    },
+    {
+      "figure": "5-3",
+      "caption": true,
+      "imageReady": true,
+      "mediaWidth": 3200,
+      "overflow": false,
+      "title": "图 5-3　生成 top-k 与 top-p 的简化对照",
+      "zoom": "放大 2 倍"
+    },
+    {
+      "figure": "5-4",
+      "caption": true,
+      "imageReady": true,
+      "mediaWidth": 3200,
+      "overflow": false,
+      "title": "图 5-4　从候选分布到输出结束的主要生成条件",
+      "zoom": "放大 2 倍"
+    },
+    {
+      "figure": "5-5",
+      "caption": true,
+      "imageReady": true,
+      "mediaWidth": 3200,
+      "overflow": false,
+      "title": "图 5-5　DeepSeek-R1 的生成与测试建议",
+      "zoom": "放大 2 倍"
+    },
+    {
+      "figure": "5-6",
+      "caption": true,
+      "imageReady": true,
+      "mediaWidth": 3200,
+      "overflow": false,
+      "title": "图 5-6　模型推理的系统分层",
+      "zoom": "放大 2 倍"
+    },
+    {
+      "figure": "5-7",
+      "caption": true,
+      "imageReady": true,
+      "mediaWidth": 3200,
+      "overflow": false,
+      "title": "图 5-7　单个请求的延迟与整个服务的吞吐",
+      "zoom": "放大 2 倍"
+    },
+    {
+      "figure": "5-8",
+      "caption": true,
+      "imageReady": true,
+      "mediaWidth": 3200,
+      "overflow": false,
+      "title": "图 5-8　最小评价的证据链",
+      "zoom": "放大 2 倍"
+    },
+    {
+      "figure": "5-9",
+      "caption": true,
+      "imageReady": true,
+      "mediaWidth": 3200,
+      "overflow": false,
+      "title": "图 5-9　DeepSeek-R1 的评测设置与主评测表",
+      "zoom": "放大 2 倍"
+    },
+    {
+      "figure": "6-1",
+      "caption": true,
+      "imageReady": true,
+      "mediaWidth": 3200,
+      "overflow": false,
+      "title": "图 6-1　从模型到任务系统的基本组成",
+      "zoom": "放大 2 倍"
+    },
+    {
+      "figure": "6-2",
+      "caption": true,
+      "imageReady": true,
+      "mediaWidth": 3200,
+      "overflow": false,
+      "title": "图 6-2　长文档切分、元数据与检索",
+      "zoom": "放大 2 倍"
+    },
+    {
+      "figure": "6-3",
+      "caption": true,
+      "imageReady": true,
+      "mediaWidth": 3200,
+      "overflow": false,
+      "title": "图 6-3　查询与文档片段的语义近邻",
+      "zoom": "放大 2 倍"
+    },
+    {
+      "figure": "6-4",
+      "caption": true,
+      "imageReady": true,
+      "mediaWidth": 3200,
+      "overflow": false,
+      "title": "图 6-4　检索增强生成的基本流程",
+      "zoom": "放大 2 倍"
+    },
+    {
+      "figure": "6-5",
+      "caption": true,
+      "imageReady": true,
+      "mediaWidth": 3200,
+      "overflow": false,
+      "title": "图 6-5　工具调用的最小闭环",
+      "zoom": "放大 2 倍"
+    },
+    {
+      "figure": "6-6",
+      "caption": true,
+      "imageReady": true,
+      "mediaWidth": 3200,
+      "overflow": false,
+      "title": "图 6-6　一次工具调用的消息与执行角色",
+      "zoom": "放大 2 倍"
+    },
+    {
+      "figure": "6-7",
+      "caption": true,
+      "imageReady": true,
+      "mediaWidth": 3200,
+      "overflow": false,
+      "title": "图 6-7　智能体的基本任务循环",
+      "zoom": "放大 2 倍"
+    },
+    {
+      "figure": "6-8",
+      "caption": true,
+      "imageReady": true,
+      "mediaWidth": 3200,
+      "overflow": false,
+      "title": "图 6-8　新生导览模拟轨迹的角色与时序",
+      "zoom": "放大 2 倍"
+    },
+    {
+      "figure": "6-9",
+      "caption": true,
+      "imageReady": true,
+      "mediaWidth": 3200,
+      "overflow": false,
+      "title": "图 6-9　MCP 2025-06-18 工具规范与安全原则局部截图",
+      "zoom": "放大 2 倍"
+    },
+    {
+      "figure": "6-10",
+      "caption": true,
+      "imageReady": true,
+      "mediaWidth": 3200,
+      "overflow": false,
+      "title": "图 6-10　人机协作中的关键检查点",
+      "zoom": "放大 2 倍"
+    }
+  ]
+}
