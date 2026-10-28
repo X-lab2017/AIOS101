@@ -61,3 +61,5 @@ python scripts/check_repo.py
 - [技术核验记录](specs/website-review-record.md)
 
 当前在线资源为维护者设计评审版，未通过课程教学验收；已提供完整序言阅读与活动样板，第 1 章草稿已入库、待在线接入，其余章节随制作进度扩展。
+
+公开预览发布范围与实际核验记录见 [Pages 发布记录](specs/pages-release-record.md)。

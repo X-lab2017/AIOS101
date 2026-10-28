@@ -20,4 +20,11 @@
 | 从一次 AI 回答到四种学习行动 | [学生任务单](student/ACT-CH01-01.md) | [教师指南](teacher/ACT-CH01-01.md) | [活动规格](ACT-CH01-01-usage-understanding-creation-spec.md) | [开发需求](../interactive/ACT-CH01-01/README.md) |
 | 我的 AI 开源学习问题地图 | [学生任务单](student/ACT-CH01-02.md) | [教师指南](teacher/ACT-CH01-02.md) | [活动规格](ACT-CH01-02-learning-question-map-spec.md) | [开发需求](../interactive/ACT-CH01-02/README.md) |
 
+## 第二章活动
+
+| 活动 | 学生入口 | 教师入口 | 活动规格 | 交互开发需求 |
+|---|---|---|---|---|
+| 拆解一项开放成果：从公开到复用 | [学生任务单](student/ACT-CH02-01.md) | [教师指南](teacher/ACT-CH02-01.md) | [活动规格](ACT-CH02-01-openness-reuse-mechanism-spec.md) | [开发需求](../interactive/ACT-CH02-01/README.md) |
+| 设计一次有效贡献：从善意到可评审 | [学生任务单](student/ACT-CH02-02.md) | [教师指南](teacher/ACT-CH02-02.md) | [活动规格](ACT-CH02-02-reviewable-contribution-spec.md) | [开发需求](../interactive/ACT-CH02-02/README.md) |
+
 当前材料均为教学草稿，尚未经过课堂实测。教师可按实际班情调整用时和组织方式，实质改变核心任务或评价时须先更新活动规格。

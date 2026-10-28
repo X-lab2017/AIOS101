@@ -2,9 +2,9 @@ name: Course website
 on:
   push:
     branches: [main]
-    paths: ['site/**', 'textbook/**', 'specs/**', 'CONSTITUTION.md', 'scripts/build_site.py', 'scripts/check_repo.py', '.github/workflows/course-pages.yml']
+    paths: ['site/**', 'textbook/**', 'activities/student/**', 'specs/**', 'CONSTITUTION.md', 'scripts/**', '.github/workflows/course-pages.yml']
   pull_request:
-    paths: ['site/**', 'textbook/**', 'specs/**', 'CONSTITUTION.md', 'scripts/build_site.py', 'scripts/check_repo.py', '.github/workflows/course-pages.yml']
+    paths: ['site/**', 'textbook/**', 'activities/student/**', 'specs/**', 'CONSTITUTION.md', 'scripts/**', '.github/workflows/course-pages.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -26,6 +26,7 @@ jobs:
       - run: node --check site/app.js
       - run: node --check site/brand.js
       - run: python scripts/check_repo.py
+      - run: python scripts/check_site.py
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
@@ -40,6 +41,8 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4

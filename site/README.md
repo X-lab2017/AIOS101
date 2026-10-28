@@ -1,6 +1,6 @@
-# AIOS101 交互学习资源 · 设计评审版
+# AIOS101 交互学习资源 · 公开预览版
 
-状态：v0.2.0-review。源码在 site/，正文唯一正本在 textbook/，网站规格在 specs/website-spec.md。仅供本轮设计评审，不代表课程教学验收。
+状态：v0.3.0-preview。源码在 site/，正文唯一正本在 textbook/，网站规格在 specs/website-spec.md。已获维护者授权发布公开预览；课程教学验收仍待完成。
 
 ## 构建
 
@@ -9,6 +9,8 @@
 ```bash
 python scripts/build_site.py
 node --check site/app.js
+node --check site/brand.js
+python scripts/check_site.py
 python scripts/check_repo.py
 ```
 
@@ -28,7 +30,7 @@ python scripts/check_repo.py
 
 ## GitHub Pages
 
-工作流在 .github/workflows/course-pages.yml。首次由仓库维护者在 Settings → Pages → Build and deployment 选择 GitHub Actions。PR 只执行检查与构建，推送 main 或在 main 手动触发才部署。当前评审分支不会自动公开部署。
+工作流在 .github/workflows/course-pages.yml。首次由仓库维护者在 Settings → Pages → Build and deployment 选择 GitHub Actions。PR 只执行检查与构建，推送 main 或在 main 手动触发才部署。首次启用状态与实际发布结果见 [Pages 发布核验记录](../specs/pages-release-record.md)。
 
 发布步骤：完成设计评审 → 确认发布范围和素材许可 → 合并 PR → 开通 Pages → 查看 Actions 部署结果。组织的自定义域名可能影响最终网址，以 GitHub 返回的部署 URL 为准。
 
@@ -36,7 +38,7 @@ Sites 使用独立的私有托管快照供维护者当前评审；GitHub 分支�
 
 ## 后续接入教材
 
-当前构建从课程规格读取十二章计划，从 textbook/preface.md 读取完整序言；不会为缺失章节生成正文。CH01 已有正文和配套活动草稿，地图提供固定版本正本与学生任务单链接，完整在线阅读和正式章节交互仍待接入。online/ 作为资源入口，site/ 是本轮原型源码；正式章节接入时补充批准状态及活动映射，再扩展构建脚本。请同步更新教材版本、来源提交、活动和翻译状态。
+当前构建从课程规格读取十二章计划，从 textbook/preface.md 读取完整序言；不会为缺失章节生成正文。CH01、CH02 已有 v0.2 自学正文和配套活动草稿，地图提供固定版本正本与学生任务单链接，完整在线阅读和正式章节交互仍待接入。online/ 作为资源入口，site/ 是本轮原型源码；正式章节接入时补充批准状态及活动映射，再扩展构建脚本。请同步更新教材版本、来源提交、活动和翻译状态。
 
 ## 来源
 

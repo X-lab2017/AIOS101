@@ -25,4 +25,8 @@
 - `activities/` 根目录：活动目标、证据和量规规格；
 - `interactive/`：交互流程、字段、导出、隐私、可及性和验收要求。
 
-第一章已建立 [ACT-CH01-01 开发需求](ACT-CH01-01/README.md)与 [ACT-CH01-02 开发需求](ACT-CH01-02/README.md)，当前均为待开发需求，不代表交互已经实现。
+第一章已建立 [ACT-CH01-01 开发需求](ACT-CH01-01/README.md)与 [ACT-CH01-02 开发需求](ACT-CH01-02/README.md)。
+
+第二章已建立 [ACT-CH02-01 开发需求](ACT-CH02-01/README.md)与 [ACT-CH02-02 开发需求](ACT-CH02-02/README.md)。
+
+以上均为待开发需求，不代表交互已经实现。

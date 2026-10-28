@@ -118,3 +118,5 @@ scripts/
 - [WEB-AIOS101 网站建设规格](website-spec.md)
 - [WEB-ACT-01／02 序言及系统探索活动](website-activities.md)
 - [技术核验与未决事项](website-review-record.md)
+
+- [Pages 公开预览发布记录](pages-release-record.md)：维护者授权范围、优化核验与部署状态。

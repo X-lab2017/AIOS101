@@ -12,3 +12,38 @@
 @media(prefers-reduced-motion:reduce){.cover-card:hover img{transform:none;transition:none}}
 
 .producer-badge{display:flex;flex-direction:column;align-items:center;width:160px;flex-shrink:0;line-height:1}.producer-kicker{font-size:9px;letter-spacing:1.6px;margin-bottom:-4px}.producer-logo{width:160px;height:52px;object-fit:contain}@media(max-width:1100px){.producer-badge{display:none}}
+
+/* Public preview: readable states, compact reading navigation and touch targets. */
+.results-count{font-size:12px;color:var(--muted);margin:0 0 22px}
+.reader-toc-mobile{display:none}
+summary:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+.header-tools .icon-button{min-width:40px;min-height:44px}
+.variant-tabs button{min-height:44px}
+.chapter-row>span:nth-child(2){min-width:0}
+.reader-toc-mobile nav{position:static;display:flex;flex-direction:column;align-items:stretch;height:auto;margin:0;padding:12px 0 0;box-shadow:none;border:0;background:transparent;gap:0}
+.reader-toc-mobile nav a{display:block;padding:10px 0;min-height:44px;line-height:1.7;font-size:13px;border-top:1px solid var(--line)}
+@media(max-width:760px){
+ .reader-toc-mobile{display:block;margin:24px 0;padding:16px 20px;border:1px solid var(--line);border-radius:8px;background:var(--surface);font-size:14px}
+ .reader-toc-mobile summary{cursor:pointer;font-weight:600}
+ .chapter-row{grid-template-columns:40px minmax(0,1fr) 18px;row-gap:10px}
+ .chapter-row .pill{display:inline-flex;grid-column:2;grid-row:2;font-size:10px;padding:4px 8px}
+ .chapter-row>svg{grid-column:3;grid-row:1 / 3}
+ .chapter-row>.chapter-id{align-self:start;padding-top:4px}
+ .head-row{flex-wrap:wrap}.page-head .pill{margin-left:0}
+ .filter{min-height:44px}
+}
+@media(max-width:400px){
+ .header-inner{padding:0 12px;gap:4px}
+ .brand,.brand img{width:168px;height:46px}
+ .header-tools{gap:0}.header-tools .icon-button{width:40px;min-width:40px}
+ .hero h1{font-size:33px}
+ .folio-large{width:270px;height:270px}
+ .folio-caption{margin-top:250px}.folio-caption h2{font-size:16px}
+ .variant-tabs button{padding:11px 8px}
+ .research-grid{grid-template-columns:1fr}
+ .identity-typography h2{font-size:58px}
+}
+@media print{
+ :root,[data-theme='dark']{--paper:#fff;--surface:#fff;--ink:#111;--muted:#444;--line:#ccc;--soft:#fff;--strong:#111}
+ .reader-toc-mobile{display:none!important}
+}
