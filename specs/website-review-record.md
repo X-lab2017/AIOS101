@@ -19,6 +19,7 @@
 | 静态构建 | 运行 `python scripts/build_site.py`；生成十二章计划、完整序言和规格资源 | Python 标准库构建 |
 | JavaScript | 运行 `node --check site/app.js`，语法检查通过 | 不是完整静态分析 |
 | 仓库检查 | 运行 `python scripts/check_repo.py`，结构与 Markdown 相对链接检查通过 | 不等于教学验收 |
+| GitHub CI | PR 提交 e21a576 的 [Course website 构建](https://github.com/X-lab2017/AIOS101/actions/runs/40645643713/job/122673705860) 成功；部署作业按分支条件跳过 | GitHub Pages 本身尚未部署 |
 | 内容一致性 | 核对 content.json 的序言与正本一致、章节 ID 完整、全部十二章为 planned | 英文只覆盖界面，正文翻译待审 |
 | 页面与品牌 | 浏览器打开首页、地图、序言、实验室、档案、评审；检查浅色和深色主题、英文界面 | 桌面 Chromium；[首页截图](../docs/review-assets/aios101-home-review.jpg) |
 | 响应式 | 在窄屏 iframe 中检查首页、地图及实验室；375 与 753 CSS 像素内容宽度无横向溢出；移动菜单可展开和导航 | 非真实手机设备测试 |
@@ -36,7 +37,7 @@
 - **文件下载端到端未验证成功**：云端测试浏览器多次报告下载失败；不能据此认定学习档案 JSON 下载已经通过。已提供并验证文本备份恢复替代路径，仍需维护者在常用浏览器实测下载。
 - 打印按钮与打印样式已实现，本轮未核验打印对话框和最终打印版式。
 - 未执行真实移动设备、Safari、屏幕阅读器或完整无障碍审计。
-- GitHub Actions 与 GitHub Pages 部署流程尚未执行；本地构建成功不等于该服务部署通过。仓库 Pages 尚未开通。
+- GitHub Actions 的 PR 构建已成功；GitHub Pages 部署流程尚未执行，部署作业在评审分支按预期跳过。仓库 Pages 尚未开通。
 - 没有课堂试用、学习效果数据、教师评价或正式教学批准。两项活动仅为待评审样板。
 
 ## 4. 发布和后续
