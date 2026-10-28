@@ -2,9 +2,7 @@
 """Regenerate outlined AIOS101 brand SVGs. Design-time only: fontTools required."""
 import argparse
 import html
-import itertools
 import json
-import zipfile
 from pathlib import Path
 from fontTools.ttLib import TTFont
 from fontTools.varLib.instancer import instantiateVariableFont
@@ -12,14 +10,13 @@ from fontTools.pens.svgPathPen import SVGPathPen
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'site/assets/course'
-P = dict(paper='#F6F3EB', ink='#1D2433', indigo='#5146D9', coral='#F27A59', lavender='#E7E3FC', teal='#3F958D')
+P = json.loads((OUT / 'tokens.json').read_text())['colors']
 parser = argparse.ArgumentParser()
 parser.add_argument('--latin-font', required=True, help='Original SpaceGrotesk[wght].ttf from the pinned upstream')
 parser.add_argument('--cjk-font', required=True, help='Local Noto Sans CJK SC Bold OTF; not bundled')
 args = parser.parse_args()
 latin = instantiateVariableFont(TTFont(args.latin_font), {'wght': 700}, inplace=False)
 cjk = TTFont(args.cjk_font)
-counter = itertools.count()
 
 
 def letters(text, x, y, size, color, font=latin, spacing=0):
@@ -96,49 +93,6 @@ for i,name in enumerate(names):
 social=f'<rect width="1200" height="630" fill="{P["paper"]}"/>'+lockup(55,52,620)+txt('打开知识，',65,357,67,chinese=True)+txt('一起创造。',65,444,67,chinese=True)+txt('AI & OPEN SOURCE LITERACY',68,550,20,spacing=1.6)+mark(797,120,330)
 write('social-card.svg',1200,630,social,'AIOS101 课程社交预览')
 
-board=f'<rect width="1440" height="1000" fill="{P["paper"]}"/>'+txt('AIOS101 / OPEN FOLIO',52,55,19,spacing=1.4)+txt('COURSE IDENTITY · v0.1',1060,55,15)+lockup(46,98,740)+txt('打开知识，一起创造。',62,345,38,chinese=True)+txt('AN OPEN COURSE. A SHARED JOURNEY.',64,388,15,spacing=1.8)+mark(1020,70,300)
-for i,(name,color) in enumerate(P.items()):
-    x=64+i*120
-    board+=f'<rect x="{x}" y="449" width="104" height="72" rx="8" fill="{color}" stroke="#D6D1CB"/>'+txt(color,x,548,12)
-for i,variant in enumerate(('light','dark','black')):
-    x=64+i*238
-    bg=P['ink'] if variant=='dark' else '#FFFFFF'
-    board+=f'<rect x="{x}" y="600" width="218" height="254" rx="10" fill="{bg}"/>'+mark(x+44,620,130,variant)+txt('AIOS101',x+24,799,33,'#FFFFFF' if variant=='dark' else P['ink'])+txt(['LIGHT','DARK','ONE COLOR'][i],x+5,883,12)
-for i in range(2):
-    x=852+i*270
-    board+=f'<g transform="translate({x} 452) scale(.405)"><rect width="600" height="1100" fill="#FFFFFF"/>'+txt('0'+str(i+1),38,91,55,P['indigo'])+txt(names[i],38,190,57,chinese=True)+txt(en[i],40,235,17)+f'<g transform="translate(0 330)">{motif(600,715,i)}</g></g>'
-board+=txt('X-lab 出品 · 课程视觉设计评审稿',64,960,19,chinese=True)
-write('identity-board.svg',1440,1000,board,'AIOS101 开卷视觉识别方案')
-
-tokens={'version':'0.1-review','name':'Open Folio / 开卷','colors':P,'typography':{'latin':'Space Grotesk','chinese':'System sans-serif; outlined Noto Sans CJK SC in fixed assets'},'mark':{'viewBox':[0,0,128,128],'clearSpaceRatio':0.125,'minSizePx':32},'parts':names}
-(OUT/'tokens.json').write_text(json.dumps(tokens,ensure_ascii=False,indent=2)+'\n')
-readme='''# AIOS101 · 开卷 / Open Folio
-
-课程专属视觉识别 v0.1，设计评审稿。X-lab 为课程出品方。
-
-## 选择文件
-
-- logo-light / logo-dark：浅底 / 深底的课程横版标志。
-- logo-black / logo-white：单色标志。
-- mark-*：独立图形标；favicon 为小尺寸专用版本。
-- avatar、social-card：课程头像与社交预览。
-- cover-part-1—4：四篇封面图形样板。
-- identity-board：视觉总览；tokens.json：数字设计参数。
-
-SVG 为已转路径的矢量资产，不是位图描摹文件；使用时保持比例和净空。图形标建议 32 px 以上，横版字标建议 220 px 以上。颜色为 sRGB，印刷须打样，不宣称已完成 CMYK 转换。
-
-Space Grotesk 原始字体按 SIL OFL 1.1 随包提供。Phosphor 辅助图标按 MIT 分别保留许可。中文固定字形使用 Noto Sans CJK SC 转路径，完整中文字体未打包。Radix Colors 和 p5.js 仅为调研参考，未打包其代码。第三方许可不自动适用于新课程标志或整仓库。
-
-课程新标志为本轮原创设计提案；对外复用条款由维护者决定。X-lab 标志应从其官方品牌库获取，保留原样作为出品方署名，不与课程图形合并。
-
-详细规格：https://github.com/X-lab2017/AIOS101/blob/codex/aios101-web-review/specs/course-identity-spec.md
-'''
-(OUT/'README.md').write_text(readme)
-with zipfile.ZipFile(OUT/'aios101-identity-kit-v0.1.zip','w',zipfile.ZIP_DEFLATED) as z:
-    for p in sorted(OUT.iterdir()):
-        if p.suffix in ('.svg','.json','.md'):
-            z.write(p,'AIOS101-Identity-v0.1/'+p.name)
-    for directory in ('fonts','icons'):
-        for p in sorted((ROOT/'site/assets'/directory).iterdir()):
-            z.write(p,'AIOS101-Identity-v0.1/'+directory+'/'+p.name)
-print(f'Generated course identity assets and kit in {OUT}')
+# The v0.1 identity-board.svg is historical; do not overwrite it.
+# Metadata and releases are maintained separately; generation never rewrites approval.
+print(f'Generated 16 production SVG assets in {OUT}; review differences, then package a new baseline version.')

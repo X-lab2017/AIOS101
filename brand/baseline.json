@@ -1,0 +1,20 @@
+{
+  "id": "VIS-AIOS101",
+  "version": "1.0.0",
+  "status": "approved",
+  "approvedOn": "2026-10-28",
+  "approval": "维护者认可已上线视觉，并要求固化为基线、存入仓库供后续复用。",
+  "name": "Open Folio / 开卷",
+  "producer": "X-lab AI",
+  "designSourceCommit": "5f91118318e3f02a857d4673ae8590d9aa5317e1",
+  "manifest": "brand/releases/v1.0.0.manifest.json",
+  "archive": "site/assets/course/aios101-identity-kit-v1.0.0.zip",
+  "tokens": "site/assets/course/tokens.json",
+  "scope": ["AIOS101 网站", "教材", "课件", "活动任务单", "课程视频与社交传播"],
+  "xlabSourceCommit": "373d61f0d6e334f0b85af0dd5d8ef9b9095bcc37",
+  "thirdPartyLicenses": {
+    "Space Grotesk": "SIL OFL 1.1",
+    "Phosphor Icons": "MIT"
+  },
+  "licenseNote": "课程配套复用按本轮维护者授权执行；未新增对第三方的通用品牌授权。"
+}

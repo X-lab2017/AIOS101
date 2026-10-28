@@ -2,9 +2,9 @@ name: Course website
 on:
   push:
     branches: [main]
-    paths: ['site/**', 'textbook/**', 'activities/student/**', 'specs/**', 'CONSTITUTION.md', 'scripts/**', '.github/workflows/course-pages.yml']
+    paths: ['site/**', 'brand/**', 'textbook/**', 'activities/student/**', 'specs/**', 'CONSTITUTION.md', 'scripts/**', '.github/workflows/course-pages.yml']
   pull_request:
-    paths: ['site/**', 'textbook/**', 'activities/student/**', 'specs/**', 'CONSTITUTION.md', 'scripts/**', '.github/workflows/course-pages.yml']
+    paths: ['site/**', 'brand/**', 'textbook/**', 'activities/student/**', 'specs/**', 'CONSTITUTION.md', 'scripts/**', '.github/workflows/course-pages.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -22,6 +22,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - run: python scripts/package_course_brand.py --check
       - run: python scripts/build_site.py
       - run: node --check site/app.js
       - run: node --check site/brand.js

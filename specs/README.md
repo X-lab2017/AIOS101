@@ -120,3 +120,5 @@ scripts/
 - [技术核验与未决事项](website-review-record.md)
 
 - [Pages 公开预览发布记录](pages-release-record.md)：维护者授权范围、优化核验与部署状态。
+
+- [AIOS101 视觉基线 v1.0.0](../brand/README.md)：已批准的课程识别、复用示例、版本包与校验清单。

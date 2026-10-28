@@ -1,0 +1,33 @@
+/* AIOS101 Visual Baseline v1.0.0. Pair with the original assets and notices. */
+:root {
+  --aios-paper: #F6F3EB;
+  --aios-ink: #1D2433;
+  --aios-indigo: #5146D9;
+  --aios-coral: #F27A59;
+  --aios-lavender: #E7E3FC;
+  --aios-teal: #3F958D;
+  --aios-bg: #F6F3EB;
+  --aios-surface: #FFFEFA;
+  --aios-text: #1D2433;
+  --aios-muted: #656577;
+  --aios-border: #DCD9E1;
+  --aios-link: #4438B7;
+  --aios-action: #5146D9;
+  --aios-on-action: #FFFFFF;
+  --aios-soft: #ECE9FB;
+  --aios-font: 'Space Grotesk', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --aios-radius-button: 6px;
+  --aios-radius-card: 10px;
+  --aios-space-unit: 4px;
+}
+[data-aios-theme='dark'] {
+  --aios-bg: #171B27;
+  --aios-surface: #202536;
+  --aios-text: #F5F2ED;
+  --aios-muted: #B7B8CA;
+  --aios-border: #3A4055;
+  --aios-link: #C1B5FF;
+  --aios-action: #A99CFF;
+  --aios-on-action: #1D2433;
+  --aios-soft: #2B2B46;
+}

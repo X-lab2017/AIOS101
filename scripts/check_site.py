@@ -38,7 +38,7 @@ for filename in ['index.html', 'styles.css', 'brand.css', 'app.js', 'brand.js']:
 for theme in ['light', 'dark']:
     for path in [f'assets/logo-{theme}.svg', f'assets/full-logo-{theme}.svg', f'assets/course/logo-{theme}.svg', f'assets/course/mark-{theme}.svg']:
         assert (OUT/path).is_file(), path
-with zipfile.ZipFile(OUT/'assets/course/aios101-identity-kit-v0.1.zip') as archive:
+with zipfile.ZipFile(OUT/'assets/course/aios101-identity-kit-v1.0.0.zip') as archive:
     assert archive.testzip() is None, 'Corrupt identity asset package'
 assert (OUT/'.nojekyll').is_file()
 print(f'PASS: 12 chapter IDs, canonical preface, draft sources, {len(checked)} static references, theme assets and ZIP')

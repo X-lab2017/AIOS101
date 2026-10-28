@@ -8,7 +8,7 @@
 
 ## 课程专属视觉与第三方资源
 
-course/ 为 AIOS101 的 Open Folio / 开卷设计提案，详见 course/README.md 和课程视觉规格。X-lab 标志保持原样，未改变其使用边界。
+course/ 为 AIOS101 的 Open Folio / 开卷 v1.0.0 视觉基线，详见 course/README.md 和课程视觉规格。X-lab 标志保持原样，未改变其使用边界。
 
 fonts/SpaceGrotesk.woff2 为 Florian Karsten 项目的原始文件，固定提交 03507d024a01282884232081fc6011c09ff4e849，原始路径 fonts/woff2/SpaceGrotesk[wght].woff2；完整授权见 fonts/OFL-Space-Grotesk.txt。
 

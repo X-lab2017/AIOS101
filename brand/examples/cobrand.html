@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AIOS101 · 视觉基线联合署名示例</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <style>
+    @font-face{font-family:'Space Grotesk';src:url('../../site/assets/fonts/SpaceGrotesk.woff2') format('woff2');font-weight:300 700;font-display:swap}
+    *{box-sizing:border-box}body{margin:0;background:#f6f3eb;color:#1d2433;font-family:var(--aios-font);line-height:1.8}main{max-width:1000px;margin:auto;padding:40px 24px}h1{font-size:30px}h2{font-size:22px;margin-top:0}.note{font-size:14px;color:#656577}.panel{margin:28px 0;padding:40px;background:var(--aios-surface);color:var(--aios-text);border:1px solid var(--aios-border);border-radius:var(--aios-radius-card)}.lockup{display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap}.course{width:360px;max-width:100%;height:auto}.producer{border-left:1px solid var(--aios-border);padding-left:40px;text-align:center}.producer span{display:block;color:var(--aios-muted);font-size:11px;letter-spacing:2px}.producer img{width:180px;height:auto;display:block}.caption{margin:30px 0 0;color:var(--aios-muted);font-size:13px;text-align:center}a{color:var(--aios-link)}@media(max-width:600px){main{padding:24px 16px}.panel{padding:32px 22px}.lockup{gap:22px}.producer{border-left:0;border-top:1px solid var(--aios-border);padding:20px 0 0;width:100%}.producer img{margin:auto;max-width:60%}h1{font-size:25px}}
+  </style>
+</head>
+<body><main>
+  <h1>AIOS101 · 开卷视觉基线</h1>
+  <p class="note">v1.0.0 · 2026-10-28。此文件可离线打开，用作教材、课件和网站联合署名的布局参考。</p>
+  <section class="panel" aria-label="浅色背景联合署名">
+    <div class="lockup"><img class="course" src="../../site/assets/course/logo-light.svg" alt="AIOS101 · AI 开源通识" width="720" height="180"><div class="producer"><span>课程出品方 · A COURSE BY</span><img src="../../site/assets/logo-light.svg" alt="X-lab AI" width="160" height="52"></div></div>
+    <p class="caption">浅底：课程主标志 + X-lab 原版署名</p>
+  </section>
+  <section class="panel" data-aios-theme="dark" aria-label="深色背景联合署名">
+    <div class="lockup"><img class="course" src="../../site/assets/course/logo-dark.svg" alt="AIOS101 · AI 开源通识" width="720" height="180"><div class="producer"><span>课程出品方 · A COURSE BY</span><img src="../../site/assets/logo-dark.svg" alt="X-lab AI" width="160" height="52"></div></div>
+    <p class="caption">深底：使用专门深色资产，保留图形和留白</p>
+  </section>
+  <p class="note">生产资产位于 site/assets/。复制示例时一并保留 brand/tokens.css 和对应资产路径；图形不变形、不合并、不任意改色。</p>
+</main></body></html>

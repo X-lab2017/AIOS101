@@ -48,7 +48,7 @@ Sites 使用独立的私有托管快照供维护者当前评审；GitHub 分支�
 
 ## 课程视觉
 
-课程采用 Open Folio / 开卷识别系统，X-lab AI 作为出品方署名。视觉正本见 [课程视觉规格](../specs/course-identity-spec.md)，资产在 assets/course/。Space Grotesk 字体与 Phosphor 辅助图标本地托管并分别保留许可。
+课程采用 Open Folio / 开卷识别系统，X-lab AI 作为出品方署名。统一取用入口为 [视觉基线 v1.0.0](../brand/README.md)，视觉正本见 [课程视觉规格](../specs/course-identity-spec.md)，资产在 assets/course/。Space Grotesk 字体与 Phosphor 辅助图标本地托管并分别保留许可。
 
 重新生成路径资产需要 fontTools、上游原版 SpaceGrotesk[wght].ttf 与本机 Noto Sans CJK SC Bold OTF：
 

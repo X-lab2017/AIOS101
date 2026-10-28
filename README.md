@@ -55,7 +55,7 @@ python scripts/check_repo.py
 ## 在线学习资源
 
 - [网站建设规格 v0.3](specs/website-spec.md)
-- [课程专属视觉识别 v0.1](specs/course-identity-spec.md)
+- [课程专属视觉识别 v1.0.0](specs/course-identity-spec.md)
 - [序言与系统探索活动设计](specs/website-activities.md)
 - [网站开发与 GitHub Pages 发布说明](site/README.md)
 - [技术核验记录](specs/website-review-record.md)
@@ -65,3 +65,7 @@ python scripts/check_repo.py
 当前为公开预览版，未通过课程教学验收；已提供完整序言阅读与活动样板，前两章 v0.2 自学草稿及任务单可从课程地图查看，完整章阅读和正式章活动随制作进度接入。
 
 公开预览发布范围与实际核验记录见 [Pages 发布记录](specs/pages-release-record.md)。
+
+## 视觉基线与复用
+
+[AIOS101 视觉基线 v1.0.0](brand/README.md)已固化：包含 Logo、配色与字体、X-lab 联合署名、四篇图形、离线示例和带 SHA-256 清单的资产包。后续教材、课件、网站及课程传播统一从此入口取用。

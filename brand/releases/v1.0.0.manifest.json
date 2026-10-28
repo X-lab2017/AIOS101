@@ -1,0 +1,183 @@
+{
+  "schema": 1,
+  "id": "VIS-AIOS101",
+  "version": "1.0.0",
+  "status": "approved",
+  "approvedOn": "2026-10-28",
+  "designSourceCommit": "5f91118318e3f02a857d4673ae8590d9aa5317e1",
+  "xlabSourceCommit": "373d61f0d6e334f0b85af0dd5d8ef9b9095bcc37",
+  "archive": "site/assets/course/aios101-identity-kit-v1.0.0.zip",
+  "productionSvgCount": 16,
+  "files": [
+    {
+      "path": "brand/README.md",
+      "bytes": 7044,
+      "sha256": "a623621b71523bbae1adb2397111c4f8b251c38d371386d0818d5fc822a2df12"
+    },
+    {
+      "path": "brand/baseline.json",
+      "bytes": 882,
+      "sha256": "f1cf827fac57a220a0ae6aa25c7fbcaaaa84a295cb8cd46effbf6e96a3ec9f0f"
+    },
+    {
+      "path": "brand/examples/cobrand.html",
+      "bytes": 2885,
+      "sha256": "b7692f60ce3bf25fad691ed1861bb4ad100f2791d19aa5830816164992e5104b"
+    },
+    {
+      "path": "brand/tokens.css",
+      "bytes": 898,
+      "sha256": "cd6761d169e09970d343f9aced6e16ea2ae53d860fc1f3e2348823f62e837218"
+    },
+    {
+      "path": "site/assets/NOTICE.md",
+      "bytes": 1630,
+      "sha256": "7eaec8b32bc7601662cd56926b409adf80b49f29872bc9a3d7685fb93322a3bb"
+    },
+    {
+      "path": "site/assets/course/README.md",
+      "bytes": 1722,
+      "sha256": "4cf32db7a70d94a7e5568a797722bfb3bab1c41022002cba15147ace168685ab"
+    },
+    {
+      "path": "site/assets/course/avatar.svg",
+      "bytes": 2512,
+      "sha256": "cf43be7aff2b89f8dc6037895d0b97b1eb7462653946f01f122a7ca1c3788e87"
+    },
+    {
+      "path": "site/assets/course/cover-part-1.svg",
+      "bytes": 15039,
+      "sha256": "69395bb3bcdfafe39c5afe7a2aec2f2dbf12379d011902018064636ae8a60c1c"
+    },
+    {
+      "path": "site/assets/course/cover-part-2.svg",
+      "bytes": 13459,
+      "sha256": "03e3c504a9f05257d3885d0d8ea78503225e2acaa93dd85282f3587bb0881e73"
+    },
+    {
+      "path": "site/assets/course/cover-part-3.svg",
+      "bytes": 14103,
+      "sha256": "24ca685c38deb4599c163448ad9687bc400deba6694e053ecd3cf59186255fac"
+    },
+    {
+      "path": "site/assets/course/cover-part-4.svg",
+      "bytes": 13345,
+      "sha256": "8461f4d8d6ba6b96ccc505f4159b9f70570a60ac316c4a5022be990f2370e804"
+    },
+    {
+      "path": "site/assets/course/favicon.svg",
+      "bytes": 302,
+      "sha256": "972436d4fad223c7f902ca27dee4c7ec09e4ad2ac7cd62932cd7524497175e54"
+    },
+    {
+      "path": "site/assets/course/hero-folio.svg",
+      "bytes": 622,
+      "sha256": "a278706da4ba03d7bce545533c2d53890ca1447e74e81ebcaea0264e05b8ead4"
+    },
+    {
+      "path": "site/assets/course/logo-black.svg",
+      "bytes": 4889,
+      "sha256": "162d649ec04ee8712877acbb8fdc95bf5a14e3d18621f318e5777ffe45a444a9"
+    },
+    {
+      "path": "site/assets/course/logo-dark.svg",
+      "bytes": 5009,
+      "sha256": "9502e0d7cc69f6a16b058e7d8876a0cd3e44076101463b5e34d48be39788e9e5"
+    },
+    {
+      "path": "site/assets/course/logo-light.svg",
+      "bytes": 5009,
+      "sha256": "203e699b550f966829903b70f5f6800f7e59324f3d4f37931b139579ffa89013"
+    },
+    {
+      "path": "site/assets/course/logo-white.svg",
+      "bytes": 4889,
+      "sha256": "9c8411e4803e20e644a77d79d984ed3c6f6aa5a1d51c328c1d60b4555b02d715"
+    },
+    {
+      "path": "site/assets/course/mark-black.svg",
+      "bytes": 486,
+      "sha256": "e239b96136e9ea0f020105202cf9fcbb4a1a826ff40b7407d43a4ec12d6c58e3"
+    },
+    {
+      "path": "site/assets/course/mark-dark.svg",
+      "bytes": 606,
+      "sha256": "3bd5e4920f10d76d9e5df39620f4f92cab8f16ea752fb2d4d24075517cbd1eb8"
+    },
+    {
+      "path": "site/assets/course/mark-light.svg",
+      "bytes": 606,
+      "sha256": "92adb004e30ed453cfb755c2dbd1cd970492e8ed0ce280e6cc27432c3c0a7c85"
+    },
+    {
+      "path": "site/assets/course/mark-white.svg",
+      "bytes": 486,
+      "sha256": "c85377ce619e80fbe36a7422bce0fe00ac56a941aa86f6267553c2c73329a19d"
+    },
+    {
+      "path": "site/assets/course/social-card.svg",
+      "bytes": 14519,
+      "sha256": "8fa5758924a23e391f576441980034abe0e21466dc977dd9b7975e971c91c806"
+    },
+    {
+      "path": "site/assets/course/tokens.json",
+      "bytes": 1397,
+      "sha256": "018efe7f5b50d2e29cd35b6a61e3afaa27e15deb6beb397835a845fe0beefea2"
+    },
+    {
+      "path": "site/assets/fonts/OFL-Space-Grotesk.txt",
+      "bytes": 4402,
+      "sha256": "c6dec685825f73b18c20926fddc65e8315642e12986f15db0699170940a09efc"
+    },
+    {
+      "path": "site/assets/fonts/SpaceGrotesk.woff2",
+      "bytes": 49256,
+      "sha256": "8e085aa438094f11487a836652edd5c054fa6a96f63fc7c282105ee3a4b08c07"
+    },
+    {
+      "path": "site/assets/full-logo-dark.svg",
+      "bytes": 18200,
+      "sha256": "dc41cbdbca97b1710781bb23bc7c63124618e8e573bbab71b58b40f96770b93f"
+    },
+    {
+      "path": "site/assets/full-logo-light.svg",
+      "bytes": 18200,
+      "sha256": "a3b271ed62292ac66d7eb42351c3d6dedcc1706245545d858d7e41498b765f42"
+    },
+    {
+      "path": "site/assets/icons/LICENSE-Phosphor.txt",
+      "bytes": 1071,
+      "sha256": "b5b1f1da112d18ea2147decfd48ddc1bf2b5aeb6c265381579340e95b15a2bb2"
+    },
+    {
+      "path": "site/assets/icons/book-open.svg",
+      "bytes": 520,
+      "sha256": "ed4f731cb4272cf5cedd9226577ba4bb1b36154f70cbee6fc50dfb947722bbc7"
+    },
+    {
+      "path": "site/assets/icons/git-branch.svg",
+      "bytes": 483,
+      "sha256": "048e8569daa3f44b71878f169003e156a57205653ebf8cb9be0da496ae4c349e"
+    },
+    {
+      "path": "site/assets/icons/graph.svg",
+      "bytes": 828,
+      "sha256": "9566260ccb3d0d4fd83a0f26205505313ed4b42ba697d9cea709efd644bd48cf"
+    },
+    {
+      "path": "site/assets/icons/magnifying-glass.svg",
+      "bytes": 317,
+      "sha256": "4d4805b059b49add1e3424b53b05ba8f5bd6031ca551540b32b0a61cfb0ec7d9"
+    },
+    {
+      "path": "site/assets/logo-dark.svg",
+      "bytes": 5988,
+      "sha256": "3bbc362dccd07408680cee512590525955277d7aff607c9484298041997e12ea"
+    },
+    {
+      "path": "site/assets/logo-light.svg",
+      "bytes": 5988,
+      "sha256": "4257c98468d89d12ae89c2951f1f84f3ed2b4acbc6d2f4db910b355c37097785"
+    }
+  ]
+}
