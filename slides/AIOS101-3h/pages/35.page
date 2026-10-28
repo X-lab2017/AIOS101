@@ -11,7 +11,7 @@ elements:
   - 600
   - 18
   content:
-    text: 第 4 章｜FineWeb 消融
+    text: 第 4 章｜训练节奏
     fontSize: 10
     fontFamily: &id001
       latin: QuattrocentoSans
@@ -31,7 +31,7 @@ elements:
   - 848
   - 72
   content:
-    text: 读消融曲线：改变一个环节，保留结论边界
+    text: 100 个样本、每批 10 个：两轮训练发生多少次更新？
     fontSize: 30
     fontFamily: *id001
     color: '#1D2433'
@@ -63,7 +63,7 @@ elements:
   - 770
   - 16
   content:
-    text: FineWeb 论文 v2 图 9（CC BY 4.0）；课程未独立复算。
+    text: 教材图 4-6；教学算例用于区分批次、迭代、训练轮次与检查点。
     fontSize: 9
     fontFamily: *id001
     color: '#656577'
@@ -112,7 +112,7 @@ elements:
   - 154
   - 832
   - 314
-  src: media/fig-4_3.jpg
+  src: media/fig-4_6.jpg
   fit:
     mode: contain
 - elementId: caption
@@ -123,7 +123,7 @@ elements:
   - 848
   - 22
   content:
-    text: 图 4-3　FineWeb 论文 v2 图 9 原图｜17.1 亿参数模型上的特定对照；比较数据处理条件，不是所有模型的普遍排名。
+    text: 图 4-6　批次、迭代、训练轮次与检查点｜每轮 10 次、两轮 20 次；检查点在第 4、13 次更新之后，但检查点不等于最佳模型。
     fontSize: 11
     fontFamily: *id001
     color: '#656577'

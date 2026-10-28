@@ -11,7 +11,7 @@ elements:
   - 600
   - 18
   content:
-    text: 第 6 章｜资料准备
+    text: 第 6 章｜检索增强生成
     fontSize: 10
     fontFamily: &id001
       latin: QuattrocentoSans
@@ -31,7 +31,7 @@ elements:
   - 848
   - 72
   content:
-    text: RAG 第一步：把长资料切成可回查的证据块
+    text: RAG：把合适的资料带到作答桌面
     fontSize: 30
     fontFamily: *id001
     color: '#1D2433'
@@ -63,7 +63,7 @@ elements:
   - 770
   - 16
   content:
-    text: AIInfra 固定 README（b97c038）；切分与候选次序为教学设计，不是产品实测。
+    text: 教材图 6-4；概念隐喻，不是软件结构。
     fontSize: 9
     fontFamily: *id001
     color: '#656577'
@@ -112,7 +112,7 @@ elements:
   - 154
   - 832
   - 314
-  src: media/fig-6_2.jpg
+  src: media/fig-6_4.jpg
   fit:
     mode: contain
 - elementId: caption
@@ -123,7 +123,7 @@ elements:
   - 848
   - 22
   content:
-    text: 图 6-2　长文档切分、元数据与检索｜固定 AIInfra README 被教学性切分；保留标题、小节、版本与原文位置。
+    text: 图 6-4　检索增强生成：带着资料作答｜书架是外部资料库，桌面是本次上下文；查资料与写回答相连，不等于重新训练。
     fontSize: 11
     fontFamily: *id001
     color: '#656577'

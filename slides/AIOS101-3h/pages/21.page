@@ -113,7 +113,7 @@ elements:
   - 197.0
   - 198
   content:
-    text: 问题发生在哪个版本、什么材料、什么使用情境？
+    text: <p>问题发生在哪个版本、什么材料、什么使用情境？</p>
     fontSize: 19
     fontFamily: *id001
     color: '#1D2433'
@@ -163,7 +163,7 @@ elements:
   - 197.0
   - 198
   content:
-    text: 他人能否复现问题或审查这组修改？
+    text: <p>他人能否复现问题或审查这组修改？</p>
     fontSize: 19
     fontFamily: *id001
     color: '#1D2433'
@@ -213,7 +213,7 @@ elements:
   - 197.0
   - 198
   content:
-    text: 谁提出了什么意见，贡献者怎样回应？
+    text: <p>谁提出了什么意见，贡献者怎样回应？</p>
     fontSize: 19
     fontFamily: *id001
     color: '#1D2433'
@@ -263,7 +263,7 @@ elements:
   - 197.0
   - 198
   content:
-    text: 合并、关闭、待处理或仍需证据？不作过度推断。
+    text: <p>合并、关闭、待处理或仍需证据？不作过度推断。</p>
     fontSize: 19
     fontFamily: *id001
     color: '#1D2433'

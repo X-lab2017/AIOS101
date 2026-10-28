@@ -30,26 +30,66 @@ for p in PAGES.glob("*.page"):
 manifest = json.loads((FIG / "manifest.json").read_text(encoding="utf-8"))
 meta = {x["id"]: x for x in manifest}
 used_figs = [
-    "1-1", "1-2", "1-3", "1-4", "2-1", "2-2", "2-3", "2-4",
-    "3-1", "3-2", "3-3", "3-4", "3-5", "3-8", "4-1", "4-2",
-    "4-3", "4-4", "4-5", "4-7", "5-1", "5-2", "5-3", "5-5",
-    "5-6", "5-8", "5-9", "6-1", "6-2", "6-4", "6-5", "6-6",
-    "6-7", "6-8", "6-9", "6-10",
+    "0-3",
+    "1-1", "1-2", "1-3", "1-4",
+    "2-1", "2-2", "2-3", "2-4",
+    "3-1", "3-2", "3-3", "3-4", "3-5", "3-8",
+    "4-1", "4-2", "4-4", "4-5", "4-6", "4-7", "4-9",
+    "5-1", "5-2", "5-3", "5-5", "5-6", "5-8",
+    "6-1", "6-3", "6-4", "6-5", "6-6", "6-7", "6-8", "6-10",
 ]
+SPLIT_POINTS = {"6-6": 0.635, "6-8": 0.427, "6-10": 0.49}
+# Slide copies omit the textbook's printed figure title and footer. Sources and
+# captions remain visible in the slide, while the original assets stay untouched.
+CROPS = {
+    "3-2": (0.08, 0.03), "3-3": (0.08, 0.03),
+    "3-4": (0.09, 0.04), "3-5": (0.09, 0.04),
+    "4-1": (0.16, 0.09), "4-2": (0.12, 0.06),
+    "4-4": (0.12, 0.06), "4-5": (0.15, 0.10),
+    "4-6": (0.15, 0.10), "4-7": (0.10, 0.05),
+    "4-9": (0.12, 0.06),
+    "5-1": (0.18, 0.10), "5-2": (0.16, 0.10),
+    "5-3": (0.14, 0.09), "5-6": (0.10, 0.06),
+    "5-8": (0.10, 0.06),
+    "6-1": (0.10, 0.06), "6-3": (0.16, 0.10),
+    "6-5": (0.10, 0.06), "6-6": (0.08, 0.04),
+    "6-7": (0.15, 0.10), "6-8": (0.08, 0.04),
+    "6-10": (0.06, 0.05),
+}
+for old in MEDIA.glob("fig-*.jpg"):
+    old.unlink()
 fig_files = {}
 for fid in used_figs:
     src = FIG / meta[fid]["file"]
-    dst = MEDIA / f"fig-{fid.replace('-', '_')}.jpg"
-    with Image.open(src) as im:
-        if im.mode != "RGB":
-            bg = Image.new("RGB", im.size, "white")
-            if im.mode == "RGBA":
-                bg.paste(im, mask=im.getchannel("A"))
+    stem = f"fig-{fid.replace('-', '_')}"
+    with Image.open(src) as source_image:
+        if source_image.mode != "RGB":
+            bg = Image.new("RGB", source_image.size, "white")
+            if source_image.mode == "RGBA":
+                bg.paste(source_image, mask=source_image.getchannel("A"))
             else:
-                bg.paste(im.convert("RGB"))
+                bg.paste(source_image.convert("RGB"))
             im = bg
-        im.save(dst, "JPEG", quality=94, optimize=True, progressive=True, subsampling=0)
-    fig_files[fid] = f"media/{dst.name}"
+        else:
+            im = source_image.copy()
+    if fid in CROPS:
+        top, bottom = CROPS[fid]
+        im = im.crop((0, round(im.height * top), im.width, round(im.height * (1-bottom))))
+    def save_figure(image_part, suffix=""):
+        dst = MEDIA / f"{stem}{suffix}.jpg"
+        image_part.save(dst, "JPEG", quality=94, optimize=True, progressive=True, subsampling=0)
+        return f"media/{dst.name}"
+    if im.width / im.height < 1.15:
+        # Process figures split at verified gaps; collages retain 8% overlap.
+        split = SPLIT_POINTS.get(fid)
+        split_top = round(im.height * (split if split is not None else 0.46))
+        split_bottom = round(im.height * (split if split is not None else 0.54))
+        fig_files[fid] = [
+            save_figure(im.crop((0, 0, im.width, split_bottom)), "-a"),
+            save_figure(im.crop((0, split_top, im.width, im.height)), "-b"),
+        ]
+    else:
+        fig_files[fid] = save_figure(im)
 
 for name in ("logo-dark", "logo-light"):
     doc = fitz.open(ROOT / "site" / "assets" / "course" / f"{name}.svg")
@@ -146,9 +186,15 @@ def fig_slide(title, fid, section, points, source="", image_side="left", caption
     add("fig", title, els, section, source=source)
 
 def full_fig(title, fid, section, note, source=""):
-    els = [rect(56, 148, 848, 326, C["white"], "image-field", line={"width": 1, "color": C["line"]}),
-           image(fig_files[fid], 64, 154, 832, 314, "figure"),
-           text(56, 480, 848, 22, f"图 {fid}　{meta[fid]['title']}｜{note}", 11, C["muted"], name="caption")]
+    paths = fig_files[fid]
+    els = [rect(56, 148, 848, 326, C["white"], "image-field", line={"width": 1, "color": C["line"]})]
+    if isinstance(paths, list):
+        els += [image(paths[0], 64, 154, 408, 314, "figure-top"),
+                image(paths[1], 488, 154, 408, 314, "figure-bottom")]
+        note += "｜竖图按上、下顺序分栏"
+    else:
+        els.append(image(paths, 64, 154, 832, 314, "figure"))
+    els.append(text(56, 480, 848, 22, f"图 {fid}　{meta[fid]['title']}｜{note}", 11, C["muted"], name="caption"))
     add("fig", title, els, section, source=source)
 
 def compare(title, columns, section, bottom=None, source=""):
@@ -159,7 +205,8 @@ def compare(title, columns, section, bottom=None, source=""):
         x = 56 + i*(cw+gap)
         els.append(text(x, 164, cw, 44, head, 23, color, bold=True, name=f"head{i}"))
         els.append(line(x, 214, x+cw, 214, color, 3, f"rule{i}"))
-        els.append(text(x, 232, cw, 198, body, 19, C["ink"], lh=1.38, name=f"body{i}"))
+        paragraphs = [escape(part) for part in body.splitlines() if part.strip()]
+        els.append(rich(x, 232, cw, 198, paragraphs, 19, C["ink"], 1.38, f"body{i}"))
     if bottom:
         els.append(rect(56, 444, 848, 42, C["lavender"], "takeaway"))
         els.append(text(72, 451, 816, 28, bottom, 17, C["indigo"], bold=True, valign="middle", name="takeaway-text"))
@@ -172,6 +219,17 @@ def practice(title, task, steps, output, minutes="3 分钟", section="课堂互�
     els.append(rect(674, 274, 230, 158, C["softcoral"], "output-field"))
     els.append(text(694, 294, 190, 24, "完成标准", 15, C["coral"], bold=True, name="output-label"))
     els.append(text(694, 330, 190, 82, output, 18, C["ink"], lh=1.32, name="output"))
+    add("practice", title, els, section, page_type="content")
+
+def fig_practice(title, fid, task, steps, output, section, minutes="3 分钟"):
+    els = [text(510, 154, 110, 24, minutes, 13, C["coral"], bold=True, name="time", wrap=False),
+           text(510, 190, 394, 76, task, 21, C["ink"], bold=True, lh=1.22, name="task"),
+           rect(56, 162, 426, 310, C["white"], "image-field", line={"width": 1, "color": C["line"]}),
+           image(fig_files[fid], 64, 170, 410, 294, "figure"),
+           text(56, 480, 426, 18, f"图 {fid}　{meta[fid]['title']}", 10, C["muted"], name="caption", wrap=False)]
+    els += bullets(steps, 510, 282, 394, 64, 17, C["coral"], numbered=True)
+    els += [rect(510, 418, 394, 54, C["softcoral"], "output-field"),
+            text(526, 427, 362, 36, f"完成标准｜{output}", 15, C["coral"], bold=True, valign="middle", name="output")]
     add("practice", title, els, section, page_type="content")
 
 def chapter(nch, title, question, goals, part):
@@ -204,20 +262,16 @@ els = [image("media/logo-light.png", 56, 38, 200, 50, "logo"),
        line(56, 306, 904, 306, "#4C5260", 1, "cover-rule"),
        text(56, 338, 848, 32, "全校通识授课｜序言与第 1—6 章", 19, C["coral"], bold=True, name="cover-scope"),
        text(56, 392, 848, 28, "180 分钟 · 真实案例 · 四次互动 · 无需编程先修", 17, "#C8C8D4", name="cover-meta"),
-       text(56, 470, 848, 20, "AIOS101 · 课程讲义 v0.2 · 2026-10-29", 11, "#A8A8B8", name="cover-version")]
+       text(56, 470, 848, 20, "AIOS101 · 课程讲义 v0.3 · 2026-10-29", 11, "#A8A8B8", name="cover-version")]
 slides.append({"title": "AI 开源通识", "pageType": "cover", "background": {"type": "solid", "color": C["ink"]}, "elements": els})
+
+full_fig("一次回答背后，有哪些工作正在发生？", "0-3", "课程导入",
+         "概念插画，不是产品架构；沿“形成模型—组织服务—核对改进”读图，找到课堂将打开的六章问题。")
 
 practice("当 AI 给出答案，你看见了什么？",
          "回想一次使用 DeepSeek 等 AI 工具的经历：除了答案，你还能指出哪些内部过程？",
          ["独立写下：你能直接观察到的两件事", "再写下：你只能推测、无法直接确认的一件事", "与邻座比较：哪些证据能把推测变成判断"],
          "一条观察＋一个待核查问题", "2 分钟", "开场互动")
-
-compare("今天不是学更多按钮，而是获得四种能力", [
-    ("辨认", "分清模型、产品、系统与开放材料。\n\n知道自己在观察什么。", C["indigo"]),
-    ("解释", "说明训练、推理、检索与工具调用怎样衔接。\n\n不停在名词。", C["indigo"]),
-    ("核查", "追问对象、版本、配置、样本、许可与证据。\n\n不把宣传当结论。", C["teal"]),
-    ("设计", "组合开放组件，加入权限、评价和人工节点。\n\n让创造可复用。", C["coral"]),
-], "课程学习成果", "最终目标：从“会得到答案”走向“能解释、会验证、可创造”。")
 
 compare("180 分钟：从开放认识到任务系统", [
     ("开场＋第 1—2 章", "10＋20＋25 分钟\n\n为什么开源\n开放、复用与协作", C["indigo"]),
@@ -298,10 +352,10 @@ compare("供应链与生态：相关，但不是同一张图", [
     ("生态视角", "观察多主体怎样共同演化\n\n关注协作、复用、派生、治理与影响\n\n适合问：谁与谁怎样连接？", C["teal"]),
 ], "第 3 章｜观察视角", "一条连线必须说明关系类型；节点靠近不自动代表依赖或因果。")
 full_fig("Agent Infra：围绕任务执行与智能体系统", "3-2", "第 3 章｜GOSD 2026",
-         "86 个精选项目、12 类；观察窗口 2025-03—2026-08。",
+         "先看大组与 12 个分类，不要求读完全部项目名；86 个精选项目，观察窗口 2025-03—2026-08。",
          "GOSD 2026 完整评审版（2026-10-22）：145 个精选项目的子集，不是全球普查；图中位置不表示依赖。")
 full_fig("Model Infra：围绕模型开发、训练与运行", "3-3", "第 3 章｜GOSD 2026",
-         "59 个精选项目、13 类；与 Agent Infra 共同构成 145 个精选项目。",
+         "先看大组与 13 个分类，不要求读完全部项目名；59 个精选项目，与 Agent Infra 合计 145 个。",
          "GOSD 2026 完整评审版（2026-10-22）：分类用于观察技术供给，不等同于市场份额或完整排名。")
 fig_slide("同样是“连接”，证据含义可以完全不同", "3-4", "第 3 章｜关系辨析",
           [("功能", "在系统中承担什么角色"), ("依赖", "运行或构建需要什么"), ("派生", "从哪个上游继续训练或修改"), ("分发", "通过什么渠道获得"), ("协作与治理", "谁参与、谁决定、怎样维护")])
@@ -324,9 +378,9 @@ fig_slide("模型能力不是某一个要素单独带来的", "4-1", "第 4 章�
 full_fig("FineWeb：训练数据是处理出来的，不是原料堆", "4-2", "第 4 章｜数据配方",
          "96 个 Common Crawl 快照，经提取、过滤、去重等处理形成约 15 万亿 token。",
          "FineWeb 论文 v2（2024-10-31）；token 按 GPT-2 分词统计，不表示其他模型使用 FineWeb。")
-full_fig("读消融曲线：改变一个环节，保留结论边界", "4-3", "第 4 章｜FineWeb 消融",
-         "17.1 亿参数模型上的特定对照；比较数据处理条件，不是所有模型的普遍排名。",
-         "FineWeb 论文 v2 图 9（CC BY 4.0）；课程未独立复算。")
+full_fig("100 个样本、每批 10 个：两轮训练发生多少次更新？", "4-6", "第 4 章｜训练节奏",
+         "每轮 10 次、两轮 20 次；检查点在第 4、13 次更新之后，但检查点不等于最佳模型。",
+         "教材图 4-6；教学算例用于区分批次、迭代、训练轮次与检查点。")
 fig_slide("token、候选分布与损失：训练目标怎样落地", "4-4", "第 4 章｜下一 token 预测",
           [("token", "词、词的一部分、汉字或其他片段"), ("候选分布", "模型对下一片段的相对可能性分配"), ("损失", "预测与训练文本实际后续之间的差距"), ("注意", "图中数字为教学示意，不是事实正确率")])
 full_fig("一次训练迭代：误差信号怎样推动参数更新", "4-5", "第 4 章｜训练循环",
@@ -340,10 +394,10 @@ compare("预训练、后训练、蒸馏：回答不同问题", [
 full_fig("DeepSeek-R1：公开说明中的形成路径", "4-7", "第 4 章｜真实模型",
          "R1-Zero 与 R1 路线不同；六个蒸馏模型同时有样本来源与微调基础两类上游。",
          "DeepSeek-R1 固定 README（0cf7856）；仅呈现公开概述，不补写数据量、奖励设计或训练时长。")
-practice("情境练习｜测试题“见过”之后，分数还说明什么？",
-         "一套校园植物识别测试题被网站转载，其中近重复图片进入了训练集；测试准确率仍然很高。",
-         ["指出问题：测试材料不当进入训练，独立性被削弱", "提出检查：来源、时间、近重复与划分规则", "改写结论：不能仅凭高分宣称能识别所有新场景"],
-         "一句风险判断＋两项核查证据", "3 分钟", "第 4 章｜课堂互动")
+fig_practice("情境练习｜测试题“见过”之后，分数还说明什么？", "4-9",
+             "校园植物测试题的近重复图片进入训练集，测试准确率仍然很高。问题在哪里？",
+             ["判断风险：测试材料不当进入训练，独立性被削弱", "核查证据：来源与时间、近重复、数据划分规则；高分不能外推到所有新场景"],
+             "一句风险判断＋两项核查证据", "第 4 章｜课堂互动")
 
 break_page(2, "第 5 章｜从训练到推理")
 
@@ -389,12 +443,12 @@ chapter(6, "从模型到智能体：检索、\n工具与人机协作", "AI 怎�
         ["分清检索片段、模型请求与工具实际执行", "设计有权限、有停止、有证据的低风险流程"], "第二篇｜理解 AI")
 fig_slide("模型不是整个任务系统", "6-1", "第 6 章｜系统组成",
           [("模型", "生成回答、计划或调用请求"), ("检索", "从外部资料找到候选片段"), ("工具", "由外部程序执行查询、计算或读写"), ("状态与人", "保存进度、设定权限并核验"), ("按需组合", "任务不缺的能力不必强行加入")])
-full_fig("RAG 第一步：把长资料切成可回查的证据块", "6-2", "第 6 章｜资料准备",
-         "固定 AIInfra README 被教学性切分；保留标题、小节、版本与原文位置。",
-         "AIInfra 固定 README（b97c038）；切分与候选次序为教学设计，不是产品实测。")
-full_fig("RAG：检索片段进入上下文，不等于重新训练", "6-4", "第 6 章｜检索增强生成",
-         "查资料与写回答相连；语义相关不等于证据适用，须核对日期、主体和替代关系。",
-         "教材图 6-4；top-k 在这里指文档片段，不是生成时的候选 token。")
+full_fig("RAG：把合适的资料带到作答桌面", "6-4", "第 6 章｜检索增强生成",
+         "书架是外部资料库，桌面是本次上下文；查资料与写回答相连，不等于重新训练。",
+         "教材图 6-4；概念隐喻，不是软件结构。")
+full_fig("检索到了，为什么还要继续核验？", "6-3", "第 6 章｜证据核查",
+         "两份通知都相关；还须核对主体、版本、范围与替代关系，信息不足时保留冲突。",
+         "教材图 6-3；检索 top-k 指文档片段，不是生成时的候选 token。")
 fig_slide("工具调用：提出请求与真正执行是两件事", "6-5", "第 6 章｜工具调用",
           [("模型", "生成工具名称与输入参数"), ("编排", "检查格式、权限和任务状态"), ("外部程序", "获准后才实际执行"), ("返回", "结果、错误或超时进入后续上下文")])
 full_fig("读工具消息：谁在说话，谁已经行动？", "6-6", "第 6 章｜消息顺序",
@@ -406,9 +460,9 @@ full_fig("智能体循环：观察、规划、行动、反馈与停止", "6-7", 
 full_fig("模拟轨迹：真实材料不等于真实执行", "6-8", "第 6 章｜新生导览",
          "人工发现“仓库体积”被误写为“模型大小”；最后只是“假设写入成功”。",
          "教学模拟轨迹，未发生真实文件写入；不得把模拟状态当作实测结果。")
-full_fig("MCP 提供共同连接约定，但不自动保证安全", "6-9", "第 6 章｜协议与边界",
-         "Client／Server 是软件角色，可在同一台电脑上运行；输入校验、权限与日志仍需落实。",
-         "MCP 2025-06-18 工具规范与安全原则（MIT License）；课程未实现或运行 MCP。")
+full_fig("人机协作：先判断、再授权、后执行", "6-10", "第 6 章｜关键检查点",
+         "拒绝或检查未通过时不执行；批准不能绕过技术约束；继续执行须重新检查。",
+         "教材图 6-10；授权与技术检查互补，不能把人工点击当作安全保证。")
 practice("设计练习｜给智能体加上必要的“刹车”",
          "为“根据公开课程资料生成学习卡，并保存到指定草稿目录”设计低风险流程。",
          ["任务开始授权：限定可读公开资料与可写草稿目录", "本任务保存前确认；范围、对象或后果变化时重新授权", "写出停止：无新证据、连续失败或达到步数上限"],
@@ -466,6 +520,6 @@ presentation = {
 }
 (OUT / "AIOS101_3h.pptd").write_text(yaml.safe_dump(presentation, allow_unicode=True, sort_keys=False, width=120), encoding="utf-8")
 
-index = ["# AIOS101 3 小时授课课件", "", "- 62 页，180 分钟，覆盖序言与第 1—6 章。", "- 两次休息各 10 分钟；四次主要课堂互动。", "- 主文件：`AIOS101_3h.pptd`；页面与媒体均在本目录内。", "- 正文来源：`textbook/chapters/`；图表来源与边界见教材图注。", "- 课件版本：v0.2；内容同步基线：`ca055b5`（专家自学教材修订）。", "- 生成脚本：`scripts/create_aios101_3h_deck.py`。", "- 校验：`kimi-slides check slides/AIOS101-3h --level keep`。", "- 截图：`kimi-slides screenshot slides/AIOS101-3h -o slides/AIOS101-3h-screenshots`。", "", "## 教学时间", "", "| 页码 | 内容 | 分钟 |", "|---|---|---:|", "| 1—4 | 开场与学习路线 | 10 |", "| 5—12 | 第 1 章 | 20 |", "| 13—21 | 第 2 章 | 25 |", "| 22 | 休息 | 10 |", "| 23—31 | 第 3 章 | 25 |", "| 32—40 | 第 4 章 | 25 |", "| 41 | 休息 | 10 |", "| 42—50 | 第 5 章 | 25 |", "| 51—60 | 第 6 章 | 25 |", "| 61—62 | 综合与课后行动 | 5 |", "", "本课件为授课评审版，不替代教材完整解释；模型数据与社区记录按页面标注的版本、日期和证据边界使用。", ""]
+index = ["# AIOS101 3 小时授课课件", "", "- 62 页，180 分钟，覆盖序言与第 1—6 章。", "- 两次休息各 10 分钟；四次主要课堂互动。", "- 主文件：`AIOS101_3h.pptd`；页面与媒体均在本目录内。", "- 正文来源：`textbook/chapters/`；图表来源与边界见教材图注。", "- 课件版本：v0.3；图版同步基线：`2100f38`（42 幅教材图片统一清单）。- 课件使用其中 36 幅；矢量教学图副本裁去重复页眉页脚，竖长流程图按上下顺序分栏，教材原图不变。", "- 生成脚本：`scripts/create_aios101_3h_deck.py`。", "- 校验：`kimi-slides check slides/AIOS101-3h --level keep`。", "- 截图：`kimi-slides screenshot slides/AIOS101-3h -o slides/AIOS101-3h-screenshots`。", "", "## 教学时间", "", "| 页码 | 内容 | 分钟 |", "|---|---|---:|", "| 1—4 | 开场与学习路线 | 10 |", "| 5—12 | 第 1 章 | 20 |", "| 13—21 | 第 2 章 | 25 |", "| 22 | 休息 | 10 |", "| 23—31 | 第 3 章 | 25 |", "| 32—40 | 第 4 章 | 25 |", "| 41 | 休息 | 10 |", "| 42—50 | 第 5 章 | 25 |", "| 51—60 | 第 6 章 | 25 |", "| 61—62 | 综合与课后行动 | 5 |", "", "本课件为授课评审版，不替代教材完整解释；模型数据与社区记录按页面标注的版本、日期和证据边界使用。", ""]
 (OUT / "README.md").write_text("\n".join(index), encoding="utf-8")
 print(f"Created {len(slides)} pages, {len(list(MEDIA.iterdir()))} media files at {OUT}")

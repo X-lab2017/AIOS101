@@ -76,7 +76,7 @@ elements:
 - elementId: time
   elementType: text
   bounds:
-  - 56
+  - 510
   - 154
   - 110
   - 24
@@ -94,13 +94,13 @@ elements:
 - elementId: task
   elementType: text
   bounds:
-  - 56
+  - 510
   - 190
-  - 848
-  - 64
+  - 394
+  - 76
   content:
-    text: 一套校园植物识别测试题被网站转载，其中近重复图片进入了训练集；测试准确率仍然很高。
-    fontSize: 25
+    text: 校园植物测试题的近重复图片进入训练集，测试准确率仍然很高。问题在哪里？
+    fontSize: 21
     fontFamily: *id001
     color: '#1D2433'
     bold: true
@@ -109,11 +109,53 @@ elements:
     - left
     - top
     wrap: true
-- elementId: n0
+- elementId: image-field
+  elementType: shape
+  bounds:
+  - 56
+  - 162
+  - 426
+  - 310
+  shapeName: rect
+  fill:
+    type: solid
+    color: '#FFFFFF'
+  border:
+    width: 1
+    color: '#DCD9E1'
+- elementId: figure
+  elementType: image
+  bounds:
+  - 64
+  - 170
+  - 410
+  - 294
+  src: media/fig-4_9.jpg
+  fit:
+    mode: contain
+- elementId: caption
   elementType: text
   bounds:
   - 56
-  - 278
+  - 480
+  - 426
+  - 18
+  content:
+    text: 图 4-9　训练、验证、测试及近重复泄漏的边界
+    fontSize: 10
+    fontFamily: *id001
+    color: '#656577'
+    bold: false
+    lineHeight: 1.25
+    align:
+    - left
+    - top
+    wrap: false
+- elementId: n0
+  elementType: text
+  bounds:
+  - 510
+  - 282
   - 42
   - 36
   content:
@@ -130,13 +172,13 @@ elements:
 - elementId: item0
   elementType: text
   bounds:
-  - 104
-  - 278
-  - 532
-  - 51
+  - 558
+  - 282
+  - 346
+  - 60
   content:
-    text: <p>指出问题：测试材料不当进入训练，独立性被削弱</p>
-    fontSize: 18
+    text: <p>判断风险：测试材料不当进入训练，独立性被削弱</p>
+    fontSize: 17
     fontFamily: *id001
     color: '#1D2433'
     bold: false
@@ -148,9 +190,9 @@ elements:
 - elementId: sep0
   elementType: shape
   bounds:
-  - 104
-  - 327
-  - 532
+  - 558
+  - 340
+  - 346
   - 1
   shapeName: rect
   fill:
@@ -162,8 +204,8 @@ elements:
 - elementId: n1
   elementType: text
   bounds:
-  - 56
-  - 333
+  - 510
+  - 346
   - 42
   - 36
   content:
@@ -180,63 +222,13 @@ elements:
 - elementId: item1
   elementType: text
   bounds:
-  - 104
-  - 333
-  - 532
-  - 51
+  - 558
+  - 346
+  - 346
+  - 60
   content:
-    text: <p>提出检查：来源、时间、近重复与划分规则</p>
-    fontSize: 18
-    fontFamily: *id001
-    color: '#1D2433'
-    bold: false
-    lineHeight: 1.3
-    align:
-    - left
-    - top
-    wrap: true
-- elementId: sep1
-  elementType: shape
-  bounds:
-  - 104
-  - 382
-  - 532
-  - 1
-  shapeName: rect
-  fill:
-    type: solid
-    color: '#DCD9E1'
-  border:
-    width: 0
-    color: '#DCD9E1'
-- elementId: n2
-  elementType: text
-  bounds:
-  - 56
-  - 388
-  - 42
-  - 36
-  content:
-    text: '03'
-    fontSize: 16
-    fontFamily: *id001
-    color: '#F27A59'
-    bold: true
-    lineHeight: 1.25
-    align:
-    - left
-    - top
-    wrap: false
-- elementId: item2
-  elementType: text
-  bounds:
-  - 104
-  - 388
-  - 532
-  - 51
-  content:
-    text: <p>改写结论：不能仅凭高分宣称能识别所有新场景</p>
-    fontSize: 18
+    text: <p>核查证据：来源与时间、近重复、数据划分规则；高分不能外推到所有新场景</p>
+    fontSize: 17
     fontFamily: *id001
     color: '#1D2433'
     bold: false
@@ -248,10 +240,10 @@ elements:
 - elementId: output-field
   elementType: shape
   bounds:
-  - 674
-  - 274
-  - 230
-  - 158
+  - 510
+  - 418
+  - 394
+  - 54
   shapeName: rect
   fill:
     type: solid
@@ -259,15 +251,15 @@ elements:
   border:
     width: 0
     color: '#FBE7DE'
-- elementId: output-label
+- elementId: output
   elementType: text
   bounds:
-  - 694
-  - 294
-  - 190
-  - 24
+  - 526
+  - 427
+  - 362
+  - 36
   content:
-    text: 完成标准
+    text: 完成标准｜一句风险判断＋两项核查证据
     fontSize: 15
     fontFamily: *id001
     color: '#F27A59'
@@ -275,23 +267,5 @@ elements:
     lineHeight: 1.25
     align:
     - left
-    - top
-    wrap: true
-- elementId: output
-  elementType: text
-  bounds:
-  - 694
-  - 330
-  - 190
-  - 82
-  content:
-    text: 一句风险判断＋两项核查证据
-    fontSize: 18
-    fontFamily: *id001
-    color: '#1D2433'
-    bold: false
-    lineHeight: 1.32
-    align:
-    - left
-    - top
+    - middle
     wrap: true

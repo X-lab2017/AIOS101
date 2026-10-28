@@ -105,14 +105,24 @@ elements:
   border:
     width: 1
     color: '#DCD9E1'
-- elementId: figure
+- elementId: figure-top
   elementType: image
   bounds:
   - 64
   - 154
-  - 832
+  - 408
   - 314
-  src: media/fig-6_6.jpg
+  src: media/fig-6_6-a.jpg
+  fit:
+    mode: contain
+- elementId: figure-bottom
+  elementType: image
+  bounds:
+  - 488
+  - 154
+  - 408
+  - 314
+  src: media/fig-6_6-b.jpg
   fit:
     mode: contain
 - elementId: caption
@@ -123,7 +133,7 @@ elements:
   - 848
   - 22
   content:
-    text: 图 6-6　一次工具调用的消息与执行角色｜工具定义 → assistant 调用请求 → tool 返回结果；天气字段是预设教学内容。
+    text: 图 6-6　一次工具调用的消息与执行角色｜工具定义 → assistant 调用请求 → tool 返回结果；天气字段是预设教学内容。｜竖图按上、下顺序分栏
     fontSize: 11
     fontFamily: *id001
     color: '#656577'

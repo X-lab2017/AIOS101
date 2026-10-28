@@ -321,7 +321,7 @@ elements:
   - 470
   - 16
   content:
-    text: 图 3-4　区分生态关系与证据
+    text: 图 3-4　功能分层与五类生态关系
     fontSize: 10
     fontFamily: *id001
     color: '#656577'

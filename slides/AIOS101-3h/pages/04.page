@@ -113,12 +113,11 @@ elements:
   - 197.0
   - 198
   content:
-    text: '10＋20＋25 分钟
+    text: '<p>10＋20＋25 分钟</p>
 
+      <p>为什么开源</p>
 
-      为什么开源
-
-      开放、复用与协作'
+      <p>开放、复用与协作</p>'
     fontSize: 19
     fontFamily: *id001
     color: '#1D2433'
@@ -168,12 +167,11 @@ elements:
   - 197.0
   - 198
   content:
-    text: '25＋25 分钟
+    text: '<p>25＋25 分钟</p>
 
+      <p>生态全景</p>
 
-      生态全景
-
-      智能如何形成'
+      <p>智能如何形成</p>'
     fontSize: 19
     fontFamily: *id001
     color: '#1D2433'
@@ -223,12 +221,11 @@ elements:
   - 197.0
   - 198
   content:
-    text: '25＋25 分钟
+    text: '<p>25＋25 分钟</p>
 
+      <p>运行与评价</p>
 
-      运行与评价
-
-      检索、工具与智能体'
+      <p>检索、工具与智能体</p>'
     fontSize: 19
     fontFamily: *id001
     color: '#1D2433'
@@ -278,12 +275,11 @@ elements:
   - 197.0
   - 198
   content:
-    text: '5 分钟
+    text: '<p>5 分钟</p>
 
+      <p>六章主线</p>
 
-      六章主线
-
-      课后核查行动'
+      <p>课后核查行动</p>'
     fontSize: 19
     fontFamily: *id001
     color: '#1D2433'

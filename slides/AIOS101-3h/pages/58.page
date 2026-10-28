@@ -105,14 +105,24 @@ elements:
   border:
     width: 1
     color: '#DCD9E1'
-- elementId: figure
+- elementId: figure-top
   elementType: image
   bounds:
   - 64
   - 154
-  - 832
+  - 408
   - 314
-  src: media/fig-6_8.jpg
+  src: media/fig-6_8-a.jpg
+  fit:
+    mode: contain
+- elementId: figure-bottom
+  elementType: image
+  bounds:
+  - 488
+  - 154
+  - 408
+  - 314
+  src: media/fig-6_8-b.jpg
   fit:
     mode: contain
 - elementId: caption
@@ -123,7 +133,7 @@ elements:
   - 848
   - 22
   content:
-    text: 图 6-8　新生导览模拟轨迹的角色与时序｜人工发现“仓库体积”被误写为“模型大小”；最后只是“假设写入成功”。
+    text: 图 6-8　新生导览模拟轨迹的角色与时序｜人工发现“仓库体积”被误写为“模型大小”；最后只是“假设写入成功”。｜竖图按上、下顺序分栏
     fontSize: 11
     fontFamily: *id001
     color: '#656577'

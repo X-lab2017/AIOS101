@@ -321,7 +321,7 @@ elements:
   - 470
   - 16
   content:
-    text: 图 2-4　公共价值的五类证据
+    text: 图 2-4　公共价值需要五类证据
     fontSize: 10
     fontFamily: *id001
     color: '#656577'

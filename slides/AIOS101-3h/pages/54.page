@@ -11,7 +11,7 @@ elements:
   - 600
   - 18
   content:
-    text: 第 6 章｜检索增强生成
+    text: 第 6 章｜证据核查
     fontSize: 10
     fontFamily: &id001
       latin: QuattrocentoSans
@@ -31,7 +31,7 @@ elements:
   - 848
   - 72
   content:
-    text: RAG：检索片段进入上下文，不等于重新训练
+    text: 检索到了，为什么还要继续核验？
     fontSize: 30
     fontFamily: *id001
     color: '#1D2433'
@@ -63,7 +63,7 @@ elements:
   - 770
   - 16
   content:
-    text: 教材图 6-4；top-k 在这里指文档片段，不是生成时的候选 token。
+    text: 教材图 6-3；检索 top-k 指文档片段，不是生成时的候选 token。
     fontSize: 9
     fontFamily: *id001
     color: '#656577'
@@ -112,7 +112,7 @@ elements:
   - 154
   - 832
   - 314
-  src: media/fig-6_4.jpg
+  src: media/fig-6_3.jpg
   fit:
     mode: contain
 - elementId: caption
@@ -123,7 +123,7 @@ elements:
   - 848
   - 22
   content:
-    text: 图 6-4　检索增强生成的基本流程｜查资料与写回答相连；语义相关不等于证据适用，须核对日期、主体和替代关系。
+    text: 图 6-3　语义相关，不等于证据适用｜两份通知都相关；还须核对主体、版本、范围与替代关系，信息不足时保留冲突。
     fontSize: 11
     fontFamily: *id001
     color: '#656577'

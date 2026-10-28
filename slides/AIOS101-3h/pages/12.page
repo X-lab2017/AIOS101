@@ -113,7 +113,7 @@ elements:
   - 197.0
   - 198
   content:
-    text: 具体是模型、数据集、代码，还是在线产品？
+    text: <p>具体是模型、数据集、代码，还是在线产品？</p>
     fontSize: 19
     fontFamily: *id001
     color: '#1D2433'
@@ -163,7 +163,7 @@ elements:
   - 197.0
   - 198
   content:
-    text: 哪一个发布版本或固定提交？阅读日期是什么？
+    text: <p>哪一个发布版本或固定提交？阅读日期是什么？</p>
     fontSize: 19
     fontFamily: *id001
     color: '#1D2433'
@@ -213,7 +213,7 @@ elements:
   - 197.0
   - 198
   content:
-    text: 权重、数据、代码、文档、评测与记录公开了哪些？
+    text: <p>权重、数据、代码、文档、评测与记录公开了哪些？</p>
     fontSize: 19
     fontFamily: *id001
     color: '#1D2433'
@@ -263,7 +263,7 @@ elements:
   - 197.0
   - 198
   content:
-    text: 允许使用、修改、再分发和商用吗？有何条件？
+    text: <p>允许使用、修改、再分发和商用吗？有何条件？</p>
     fontSize: 19
     fontFamily: *id001
     color: '#1D2433'
