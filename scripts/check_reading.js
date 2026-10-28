@@ -11,6 +11,12 @@ vm.runInContext(fs.readFileSync('site/app.js','utf8'),context);
 context.payload=JSON.parse(fs.readFileSync('dist/content.json','utf8'));
 vm.runInContext('data=payload',context);
 const home=vm.runInContext('home()',context);
+// Chapter covers must use the current image version and canonical title.
+for(const figure of ['1-2','2-1','3-1','4-1','5-3','6-4']) {
+ const current=context.payload.figureCatalog[figure];
+ assert(home.includes('textbook/assets/figures/'+current.file),'Stale home image: '+figure);
+ assert(home.includes('alt="'+current.title+'"'),'Stale home title: '+figure);
+}
 for(const id of ['CH01','CH02','CH03','CH04','CH05','CH06'])assert(home.includes('href="#/learn/'+id+'"'));
 for(const id of Object.keys(context.payload.units)){
  context.id=id;
