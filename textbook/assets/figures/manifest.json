@@ -84,7 +84,7 @@
   },
   {
     "id": "2-2",
-    "title": "Issue 与 PR：两种协作入口",
+    "title": "Issue 与 PR：两种独立的协作入口",
     "file": "AIOS101_Fig-02-02_issue-pr-workflow_v01.webp",
     "width": 1536,
     "height": 1024,
@@ -97,7 +97,7 @@
   },
   {
     "id": "2-3",
-    "title": "AIInfra Issue #386 与 PR #364",
+    "title": "AIInfra：问题报告与变更提议的真实记录",
     "file": "AIOS101_Fig-02-03_aiinfra-evidence_v01.webp",
     "width": 2520,
     "height": 2190,
@@ -113,7 +113,7 @@
   },
   {
     "id": "2-4",
-    "title": "公共价值的五类证据",
+    "title": "公共价值需要五类证据",
     "file": "AIOS101_Fig-02-04_public-value-evidence_v01.webp",
     "width": 1536,
     "height": 1024,

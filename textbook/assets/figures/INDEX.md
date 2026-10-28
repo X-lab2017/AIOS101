@@ -10,9 +10,9 @@
 | 图 1-3 | 理解 AI 开放的六类材料 | 第 1 章　智能时代为什么需要 AI 开源通识 / 1.4.1　六类开放材料分别能回答什么 | [WebP](AIOS101_Fig-01-03_ai-open-materials_v01.webp) | 原像素图 |
 | 图 1-4 | DeepSeek-R1：从真实 README 查找开放材料 | 第 1 章　智能时代为什么需要 AI 开源通识 / 1.4.2　真实案例：DeepSeek-R1 官方仓库能说明什么 | [WebP](AIOS101_Fig-01-04_deepseek-readme_v01.webp) | 原像素图 |
 | 图 2-1 | 开放、复用、协作与公共价值 | 第 2 章　开源的本质：开放、复用、协作与公共价值 / 2.1　打开一个真实仓库，我们究竟看到了什么 | [WebP](AIOS101_Fig-02-01_open-source-mechanism_v01.webp) | 原像素图 |
-| 图 2-2 | Issue 与 PR：两种协作入口 | 第 2 章　开源的本质：开放、复用、协作与公共价值 / 2.4.3　初学者需要理解的协作术语 | [WebP](AIOS101_Fig-02-02_issue-pr-workflow_v01.webp) | 原像素图 |
-| 图 2-3 | AIInfra Issue #386 与 PR #364 | 第 2 章　开源的本质：开放、复用、协作与公共价值 / 2.5.2　PR #364：一个小范围技术纠错如何进入项目 | [WebP](AIOS101_Fig-02-03_aiinfra-evidence_v01.webp) | 原像素图 |
-| 图 2-4 | 公共价值的五类证据 | 第 2 章　开源的本质：开放、复用、协作与公共价值 / 2.6　公共价值：从“成果可用”到“谁真正受益” | [WebP](AIOS101_Fig-02-04_public-value-evidence_v01.webp) | 原像素图 |
+| 图 2-2 | Issue 与 PR：两种独立的协作入口 | 第 2 章　开源的本质：开放、复用、协作与公共价值 / 2.4.3　初学者需要理解的协作术语 | [WebP](AIOS101_Fig-02-02_issue-pr-workflow_v01.webp) | 原像素图 |
+| 图 2-3 | AIInfra：问题报告与变更提议的真实记录 | 第 2 章　开源的本质：开放、复用、协作与公共价值 / 2.5.2　PR #364：一个小范围技术纠错如何进入项目 | [WebP](AIOS101_Fig-02-03_aiinfra-evidence_v01.webp) | 原像素图 |
+| 图 2-4 | 公共价值需要五类证据 | 第 2 章　开源的本质：开放、复用、协作与公共价值 / 2.6　公共价值：从“成果可用”到“谁真正受益” | [WebP](AIOS101_Fig-02-04_public-value-evidence_v01.webp) | 原像素图 |
 | 图 3-1 | AI 开源生态的四个观察维度 | 第 3 章　AI 开源生态全景：数据、模型、代码、工具链与社区 / 3.1　一个模型仓库，为什么还不是完整的生态 | [WebP](AIOS101_Fig-03-01_ecosystem-dimensions_v01.webp) | 原像素图 |
 | 图 3-2 | Agent Infra 技术全景 | 第 3 章　AI 开源生态全景：数据、模型、代码、工具链与社区 / 3.2.2　工具链：让分散成果连接成工作过程 | [WebP](AIOS101_Fig-03-02_agent-infra-landscape_v01.webp) | [SVG](vector/AIOS101_Fig-03-02_agent-infra-landscape_v02.svg) |
 | 图 3-3 | Model Infra 技术全景 | 第 3 章　AI 开源生态全景：数据、模型、代码、工具链与社区 / 3.2.2　工具链：让分散成果连接成工作过程 | [WebP](AIOS101_Fig-03-03_model-infra-landscape_v01.webp) | [SVG](vector/AIOS101_Fig-03-03_model-infra-landscape_v02.svg) |
