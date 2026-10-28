@@ -1,0 +1,300 @@
+pageType: content
+background: {type: solid, color: "$background"}
+elements:
+  - elementId: title
+    elementType: text
+    bounds: [48, 28, 900, 42]
+    content:
+      style: "$title"
+      wrap: false
+      text: 《AI 开源通识》全书学习地图
+  - elementId: edition
+    elementType: text
+    bounds: [1000, 40, 232, 18]
+    content:
+      style: "$caption"
+      align: [right, middle]
+      wrap: false
+      text: PREFACE · 00 / 2026
+  - elementId: subtitle
+    elementType: text
+    bounds: [48, 76, 1100, 22]
+    content:
+      fontSize: 13
+      color: "$muted"
+      fontFamily: MiSans
+      wrap: false
+      text: 以 AI 为学习对象 · 以开源为认识论、方法论和实践方式
+  - elementId: learning-route
+    elementType: text
+    bounds: [148, 110, 984, 40]
+    content:
+      fontSize: 23
+      bold: true
+      color: "$green"
+      fontFamily: MiSans
+      align: [center, middle]
+      wrap: false
+      text: 使用　→　理解　→　探究　→　贡献　→　创造
+  - elementId: route-rule
+    elementType: shape
+    bounds: [48, 160, 1184, 1]
+    shapeName: rect
+    fill: {type: solid, color: "$line"}
+
+  - elementId: part1-rule
+    elementType: shape
+    bounds: [48, 178, 272, 4]
+    shapeName: rect
+    fill: {type: solid, color: "$green"}
+  - elementId: part1-heading
+    elementType: text
+    bounds: [48, 192, 272, 28]
+    content:
+      style: "$part"
+      color: "$green"
+      wrap: false
+      text: 01　认识开源
+  - elementId: part1-subtitle
+    elementType: text
+    bounds: [48, 222, 272, 22]
+    content:
+      fontSize: 12
+      color: "$muted"
+      fontFamily: MiSans
+      wrap: false
+      text: 智能时代的共同创造
+  - elementId: part1-ch1
+    elementType: text
+    bounds: [48, 258, 272, 62]
+    content:
+      style: "$body"
+      text: |
+        <p><span style="font-size:11px;color:$green">CH01</span></p>
+        <p>智能时代为什么需要 AI 开源通识</p>
+  - elementId: part1-ch2
+    elementType: text
+    bounds: [48, 330, 272, 76]
+    content:
+      style: "$body"
+      text: |
+        <p><span style="font-size:11px;color:$green">CH02</span></p>
+        <p>开源的本质：开放、复用、协作与公共价值</p>
+  - elementId: part1-ch3
+    elementType: text
+    bounds: [48, 416, 272, 76]
+    content:
+      style: "$body"
+      text: |
+        <p><span style="font-size:11px;color:$green">CH03</span></p>
+        <p>AI 开源生态全景：数据、模型、代码、工具链与社区</p>
+
+  - elementId: separator1
+    elementType: shape
+    bounds: [336, 188, 1, 294]
+    shapeName: rect
+    fill: {type: solid, color: "$line"}
+  - elementId: part2-rule
+    elementType: shape
+    bounds: [352, 178, 272, 4]
+    shapeName: rect
+    fill: {type: solid, color: "$gold"}
+  - elementId: part2-heading
+    elementType: text
+    bounds: [352, 192, 272, 28]
+    content:
+      style: "$part"
+      color: "$gold"
+      wrap: false
+      text: 02　理解 AI
+  - elementId: part2-subtitle
+    elementType: text
+    bounds: [352, 222, 272, 22]
+    content:
+      fontSize: 12
+      color: "$muted"
+      fontFamily: MiSans
+      wrap: false
+      text: 从模型黑盒到开放系统
+  - elementId: part2-ch4
+    elementType: text
+    bounds: [352, 258, 272, 62]
+    content:
+      style: "$body"
+      text: |
+        <p><span style="font-size:11px;color:$gold">CH04</span></p>
+        <p>从数据到模型：智能如何形成</p>
+  - elementId: part2-ch5
+    elementType: text
+    bounds: [352, 330, 272, 76]
+    content:
+      style: "$body"
+      text: |
+        <p><span style="font-size:11px;color:$gold">CH05</span></p>
+        <p>从训练到推理：AI 系统如何运行与评估</p>
+  - elementId: part2-ch6
+    elementType: text
+    bounds: [352, 416, 272, 76]
+    content:
+      style: "$body"
+      text: |
+        <p><span style="font-size:11px;color:$gold">CH06</span></p>
+        <p>从模型到智能体：检索、工具与人机协作</p>
+
+  - elementId: separator2
+    elementType: shape
+    bounds: [640, 188, 1, 294]
+    shapeName: rect
+    fill: {type: solid, color: "$line"}
+  - elementId: part3-rule
+    elementType: shape
+    bounds: [656, 178, 272, 4]
+    shapeName: rect
+    fill: {type: solid, color: "$rust"}
+  - elementId: part3-heading
+    elementType: text
+    bounds: [656, 192, 272, 28]
+    content:
+      style: "$part"
+      color: "$rust"
+      wrap: false
+      text: 03　探究证据
+  - elementId: part3-subtitle
+    elementType: text
+    bounds: [656, 222, 272, 22]
+    content:
+      fontSize: 12
+      color: "$muted"
+      fontFamily: MiSans
+      wrap: false
+      text: 开放程度、可复现性与生态影响
+  - elementId: part3-ch7
+    elementType: text
+    bounds: [656, 258, 272, 62]
+    content:
+      style: "$body"
+      text: |
+        <p><span style="font-size:11px;color:$rust">CH07</span></p>
+        <p>开放到什么程度：模型材料、许可证与开放分级</p>
+  - elementId: part3-ch8
+    elementType: text
+    bounds: [656, 330, 272, 76]
+    content:
+      style: "$body"
+      text: |
+        <p><span style="font-size:11px;color:$rust">CH08</span></p>
+        <p>从公开到可复现：版本、文档、评测与开放科学</p>
+  - elementId: part3-ch9
+    elementType: text
+    bounds: [656, 416, 272, 76]
+    content:
+      style: "$body"
+      text: |
+        <p><span style="font-size:11px;color:$rust">CH09</span></p>
+        <p>用数据理解生态：供给、网络、影响力与公共价值</p>
+
+  - elementId: separator3
+    elementType: shape
+    bounds: [944, 188, 1, 294]
+    shapeName: rect
+    fill: {type: solid, color: "$line"}
+  - elementId: part4-rule
+    elementType: shape
+    bounds: [960, 178, 272, 4]
+    shapeName: rect
+    fill: {type: solid, color: "$slate"}
+  - elementId: part4-heading
+    elementType: text
+    bounds: [960, 192, 272, 28]
+    content:
+      style: "$part"
+      color: "$slate"
+      wrap: false
+      text: 04　共同创造
+  - elementId: part4-subtitle
+    elementType: text
+    bounds: [960, 222, 272, 22]
+    content:
+      fontSize: 12
+      color: "$muted"
+      fontFamily: MiSans
+      wrap: false
+      text: 从开放参与到负责任发布
+  - elementId: part4-ch10
+    elementType: text
+    bounds: [960, 258, 272, 62]
+    content:
+      style: "$body"
+      text: |
+        <p><span style="font-size:11px;color:$slate">CH10</span></p>
+        <p>从参与到贡献：开源社区协作、治理与评价</p>
+  - elementId: part4-ch11
+    elementType: text
+    bounds: [960, 330, 272, 76]
+    content:
+      style: "$body"
+      text: |
+        <p><span style="font-size:11px;color:$slate">CH11</span></p>
+        <p>用开源创造 AI：项目设计、系统集成与负责任发布</p>
+  - elementId: part4-ch12
+    elementType: text
+    bounds: [960, 416, 272, 76]
+    content:
+      style: "$body"
+      text: |
+        <p><span style="font-size:11px;color:$slate">CH12</span></p>
+        <p>从学习者到创造者：综合项目、公开答辩与持续贡献</p>
+
+  - elementId: bottom-rule
+    elementType: shape
+    bounds: [48, 508, 1184, 1]
+    shapeName: rect
+    fill: {type: solid, color: "$line"}
+  - elementId: layers-label
+    elementType: text
+    bounds: [48, 524, 150, 20]
+    content:
+      fontSize: 11
+      bold: true
+      color: "$muted"
+      fontFamily: MiSans
+      letterSpacing: 1
+      wrap: false
+      text: 三层学习路径
+  - elementId: layers
+    elementType: text
+    bounds: [48, 548, 1184, 48]
+    content:
+      fontSize: 13
+      color: "$text"
+      fontFamily: MiSans
+      lineHeight: 1.4
+      text: |
+        <p><strong>核心通识</strong>｜全体学习者建立共同语言　　　<strong>探究实践</strong>｜无代码／低代码均可进入　　　<strong>进阶挑战</strong>｜面向有编程或系统基础者</p>
+  - elementId: projects-label
+    elementType: text
+    bounds: [48, 608, 150, 20]
+    content:
+      fontSize: 11
+      bold: true
+      color: "$muted"
+      fontFamily: MiSans
+      letterSpacing: 1
+      wrap: false
+      text: 综合项目方向
+  - elementId: projects
+    elementType: text
+    bounds: [220, 604, 1012, 28]
+    content:
+      fontSize: 14
+      bold: true
+      color: "$green"
+      fontFamily: MiSans
+      wrap: false
+      text: 开放证据审计　·　生态数据研究　·　开源作品创造
+  - elementId: evidence
+    elementType: text
+    bounds: [48, 654, 1184, 38]
+    content:
+      style: "$caption"
+      text: 学习证据：AI 开源生态图 · 开放度核查档案 · 最小探究记录 · 数据探究简报 · 贡献档案 · 综合项目发布包

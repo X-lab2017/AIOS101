@@ -1,0 +1,36 @@
+version: v2
+title: 《AI 开源通识》全书学习地图
+size: [1280, 720]
+theme:
+  colors:
+    background: "#FAF8F4"
+    text: "#202A27"
+    muted: "#66716C"
+    line: "#D9DCD5"
+    green: "#315F57"
+    gold: "#9A7A3F"
+    rust: "#925B4E"
+    slate: "#52697A"
+  textStyles:
+    title:
+      fontSize: 30
+      bold: true
+      color: "$text"
+      fontFamily: MiSans
+    part:
+      fontSize: 20
+      bold: true
+      color: "$text"
+      fontFamily: MiSans
+    body:
+      fontSize: 14
+      color: "$text"
+      fontFamily: MiSans
+      lineHeight: 1.35
+    caption:
+      fontSize: 11
+      color: "$muted"
+      fontFamily: MiSans
+      lineHeight: 1.3
+pages:
+  - pages/course-map.page

@@ -15,7 +15,10 @@
 
 | 来源 ID | 类型 | 标题／对象 | 作者／机构 | URL／出版信息 | 定位 | 发布／版本日期 | 读取日期 | 许可 | 核验状态 | 使用位置与结论 | 备注 |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-|  |  |  |  |  |  |  |  |  |  |  |  |
+| SRC-2026-001 | 项目文档 | OpenDipper 项目中文说明 | X-lab | [固定提交](https://github.com/X-lab2017/open-dipper/blob/8fa36b5d19f9bdc01fe1505f153c19b3c499c712/README.zh-CN.md) | 模块表、数据边界、披露与复用 | 应用 v1.16.1；提交 8fa36b5 | 2026-10-28 | 根应用许可未选定；仅作事实重述与链接 | 已核验 | 序言：OpenDipper 的模块、教学入口及公开可下载的边界 | 未复制图片、代码、数据或品牌素材 |
+| SRC-2026-002 | 模块契约 | Open Galaxy／开源星系契约 | X-lab | [固定提交](https://github.com/X-lab2017/open-dipper/blob/8fa36b5d19f9bdc01fe1505f153c19b3c499c712/docs/OPEN_GALAXY.md) | Discovery and research；Data contract | 发布实现 1.5.1；提交 8fa36b5 | 2026-10-28 | 未统一授权；仅作事实重述与链接 | 已核验 | 序言：记录关系、推断关系与软件依赖链的区别 | 上游数据快照具有独立观察期 |
+| SRC-2026-003 | 数据证据规范 | OpenShare and GOSD observed evidence | X-lab | [固定提交](https://github.com/X-lab2017/open-dipper/blob/8fa36b5d19f9bdc01fe1505f153c19b3c499c712/docs/DATA_EVIDENCE.md) | Product selection；Versioned data path | 固定提交 8fa36b5 | 2026-10-28 | 未统一授权；仅作事实重述与链接 | 已核验 | 序言：指标口径、独立观察期、覆盖范围与缺失值原则 | 未在序言引用具体统计数值或宣称复算 |
+| SRC-2026-004 | 项目发布截图 | OpenDipper 开源星系浅色实景截图及截图说明 | X-lab | [截图](https://raw.githubusercontent.com/X-lab2017/open-dipper/8fa36b5d19f9bdc01fe1505f153c19b3c499c712/docs/assets/opendipper-1.6.0-galaxy-light-20261027.jpg)；[说明](https://github.com/X-lab2017/open-dipper/blob/8fa36b5d19f9bdc01fe1505f153c19b3c499c712/docs/assets/README.md) | Current product screenshots；完整 1363×936 视口 | 应用 v1.6.0；截图 2026-10-27；提交 8fa36b5 | 2026-10-28 | 根应用许可未选定；本稿仅限专家评审，出版授权待复核 | 已核验 | 序言图 0-1：开源星系界面、记录关系与观察边界 | 原始 JPEG 未编辑；截图日期不等于数据观察期 |
 
 ## 3. 数据与版本补充记录
 

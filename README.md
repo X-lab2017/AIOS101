@@ -12,7 +12,8 @@
 2. [规格体系](specs/README.md)：规格层级、标识规则、状态流转和标准开发流程；
 3. [课程总规格](specs/course-spec.md)：十二章、六项学习成果和最低学习证据的对齐关系；
 4. [参与建设](CONTRIBUTING.md)：人类与 AI 贡献者的协作入口；
-5. [AI 协作者工作指南](AGENTS.md)：AI 工作顺序、证据硬规则与交付要求。
+5. [AI 协作者工作指南](AGENTS.md)：AI 工作顺序、证据硬规则与交付要求；
+6. [教材序言 v0.3](textbook/preface.md)：从一次 AI 提问进入模型供应链与开源生态，保留完整正文并以图号、图题占位的清爽内容评审稿。
 
 当前规格处于草稿阶段，不代表教材内容或课程实施已经完成验收。
 
@@ -23,7 +24,8 @@ CONSTITUTION.md          课程最高基线
 AGENTS.md                AI 协作者工作指南
 CONTRIBUTING.md          贡献流程
 CHANGELOG.md             版本与变更记录
-specs/                   课程、章节、活动及跨产物规范与模板
+specs/                   课程、序言、章节、活动及跨产物规范与模板
+textbook/preface.md      教材序言正本
 scripts/check_repo.py    仓库基础结构与 Markdown 静态检查
 ```
 

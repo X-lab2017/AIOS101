@@ -16,6 +16,7 @@
 |---|---|---|---|
 | 宪法 | `CONSTITUTION.md` | 为什么建设这门课，什么不能偏离 | 全部规格与产物 |
 | 课程规格 | `specs/course-spec.md` | 教什么、学到什么、如何形成课程证据 | 章节规格、评价体系、综合项目 |
+| 导入规格 | `specs/preface-spec.md` | 如何为全体学习者建立课程问题、全书地图与学习预期 | 教材序言、课程导入 |
 | 章节规格 | `specs/chapter-spec-template.md` | 每章如何对齐成果并组织学习 | 教材、讲义、章节活动、章节评价 |
 | 活动规格 | `specs/activity-spec-template.md` | 实践如何做、留下什么、如何评价 | 实验、数据任务、贡献任务、活动量规 |
 | 支撑规范 | 内容、评价、展现等规范 | 各类产物共同遵守什么标准 | 跨章节一致性与质量控制 |
@@ -73,6 +74,7 @@ CHANGELOG.md
 specs/
   README.md
   course-spec.md
+  preface-spec.md
   chapter-spec-template.md
   activity-spec-template.md
   content-evidence-spec.md

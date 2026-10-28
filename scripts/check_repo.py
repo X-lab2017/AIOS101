@@ -96,6 +96,7 @@ REQUIRED_SECTIONS = {
 }
 
 LINK_RE = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
+EXCLUDED_DIRS = {".git", "node_modules", "__pycache__"}
 
 
 def relative_name(path: Path) -> str:
@@ -120,7 +121,7 @@ def main() -> int:
     markdown_files = sorted(
         path
         for path in ROOT.rglob("*.md")
-        if ".git" not in path.relative_to(ROOT).parts
+        if not EXCLUDED_DIRS.intersection(path.relative_to(ROOT).parts)
     )
     markdown_text: dict[str, str] = {}
 
