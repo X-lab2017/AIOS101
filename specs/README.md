@@ -77,6 +77,8 @@ specs/
   preface-spec.md
   chapter-spec-template.md
   activity-spec-template.md
+  chapters/
+    CH01-ai-open-source-literacy-spec.md
   content-evidence-spec.md
   assessment-spec.md
   presentation-spec.md
@@ -85,11 +87,20 @@ specs/
   source-register.md
   decision-record-template.md
   change-request-template.md
+textbook/
+  preface.md
+  chapters/
+  assets/
+activities/
+slides/
+online/
+interactive/
+deliverables/
 scripts/
   check_repo.py
 ```
 
-后续可建立 `chapters/`、`activities/`、`textbook/`、`slides/`、`assets/` 等产物目录。新目录必须在相应规格中说明用途，不得形成无人维护的重复正本。
+`textbook/chapters/` 是章节正文唯一正本；`online/` 保存在线版配置与组件；`interactive/` 保存交互实现与回退资源。新目录必须在相应规格中说明用途，不得形成无人维护的重复正本。
 
 ## 7. 变更与验收原则
 
@@ -98,7 +109,6 @@ scripts/
 - 每次变更必须明确受影响的章节、活动、评价和展现产物。
 - 所有“已完成”声明必须对应[验收规范](acceptance-spec.md)中的证据。
 - 未验证、未覆盖、待核实和真实为零必须分别记录，不得用确定语气掩盖缺口。
-
 
 ## 8. 在线学习资源评审
 
