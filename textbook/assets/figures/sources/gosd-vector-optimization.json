@@ -1,0 +1,50 @@
+[
+  {
+    "id": "3-2",
+    "sourceFile": "AIOS101_Fig-03-02_agent-infra-landscape_v01.svg",
+    "sourceSha256": "c6a99f2835cbb964da78d3a5404688295fc76beb246d7fb632aae368694a54f6",
+    "sourceBytes": 1056323,
+    "file": "vector/AIOS101_Fig-03-02_agent-infra-landscape_v02.svg",
+    "bytes": 351297,
+    "stylesDeduplicated": 45,
+    "iconsCompressed": 80,
+    "textAndGeometry": "unchanged",
+    "iconPolicy": "WebP quality 92; up to 4x native display dimensions"
+  },
+  {
+    "id": "3-3",
+    "sourceFile": "AIOS101_Fig-03-03_model-infra-landscape_v01.svg",
+    "sourceSha256": "6cbb7530f58d374e86bbb42817b5fd19f4bc3c31c0edbea6085a1b82b7dc0bb6",
+    "sourceBytes": 868435,
+    "file": "vector/AIOS101_Fig-03-03_model-infra-landscape_v02.svg",
+    "bytes": 337166,
+    "stylesDeduplicated": 35,
+    "iconsCompressed": 55,
+    "textAndGeometry": "unchanged",
+    "iconPolicy": "WebP quality 92; up to 4x native display dimensions"
+  },
+  {
+    "id": "3-6",
+    "sourceFile": "AIOS101_Fig-03-06_model-task-landscape_v01.svg",
+    "sourceSha256": "d65b545317fb69a52790e9234fc989f8690854cf2884da724abd3778f424661a",
+    "sourceBytes": 336960,
+    "file": "vector/AIOS101_Fig-03-06_model-task-landscape_v02.svg",
+    "bytes": 101596,
+    "stylesDeduplicated": 22,
+    "iconsCompressed": 0,
+    "textAndGeometry": "unchanged",
+    "iconPolicy": "WebP quality 92; up to 4x native display dimensions"
+  },
+  {
+    "id": "3-7",
+    "sourceFile": "AIOS101_Fig-03-07_pytorch-ecosystem_v01.svg",
+    "sourceSha256": "bf40651f90a587f232061b194b9f38203a695d9d102d1ef961a30ea26fe1444c",
+    "sourceBytes": 311057,
+    "file": "vector/AIOS101_Fig-03-07_pytorch-ecosystem_v02.svg",
+    "bytes": 95954,
+    "stylesDeduplicated": 25,
+    "iconsCompressed": 0,
+    "textAndGeometry": "unchanged",
+    "iconPolicy": "WebP quality 92; up to 4x native display dimensions"
+  }
+]
