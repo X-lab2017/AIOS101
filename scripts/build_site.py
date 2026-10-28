@@ -49,7 +49,7 @@ for key,u in units.items():
     for sec in u['sections']:
         if sec['title']=='关键术语':
             for term,meaning in re.findall(r'^- \*\*(.+?)\*\*：(.+)$',sec['markdown'],re.M):glossary.append({'term':term,'meaning':meaning,'unit':key,'section':sec['id']})
-content = dict(version='0.4.0-learning-preview',date='2026-10-28',sourceCommit=commit,visualVersion='1.0.0',brandCommit='373d61f0d6e334f0b85af0dd5d8ef9b9095bcc37',chapters=chapters,units=units,worksheets=worksheets,glossary=glossary,preface=units['PREFACE']['markdown'],sources=(ROOT/'specs/source-register.md').read_text())
+content = dict(version='0.5.0-reading',date='2026-10-28',sourceCommit=commit,visualVersion='1.0.0',brandCommit='373d61f0d6e334f0b85af0dd5d8ef9b9095bcc37',chapters=chapters,units=units,worksheets=worksheets,glossary=glossary,preface=units['PREFACE']['markdown'],sources=(ROOT/'specs/source-register.md').read_text())
 (OUT/'content.json').write_text(json.dumps(content,ensure_ascii=False),encoding='utf-8')
 (OUT/'resources').mkdir()
 resources = [(u['sourcePath'],key+'.md') for key,u in units.items()] + [(v['path'],key+'.md') for key,v in worksheets.items()] + [('specs/'+x+'.md',x+'.md') for x in ['website-spec','website-activities','learning-experience-spec','course-identity-spec','source-register']]

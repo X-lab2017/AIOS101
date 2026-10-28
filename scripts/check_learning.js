@@ -56,3 +56,6 @@ assert.equal(C.fieldsOf(definitions[2]).filter(f=>/^release_\d_/.test(f.id)).len
 assert.equal(C.fieldsOf(definitions[2]).filter(f=>/^collaboration_.+_(evidence|missing)$/.test(f.id)).length,14);
 assert.ok(C.fieldsOf(definitions[3]).some(f=>f.id==='proposal'));
 console.log('PASS: migration/reload, four complete worksheets, snapshots, safe imports, merge recovery and full exports');
+
+// The public site is now reading-first; retained activity modules remain recoverable.
+require('./check_reading.js');
