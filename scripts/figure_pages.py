@@ -17,12 +17,17 @@ def build_figure_pages(root, out, commit):
         source=path.relative_to(root).as_posix()
         image_path='textbook/assets/figures/'+record['file']
         vector=record.get('zoomFile')
+        snapshot=record.get('staticSnapshot', False)
         if vector:
             svg=(root/'textbook/assets/figures'/vector).read_text()
             # Only curated, self-contained repository SVGs are included inline.
             if re.search(r'<script|<foreignObject|\bon\w+\s*=|(?:href|url)=["\']https?:',svg,re.I):
                 raise ValueError('Non-local SVG content '+vector)
             svg=re.sub(r'<\?xml[^>]*>|<!DOCTYPE[^>]*>', '',svg)
+            if snapshot:
+                # Exported report controls are pixels/text, not working course controls.
+                svg=re.sub(r'\s+(?:tabindex|aria-pressed|aria-expanded|aria-controls|aria-haspopup)="[^"]*"', '', svg)
+                svg=re.sub(r'\s+role="(?:button|link|checkbox|tab|switch)"', '', svg)
             media=svg
         else:
             media='<img src="../'+image_path+'" alt="'+html.escape(record.get('alt',title),quote=True)+'" width="'+str(record['width'])+'" height="'+str(record['height'])+'">'
@@ -35,7 +40,7 @@ def build_figure_pages(root, out, commit):
 <button type="button" data-scale="1" aria-pressed="false">原尺寸</button>
 <button type="button" data-scale="2" aria-pressed="false">放大 2 倍</button>
 <span id="zoom-status" role="status">适应屏幕</span></div>
-<p class="view-hint">放大后可在图内横向、纵向滑动。'''+('此图使用矢量文字。' if vector else '此图保留原图像素；密集材料可结合下方来源核对。')+'''</p>
+<p class="view-hint">放大后可在图内横向、纵向滑动。'''+('此图使用矢量文字。' if vector else '此图保留原图像素；密集材料可结合下方来源核对。')+('图内控件为原报告静态画面，交互探索请打开下方来源。' if snapshot else '')+'''</p>
 <div class="figure-stage" tabindex="0" role="region" aria-label="可滚动的大图" data-width="'''+str(record['width'])+'''">'''+media+'''</div>
 <p class="figure-caption">图 '''+number+'　'+inline(caption[1],source,commit,{})+'''</p>
 <p class="figure-download"><a href="../'''+image_path+'''" download>下载 WebP</a>'''+(' · <a href="../textbook/assets/figures/'+vector+'" download>下载 SVG</a>' if vector else '')+'''</p>

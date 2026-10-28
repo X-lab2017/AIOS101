@@ -136,7 +136,8 @@
       "https://www.x-lab.info/2026-Global-Open-Source-Development-Report/2026/zh/chapters/04/"
     ],
     "vector": "vector/AIOS101_Fig-03-02_agent-infra-landscape_v02.svg",
-    "zoomFile": "vector/AIOS101_Fig-03-02_agent-infra-landscape_v02.svg"
+    "zoomFile": "vector/AIOS101_Fig-03-02_agent-infra-landscape_v02.svg",
+    "staticSnapshot": true
   },
   {
     "id": "3-3",
@@ -153,7 +154,8 @@
       "https://www.x-lab.info/2026-Global-Open-Source-Development-Report/2026/zh/chapters/04/"
     ],
     "vector": "vector/AIOS101_Fig-03-03_model-infra-landscape_v02.svg",
-    "zoomFile": "vector/AIOS101_Fig-03-03_model-infra-landscape_v02.svg"
+    "zoomFile": "vector/AIOS101_Fig-03-03_model-infra-landscape_v02.svg",
+    "staticSnapshot": true
   },
   {
     "id": "3-4",
@@ -202,7 +204,8 @@
       "https://www.x-lab.info/2026-Global-Open-Source-Development-Report/2026/zh/chapters/04/"
     ],
     "vector": "vector/AIOS101_Fig-03-06_model-task-landscape_v02.svg",
-    "zoomFile": "vector/AIOS101_Fig-03-06_model-task-landscape_v02.svg"
+    "zoomFile": "vector/AIOS101_Fig-03-06_model-task-landscape_v02.svg",
+    "staticSnapshot": true
   },
   {
     "id": "3-7",
@@ -219,7 +222,8 @@
       "https://www.x-lab.info/2026-Global-Open-Source-Development-Report/2026/zh/chapters/04/"
     ],
     "vector": "vector/AIOS101_Fig-03-07_pytorch-ecosystem_v02.svg",
-    "zoomFile": "vector/AIOS101_Fig-03-07_pytorch-ecosystem_v02.svg"
+    "zoomFile": "vector/AIOS101_Fig-03-07_pytorch-ecosystem_v02.svg",
+    "staticSnapshot": true
   },
   {
     "id": "3-8",
