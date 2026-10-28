@@ -25,10 +25,10 @@ english = ['Why AI and open source literacy?', 'Openness, reuse and collaboratio
 chapters = [dict(id=r[0], title=r[1], en=english[i], part=i//3, outcomes=r[2], evidence=r[3], question=questions[i], status='planned') for i,r in enumerate(rows)]
 chapters[0]['sourcePath'] = 'textbook/chapters/CH01-why-ai-open-source-literacy.md'
 chapters[0]['sourceStatus'] = 'draft'
-content = dict(version='0.1.0-review', date='2026-10-28', sourceCommit='cf5e128345507635e60f82b38505f469c5156778', brandCommit='373d61f0d6e334f0b85af0dd5d8ef9b9095bcc37', chapters=chapters, preface=(ROOT/'textbook/preface.md').read_text(), sources=(ROOT/'specs/source-register.md').read_text(), websiteSpec=(ROOT/'specs/website-spec.md').read_text(), activitySpec=(ROOT/'specs/website-activities.md').read_text())
+content = dict(version='0.2.0-review', date='2026-10-28', sourceCommit='cf5e128345507635e60f82b38505f469c5156778', brandCommit='373d61f0d6e334f0b85af0dd5d8ef9b9095bcc37', chapters=chapters, preface=(ROOT/'textbook/preface.md').read_text(), sources=(ROOT/'specs/source-register.md').read_text(), websiteSpec=(ROOT/'specs/website-spec.md').read_text(), activitySpec=(ROOT/'specs/website-activities.md').read_text())
 (OUT/'content.json').write_text(json.dumps(content, ensure_ascii=False))
 (OUT/'resources').mkdir()
-for src, name in [('specs/website-spec.md','website-spec.md'),('specs/website-activities.md','website-activities.md'),('textbook/preface.md','preface.md')]:
+for src, name in [('specs/website-spec.md','website-spec.md'),('specs/website-activities.md','website-activities.md'),('textbook/preface.md','preface.md'),('specs/course-identity-spec.md','course-identity-spec.md')]:
     text = (ROOT/src).read_text()
     def public_link(match):
         label, target = match.groups()
@@ -39,4 +39,4 @@ for src, name in [('specs/website-spec.md','website-spec.md'),('specs/website-ac
         return f'[{label}]({url})'
     (OUT/'resources'/name).write_text(re.sub(r'\[([^\]]+)\]\(([^)]+)\)', public_link, text))
 (OUT/'.nojekyll').write_text('')
-print(f'Built {len(chapters)} planned chapters, full preface and 2 review specifications into {OUT}')
+print(f'Built {len(chapters)} planned chapters, full preface and 3 review specifications into {OUT}')

@@ -1,6 +1,6 @@
 # AIOS101 交互学习资源 · 设计评审版
 
-状态：v0.1.0-review。源码在 site/，正文唯一正本在 textbook/，网站规格在 specs/website-spec.md。仅供本轮设计评审，不代表课程教学验收。
+状态：v0.2.0-review。源码在 site/，正文唯一正本在 textbook/，网站规格在 specs/website-spec.md。仅供本轮设计评审，不代表课程教学验收。
 
 ## 构建
 
@@ -22,6 +22,7 @@ python scripts/check_repo.py
 - #/lab 五层系统探索、关系判断与修订
 - #/notebook 本地学习档案与导入导出
 - #/review 版本来源、规格下载与本地评审记录
+- #/identity 课程专属视觉、X-lab 联合署名与资产包
 
 核心资料只有中文正本；英文界面明确提示翻译待审。全部个人记录在当前浏览器，不上传。学习档案 JSON 不能自动跨设备同步，请主动备份。若浏览器限制文件下载，可使用“备份文本 / 从文本恢复”保存和恢复 JSON。
 
@@ -40,3 +41,15 @@ Sites 使用独立的私有托管快照供维护者当前评审；GitHub 分支�
 ## 来源
 
 品牌 SVG 来源及使用边界见 assets/NOTICE.md。OpenDipper 截图未复制到本站；系统分层和情境为概念示意。
+
+## 课程视觉
+
+课程采用 Open Folio / 开卷识别系统，X-lab AI 作为出品方署名。视觉正本见 [课程视觉规格](../specs/course-identity-spec.md)，资产在 assets/course/。Space Grotesk 字体与 Phosphor 辅助图标本地托管并分别保留许可。
+
+重新生成路径资产需要 fontTools、上游原版 SpaceGrotesk[wght].ttf 与本机 Noto Sans CJK SC Bold OTF：
+
+```bash
+python scripts/generate_course_brand.py --latin-font /path/to/SpaceGrotesk.ttf --cjk-font /path/to/NotoSansCJKsc-Bold.otf
+```
+
+此命令仅用于设计维护，不是网站日常构建依赖。

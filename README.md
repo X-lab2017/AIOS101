@@ -54,7 +54,8 @@ python scripts/check_repo.py
 
 ## 在线学习资源设计评审
 
-- [网站建设规格 v0.1](specs/website-spec.md)
+- [网站建设规格 v0.2](specs/website-spec.md)
+- [课程专属视觉识别 v0.1](specs/course-identity-spec.md)
 - [序言与系统探索活动设计](specs/website-activities.md)
 - [网站开发与 GitHub Pages 发布说明](site/README.md)
 - [技术核验记录](specs/website-review-record.md)

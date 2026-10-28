@@ -24,6 +24,7 @@ jobs:
           node-version: '22'
       - run: python scripts/build_site.py
       - run: node --check site/app.js
+      - run: node --check site/brand.js
       - run: python scripts/check_repo.py
       - uses: actions/upload-pages-artifact@v3
         with:

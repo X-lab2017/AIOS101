@@ -114,6 +114,7 @@ scripts/
 
 本轮经维护者授权，同步设计有限范围的评审原型，规格保持评审中。
 
+- [VIS-AIOS101 课程专属视觉](course-identity-spec.md)
 - [WEB-AIOS101 网站建设规格](website-spec.md)
 - [WEB-ACT-01／02 序言及系统探索活动](website-activities.md)
 - [技术核验与未决事项](website-review-record.md)
