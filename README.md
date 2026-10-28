@@ -52,14 +52,16 @@ python scripts/check_repo.py
 
 完整验收要求见[验收与发布规范](specs/acceptance-spec.md)，重要变更记录见[更新日志](CHANGELOG.md)。
 
-## 在线学习资源设计评审
+## 在线学习资源
 
-- [网站建设规格 v0.2](specs/website-spec.md)
+- [网站建设规格 v0.3](specs/website-spec.md)
 - [课程专属视觉识别 v0.1](specs/course-identity-spec.md)
 - [序言与系统探索活动设计](specs/website-activities.md)
 - [网站开发与 GitHub Pages 发布说明](site/README.md)
 - [技术核验记录](specs/website-review-record.md)
 
-当前在线资源为维护者设计评审版，未通过课程教学验收；已提供完整序言阅读与活动样板，第 1 章草稿已入库、待在线接入，其余章节随制作进度扩展。
+[进入 AIOS101 课程网站](https://www.x-lab.info/AIOS101/) · [课程视觉方案](https://www.x-lab.info/AIOS101/#/identity)
+
+当前为公开预览版，未通过课程教学验收；已提供完整序言阅读与活动样板，前两章 v0.2 自学草稿及任务单可从课程地图查看，完整章阅读和正式章活动随制作进度接入。
 
 公开预览发布范围与实际核验记录见 [Pages 发布记录](specs/pages-release-record.md)。

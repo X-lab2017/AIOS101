@@ -22,9 +22,16 @@
 
 ## 发布状态
 
-源码与优化已完成，Pages 首次启用仍须仓库 Settings → Pages → GitHub Actions。当前 GitHub 插件没有 Pages 管理接口；云端浏览器未登录 GitHub，设置页显示未登录的 404。仅凭构建通过不宣称 Pages 已上线，最终结果以部署日志及公开站点核验为准。
+已于 2026-10-28 发布到 GitHub Pages，公开地址为 **https://www.x-lab.info/AIOS101/**，无需登录。沿用 X-lab 组织已有域名，未更改域名配置。
 
-GitHub Actions 官方 configure-pages 的 enablement 说明要求 GITHUB_TOKEN 以外的授权，故不尝试用工作流绕过首次启用权限。参考：[官方 action.yml](https://github.com/actions/configure-pages/blob/main/action.yml)。
+- 首次上线提交：`8268777f9b5a63317c9462599dd507c7fad4915d`（PR #1 合并结果）。
+- 维护者在 Settings → Pages 选择 GitHub Actions 后，重跑部署成功；[Actions 第 2 次运行](https://github.com/X-lab2017/AIOS101/actions/runs/40654970174/attempts/2)的 build 与 deploy 均为 success。
+- 线上浏览器核验：首页公开可访问，HTTP 自动转 HTTPS；课程 Logo、X-lab 署名和首页图形加载正常。
+- 课程地图与 CH02 弹窗正常，正文和两份任务单链接绑定首次上线提交；[课程视觉页](https://www.x-lab.info/AIOS101/#/identity)可访问。
+- 构建实际检查通过：60 份 Markdown、133 个相对链接；静态资源子路径与 ZIP 完整性检查通过。
+- 公开站资产包的浏览器下载工具仍返回失败，尚未完成该下载路径的端到端核验，不将其描述为通过。
+
+后续 main 中教材、学生任务单、网站和规格等相关改动由工作流自动检查和部署。技术发布成功不改变教材草稿和教学验收状态。
 
 ## 未完成的验证
 

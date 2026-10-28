@@ -30,6 +30,8 @@ python scripts/check_repo.py
 
 ## GitHub Pages
 
+已上线：[AIOS101 课程网站](https://www.x-lab.info/AIOS101/)。公开免登录，沿用组织现有域名。
+
 工作流在 .github/workflows/course-pages.yml。首次由仓库维护者在 Settings → Pages → Build and deployment 选择 GitHub Actions。PR 只执行检查与构建，推送 main 或在 main 手动触发才部署。首次启用状态与实际发布结果见 [Pages 发布核验记录](../specs/pages-release-record.md)。
 
 发布步骤：完成设计评审 → 确认发布范围和素材许可 → 合并 PR → 开通 Pages → 查看 Actions 部署结果。组织的自定义域名可能影响最终网址，以 GitHub 返回的部署 URL 为准。
