@@ -159,7 +159,9 @@ def render(text, source, commit, routes):
         paragraph = [line]; i += 1
         while i < len(lines) and lines[i].strip() and not re.match(r'^(?:#{1,6} |>|\||[-*] |\d+\. |```)', lines[i].strip()):
             paragraph.append(lines[i].strip()); i += 1
-        cls = ' class="figure-caption"' if re.match(r'^图\s*\d', line) else ''
+        # Canonical captions use an ideographic space after the figure ID.
+        # A prose paragraph such as “图 0-4 展示……” is ordinary body text.
+        cls = ' class="figure-caption"' if re.match(r'^图 \d+-\d+　', line) else ''
         result.append('<p'+cls+'>'+fmt('\n'.join(paragraph))+'</p>')
     return '\n'.join(result)
 

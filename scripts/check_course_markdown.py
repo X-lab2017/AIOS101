@@ -26,6 +26,9 @@ rendered = render('<script>alert(1)</script>\n\n[x](javascript:evil)\n\n| 列 |\
 assert '<script>' not in rendered and 'href="javascript:' not in rendered
 assert '<th scope="col">列</th>' in rendered and '<strong>证据</strong>' in rendered
 assert '&lt;script&gt;' in rendered
+caption_sample = render('图 0-4 展示全球观测界面。\n\n图 0-4　OpenDipper 全球观测：从分布追问口径。', source, commit, {})
+assert '<p>图 0-4 展示全球观测界面。</p>' in caption_sample
+assert caption_sample.count('class="figure-caption"') == 1
 mermaid = render('```mermaid\nflowchart LR\n A["开放"] -->|仍需文档| B["复用"]\n C["协作"] -.-> B\n```', source, commit, {})
 assert 'textbook-diagram' in mermaid and '开放' in mermaid and '复用' in mermaid
 assert '仍需文档' in mermaid and '→' in mermaid and '⇢' in mermaid
