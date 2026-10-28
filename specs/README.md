@@ -129,3 +129,7 @@ scripts/
 
 - [序言与前六章自学教材评审规格](self-study-textbook-review.md)
 - [逐章评审与修订记录](../docs/self-study-review-2026-10-29.md)
+
+## 10. 自学教材图版修订
+
+- [序言与前六章图版修订规格](visual-learning-review-2026-10-29.md)：内容需求、逐章取舍、统一编号题名与线上验收。

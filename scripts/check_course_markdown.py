@@ -33,7 +33,8 @@ assert '<summary>查看 Mermaid 图源码</summary>' in mermaid
 unsafe_mermaid = render('```mermaid\nflowchart LR\n A["<img src=x>"] --> B["结果"]\n```', source, commit, {})
 assert '<img src=x>' not in unsafe_mermaid and '&lt;img src=x&gt;' in unsafe_mermaid
 assert '#/learn/APP-A' in ''.join(s['html'] for s in data['units']['CH01']['sections'])
-assert sum(s['html'].count('textbook-diagram') for key in ('CH01', 'CH02', 'CH03', 'CH04', 'CH05', 'CH06') for s in data['units'][key]['sections']) == 31
+expected_diagrams=sum(u['markdown'].count('```mermaid') for u in data['units'].values())
+assert sum(s['html'].count('textbook-diagram') for u in data['units'].values() for s in u['sections']) == expected_diagrams
 assert len(data['worksheets']) == 4
 print('PASS: canonical full text, stable sections, source digests, safe rendering, Mermaid fallbacks and internal appendix links')
 
@@ -46,8 +47,13 @@ class Images(HTMLParser):
     def handle_starttag(self, tag, attrs):
         if tag == 'img': self.images.append(dict(attrs))
 figures = json.loads((root/'textbook/assets/figures/manifest.json').read_text())
-assert len(figures) == 44 and len({f['id'] for f in figures}) == 44
-for ch, count in [('CH01', 4), ('CH02', 4), ('CH03', 8), ('CH04', 9), ('CH05', 9), ('CH06', 10)]:
+assert len(figures) == len({f['id'] for f in figures})
+retired=json.loads((root/'textbook/assets/figures/retired.json').read_text())
+assert not ({f['id'] for f in figures} & {f['id'] for f in retired})
+assert data['figureCount'] == len(figures)
+for ch in ['PREFACE', *[f'CH{n:02}' for n in range(1,7)]]:
+    prefix='0-' if ch=='PREFACE' else str(int(ch[2:]))+'-'
+    count=sum(f['id'].startswith(prefix) for f in figures)
     parser = Images()
     for sec in data['units'][ch]['sections']: parser.feed(sec['html'])
     assert len(parser.images) == count, ch
@@ -56,12 +62,13 @@ for ch, count in [('CH01', 4), ('CH02', 4), ('CH03', 8), ('CH04', 9), ('CH05', 9
         assert image['loading'] == 'lazy'
         assert (root/'dist'/image['src']).is_file()
     raw = (root/'dist/resources'/f'{ch}.md').read_text()
-    assert raw.count('![图 ') == count and 'https://raw.githubusercontent.com/' in raw
+    assert raw.count('![图 ') == count, ch
+    if count: assert 'https://raw.githubusercontent.com/' in raw
 for target in ['javascript:evil.webp', '//evil.test/a.webp', '../../../private.webp', '../assets/figures/../../private.webp', 'https://evil.test/a.webp']:
     assert image_path(target, source) is None
 assert '<script>' not in render('<details onclick="evil()">\n<script>evil()</script>', source, commit, {})
-assert sum(s['html'].count('<details class="figure-relations">') for ch in ('CH01','CH02','CH03','CH04','CH05','CH06') for s in data['units'][ch]['sections']) == 31
-print('PASS: 44 registered images, dimensions, local assets, portable downloads, 31 folded fallbacks and unsafe image rejection')
+assert sum(s['html'].count('<details class="figure-relations">') for u in data['units'].values() for s in u['sections']) == expected_diagrams
+print(f'PASS: {len(figures)} registered images, dimensions, local assets, portable downloads, {expected_diagrams} folded fallbacks and unsafe image rejection')
 
 # Decision-node labels and branches must survive the text fallback.
 decision = render('```mermaid\nflowchart TD\n A["开始"] --> D{"继续？"}\n D -->|否| E["结束"]\n```', source, commit, {})
@@ -94,4 +101,4 @@ for ch in range(1,7):
         assert match[1].strip() == (root/'textbook/assets/figures/mermaid'/f'Fig-{number}.mmd').read_text().strip(),number
     assert not any(old in raw for old in ['正式绘制可用','真实截图占位'])
 assert (root/'dist/figure-fonts/figure-sans.woff').is_file()
-print('PASS: 44 captioned zoom pages, source parity and labeled dotted edges')
+print(f'PASS: {len(figures)} captioned zoom pages, source parity and labeled dotted edges')

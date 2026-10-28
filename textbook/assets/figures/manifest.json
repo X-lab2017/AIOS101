@@ -1,5 +1,21 @@
 [
   {
+    "id": "0-3",
+    "title": "一次回答背后的工作",
+    "file": "AIOS101_Fig-00-03_behind-the-answer_v01.webp",
+    "width": 1536,
+    "height": 1024,
+    "bytes": 469454,
+    "originalBytes": 3396337,
+    "insertion": "序言 / 一次提问，如何连接一个世界 / 三个问题之后",
+    "alt": "打开的聊天界面像一扇门，显露整理材料与计算、组合界面与服务、核对资料和共同修改的工作场景。开卷式场景是概念隐喻，不是实际产品架构。",
+    "displayWidth": 860,
+    "sourceUrls": [],
+    "kind": "concept-illustration",
+    "revision": "2026-10-29",
+    "sourceRecord": "sources/visual-learning-2026-10-29.md"
+  },
+  {
     "id": "1-1",
     "title": "使用、理解与创造：三种学习位置",
     "file": "AIOS101_Fig-01-01_learning-positions_v01.webp",

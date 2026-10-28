@@ -17,7 +17,7 @@ for(const id of Object.keys(context.payload.units)){
  const html=vm.runInContext('reader(id,new URLSearchParams())',context);
  for(const sec of context.payload.units[id].sections)assert(html.includes(sec.html),'Full canonical section retained: '+id);
  for(const forbidden of ['data-mark=','data-note=','reading-notes','after-reading','margin-note','#/activity/','#/workshop','#/notebook'])assert(!html.includes(forbidden),id+' '+forbidden);
- const expected={CH01:4,CH02:4,CH03:8,CH04:9,CH05:9,CH06:10}[id];if(expected)assert.equal((html.match(/class="textbook-figure"/g)||[]).length,expected);
+ const expected=(context.payload.units[id].markdown.match(/!\[图 /g)||[]).length;assert.equal((html.match(/class="textbook-figure"/g)||[]).length,expected);
  assert(html.includes('source-trail')&&html.includes('chapter-pagination'));
 }
 const index=fs.readFileSync('site/index.html','utf8');
@@ -27,4 +27,4 @@ for(const route of ['#/notebook','#/workshop','#/activity/ACT-CH01-01','#/identi
  let redirect='';context.location.hash=route;context.location.replace=v=>{redirect=v;};vm.runInContext('render()',context);assert(redirect==='#/map'||redirect==='#/learn/CH01');
 }
 assert(fs.readFileSync('dist/index.html','utf8').includes('app.js?v='));
-console.log('PASS: reading-only home and all units, 44 figures, complete canonical sections, retired route fallback, old records untouched, release-bound assets');
+console.log('PASS: reading-only home and all units, canonical figure counts, complete canonical sections, retired route fallback, old records untouched, release-bound assets');
