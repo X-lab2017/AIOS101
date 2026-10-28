@@ -86,7 +86,7 @@ def mermaid_block(code):
         node = re.fullmatch(r'([A-Za-z]\w*)\s*\["([^"]*)"\]', line)
         if node:
             nodes[node[1]] = node[2]; continue
-        edge = re.fullmatch(r'([A-Za-z]\w*)(?:\["([^"]*)"\])?\s*(-\.->|-->)\s*(?:\|([^|]*)\|\s*)?([A-Za-z]\w*)(?:\["([^"]*)"\])?', line)
+        edge = re.fullmatch(r'([A-Za-z]\w*)(?:\["([^"]*)"\])?\s*(-\.->|---|-->)\s*(?:\|([^|]*)\|\s*)?([A-Za-z]\w*)(?:\["([^"]*)"\])?', line)
         if edge:
             if edge[2]: nodes[edge[1]] = edge[2]
             if edge[6]: nodes[edge[5]] = edge[6]
@@ -95,7 +95,8 @@ def mermaid_block(code):
         return '<pre><code>' + html.escape(code) + '</code></pre>'
     relations = []
     for start, end, arrow, label in edges:
-        relation = '<span class="diagram-arrow">' + ('⇢' if arrow == '-.->' else '→') + '</span>'
+        symbol = {'-.->': '⇢', '---': '—'}.get(arrow, '→')
+        relation = '<span class="diagram-arrow">' + symbol + '</span>'
         if label:
             relation += '<span class="diagram-label">' + html.escape(label) + '</span>'
         relations.append('<li><span class="diagram-node">' + html.escape(nodes.get(start, start)) + '</span>' + relation + '<span class="diagram-node">' + html.escape(nodes.get(end, end)) + '</span></li>')

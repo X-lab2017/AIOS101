@@ -17,10 +17,11 @@
 7. [第 1 章 v0.5](textbook/chapters/CH01-why-ai-open-source-literacy.md)：从 AI 使用经验进入 GNU、Linux、OSI 的历史，再转向 AI 开源通识的理解与创造；
 8. [第 2 章 v0.5](textbook/chapters/CH02-open-source-mechanisms.md)：以真实仓库和社区记录解释开放、复用、协作与公共价值；
 9. [第 3 章 v0.2](textbook/chapters/CH03-ai-open-source-ecosystem.md)：以资产、关系、参与者与规则建立 AI 开源生态全景；
-10. [第 4 章 v0.1](textbook/chapters/CH04-data-to-models.md)：以 FineWeb 和 DeepSeek-R1 解释数据、训练过程与模型能力的形成；
-11. [第 5 章 v0.2](textbook/chapters/CH05-training-to-inference.md)：以通识化解释、生成过程、推理系统与最小评价理解模型运行及证据；
-12. [第 6 章 v0.1](textbook/chapters/CH06-model-to-agents.md)：以真实材料和模拟轨迹理解 RAG、工具调用、智能体循环与人机责任；
-13. [附录 A](textbook/appendices/APP-A-repository-snapshots.md)：仓库、提交号与固定版本的共同访问指南。
+10. [第 4 章 v0.2](textbook/chapters/CH04-data-to-models.md)：以 FineWeb 和 DeepSeek-R1 解释数据、训练过程与模型能力的形成；
+11. [第 5 章 v0.3](textbook/chapters/CH05-training-to-inference.md)：以通识化解释、生成过程、推理系统与最小评价理解模型运行及证据；
+12. [第 6 章 v0.2](textbook/chapters/CH06-model-to-agents.md)：以真实材料和模拟轨迹理解 RAG、工具调用、智能体循环与人机责任；
+13. [第二篇统一视觉清单](textbook/assets/ch04-ch06/README.md)：第四章至第六章 22 幅结构图与 6 项真实材料配图的绘制要求；
+14. [附录 A](textbook/appendices/APP-A-repository-snapshots.md)：仓库、提交号与固定版本的共同访问指南。
 
 当前规格和章节处于草稿或实施阶段，不代表教材内容或课程实施已经完成验收。
 
