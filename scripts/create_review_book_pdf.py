@@ -3,6 +3,8 @@
 
 from __future__ import annotations
 
+import argparse
+import hashlib
 import html
 import json
 import os
@@ -39,9 +41,9 @@ from reportlab.platypus.tableofcontents import TableOfContents
 
 ROOT = Path(__file__).resolve().parents[1]
 TEXTBOOK = ROOT / "textbook"
-OUTPUT = ROOT / "deliverables" / "AI开源通识_序言与前六章_图文评审版_2026-10-29.pdf"
+OUTPUT = ROOT / "deliverables" / "AI开源通识_序言与前六章_自学评审版_2026-10-29.pdf"
 ASSET_DIR = ROOT / "deliverables" / ".review-book-assets"
-REPORT = ROOT / "deliverables" / "AI开源通识_序言与前六章_排版核验.json"
+REPORT = ROOT / "deliverables" / "AI开源通识_序言与前六章_自学排版核验.json"
 PAGE_W, PAGE_H = A4
 LEFT = 25 * mm
 RIGHT = 22 * mm
@@ -71,6 +73,29 @@ CHAPTERS = [
 ]
 PREFACE = TEXTBOOK / "preface.md"
 APPENDIX = TEXTBOOK / "appendices" / "APP-A-repository-snapshots.md"
+
+
+
+def source_metadata() -> dict:
+    """Read edition details from canonical files; never invent missing figures."""
+    paths = [PREFACE, *CHAPTERS, APPENDIX]
+    labels = ["序言", *[f"第 {n} 章" for n in range(1, 7)], "附录 A"]
+    versions, hashes, figures = {}, {}, []
+    for label, path in zip(labels, paths):
+        text = path.read_text(encoding="utf-8")
+        version = re.search(r"^> 版本：([^\n]+)", text, re.MULTILINE)
+        if not version:
+            raise RuntimeError(f"Missing source version: {path}")
+        if "图片占位" in text:
+            raise RuntimeError(f"Unresolved figure placeholder: {path}")
+        versions[label] = version.group(1).strip()
+        hashes[str(path.relative_to(ROOT))] = hashlib.sha256(path.read_bytes()).hexdigest()
+        figures.extend(re.findall(r"^!\[图\s+([0-9A-Z]+-[0-9]+)\b", text, re.MULTILINE))
+    manifest = json.loads((TEXTBOOK / "assets/figures/manifest.json").read_text())
+    expected = {entry["id"] for entry in manifest}
+    if set(figures) != expected or len(figures) != len(expected):
+        raise RuntimeError("Source/manifest figure parity failed")
+    return {"versions": versions, "sourceHashes": hashes, "chapterFigures": len(figures)}
 
 
 def register_fonts() -> None:
@@ -109,6 +134,7 @@ def make_styles() -> dict[str, ParagraphStyle]:
         "lead": ParagraphStyle(
             "BookLead",
             parent=base["Normal"],
+            keepWithNext=True,
             fontName="DaimonCJK-Bold",
             fontSize=10.8,
             leading=18.5,
@@ -482,7 +508,7 @@ def draw_cover(canvas, doc):
     canvas.drawString(24 * mm, PAGE_H - 151 * mm, "序言与前六章")
     canvas.setFillColor(MUTED)
     canvas.setFont("DaimonCJK", 11)
-    canvas.drawString(24 * mm, PAGE_H - 164 * mm, "图文评审版 · 专家评审样书")
+    canvas.drawString(24 * mm, PAGE_H - 164 * mm, "自学教材评审版 · 专家评审样书")
 
     x0, y0 = 26 * mm, 45 * mm
     ww, hh = 155 * mm, 57 * mm
@@ -519,7 +545,7 @@ def draw_cover(canvas, doc):
 
 def draw_body_page(canvas, doc):
     canvas.saveState()
-    canvas.setTitle("AI 开源通识：序言与前六章（图文评审版）")
+    canvas.setTitle("AI 开源通识：序言与前六章（自学教材评审版）")
     canvas.setAuthor("X-lab AI")
     canvas.setSubject("AI 开源通识教材专家评审样书")
     if doc.page >= 4:
@@ -529,7 +555,7 @@ def draw_body_page(canvas, doc):
         canvas.setFillColor(MUTED)
         canvas.setFont("DaimonCJK", 8)
         canvas.drawString(LEFT, PAGE_H - 12 * mm, "AI 开源通识")
-        canvas.drawRightString(PAGE_W - RIGHT, PAGE_H - 12 * mm, "序言与前六章 · 图文评审版")
+        canvas.drawRightString(PAGE_W - RIGHT, PAGE_H - 12 * mm, "序言与前六章 · 自学评审版")
         canvas.drawCentredString(PAGE_W / 2, 11 * mm, str(doc.page))
     canvas.restoreState()
 
@@ -740,25 +766,8 @@ class MarkdownRenderer:
                 story.append(image_flowable(path))
                 i += 1
                 continue
-            if line.startswith("图 0-1") and "图片占位" in line:
-                path = TEXTBOOK / "assets" / "figures" / "AIOS101_Fig-03-08_opendipper-open-galaxy_v01.webp"
-                story.append(BookmarkFlowable("fig-0-1"))
-                story.append(image_flowable(path, max_height=138 * mm))
-                story.append(Paragraph("图 0-1　OpenDipper 开源星系界面。", self.styles["caption"]))
-                i += 1
-                continue
-            if line.startswith("图 0-2") and "图片占位" in line:
-                story.append(BookmarkFlowable("fig-0-2"))
-                story.append(LearningMap())
-                story.append(Paragraph("图 0-2　《AI 开源通识》全书学习地图。", self.styles["caption"]))
-                i += 1
-                continue
-            if line.startswith("图 A-1") and "图片占位" in line:
-                story.append(BookmarkFlowable("fig-A-1"))
-                story.append(RepositoryMap())
-                story.append(Paragraph("图 A-1　公开仓库中的 README、许可、版本与协作入口。", self.styles["caption"]))
-                i += 1
-                continue
+            if "图片占位" in line:
+                raise RuntimeError(f"Unresolved figure placeholder in {source.name}: {line}")
             caption_match = re.match(r"^图\s+([0-9A-Z]+-[0-9]+)　", line)
             if caption_match:
                 story.append(Paragraph(inline_markup(line, source), self.styles["caption"]))
@@ -803,6 +812,7 @@ def add_part(story, number: str, title: str, description: str, anchor: str, styl
 
 
 def build_book() -> dict:
+    metadata = source_metadata()
     register_fonts()
     styles = make_styles()
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
@@ -817,7 +827,7 @@ def build_book() -> dict:
         rightMargin=RIGHT,
         topMargin=TOP,
         bottomMargin=BOTTOM,
-        title="AI 开源通识：序言与前六章（图文评审版）",
+        title="AI 开源通识：序言与前六章（自学教材评审版）",
         author="X-lab AI",
         subject="AI 开源通识教材专家评审样书",
     )
@@ -835,7 +845,7 @@ def build_book() -> dict:
         Paragraph("AI & Open Source Literacy", styles["title_sub"]),
         Spacer(1, 12 * mm),
         Paragraph("序言与前六章", styles["title_sub"]),
-        Paragraph("图文评审版 · 专家评审样书", styles["title_sub"]),
+        Paragraph("自学教材评审版 · 专家评审样书", styles["title_sub"]),
         Spacer(1, 65 * mm),
         Paragraph("X-lab AI 出品", styles["title_sub"]),
         Paragraph("2026 年 10 月", styles["title_sub"]),
@@ -845,13 +855,9 @@ def build_book() -> dict:
         Paragraph("本册收录序言、第一篇（第 1—3 章）、第二篇（第 4—6 章）及附录 A。全书规划中的第 7—12 章不收录于本册。", styles["body"]),
         Spacer(1, 4 * mm),
     ])
-    versions = [
-        ["内容", "版本", "内容", "版本"],
-        ["序言", "v0.4", "第 1 章", "v0.6"],
-        ["第 2 章", "v0.6", "第 3 章", "v0.3"],
-        ["第 4 章", "v0.3", "第 5 章", "v0.4"],
-        ["第 6 章", "v0.3", "附录 A", "v0.1"],
-    ]
+    entries = list(metadata["versions"].items())
+    versions = [["内容", "版本", "内容", "版本"]]
+    versions.extend([*entries[i], *entries[i + 1]] for i in range(0, len(entries), 2))
     story.append(make_table(versions, ROOT / "README.md", styles))
     story.extend([
         Paragraph(f"正文来源提交：{source_commit}", styles["note"]),
@@ -907,15 +913,27 @@ def build_book() -> dict:
         "pages": page_count,
         "chapters": renderer.chapter_count,
         "chapterFigures": len(renderer.figure_ids),
-        "prefaceAndAppendixFigures": 3,
+        "prefaceAndAppendixFigures": 0,
+        "versions": metadata["versions"],
+        "sourceHashes": metadata["sourceHashes"],
         "tables": renderer.table_count,
         "bytes": OUTPUT.stat().st_size,
         "requiredTextMissing": absent,
     }
+    REPORT.parent.mkdir(parents=True, exist_ok=True)
     REPORT.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return result
 
 
 if __name__ == "__main__":
-    build_book()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output", type=Path, default=OUTPUT)
+    parser.add_argument("--report", type=Path, default=REPORT)
+    parser.add_argument("--check-only", action="store_true", help="Validate source versions and figures without fonts or PDF generation")
+    args = parser.parse_args()
+    OUTPUT, REPORT = args.output.resolve(), args.report.resolve()
+    if args.check_only:
+        print(json.dumps(source_metadata(), ensure_ascii=False, indent=2))
+    else:
+        build_book()

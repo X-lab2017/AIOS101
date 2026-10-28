@@ -4,6 +4,7 @@ import json
 import os
 import re
 import shutil
+import subprocess
 from pathlib import Path
 from course_markdown import unit, destination, image_path
 from figure_pages import build_figure_pages
@@ -13,7 +14,7 @@ OUT = ROOT/'dist'
 if OUT.exists(): shutil.rmtree(OUT)
 shutil.copytree(ROOT/'site', OUT)
 shutil.copytree(ROOT/'textbook/assets/figures', OUT/'textbook/assets/figures')
-commit = os.environ.get('GITHUB_SHA', 'b043bfb0761cdfed3c6a7e4bf144a353c35bb035')
+commit = os.environ.get('GITHUB_SHA') or subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
 if not re.fullmatch(r'[0-9a-f]{40}', commit): raise SystemExit('Invalid source commit')
 # Keep content and styles on the same release even when a reader has cached an older visit.
 index = (OUT/'index.html').read_text()
@@ -50,7 +51,7 @@ for key,u in units.items():
     for sec in u['sections']:
         if sec['title']=='关键术语':
             for term,meaning in re.findall(r'^- \*\*(.+?)\*\*：(.+)$',sec['markdown'],re.M):glossary.append({'term':term,'meaning':meaning,'unit':key,'section':sec['id']})
-content = dict(version='0.6.0-review',date='2026-10-29',sourceCommit=commit,visualVersion='1.0.0',brandCommit='373d61f0d6e334f0b85af0dd5d8ef9b9095bcc37',chapters=chapters,units=units,worksheets=worksheets,glossary=glossary,preface=units['PREFACE']['markdown'],sources=(ROOT/'specs/source-register.md').read_text())
+content = dict(version='0.7.0-self-study',date='2026-10-29',sourceCommit=commit,visualVersion='1.0.0',brandCommit='373d61f0d6e334f0b85af0dd5d8ef9b9095bcc37',chapters=chapters,units=units,worksheets=worksheets,glossary=glossary,preface=units['PREFACE']['markdown'],sources=(ROOT/'specs/source-register.md').read_text())
 (OUT/'content.json').write_text(json.dumps(content,ensure_ascii=False),encoding='utf-8')
 (OUT/'resources').mkdir()
 resources = [(u['sourcePath'],key+'.md') for key,u in units.items()] + [(v['path'],key+'.md') for key,v in worksheets.items()] + [('specs/'+x+'.md',x+'.md') for x in ['website-spec','website-activities','learning-experience-spec','course-identity-spec','source-register']]
