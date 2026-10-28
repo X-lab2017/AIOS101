@@ -3,3 +3,4 @@ __pycache__/
 *.log
 textbook/assets/preface/map-qa/
 deliverables/*-qa/
+dist/

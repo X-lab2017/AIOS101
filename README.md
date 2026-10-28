@@ -42,3 +42,13 @@ python scripts/check_repo.py
 该命令仅使用 Python 标准库，检查必需文件、核心规格章节、CH01—CH12 的完整顺序、Markdown 行尾空白及相对链接目标。通过此检查只代表基础结构合规，不等于内容、教学或技术验收全部通过。
 
 完整验收要求见[验收与发布规范](specs/acceptance-spec.md)，重要变更记录见[更新日志](CHANGELOG.md)。
+
+
+## 在线学习资源设计评审
+
+- [网站建设规格 v0.1](specs/website-spec.md)
+- [序言与系统探索活动设计](specs/website-activities.md)
+- [网站开发与 GitHub Pages 发布说明](site/README.md)
+- [技术核验记录](specs/website-review-record.md)
+
+当前在线资源为维护者设计评审版，未通过课程教学验收；已提供完整序言阅读与活动样板，十二章正文待制作方逐章接入。

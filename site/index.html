@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI 开源通识 · X-lab AI</title>
+  <meta name="description" content="X-lab 出品。以开源的方式学习 AI，以创造的方式理解开源。AIOS101 交互学习资源设计评审版。">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#f7f8f3">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳转到主要内容 / Skip to content</a>
+<header class="topbar"><div class="header-inner">
+  <a class="brand" href="#/" aria-label="X-lab AI · 首页"><img class="theme-logo" src="assets/logo-light.svg" alt="X-lab AI" width="160" height="52"></a>
+  <div class="brand-divider"></div><a href="#/" class="course-name">AIOS<span>101</span></a>
+  <nav id="nav" aria-label="主要导航"></nav>
+  <div class="header-tools"><button id="lang" class="icon-button" aria-label="Switch to English">EN</button><button id="theme" class="icon-button" aria-label="切换深色主题"></button><button id="menu" class="icon-button mobile-menu" aria-label="展开导航" aria-expanded="false"></button></div>
+</div></header>
+<main id="main" tabindex="-1"><div class="loading">正在展开一个开放的世界…</div></main>
+<footer id="footer"></footer>
+<div id="toast" role="status" aria-live="polite"></div>
+<dialog id="chapter-dialog"><button class="dialog-close icon-button" aria-label="关闭 / Close">×</button><div id="dialog-body"></div></dialog>
+<dialog id="backup-dialog"><button class="backup-close dialog-close icon-button" aria-label="关闭备份 / Close backup">×</button><h2 id="backup-title"></h2><p id="backup-help" class="muted" style="font-size:13px;margin:15px 0"></p><div class="field"><textarea id="backup-text" aria-label="JSON backup" style="min-height:290px;font-family:monospace;font-size:12px"></textarea></div><div class="actions"><button class="btn primary" id="copy-backup"></button><button class="btn" id="restore-backup"></button></div></dialog>
+<input type="file" id="import-file" accept="application/json,.json" hidden>
+</body></html>
