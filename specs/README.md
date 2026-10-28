@@ -116,6 +116,8 @@ scripts/
 
 - [VIS-AIOS101 课程专属视觉](course-identity-spec.md)
 - [WEB-AIOS101 网站建设规格](website-spec.md)
+- [WEB-LEARN-AIOS101 学习体验与交互资源规格](learning-experience-spec.md)
+- [学习版核验与评审记录](learning-review-record.md)
 - [WEB-ACT-01／02 序言及系统探索活动](website-activities.md)
 - [技术核验与未决事项](website-review-record.md)
 

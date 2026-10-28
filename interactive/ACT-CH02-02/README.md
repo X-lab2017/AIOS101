@@ -4,7 +4,7 @@
 >
 > 学习证据：`EVD-CH02-02`
 >
-> 状态：待开发，尚未实现或课堂实测
+> 状态：v0.4 分步交互打样已实现；教学验收和课堂实测待进行
 >
 > 教学正本：[学生任务单](../../activities/student/ACT-CH02-02.md)
 >
@@ -97,3 +97,11 @@ ai_disclosure: {used, description, verification, final_responsibility}
 - [ ] 自动反馈不伪造评审、不产生公共价值结论；
 - [ ] 无网络、无脚本、窄屏、键盘和屏幕阅读器路径可用；
 - [ ] 不默认上传或公开个人内容。
+
+## 当前实现挂载（v0.4）
+
+- 在线入口：[#/activity/ACT-CH02-02](https://www.x-lab.info/AIOS101/#/activity/ACT-CH02-02)。
+- 字段与流程：[learning-data.js](../../site/learning-data.js)；本地数据、迁移和导出：[learning-core.js](../../site/learning-core.js)；统一页面：[app.js](../../site/app.js)。
+- 使用 schema 2 的 activities[活动 ID] 保存 fields、step、status、history；教学字段按本页要求映射，原建议结构不作为已经发布的数据格式。
+- 自动检查只提示缺项；反馈由本人、同伴或教师填写，完成状态不等于学习评价。静态回退使用上方学生任务单。
+- 实际核验范围与限制见[学习版核验记录](../../specs/learning-review-record.md)。

@@ -20,10 +20,10 @@
 4. 来源、许可、版本和结论边界必须随内容一起发布；
 5. 每次正文更新后重新检查导航、锚点、移动端阅读和交互回退。
 
-## 当前设计评审原型
+## 当前交互学习打样 v0.4
 
-本目录作为在线资源入口；本轮网站壳、品牌与通用评审活动源码位于 [site/](../site/README.md)，以 [网站规格](../specs/website-spec.md) 约定范围，运行 `python scripts/build_site.py` 生成静态 dist/。不在 online/ 或 site/ 复制教材正本。
+[课程网站](https://www.x-lab.info/AIOS101/)从教材正本自动生成绪论、CH01、CH02 与附录 A 的完整阅读页；第三章新草稿也已自动接入阅读。保留来源、版本和插图占位。阅读器支持分节目录、字号、专注模式、书签和页边笔记。
 
-序言已接入阅读；CH01、CH02 v0.2 自学修订稿和四项正式活动材料已入库，网站目前提供草稿入口，完整在线阅读及正式活动实现待接入。WEB-ACT-01／02 是序言导入与系统探索样例，不代表 ACT-CH01／02 的正式交互已实现，也不替代学生任务单。
+源码在 [site/](../site/README.md)，生成器在 [scripts/build_site.py](../scripts/build_site.py)。[学习体验规格](../specs/learning-experience-spec.md)定义三个案例观察窗、四项分步活动与本地学习手账；任务单仍是教学正本。[核验记录](../specs/learning-review-record.md)区分工程检查与待开展的教学评审。
 
-GitHub Pages 配置和私有评审托管说明见 [网站开发与发布说明](../site/README.md)。正式章节组件继续遵循本目录的内容来源与 interactive/ 的挂载约定。
+新章节文件进入 textbook/chapters/ 后，会在下一次构建自动生成阅读页。定制活动需要在 site/learning-data.js 中按既有 ACT/EVD ID 接入并核对学生任务单。未出现的章正文不会被补写。

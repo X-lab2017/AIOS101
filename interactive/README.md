@@ -29,4 +29,6 @@
 
 第二章已建立 [ACT-CH02-01 开发需求](ACT-CH02-01/README.md)与 [ACT-CH02-02 开发需求](ACT-CH02-02/README.md)。
 
-以上均为待开发需求，不代表交互已经实现。
+四项活动现已实现为 v0.4 分步交互打样，使用统一字段定义、草稿保存、反馈修订和导出逻辑。教学验收与课堂实测仍待进行。
+
+实现见 [site/learning-data.js](../site/learning-data.js)、[site/learning-core.js](../site/learning-core.js)与 [site/app.js](../site/app.js)；规格和实际核验分别见[学习体验规格](../specs/learning-experience-spec.md)与[核验记录](../specs/learning-review-record.md)。

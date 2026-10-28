@@ -58,15 +58,17 @@ python scripts/check_repo.py
 
 ## 在线学习资源
 
-- [网站建设规格 v0.3](specs/website-spec.md)
+- [网站建设规格 v0.4](specs/website-spec.md)
 - [课程专属视觉识别 v1.0.0](specs/course-identity-spec.md)
 - [序言与系统探索活动设计](specs/website-activities.md)
 - [网站开发与 GitHub Pages 发布说明](site/README.md)
-- [技术核验记录](specs/website-review-record.md)
+- [学习体验与活动规格 v0.4](specs/learning-experience-spec.md)
+- [学习版核验记录](specs/learning-review-record.md)
+- [早期原型核验记录](specs/website-review-record.md)
 
 [进入 AIOS101 课程网站](https://www.x-lab.info/AIOS101/) · [课程视觉方案](https://www.x-lab.info/AIOS101/#/identity)
 
-当前为公开预览版，未通过课程教学验收；已提供完整序言阅读与活动样板，前两章 v0.4 打印教材修订稿及独立任务单、第三章 v0.1 打印教材草稿可从课程地图查看，完整章阅读和正式章活动随制作进度接入。
+当前为 v0.4 交互学习打样，教学验收待评审。绪论、前两章和附录 A 已接入完整阅读；三个案例观察窗与四项分步活动支持笔记、草稿、人工反馈、修订快照和导出恢复。第三章 v0.1 草稿已自动接入阅读，配套活动待制作；CH04—CH12 随教材逐步上线。
 
 公开预览发布范围与实际核验记录见 [Pages 发布记录](specs/pages-release-record.md)。
 

@@ -23,7 +23,7 @@ for chapter in data['chapters']:
 # Resolve literal references as if hosted under a repository subpath.
 base = 'https://example.test/AIOS101/'
 checked = set()
-for filename in ['index.html', 'styles.css', 'brand.css', 'app.js', 'brand.js']:
+for filename in ['index.html', 'styles.css', 'brand.css', 'app.js', 'brand.js', 'learning.css', 'learning-core.js', 'learning-data.js']:
     text = (OUT/filename).read_text()
     refs = re.findall(r'''(?:src|href)=["']([^"']+)["']''', text)
     refs += re.findall(r'''url\(["']?([^)'"\s]+)''', text)
