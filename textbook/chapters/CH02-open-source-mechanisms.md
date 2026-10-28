@@ -1,6 +1,6 @@
 # 第 2 章　开源的本质：开放、复用、协作与公共价值
 
-> 版本：v0.3
+> 版本：v0.4
 >
 > 状态：打印教材修订稿
 >
@@ -17,7 +17,7 @@
 
 ## 一、打开一个真实仓库，我们究竟看到了什么
 
-AIInfra 是一个在 GitHub 上公开维护的 AI 基础设施课程项目。以其仓库固定提交 `b97c038` 为观察对象，README 提供课程背景、内容大纲、在线文章与相关资源入口，根目录提供 Apache License 2.0 文本。项目公开页面还保留 Issue 和 Pull Request 等协作记录。[6][7][8]
+AIInfra 是一个在 GitHub 上公开维护的 AI 基础设施课程项目。本章使用[本书固定的仓库版本](https://github.com/Infrasys-AI/AIInfra/tree/b97c0385ba07a62a717d82a0e7aed2927f12fc35)作为观察对象。`b97c038` 是提交号缩写，用来定位这份历史材料，并不是课程发布版本号；访问方法见[附录 A](../appendices/APP-A-repository-snapshots.md)。在这个版本中，README 提供课程背景、内容大纲、在线文章与相关资源入口，根目录提供 Apache License 2.0 文本。项目公开页面还保留 Issue 和 Pull Request 等协作记录。
 
 对一个初次接触开源的大学生来说，这些材料很容易混成一件事：既然都能公开看到，似乎就都属于“开源”。实际上，它们分别回答不同问题。
 
@@ -43,7 +43,7 @@ AIInfra 是一个在 GitHub 上公开维护的 AI 基础设施课程项目。以
 
 网页可以浏览，文件可以下载，代码可以复制，模型参数也可能有公开链接。这些现象首先说明“能够获得”，并没有完整回答“获得之后可以做什么”。
 
-开放源代码定义不仅关注源代码是否可获得，也涉及自由再分发、衍生作品等条件。自由软件定义则围绕运行、研究修改、复制分享以及分享修改版本的自由展开。两者历史与价值表述不同，却都提醒我们：开源不是单纯把材料放在公众面前，而是让使用者在明确条件下拥有进一步行动的空间。[1][2]
+开放源代码定义不仅关注源代码是否可获得，也涉及自由再分发、衍生作品等条件。自由软件定义则围绕运行、研究修改、复制分享以及分享修改版本的自由展开。两者历史与价值表述不同，却都提醒我们：开源不是单纯把材料放在公众面前，而是让使用者在明确条件下拥有进一步行动的空间。
 
 面对一个公开成果，至少需要分开问：
 
@@ -58,7 +58,7 @@ AIInfra 是一个在 GitHub 上公开维护的 AI 基础设施课程项目。以
 
 开源允许使用、修改和分享，并不意味着作者放弃所有权利，也不意味着使用者没有责任。许可可能要求保留版权与许可信息、署名或说明修改，具体义务取决于实际许可和材料类型。
 
-AIInfra 仓库中的 Apache License 2.0 包含复制、衍生作品与再分发等授权及相应条件。这里的关键不是记住许可证名称，而是理解：**公开页面让人看见成果，许可文本让人知道自己可以在什么条件下行动。**[6]
+AIInfra 仓库中的 Apache License 2.0 包含复制、衍生作品与再分发等授权及相应条件。这里的关键不是记住许可证名称，而是理解：**公开页面让人看见成果，许可文本让人知道自己可以在什么条件下行动。**
 
 开放授权也不等于作者承诺提供无限支持。许可可以允许修改资料，却不会因此保证作者必须回答每个问题、合并每项建议或长期维护成果。
 
@@ -92,7 +92,7 @@ AIInfra 仓库中的 Apache License 2.0 包含复制、衍生作品与再分发�
 
 ### 2. 可下载不等于容易复用
 
-AIInfra 的 README 在固定版本中特别提醒，仓库已经很大，完整克隆可能较慢，建议优先从 Releases 下载需要的内容。这是一个很实际的复用问题：开放许可解决了权利问题，但文件体积、网络条件、格式、依赖与目标不清，仍可能影响实际使用。[6]
+AIInfra 的 README 在固定版本中特别提醒，仓库已经很大，完整克隆可能较慢，建议优先从 Releases 下载需要的内容。这是一个很实际的复用问题：开放许可解决了权利问题，但文件体积、网络条件、格式、依赖与目标不清，仍可能影响实际使用。
 
 这个细节说明，好的复用设计不只是“把全部材料放出来”。项目还需要帮助使用者找到合适入口，说明哪些文件必要、怎样选择版本、如何验证结果。对学习者而言，也不必把“完整下载整个仓库”当成阅读和使用公开材料的前提。
 
@@ -136,7 +136,7 @@ AIInfra 的 README 在固定版本中特别提醒，仓库已经很大，完整�
 
 **Git** 是常用的分布式版本控制工具，帮助记录文件变化、分支和提交历史。**GitHub** 与 **AtomGit** 则是承载仓库和协作过程的平台，在版本管理之外提供 Issue、Pull Request、评审等功能。
 
-本书涉及国际项目和社区案例时使用 GitHub，涉及国内平台实践时使用 AtomGit。二者概念相近，但界面、权限和具体功能可能不同，实际操作应以项目指南和平台当期文档为准。[9][10]
+本书涉及国际项目和社区案例时使用 GitHub，涉及国内平台实践时使用 AtomGit。二者概念相近，但界面、权限和具体功能可能不同，实际操作应以项目指南和平台当期文档为准。
 
 | 协作需要 | GitHub | AtomGit |
 |---|---|---|
@@ -160,7 +160,7 @@ AIInfra 的 README 在固定版本中特别提醒，仓库已经很大，完整�
 | 评审（Review） | 依据项目需要、质量、范围与规则检查贡献并反馈意见 | 只是表达个人喜好 |
 | 合并（Merge） | 将一组变更纳入目标分支的项目操作 | 合并后不再需要维护或验证 |
 
-GitHub 官方文档把 PR 描述为提出、讨论、评审和合并更改的协作机制；AtomGit 文档也提供 Issue 跟踪、PR 评审和轻量级 PR 等功能。这些功能降低了小范围文档与代码贡献的操作成本，但是否接纳变更仍由项目规则和评审决定。[9][10]
+GitHub 官方文档把 PR 描述为提出、讨论、评审和合并更改的协作机制；AtomGit 文档也提供 Issue 跟踪、PR 评审和轻量级 PR 等功能。这些功能降低了小范围文档与代码贡献的操作成本，但是否接纳变更仍由项目规则和评审决定。
 
 图 2-2　从 Issue 到 PR：问题讨论、变更提议与项目决定（图片占位）
 
@@ -168,7 +168,7 @@ GitHub 官方文档把 PR 描述为提出、讨论、评审和合并更改的协
 
 ### 1. Issue #386：提出问题不等于问题解决
 
-2026 年 5 月，一位参与者在 AIInfra 的 Issue #386 中对文档中的 NVIDIA H100 FP8 峰值算力数值提出疑问，并在报告中附上项目原文位置和 NVIDIA 官方文档链接。截至本书读取日，该 Issue 处于开放状态。[7]
+2026 年 5 月，一位参与者在 AIInfra 的 [Issue #386](https://github.com/Infrasys-AI/AIInfra/issues/386) 中对文档中的 NVIDIA H100 FP8 峰值算力数值提出疑问，并在报告中附上项目原文位置和 NVIDIA 官方文档链接。截至 2026 年 10 月 28 日读取时，该 Issue 处于开放状态。
 
 这条记录展示了 Issue 的几个价值：指出具体位置，描述技术疑问，提供可回查材料，让问题进入公共跟踪过程。它也可能帮助维护者和其他读者集中讨论同一问题。
 
@@ -176,7 +176,7 @@ GitHub 官方文档把 PR 描述为提出、讨论、评审和合并更改的协
 
 ### 2. PR #364：一个小范围技术纠错如何进入项目
 
-AIInfra 的 PR #364 于 2025 年 12 月提出，标题为“Fix byte size for model weights in quantization section”。贡献者说明希望修正量化章节中的字节数，公开差异显示修改集中在一个 Markdown 文件中。该 PR 后来由项目维护者合并，合并提交为 `b97c038`。[8]
+AIInfra 的 [PR #364](https://github.com/Infrasys-AI/AIInfra/pull/364) 于 2025 年 12 月提出，标题为“Fix byte size for model weights in quantization section”。贡献者说明希望修正量化章节中的字节数，公开差异显示修改集中在一个 Markdown 文件中。该 PR 后来由项目维护者合并，合并提交为 `b97c038`。
 
 这个真实案例说明，贡献不一定是大规模代码开发。一处能够定位、差异清楚的技术文档修正，也可以减少后来读者的误解。PR 把“建议改什么”变成可检查的具体变更，合并则记录项目接受了这项变更。
 
@@ -184,11 +184,11 @@ AIInfra 的 PR #364 于 2025 年 12 月提出，标题为“Fix byte size for mo
 
 ### 3. 贡献与维护都不只等于代码数量
 
-文档、数据、评测、翻译、设计、讨论、组织和代码都可以成为贡献。对 AI 项目而言，补充不同专业的评测样例、核对技术文档中的来源、整理失败案例和改进风险提示，都可能回应真实需要。[3]
+文档、数据、评测、翻译、设计、讨论、组织和代码都可以成为贡献。对 AI 项目而言，补充不同专业的评测样例、核对技术文档中的来源、整理失败案例和改进风险提示，都可能回应真实需要。
 
 有效贡献应说明：对应哪个版本和位置，影响了谁，准备改变什么，交付物是什么，如何检查。范围适当的小贡献通常更容易评审。提交之后，维护者可能要求补充证据、缩小范围或调整格式，也可能不接纳。开放协作不意味着个人建议必须被接受。
 
-维护者则承担分类问题、回应贡献、测试、发布、文档更新和长期照料等劳动。评价协作不能只看参与者数量、提交次数或讨论热度，还要看问题是否澄清、评审是否有依据、决定是否可理解、贡献是否得到回应、维护是否可持续。[4]
+维护者则承担分类问题、回应贡献、测试、发布、文档更新和长期照料等劳动。评价协作不能只看参与者数量、提交次数或讨论热度，还要看问题是否澄清、评审是否有依据、决定是否可理解、贡献是否得到回应、维护是否可持续。
 
 ## 六、公共价值：从“成果可用”到“谁真正受益”
 
@@ -204,7 +204,7 @@ AIInfra 公开课程材料并保留协作记录，为学习和共同改进提供
 - **经济学中的公共产品**通常用非排他性和非竞争性刻画，不能仅凭“是数字文件”就完成判定；
 - **数字公共品**在数字公共品联盟的标准中有特定含义与认定程序，涉及开放许可、文档、隐私、安全和防止伤害等多个维度。
 
-数字公共品标准不能与开源定义混为一谈，也不能直接变成本书的评分表。开放是公共价值的重要基础，却不是全部证据。[5]
+数字公共品标准不能与开源定义混为一谈，也不能直接变成本书的评分表。开放是公共价值的重要基础，却不是全部证据。
 
 | 观察维度 | 需要追问的问题 |
 |---|---|
@@ -263,32 +263,8 @@ Star、下载量、浏览量和贡献者数量可以提供关注或活动信号�
 4. Issue #386 与 PR #364 分别处在协作过程的什么位置？从公开记录中还能提出哪些需要核验的问题？
 5. 一个 AI 开放项目下载量很高但存在隐私风险，你会怎样分析它的公共价值？
 
-## 延伸学习与在线实践
+## 延伸学习
 
-- 阅读《解码开源：开源生态 60 问》第 5、8、35 问，进一步理解开放式协作、开发协作与贡献。
-- 阅读《开源软件构建技术：理论与实践》第 3、6 章，继续学习版本控制、Issue 与 Pull Request 的技术操作。
-- 在 GitHub 浏览 AIInfra 的 README、Issue #386 与 PR #364，比较“项目说明、问题报告、变更提议和合并记录”。
-- 在 AtomGit 官方文档中查找 Issue 与轻量级 PR 说明，比较两个平台的基本概念，不要求在本章注册或提交贡献。
-- 本章完整学习任务保留在独立任务单中：[拆解一项开放成果](../../activities/student/ACT-CH02-01.md)、[设计一次有效贡献](../../activities/student/ACT-CH02-02.md)。后续在线版再提供相应交互，不影响打印教材的连续阅读。
-
-## 资料来源
-
-[1] Free Software Foundation，[What is Free Software?](https://www.gnu.org/philosophy/free-sw.html)，四项基本自由，读取日期：2026-10-28。来源登记：SRC-2026-006。
-
-[2] Open Source Initiative，[The Open Source Definition](https://opensource.org/osd)，OSD 1.9，读取日期：2026-10-28。来源登记：SRC-2026-009。
-
-[3] Open Source Guides，[How to Contribute to Open Source](https://opensource.guide/how-to-contribute/)，非代码贡献、沟通与评审，读取日期：2026-10-28。来源登记：SRC-2026-011。
-
-[4] Karl Fogel，[Producing Open Source Software](https://producingoss.com/en/index.html)，2nd Edition，Version 2.3315，2026-05-20；社会基础设施与技术基础设施章节。来源登记：SRC-2026-012。
-
-[5] Digital Public Goods Alliance，[Digital Public Goods Standard](https://digitalpublicgoods.net/standard/)，九项指标及其适用边界，读取日期：2026-10-28。来源登记：SRC-2026-013。
-
-[6] Infrasys-AI，[AIInfra README 与 LICENSE（固定提交 b97c038）](https://github.com/Infrasys-AI/AIInfra/tree/b97c0385ba07a62a717d82a0e7aed2927f12fc35)，课程材料、复用提示与 Apache License 2.0，读取日期：2026-10-28。来源登记：SRC-2026-017。
-
-[7] AIInfra 社区，[Issue #386：Incorrect H100 FP8 peak FLOPS value](https://github.com/Infrasys-AI/AIInfra/issues/386)，2026-05-13 创建；读取时为开放状态，读取日期：2026-10-28。来源登记：SRC-2026-018。
-
-[8] AIInfra 社区，[Pull Request #364：Fix byte size for model weights in quantization section](https://github.com/Infrasys-AI/AIInfra/pull/364)，2025-12-04 创建，2025-12-22 合并；合并提交 b97c038。来源登记：SRC-2026-019。
-
-[9] GitHub Docs，[About pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)；[Quickstart for GitHub Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/quickstart)，读取日期：2026-10-28。来源登记：SRC-2026-020。
-
-[10] AtomGit 帮助文档，[Issue 简介](https://docs.atomgit.com/docs/help/home/org_project/issue/issue_introduction/)；[轻量级 PR](https://docs.atomgit.com/docs/help/home/org_project/pullrequests/pr-lightweight)，读取日期：2026-10-28。来源登记：SRC-2026-021。
+- **希望理解协作平台之外的项目运行**：阅读 Karl Fogel 的《Producing Open Source Software》中[社会基础设施](https://producingoss.com/en/social-infrastructure.html)与[技术基础设施](https://producingoss.com/en/technical-infrastructure.html)两章。它们进一步讨论项目如何组织信息、选择协作工具并维持长期工作，可用来深化本章关于评审、维护与共同劳动的内容。
+- **希望练习阅读真实社区记录**：对照浏览 AIInfra 的 [Issue #386](https://github.com/Infrasys-AI/AIInfra/issues/386) 与 [PR #364](https://github.com/Infrasys-AI/AIInfra/pull/364)，重点区分“问题报告”“变更提议”“公开差异”和“项目决定”。这些记录用于理解协作机制，不要求读者提交 Issue、PR 或账号信息。
+- **希望进一步辨析公共价值与数字公共品**：阅读数字公共品联盟的[《数字公共品标准》](https://digitalpublicgoods.net/standard/)，重点查看开放许可、文档、隐私和防止伤害等要求。它提供的是一种多维标准，可帮助理解为什么“公开可用”不足以证明实际公共价值，而不是给本章案例打分或认证。

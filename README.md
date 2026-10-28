@@ -14,7 +14,9 @@
 4. [参与建设](CONTRIBUTING.md)：人类与 AI 贡献者的协作入口；
 5. [AI 协作者工作指南](AGENTS.md)：AI 工作顺序、证据硬规则与交付要求；
 6. [教材序言 v0.3](textbook/preface.md)：从一次 AI 提问进入模型供应链与开源生态的清爽内容评审稿；
-7. [第 1 章 v0.1](textbook/chapters/CH01-why-ai-open-source-literacy.md)：从 AI 使用经验进入 GNU、Linux、OSI 的历史，再转向 AI 开源通识的理解与创造。
+7. [第 1 章 v0.4](textbook/chapters/CH01-why-ai-open-source-literacy.md)：从 AI 使用经验进入 GNU、Linux、OSI 的历史，再转向 AI 开源通识的理解与创造；
+8. [第 2 章 v0.4](textbook/chapters/CH02-open-source-mechanisms.md)：以真实仓库和社区记录解释开放、复用、协作与公共价值；
+9. [附录 A](textbook/appendices/APP-A-repository-snapshots.md)：仓库、提交号与固定版本的共同访问指南。
 
 当前规格和章节处于草稿或实施阶段，不代表教材内容或课程实施已经完成验收。
 
@@ -29,6 +31,7 @@ specs/                      课程、序言与跨产物规范
 specs/chapters/             各章开发与验收规格
 textbook/preface.md         教材序言正本
 textbook/chapters/          各章教材正文唯一正本
+textbook/appendices/        跨章节共享的访问指南与知识支架
 textbook/assets/            图片、地图及视觉资产索引
 activities/                 探究活动、学习证据与评价规格
 slides/                     配套讲义入口与派生资源
@@ -62,7 +65,7 @@ python scripts/check_repo.py
 
 [进入 AIOS101 课程网站](https://www.x-lab.info/AIOS101/) · [课程视觉方案](https://www.x-lab.info/AIOS101/#/identity)
 
-当前为公开预览版，未通过课程教学验收；已提供完整序言阅读与活动样板，前两章 v0.2 自学草稿及任务单可从课程地图查看，完整章阅读和正式章活动随制作进度接入。
+当前为公开预览版，未通过课程教学验收；已提供完整序言阅读与活动样板，前两章 v0.4 打印教材修订稿及独立任务单可从课程地图查看，完整章阅读和正式章活动随制作进度接入。
 
 公开预览发布范围与实际核验记录见 [Pages 发布记录](specs/pages-release-record.md)。
 
