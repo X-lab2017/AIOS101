@@ -1,0 +1,183 @@
+{
+  "sourceCommit": "770890132ffbfcca1ab25653d342abecf8607d56",
+  "date": "2026-10-29",
+  "method": "Cloud browser; 320px and 390px iframe viewports, not physical devices",
+  "narrow": [
+    {
+      "chapter": "PREFACE",
+      "results": [
+        {
+          "headings": 8,
+          "overflow": 0,
+          "scrollWidth": 305,
+          "source": "正文来源与版本v0.5 · 自学教材评审版（2026-10-29）仓库正本 · 7708901下载正文 Markdown来源登记",
+          "title": "AIOS101 · 序言　从一次提问，看见一个开放的世界 · X-lab",
+          "width": 305
+        },
+        {
+          "headings": 8,
+          "overflow": 0,
+          "scrollWidth": 375,
+          "source": "正文来源与版本v0.5 · 自学教材评审版（2026-10-29）仓库正本 · 7708901下载正文 Markdown来源登记",
+          "title": "AIOS101 · 序言　从一次提问，看见一个开放的世界 · X-lab",
+          "width": 375
+        }
+      ]
+    },
+    {
+      "chapter": "CH01",
+      "results": [
+        {
+          "checks": 3,
+          "figures": 4,
+          "headings": 12,
+          "overflow": 0,
+          "scrollWidth": 305,
+          "source": "正文来源与版本v0.7 · 自学教材评审版（2026-10-29）仓库正本 · 7708901下载正文 Markdown来源登记",
+          "viewport": 305
+        },
+        {
+          "checks": 3,
+          "figures": 4,
+          "headings": 12,
+          "overflow": 0,
+          "scrollWidth": 375,
+          "source": "正文来源与版本v0.7 · 自学教材评审版（2026-10-29）仓库正本 · 7708901下载正文 Markdown来源登记",
+          "viewport": 375
+        }
+      ]
+    },
+    {
+      "chapter": "CH02",
+      "results": [
+        {
+          "checks": 3,
+          "figures": 4,
+          "headings": 13,
+          "overflow": 0,
+          "scrollWidth": 305,
+          "source": "正文来源与版本v0.7 · 自学教材评审版（2026-10-29）仓库正本 · 7708901下载正文 Markdown来源登记",
+          "viewport": 305
+        },
+        {
+          "checks": 3,
+          "figures": 4,
+          "headings": 13,
+          "overflow": 0,
+          "scrollWidth": 375,
+          "source": "正文来源与版本v0.7 · 自学教材评审版（2026-10-29）仓库正本 · 7708901下载正文 Markdown来源登记",
+          "viewport": 375
+        }
+      ]
+    },
+    {
+      "chapter": "CH03",
+      "results": [
+        {
+          "checks": 3,
+          "figures": 8,
+          "headings": 14,
+          "overflow": 0,
+          "scrollWidth": 305,
+          "source": "正文来源与版本v0.4 · 自学教材评审版（2026-10-29）仓库正本 · 7708901下载正文 Markdown来源登记",
+          "viewport": 305
+        },
+        {
+          "checks": 3,
+          "figures": 8,
+          "headings": 14,
+          "overflow": 0,
+          "scrollWidth": 375,
+          "source": "正文来源与版本v0.4 · 自学教材评审版（2026-10-29）仓库正本 · 7708901下载正文 Markdown来源登记",
+          "viewport": 375
+        }
+      ]
+    },
+    {
+      "chapter": "CH04",
+      "results": [
+        {
+          "checks": 4,
+          "figures": 9,
+          "headings": 14,
+          "overflow": 0,
+          "scrollWidth": 305,
+          "source": "正文来源与版本v0.4 · 自学教材评审版（2026-10-29）仓库正本 · 7708901下载正文 Markdown来源登记",
+          "viewport": 305
+        },
+        {
+          "checks": 4,
+          "figures": 9,
+          "headings": 14,
+          "overflow": 0,
+          "scrollWidth": 375,
+          "source": "正文来源与版本v0.4 · 自学教材评审版（2026-10-29）仓库正本 · 7708901下载正文 Markdown来源登记",
+          "viewport": 375
+        }
+      ]
+    },
+    {
+      "chapter": "CH05",
+      "results": [
+        {
+          "checks": 4,
+          "figures": 9,
+          "headings": 15,
+          "overflow": 0,
+          "scrollWidth": 305,
+          "source": "正文来源与版本v0.5 · 自学教材评审版（2026-10-29）仓库正本 · 7708901下载正文 Markdown来源登记",
+          "viewport": 305
+        },
+        {
+          "checks": 4,
+          "figures": 9,
+          "headings": 15,
+          "overflow": 0,
+          "scrollWidth": 375,
+          "source": "正文来源与版本v0.5 · 自学教材评审版（2026-10-29）仓库正本 · 7708901下载正文 Markdown来源登记",
+          "viewport": 375
+        }
+      ]
+    },
+    {
+      "chapter": "CH06",
+      "results": [
+        {
+          "checks": 4,
+          "figures": 10,
+          "headings": 17,
+          "overflow": 0,
+          "scrollWidth": 305,
+          "source": "正文来源与版本v0.4 · 自学教材评审版（2026-10-29）仓库正本 · 7708901下载正文 Markdown来源登记",
+          "viewport": 305
+        },
+        {
+          "checks": 4,
+          "figures": 10,
+          "headings": 17,
+          "overflow": 0,
+          "scrollWidth": 375,
+          "source": "正文来源与版本v0.4 · 自学教材评审版（2026-10-29）仓库正本 · 7708901下载正文 Markdown来源登记",
+          "viewport": 375
+        }
+      ]
+    }
+  ],
+  "zoom": [
+    {
+      "fontSize": "22px",
+      "overflow": 0,
+      "scrollWidth": 305,
+      "target": 205.203125,
+      "viewport": 305
+    },
+    {
+      "fontSize": "22px",
+      "overflow": 0,
+      "scrollWidth": 375,
+      "target": 204.8125,
+      "viewport": 375
+    }
+  ],
+  "homepage": "All six chapter covers loaded; CH04–CH06 use v02; no horizontal overflow"
+}
