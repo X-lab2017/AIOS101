@@ -15,5 +15,22 @@
     ],
     "retirementReason": "与图 1-4 的 README 证据及图 4-7 的形成路径重复；固定原文链接继续保留在正文。",
     "retiredOn": "2026-10-29"
+  },
+  {
+    "id": "5-4",
+    "title": "从候选分布到输出结束的主要生成条件",
+    "file": "AIOS101_Fig-05-04_v01.webp",
+    "width": 1600,
+    "height": 1220,
+    "bytes": 84956,
+    "originalBytes": 374799,
+    "insertion": "第 5 章 / 三、从候选分布到具体文字：生成策略怎样影响输出 / 4. 最大生成长度与停止条件：输出在哪里结束",
+    "alt": "候选概率、温度、top-k、top-p、随机种子与实现环境共同影响生成策略与 token 选择；最大生成长度与停止条件影响何时结束。任何单个参数都不能保证真实性。",
+    "displayWidth": 780,
+    "sourceUrls": [],
+    "vector": "vector/AIOS101_Fig-05-04_v01.svg",
+    "zoomFile": "vector/AIOS101_Fig-05-04_v01.svg",
+    "retirementReason": "与图 5-1、5-2、5-3 及 5.3 节说明重复；停止条件文字保留。",
+    "retiredOn": "2026-10-29"
   }
 ]

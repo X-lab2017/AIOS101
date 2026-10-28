@@ -106,5 +106,60 @@ def chapter4():
     assert 100//10==10 and 2*100//10==20
     save('4-6',3,b,['每个小格是一批，不是一个样本；示意未采用梯度累积等安排。','每轮可重新打乱样本顺序；图中批号仅用于计数。检查点不自动等于最佳模型。'],'100个样本，每批10个，每批一次更新。第一轮10批对应累计更新1至10，第二轮对应11至20。检查点示意保存在更新4和13之后，均在轮次内部；检查点不等于最佳模型。',1020)
 
+def chapter5():
+    b=text(64,180,'假设总容量 1,000 token；全部输入已占 780，留给新输出的空间还剩多少？',28,TEAL)
+    left=100; span=1400; used=span*.78
+    b+=text(100,269,'本次可用的总容量',29,INK,600)+text(1500,269,'1,000 token',29,PURPLE,600,anchor='end')
+    b+=rect(left,320,span,150,'white',PURPLE,4)+rect(left,320,used,150,'#DCD6F6',PURPLE,4)+rect(left+used,320,span-used,150,'#D8ECE6',TEAL,4)
+    b+=text(130,380,'全部输入：780',40,PURPLE,700)+text(130,429,'系统指令、历史对话、材料与本次任务',28)
+    b+=text(left+used+24,383,'剩余 220',36,TEAL,700)+text(left+used+24,430,'可容纳新输出',25)
+    for value in range(0,1001,100):
+        x=left+span*value/1000;b+=path(f'M{x} 475v16',GRAY,width=2)+text(x,523,value,23,GRAY,anchor='middle')
+    b+=text(100,606,'再看单独设置的“最大生成长度”',30,INK,600)
+    b+=text(100,661,'设置为 300',36,CORAL,700)+text(470,660,'≠  一定能写 300',34,CORAL,700)
+    b+=text(100,732,'若保持这些输入和总容量，空间上最多还能容纳 220 个新 token。',30)
+    b+=text(100,786,'即使空间允许，遇到结束条件时，实际输出也可能更短。',29,TEAL)
+    assert 1000-780==220
+    save('5-1',2,b,['容量条按本例 780∶220 精确绘制；不代表某款真实产品的固定额度。','超限时拒绝、截短或调整预算由实现决定；token 数不等于汉字数。'],'总容量1000 token的刻度条按比例分为780个输入token和220个剩余空间。另行设置最大生成长度300不会增加总容量；保持这些输入时最多还能容纳220个新token，实际输出可以更短。',960)
+
+    # A growing text ribbon, with a separate loop explaining the computation.
+    b=text(64,180,'先分词并处理已有输入（预填充），再一次次选择新 token（解码）。',28,TEAL)
+    b+=text(64,252,'观察文本怎样增长',30,INK,700)+text(1030,252,'每一步怎样产生',30,PURPLE,700)
+    for i,(words,tag) in enumerate([('今天的天气很','已有输入'),('今天的天气很 ｜ 晴朗','加入本步选出的片段'),('今天的天气很 ｜ 晴朗 ｜ 。','继续加入下一片段')]):
+        y=292+i*204
+        b+=f'<path d="M64 {y}H872L888 {y+24}L872 {y+48}L888 {y+72}L872 {y+96}L888 {y+120}H64Z" fill="white" stroke="#BEB7DC" stroke-width="2"/>'
+        b+=text(89,y+39,tag,24,GRAY)+text(89,y+90,words,36,PURPLE if i==0 else TEAL,600)
+        if i<2:b+=path(f'M700 {y+127}v61',arrow=True)+text(90,y+170,'选择“晴朗”' if i==0 else '选择“。”',27,TEAL)
+    b+=rect(1010,293,500,136,'#EEEBFA',PURPLE,10)+text(1043,344,'模型计算候选分布',32,PURPLE,700)+text(1043,389,'使用已有参数和当前上下文',25)
+    b+=path('M1260 440V485',arrow=True)+text(1040,531,'生成策略选择一个 token',30,INK,600)
+    b+=path('M1260 550V592',arrow=True)+text(1040,638,'接到输出与上下文末端',30,TEAL,600)
+    b+=path('M1260 658V707',arrow=True)+text(1040,748,'检查结束条件',30,INK,600)
+    b+=path('M1500 737H1541V361H1515',arrow=True)+text(1410,692,'未结束',24,PURPLE)
+    b+=path('M1260 770V822',arrow=True)+text(1070,864,'达到条件 → 停止生成',27,CORAL,600)
+    b+=text(64,871,'生成的片段会影响后续；普通推理不更新参数。',28,TEAL,600)
+    save('5-2',2,b,['文本与分词均为教学假设，不对应特定真实分词器；“。”也不必然是结束标记。','结束标记、长度上限或系统停止都可结束生成；流式服务可在结束前逐步呈现。'],'假想输入今天的天气很经过预填充，依次选择晴朗与句号并加入上下文。每步计算候选、按策略选择、追加后检查结束条件；未结束则使用增长后的上下文再次计算，普通推理不更新参数。',1030)
+
+    # Bars show original distribution; the lower panels explicitly rescale it.
+    b=text(64,179,'同一组教学候选：先筛选保留项，再把保留项重新缩放到合计 100%。',28,TEAL)
+    probabilities=[.55,.25,.12,.05,.03];labels=['晴朗','寒冷','温暖','潮湿','安静']
+    b+=text(64,249,'原始候选概率',30,INK,700)+text(920,249,'按概率从高到低累计',30,INK,700)
+    cumulative=0
+    for i,(word,p) in enumerate(zip(labels,probabilities)):
+        y=298+i*60;b+=text(64,y+28,word,28)+rect(175,y,610*p/.55,34,PURPLE,PURPLE,3)+text(800,y+28,f'{p:.2f}',27,PURPLE)
+        cumulative+=p;b+=text(925,y+28,f'{cumulative:.2f}',27,TEAL if i==2 else GRAY)
+        if i==1:b+=text(1040,y+28,'前 2 项：0.80 ＜ 0.90',25,GRAY)
+        if i==2:b+=text(1040,y+28,'前 3 项：0.92 ≥ 0.90',25,TEAL,600)
+    for x,c,head in [(64,PURPLE,'top-k＝2：固定数量'),(830,TEAL,'top-p＝0.90：累计阈值')]:
+        b+=path(f'M{x} 648h705',c,width=4)+text(x,699,head,33,c,700)
+    b+=text(64,751,'保留晴朗、寒冷；原概率合计 0.80。',27)
+    b+=text(64,813,'晴朗：0.55 ÷ 0.80＝68.75%',30,PURPLE,600)+text(64,865,'寒冷：0.25 ÷ 0.80＝31.25%',30,PURPLE,600)
+    b+=text(64,927,'两项重新合计 100%，不是各占一半。',27,GRAY)
+    b+=text(830,751,'保留前三项；原概率合计 0.92。',27)
+    b+=text(830,808,'晴朗：0.55 ÷ 0.92 ≈ 59.8%',28,TEAL,600)+text(830,856,'寒冷：0.25 ÷ 0.92 ≈ 27.2%',28,TEAL,600)+text(830,904,'温暖：0.12 ÷ 0.92 ≈ 13.0%',28,TEAL,600)
+    b+=text(830,951,'按一位小数显示，仍保留原来的相对比例。',25,GRAY)
+    assert abs(sum(probabilities)-1)<1e-10 and sum(probabilities[:2])<.9<=sum(probabilities[:3])
+    assert .55/.8*100==68.75 and .25/.8*100==31.25
+    save('5-3',3,b,['这些是选择 token 的概率，不是天气事实正确率；没有连接真实天气观测。','图中分别比较两种筛选；温度、其他限制与组合顺序须按具体实现另行核对。'],'候选概率晴朗0.55、寒冷0.25、温暖0.12、潮湿0.05、安静0.03。top-k等于2保留前两项，归一化为68.75%和31.25%；top-p等于0.90保留累计0.92的前三项，归一化约59.8%、27.2%、13.0%。',1120)
+
 if __name__=='__main__':
-    {'4':chapter4}[sys.argv[1]]()
+    {'4':chapter4,'5':chapter5}[sys.argv[1]]()
