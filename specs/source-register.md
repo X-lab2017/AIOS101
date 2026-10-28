@@ -28,6 +28,8 @@
 | SRC-2026-011 | 开放协作指南 | How to Contribute to Open Source | Open Source Guides／GitHub 及贡献者 | [贡献指南](https://opensource.guide/how-to-contribute/)；[许可](https://raw.githubusercontent.com/github/opensource.guide/main/LICENSE) | 非代码贡献；项目组成；贡献前检查；沟通、评审与后续回应 | 持续更新网页；读取日期版本 | 2026-10-28 | 内容 CC BY 4.0；事实重述与链接 | 已核验 | CH02：贡献类型、项目情境、公开沟通、评审和维护成本 | 不把指南建议写成所有项目的统一规则 |
 | SRC-2026-012 | 开源项目专著 | Producing Open Source Software，2nd Edition | Karl Fogel | [版本入口](https://producingoss.com/en/index.html)；[社会基础设施](https://producingoss.com/en/social-infrastructure.html)；[技术基础设施](https://producingoss.com/en/technical-infrastructure.html) | 信息管理、协作工具、项目持续性与可分叉性 | 2.3315，2026-05-20 | 2026-10-28 | CC BY-SA 4.0；事实重述与链接 | 已核验 | CH02：协作不只是人数，项目需要记录、工具、治理与持续维护 | 只阅读所列章节，不声称核验全书 |
 | SRC-2026-013 | 数字公共品标准 | Digital Public Goods Standard | Digital Public Goods Alliance | [DPG Standard](https://digitalpublicgoods.net/standard/) | 九项指标；开放许可、所有权、文档、隐私、安全与防止伤害 | 持续更新网页；读取日期版本 | 2026-10-28 | 标准 CC BY-SA 4.0；事实重述与链接 | 已核验 | CH02：公共价值不能由开放许可单独证明，还需考虑文档、隐私与风险 | 不用于给具体项目认证或构造课程评分 |
+| SRC-2026-014 | 教材 | 解码开源：开源生态 60 问 | 庄表伟 | 用户提供的 2026 年 PDF 版本，共 256 页 | 第 1、5、8、35 问及前言 | 2026 年；前言署名日期 2026-05 | 2026-10-28 | 用户提供评审副本；仅作内部研读、事实重述与延伸阅读，不复制正文 | 部分核验 | CH01：自由软件、开源与公共价值延伸；CH02：开放式协作、开发协作与贡献延伸 | 未声称核验全书；正式出版信息待版权页复核 |
+| SRC-2026-015 | 教材 | 开源软件构建技术：理论与实践 | 作者信息以正式版权页为准 | 用户提供的打印版 DOCX | 第 3 章开源软件版本控制管理；第 6 章开源任务参与实践；相关导论 | 打印版，日期待版权页复核 | 2026-10-28 | 用户提供评审副本；仅作内部研读、事实重述与延伸阅读，不复制正文 | 部分核验 | CH01：源代码、构建与复用延伸；CH02：版本控制、Issue 与 Pull Request 延伸 | 未声称核验全书；不猜写作者与出版信息 |
 
 ## 3. 数据与版本补充记录
 
