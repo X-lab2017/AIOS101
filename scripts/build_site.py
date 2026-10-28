@@ -5,12 +5,13 @@ import os
 import re
 import shutil
 from pathlib import Path
-from course_markdown import unit, destination
+from course_markdown import unit, destination, image_path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT/'dist'
 if OUT.exists(): shutil.rmtree(OUT)
 shutil.copytree(ROOT/'site', OUT)
+shutil.copytree(ROOT/'textbook/assets/figures', OUT/'textbook/assets/figures')
 commit = os.environ.get('GITHUB_SHA', 'b043bfb0761cdfed3c6a7e4bf144a353c35bb035')
 if not re.fullmatch(r'[0-9a-f]{40}', commit): raise SystemExit('Invalid source commit')
 course = (ROOT/'specs/course-spec.md').read_text()
@@ -49,7 +50,11 @@ resources = [(u['sourcePath'],key+'.md') for key,u in units.items()] + [(v['path
 for path,name in resources:
     raw = (ROOT/path).read_text()
     # Downloads point to the matching source commit, independent of local app routes.
-    raw = re.sub(r'\[([^\]]+)\]\(([^)]+)\)',lambda m:'['+m[1]+']('+destination(m[2],path,commit,{})+')',raw)
+    def download_link(m):
+        image = image_path(m[3], path) if m[1] else None
+        url = 'https://raw.githubusercontent.com/X-lab2017/AIOS101/'+commit+'/'+image if image else destination(m[3],path,commit,{})
+        return m[1]+'['+m[2]+']('+url+')'
+    raw = re.sub(r'(!?)\[([^\]]+)\]\(([^)]+)\)', download_link, raw)
     (OUT/'resources'/name).write_text(raw,encoding='utf-8')
 # Historical download path remains valid; Windows treats these names as one file.
 legacy_preface = OUT/'resources/preface.md'

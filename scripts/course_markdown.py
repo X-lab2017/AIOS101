@@ -1,8 +1,10 @@
 """Small, escaped Markdown renderer for the repository's textbook subset."""
 import hashlib
 import html
+import json
 import posixpath
 import re
+from pathlib import Path
 from urllib.parse import quote, urlsplit
 
 
@@ -47,6 +49,35 @@ def inline(text, source, commit, routes):
     return text
 
 
+def image_path(target, source):
+    """Only repository-owned raster figures may be embedded in the reader."""
+    parsed = urlsplit(target)
+    if parsed.scheme or parsed.netloc or parsed.query or parsed.fragment:
+        return None
+    path = posixpath.normpath(posixpath.join(posixpath.dirname(source), parsed.path))
+    if path.startswith('textbook/assets/figures/') and path.endswith('.webp'):
+        return path
+    return None
+
+
+def figure_image(label, target, source):
+    path = image_path(target, source)
+    if not path:
+        return '<p>' + html.escape(label) + '</p>'
+    root = Path(__file__).resolve().parents[1]
+    records = json.loads((root/'textbook/assets/figures/manifest.json').read_text())
+    record = next((r for r in records if r['file'] == posixpath.basename(path)), None)
+    if not record or not (root/path).is_file():
+        raise ValueError('Unregistered or missing figure: ' + path)
+    url = html.escape(quote(path), quote=True)
+    alt = html.escape(label, quote=True)
+    return ('<figure class="textbook-figure"><a class="figure-open" href="' + url +
+            '" target="_blank" rel="noopener noreferrer" aria-label="' + alt + ' · 查看大图 / Open full size">' +
+            '<img src="' + url + '" alt="' + alt + '" width="' + str(record['width']) +
+            '" height="' + str(record['height']) + '" loading="lazy" decoding="async"></a>' +
+            '<figcaption><a href="' + url + '" target="_blank" rel="noopener noreferrer">查看大图 / Open full size ↗</a></figcaption></figure>')
+
+
 def mermaid_block(code):
     """Render the textbook's simple node/edge subset as an accessible fallback."""
     nodes = {}; edges = []
@@ -79,6 +110,15 @@ def render(text, source, commit, routes):
         line = lines[i].strip()
         if not line:
             i += 1; continue
+        if line == '<details>' and i+1 < len(lines) and lines[i+1].strip() == '<summary>结构关系与 Mermaid 源码</summary>':
+            block = []; i += 2
+            while i < len(lines) and lines[i].strip() != '</details>':
+                block.append(lines[i]); i += 1
+            result.append('<details class="figure-relations"><summary>结构关系与 Mermaid 源码</summary>' + render('\n'.join(block), source, commit, routes) + '</details>')
+            i += 1; continue
+        picture = re.fullmatch(r'!\[([^\]]+)\]\(([^)]+)\)', line)
+        if picture:
+            result.append(figure_image(picture[1], picture[2], source)); i += 1; continue
         if line.startswith('```'):
             language = line[3:].strip().lower(); code = []; i += 1
             while i < len(lines) and not lines[i].startswith('```'):
@@ -113,7 +153,7 @@ def render(text, source, commit, routes):
         paragraph = [line]; i += 1
         while i < len(lines) and lines[i].strip() and not re.match(r'^(?:#{1,6} |>|\||[-*] |\d+\. |```)', lines[i].strip()):
             paragraph.append(lines[i].strip()); i += 1
-        cls = ' class="figure-placeholder"' if re.match(r'^图\s*\d', line) else ''
+        cls = ' class="figure-caption"' if re.match(r'^图\s*\d', line) else ''
         result.append('<p'+cls+'>'+fmt('\n'.join(paragraph))+'</p>')
     return '\n'.join(result)
 

@@ -36,3 +36,29 @@ assert '#/learn/APP-A' in ''.join(s['html'] for s in data['units']['CH01']['sect
 assert sum(s['html'].count('textbook-diagram') for key in ('CH01', 'CH02', 'CH03', 'CH04', 'CH05', 'CH06') for s in data['units'][key]['sections']) == 22
 assert len(data['worksheets']) == 4
 print('PASS: canonical full text, stable sections, source digests, safe rendering, Mermaid fallbacks and internal appendix links')
+
+# Figure delivery: exact IDs, portable Pages paths, reserved geometry and safe input.
+from course_markdown import image_path
+from html.parser import HTMLParser
+class Images(HTMLParser):
+    def __init__(self):
+        super().__init__(); self.images = []
+    def handle_starttag(self, tag, attrs):
+        if tag == 'img': self.images.append(dict(attrs))
+figures = json.loads((root/'textbook/assets/figures/manifest.json').read_text())
+assert len(figures) == 16 and len({f['id'] for f in figures}) == 16
+for ch, count in [('CH01', 4), ('CH02', 4), ('CH03', 8)]:
+    parser = Images()
+    for sec in data['units'][ch]['sections']: parser.feed(sec['html'])
+    assert len(parser.images) == count, ch
+    for image in parser.images:
+        assert image['alt'] and int(image['width']) > 0 and int(image['height']) > 0
+        assert image['loading'] == 'lazy'
+        assert (root/'dist'/image['src']).is_file()
+    raw = (root/'dist/resources'/f'{ch}.md').read_text()
+    assert raw.count('![图 ') == count and 'https://raw.githubusercontent.com/' in raw
+for target in ['javascript:evil.webp', '//evil.test/a.webp', '../../../private.webp', '../assets/figures/../../private.webp', 'https://evil.test/a.webp']:
+    assert image_path(target, source) is None
+assert '<script>' not in render('<details onclick="evil()">\n<script>evil()</script>', source, commit, {})
+assert sum(s['html'].count('<details class="figure-relations">') for ch in ('CH01','CH02','CH03') for s in data['units'][ch]['sections']) == 9
+print('PASS: 16 registered images, dimensions, local assets, portable downloads, 9 folded fallbacks and unsafe image rejection')
