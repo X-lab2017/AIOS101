@@ -1,4 +1,4 @@
-# AIOS101 前三章 16 幅附图交付索引
+# AIOS101 前六章 44 幅附图交付索引
 
 正文依据：AIOS101 提交 `4b4c76f43013ac889d6d06f88ce83cabafae97c3`。以正文图号为准；旧资产索引曾有编号错位。
 
@@ -23,7 +23,7 @@
 
 ## 在线图版与维护
 
-本目录是 CH01—CH03 在线配图正本，共 16 张 WebP。保留原始像素尺寸，以有损 WebP 压缩；原 PNG 共 28,117,889 字节，WebP 共 6,143,498 字节，减少 78.2%。单图最大约 515 KiB。尺寸、字节数和章节位置见 manifest.json。
+本目录的 CH01—CH03 部分包含 16 张 WebP。保留原始像素尺寸，以有损 WebP 压缩；原 PNG 共 28,117,889 字节，WebP 共 6,143,498 字节，减少 78.2%。单图最大约 515 KiB。尺寸、字节数和章节位置见 manifest.json。
 
 完整出版交付包另行保留，不将大型 PNG、截图原件和嵌入位图的 SVG 重复加入仓库。9 份 Mermaid 源码保留在 mermaid/，正文通过折叠区保留相同源码及文字关系回退。修改结构时同步修改正文和对应 .mmd，并重新核对成图。
 
@@ -37,3 +37,40 @@
 - OpenDipper: https://www.x-lab.info/open-dipper/ 。截图 2026-10-28，模型数据日期 2026-08-05，当前界面不冒充正文引用的旧提交版本。
 
 六幅概念插画采用 AI 辅助绘制，三幅精确关系图采用矢量排版，七幅证据图组合真实截图或报告原图。所有截图仅裁切、编排及压缩，不重写其中事实。
+
+## 第四至第六章：28 幅新图
+
+正文基线：`3965a64c939e945f5245184e3e5bcc51bcb823ca`；第四章 9 幅、第五章 9 幅、第六章 10 幅。网页图共 3,225,708 字节；相对本轮 PNG 导出 21,436,738 字节减少 85.0%。图像宽 1600 像素，正文显示宽度 700—780px、保持自然比例，点击可查看完整图。
+
+22 份可编辑矢量图位于 vector/，对应 Mermaid 在 mermaid/；FineWeb 原始 Figure 9 矢量图也保留。密集截图和高分辨率 PNG 不重复入库。完整来源、固定版本、许可与变更说明见 [本轮来源记录](ch04-ch06-sources.md)。
+
+| 图号 | 图题 | 在线图 | 矢量源 |
+|---|---|---|---|
+| 4-1 | 模型形成的基本要素 | [WebP](AIOS101_Fig-04-01_v01.webp) | [SVG](vector/AIOS101_Fig-04-01_v01.svg) |
+| 4-2 | FineWeb 论文报告的主要数据处理链 | [WebP](AIOS101_Fig-04-02_v01.webp) | [SVG](vector/AIOS101_Fig-04-02_v01.svg) |
+| 4-3 | FineWeb 论文 v2 图 9 原图 | [WebP](AIOS101_Fig-04-03_v01.webp) | 真实材料组合 |
+| 4-4 | 分词、下一 token 候选分布与训练目标的简化关系 | [WebP](AIOS101_Fig-04-04_v01.webp) | [SVG](vector/AIOS101_Fig-04-04_v01.svg) |
+| 4-5 | 一次训练迭代的基本循环 | [WebP](AIOS101_Fig-04-05_v01.webp) | [SVG](vector/AIOS101_Fig-04-05_v01.svg) |
+| 4-6 | 批次、迭代、训练轮次与检查点的关系 | [WebP](AIOS101_Fig-04-06_v01.webp) | [SVG](vector/AIOS101_Fig-04-06_v01.svg) |
+| 4-7 | DeepSeek-R1 固定 README 公开的形成路径 | [WebP](AIOS101_Fig-04-07_v01.webp) | [SVG](vector/AIOS101_Fig-04-07_v01.svg) |
+| 4-8 | DeepSeek-R1 固定 README 的 Model Summary 与 Model Downloads 局部截图 | [WebP](AIOS101_Fig-04-08_v01.webp) | 真实材料组合 |
+| 4-9 | 训练、验证、测试及近重复泄漏的边界 | [WebP](AIOS101_Fig-04-09_v01.webp) | [SVG](vector/AIOS101_Fig-04-09_v01.svg) |
+| 5-1 | 上下文容量与最大生成长度的区别 | [WebP](AIOS101_Fig-05-01_v01.webp) | [SVG](vector/AIOS101_Fig-05-01_v01.svg) |
+| 5-2 | 语言模型推理的最小生成循环 | [WebP](AIOS101_Fig-05-02_v01.webp) | [SVG](vector/AIOS101_Fig-05-02_v01.svg) |
+| 5-3 | 生成 top-k 与 top-p 的简化对照 | [WebP](AIOS101_Fig-05-03_v01.webp) | [SVG](vector/AIOS101_Fig-05-03_v01.svg) |
+| 5-4 | 从候选分布到输出结束的主要生成条件 | [WebP](AIOS101_Fig-05-04_v01.webp) | [SVG](vector/AIOS101_Fig-05-04_v01.svg) |
+| 5-5 | DeepSeek-R1 固定 README 的 Usage Recommendations 截图 | [WebP](AIOS101_Fig-05-05_v01.webp) | 真实材料组合 |
+| 5-6 | 模型推理的系统分层 | [WebP](AIOS101_Fig-05-06_v01.webp) | [SVG](vector/AIOS101_Fig-05-06_v01.svg) |
+| 5-7 | 单个请求的延迟与整个服务的吞吐 | [WebP](AIOS101_Fig-05-07_v01.webp) | [SVG](vector/AIOS101_Fig-05-07_v01.svg) |
+| 5-8 | 最小评价的证据链 | [WebP](AIOS101_Fig-05-08_v01.webp) | [SVG](vector/AIOS101_Fig-05-08_v01.svg) |
+| 5-9 | DeepSeek-R1 固定 README 的 Evaluation Results 设置与主评测表局部截图 | [WebP](AIOS101_Fig-05-09_v01.webp) | 真实材料组合 |
+| 6-1 | 从模型到任务系统的基本组成 | [WebP](AIOS101_Fig-06-01_v01.webp) | [SVG](vector/AIOS101_Fig-06-01_v01.svg) |
+| 6-2 | 长文档切分、元数据与检索的简化示意 | [WebP](AIOS101_Fig-06-02_v01.webp) | [SVG](vector/AIOS101_Fig-06-02_v01.svg) |
+| 6-3 | 查询与文档片段的语义近邻简化示意 | [WebP](AIOS101_Fig-06-03_v01.webp) | [SVG](vector/AIOS101_Fig-06-03_v01.svg) |
+| 6-4 | 检索增强生成的基本流程 | [WebP](AIOS101_Fig-06-04_v01.webp) | [SVG](vector/AIOS101_Fig-06-04_v01.svg) |
+| 6-5 | 工具调用的最小闭环 | [WebP](AIOS101_Fig-06-05_v01.webp) | [SVG](vector/AIOS101_Fig-06-05_v01.svg) |
+| 6-6 | 《深入理解 AI Agent》固定第 2 章“带工具调用的多轮交互”局部截图 | [WebP](AIOS101_Fig-06-06_v01.webp) | 真实材料组合 |
+| 6-7 | 智能体的基本任务循环 | [WebP](AIOS101_Fig-06-07_v01.webp) | [SVG](vector/AIOS101_Fig-06-07_v01.svg) |
+| 6-8 | 新生导览模拟轨迹的角色与时序 | [WebP](AIOS101_Fig-06-08_v01.webp) | [SVG](vector/AIOS101_Fig-06-08_v01.svg) |
+| 6-9 | MCP 2025-06-18 工具规范与安全原则局部截图 | [WebP](AIOS101_Fig-06-09_v01.webp) | 真实材料组合 |
+| 6-10 | 人机协作中的关键检查点 | [WebP](AIOS101_Fig-06-10_v01.webp) | [SVG](vector/AIOS101_Fig-06-10_v01.svg) |

@@ -1,0 +1,7 @@
+flowchart TD
+    B["DeepSeek-V3-Base"] -->|直接大规模 RL；无预先 SFT| Z["DeepSeek-R1-Zero"]
+    B -->|冷启动数据；两阶段 SFT 与两阶段 RL| R["DeepSeek-R1"]
+    R -->|生成样本| S["用于蒸馏的样本"]
+    Q["Qwen2.5 系列"] -->|微调基础| D["六个蒸馏模型"]
+    L["Llama3 系列"] -->|微调基础| D
+    S -->|用于微调| D

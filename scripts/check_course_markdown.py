@@ -46,8 +46,8 @@ class Images(HTMLParser):
     def handle_starttag(self, tag, attrs):
         if tag == 'img': self.images.append(dict(attrs))
 figures = json.loads((root/'textbook/assets/figures/manifest.json').read_text())
-assert len(figures) == 16 and len({f['id'] for f in figures}) == 16
-for ch, count in [('CH01', 4), ('CH02', 4), ('CH03', 8)]:
+assert len(figures) == 44 and len({f['id'] for f in figures}) == 44
+for ch, count in [('CH01', 4), ('CH02', 4), ('CH03', 8), ('CH04', 9), ('CH05', 9), ('CH06', 10)]:
     parser = Images()
     for sec in data['units'][ch]['sections']: parser.feed(sec['html'])
     assert len(parser.images) == count, ch
@@ -60,5 +60,9 @@ for ch, count in [('CH01', 4), ('CH02', 4), ('CH03', 8)]:
 for target in ['javascript:evil.webp', '//evil.test/a.webp', '../../../private.webp', '../assets/figures/../../private.webp', 'https://evil.test/a.webp']:
     assert image_path(target, source) is None
 assert '<script>' not in render('<details onclick="evil()">\n<script>evil()</script>', source, commit, {})
-assert sum(s['html'].count('<details class="figure-relations">') for ch in ('CH01','CH02','CH03') for s in data['units'][ch]['sections']) == 9
-print('PASS: 16 registered images, dimensions, local assets, portable downloads, 9 folded fallbacks and unsafe image rejection')
+assert sum(s['html'].count('<details class="figure-relations">') for ch in ('CH01','CH02','CH03','CH04','CH05','CH06') for s in data['units'][ch]['sections']) == 31
+print('PASS: 44 registered images, dimensions, local assets, portable downloads, 31 folded fallbacks and unsafe image rejection')
+
+# Decision-node labels and branches must survive the text fallback.
+decision = render('```mermaid\nflowchart TD\n A["开始"] --> D{"继续？"}\n D -->|否| E["结束"]\n```', source, commit, {})
+assert "继续？" in decision and "开始" in decision and "结束" in decision and "否" in decision

@@ -66,3 +66,7 @@
 ## 前三章在线图版补充记录（2026-10-28）
 
 16 幅图版的文件、图号、原始来源、截图日期、修改方式及第三方复用条件统一登记于 [附图索引](../textbook/assets/figures/README.md) 与 [人物参考记录](../textbook/assets/figures/portrait-sources.md)。本次为维护者授权的课程仓库与 Pages 公开评审；不将其记为正式出版清权。
+
+## 第四至第六章图版复用补充（2026-10-28）
+
+本轮在维护者授权下将 SRC-2026-016、023、026、027 的所需局部材料用于 Pages 图文评审。逐图署名、固定版本、改动和许可全文链接见 [CH04—CH06 图版来源记录](../textbook/assets/figures/ch04-ch06-sources.md)。FineWeb Figure 9 按 CC BY 4.0；DeepSeek README 按固定提交 MIT；AI Agent 章节按固定提交 Apache-2.0；MCP 补充核验规范标签 2025-06-18 的 MIT LICENSE（blob e699ea7a0f887b528f9bc2aec8065a70c8d3f550），不以当前许可过渡文件替代历史证据。原来源表的只重述／占位是此前状态，本补充记录本轮实际图版复用；未声明独立运行或复算。

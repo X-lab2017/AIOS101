@@ -71,7 +71,8 @@ def figure_image(label, target, source):
         raise ValueError('Unregistered or missing figure: ' + path)
     url = html.escape(quote(path), quote=True)
     alt = html.escape(label, quote=True)
-    return ('<figure class="textbook-figure"><a class="figure-open" href="' + url +
+    display_width = max(520, min(920, int(record.get('displayWidth', 780))))
+    return ('<figure class="textbook-figure" style="max-width:' + str(display_width) + 'px"><a class="figure-open" href="' + url +
             '" target="_blank" rel="noopener noreferrer" aria-label="' + alt + ' · 查看大图 / Open full size">' +
             '<img src="' + url + '" alt="' + alt + '" width="' + str(record['width']) +
             '" height="' + str(record['height']) + '" loading="lazy" decoding="async"></a>' +
@@ -83,10 +84,10 @@ def mermaid_block(code):
     nodes = {}; edges = []
     for raw in code.splitlines():
         line = raw.strip()
-        node = re.fullmatch(r'([A-Za-z]\w*)\s*\["([^"]*)"\]', line)
+        node = re.fullmatch(r'([A-Za-z]\w*)\s*[\[{]"([^"]*)"[\]}]', line)
         if node:
             nodes[node[1]] = node[2]; continue
-        edge = re.fullmatch(r'([A-Za-z]\w*)(?:\["([^"]*)"\])?\s*(-\.->|---|-->)\s*(?:\|([^|]*)\|\s*)?([A-Za-z]\w*)(?:\["([^"]*)"\])?', line)
+        edge = re.fullmatch(r'([A-Za-z]\w*)(?:[\[{]"([^"]*)"[\]}])?\s*(-\.->|---|-->)\s*(?:\|([^|]*)\|\s*)?([A-Za-z]\w*)(?:[\[{]"([^"]*)"[\]}])?', line)
         if edge:
             if edge[2]: nodes[edge[1]] = edge[2]
             if edge[6]: nodes[edge[5]] = edge[6]
