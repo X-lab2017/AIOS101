@@ -47,3 +47,21 @@ Only four large readable Chinese labels, integrated as restrained marginal penci
 ## 图 5-1、5-2、5-3：容量、文本增长与候选筛选
 
 原生 SVG 由 `scripts/figures/self_study.py 5` 生成；无新增外部素材。容量图使用正文假设 1000−780=220；候选图使用 0.55/0.25/0.12/0.05/0.03，归一化比例由这些数字直接计算。文本纸带是假想分词与输出，不声称来自真实模型；普通推理参数不变。WebP 质量 91；SVG 中保留文字以便放大。
+
+## 图 6-3、6-7：相关性、适用性与反馈分支
+
+原生 SVG 由 `scripts/figures/self_study.py 6` 绘制。6-3 采用正文完全假想的两份活动通知（9 月 10 日/延期至 9 月 15 日）；示意距离不是嵌入实测，颜色不代表自动判定新通知有效。6-7 的反馈条件来自 6.6.1 节，分支、权限与停止边界与正文对应。无新增外部素材，WebP 质量 91，SVG 用于放大。
+
+## 图 6-4　检索增强生成：带着资料作答
+
+- 方法：内置 imagegen；图 1-2 仅作纸色、媒介与笔触参考。原始输出 `exec-52cd4804-403d-483f-a0d4-594e2449fd47.png`，保留 1536×1024 像素，WebP 质量 88。
+- 边界：假想图书馆场景；人物、资料与屏幕均不是真实项目材料。书架、选页、桌面、逐项核对分别帮助理解外部资料、检索、上下文和引用核验。精确流程仍由正文及 Mermaid 表述。
+- 验看：三张带来源标记的资料页与屏幕标记可区分；库与桌面分离；未生成技术数字、品牌标志或虚假引用。
+
+### 最终绘制提示
+
+```text
+Use case: illustration-story. Create a sophisticated conceptual editorial illustration for AIOS101, a university self-study textbook, using a real-world visual metaphor for retrieval-augmented generation: "bring the relevant pages to the writing desk, do not move the entire library into the writer's head." Input image is a STYLE reference only: warm ivory paper, excellent colored pencil/graphite drawing, restrained indigo, muted teal, coral accents. Do not copy historical portraits or words.
+Landscape 3:2, spacious architectural cutaway of a beautiful ordinary university library reading room. Clear large silhouettes and purposeful details, not a grid of boxes. At far left a tall curved bookshelf full of plain bound documents; at its foot an open wooden card-catalog drawer and a small university librarian in side profile comparing a plain question slip with catalog cards. In the middle she selects JUST THREE separate excerpt sheets with colored edge tabs and blank source labels, carrying them on a small wheeled book trolley toward the right. Several other documents remain visibly on the shelf. On the right foreground a large uncluttered reading desk: the three excerpt pages are spread open next to the original question slip, each keeps its tab and source label. A realistic laptop on that desk shows a single blank answer-page shape with three tiny colored reference markers matching the papers. A real human reader standing beside the desk points between one sentence-line on that output and one specific source page, visibly checking support. Behind the desk a modest closed computer tower remains a separate object, with no flow of paper into it. The desk is the metaphor for temporary context, the external shelves remain separate and independently changeable.
+This is a conceptual scene, not a real product UI or a literal software architecture. No network diagrams, no arrows, no human brain, no robots, no mystical floating words, no fake screenshots, no fabricated citations or logos. NO readable text, numbers, titles, figure number or watermark anywhere. The laptop and papers contain only minimal neutral pencil strokes. Keep the central three excerpt pages and the comparing gesture visually unmistakable. Generous ivory negative space, elegant varying scale between architectural shelves and human-scale papers, subtle daylight. Professional, interesting, calm and didactic.
+```

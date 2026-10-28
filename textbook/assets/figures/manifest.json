@@ -543,33 +543,35 @@
   },
   {
     "id": "6-3",
-    "title": "查询与文档片段的语义近邻",
-    "file": "AIOS101_Fig-06-03_v02.webp",
+    "title": "语义相关，不等于证据适用",
+    "file": "AIOS101_Fig-06-03_v03.webp",
     "width": 1600,
-    "height": 1220,
-    "bytes": 81930,
+    "height": 1020,
+    "bytes": 132620,
     "insertion": "第 6 章 / 三、给模型一座可查阅的资料库：检索与 RAG / 2. 关键词之外，为什么还需要嵌入",
-    "alt": "二维教学散点中，查询这个项目主要学什么与两条课程定位片段相近，与年度发布日期说明较远。坐标没有人工语义名称，位置与距离不是实际嵌入结果。",
+    "alt": "查询何时报名截止，与旧通知9月10日和更新通知9月15日都在语义示意图中相近，与食堂菜谱较远。右侧对照两份通知，要求核对发布主体、版本、范围和替代关系；信息不足应保留冲突。",
     "displayWidth": 780,
     "sourceUrls": [],
-    "vector": "vector/AIOS101_Fig-06-03_v02.svg",
+    "vector": "vector/AIOS101_Fig-06-03_v03.svg",
     "revision": "2026-10-29",
-    "zoomFile": "vector/AIOS101_Fig-06-03_v02.svg"
+    "zoomFile": "vector/AIOS101_Fig-06-03_v03.svg",
+    "sourceRecord": "sources/visual-learning-2026-10-29.md"
   },
   {
     "id": "6-4",
-    "title": "检索增强生成的基本流程",
-    "file": "AIOS101_Fig-06-04_v01.webp",
-    "width": 1600,
-    "height": 1530,
-    "bytes": 82066,
-    "originalBytes": 363823,
+    "title": "检索增强生成：带着资料作答",
+    "file": "AIOS101_Fig-06-04_rag-reading-room_v02.webp",
+    "width": 1536,
+    "height": 1024,
+    "bytes": 535090,
+    "originalBytes": 3621815,
     "insertion": "第 6 章 / 三、给模型一座可查阅的资料库：检索与 RAG / 3. RAG：把检索片段交给生成模型",
-    "alt": "资料准备通道将外部文档切分并索引；问题通道形成查询，检索 top-k 带来源片段，经筛选排序进入上下文，与问题一起供模型生成可核查的回答。索引不进入训练参数。",
+    "alt": "图书馆中依问题查找目录、选出带来源标记的资料页，送到桌面与问题一起供生成使用，读者对照回答与原文。书架是外部资料库，桌面是本次上下文；这是概念隐喻，不是真实软件结构。",
     "displayWidth": 780,
     "sourceUrls": [],
-    "vector": "vector/AIOS101_Fig-06-04_v01.svg",
-    "zoomFile": "vector/AIOS101_Fig-06-04_v01.svg"
+    "kind": "concept-illustration",
+    "revision": "2026-10-29",
+    "sourceRecord": "sources/visual-learning-2026-10-29.md"
   },
   {
     "id": "6-5",
@@ -606,17 +608,18 @@
   {
     "id": "6-7",
     "title": "智能体的基本任务循环",
-    "file": "AIOS101_Fig-06-07_v02.webp",
+    "file": "AIOS101_Fig-06-07_v03.webp",
     "width": 1600,
-    "height": 1690,
-    "bytes": 86010,
+    "height": 1110,
+    "bytes": 129920,
     "insertion": "第 6 章 / 六、从一次调用到多轮任务：智能体循环 / 1. 观察、规划、行动与反馈",
-    "alt": "目标与约束进入观察、规划、经权限检查的行动和反馈，随后检查停止条件。未停止则回到观察，停止则交付结果、证据和未完成事项。",
+    "alt": "新生导览任务中，三项事实齐备则生成草稿，缺获取建议则在获准范围内补查备注，查遍材料仍缺证据则报告缺项停止。生成或检索后核对结果和停止条件，尚可继续才返回观察；三行是分支而非三个连续步骤。",
     "displayWidth": 700,
     "sourceUrls": [],
-    "vector": "vector/AIOS101_Fig-06-07_v02.svg",
+    "vector": "vector/AIOS101_Fig-06-07_v03.svg",
     "revision": "2026-10-29",
-    "zoomFile": "vector/AIOS101_Fig-06-07_v02.svg"
+    "zoomFile": "vector/AIOS101_Fig-06-07_v03.svg",
+    "sourceRecord": "sources/visual-learning-2026-10-29.md"
   },
   {
     "id": "6-8",
@@ -632,22 +635,6 @@
     "sourceUrls": [],
     "vector": "vector/AIOS101_Fig-06-08_v01.svg",
     "zoomFile": "vector/AIOS101_Fig-06-08_v01.svg"
-  },
-  {
-    "id": "6-9",
-    "title": "MCP 2025-06-18 工具规范与安全原则局部截图",
-    "file": "AIOS101_Fig-06-09_v01.webp",
-    "width": 1600,
-    "height": 1540,
-    "bytes": 172578,
-    "originalBytes": 1507342,
-    "insertion": "第 6 章 / 八、能力越强，边界越要清楚：风险与人机协作 / 3. 隐私、错误传播与费用",
-    "alt": "MCP 2025-06-18 工具规范与安全原则三处原文局部组合：技术安全建议、用户同意与隐私、工具安全，包含敏感操作确认、工具输入展示、校验、超时和日志。",
-    "displayWidth": 780,
-    "sourceUrls": [
-      "https://modelcontextprotocol.io/specification/2025-06-18/server/tools",
-      "https://modelcontextprotocol.io/specification/2025-06-18"
-    ]
   },
   {
     "id": "6-10",

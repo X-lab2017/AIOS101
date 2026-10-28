@@ -32,5 +32,23 @@
     "zoomFile": "vector/AIOS101_Fig-05-04_v01.svg",
     "retirementReason": "与图 5-1、5-2、5-3 及 5.3 节说明重复；停止条件文字保留。",
     "retiredOn": "2026-10-29"
+  },
+  {
+    "id": "6-9",
+    "title": "MCP 2025-06-18 工具规范与安全原则局部截图",
+    "file": "AIOS101_Fig-06-09_v01.webp",
+    "width": 1600,
+    "height": 1540,
+    "bytes": 172578,
+    "originalBytes": 1507342,
+    "insertion": "第 6 章 / 八、能力越强，边界越要清楚：风险与人机协作 / 3. 隐私、错误传播与费用",
+    "alt": "MCP 2025-06-18 工具规范与安全原则三处原文局部组合：技术安全建议、用户同意与隐私、工具安全，包含敏感操作确认、工具输入展示、校验、超时和日志。",
+    "displayWidth": 780,
+    "sourceUrls": [
+      "https://modelcontextprotocol.io/specification/2025-06-18/server/tools",
+      "https://modelcontextprotocol.io/specification/2025-06-18"
+    ],
+    "retirementReason": "英文规范长截图打断初学者阅读；正文已有角色、控制说明及图 6-10，保留固定规范链接供核查。",
+    "retiredOn": "2026-10-29"
   }
 ]
