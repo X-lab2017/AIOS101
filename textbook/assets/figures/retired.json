@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "4-8",
+    "title": "DeepSeek-R1 形成路径的原始证据",
+    "file": "AIOS101_Fig-04-08_v01.webp",
+    "width": 1600,
+    "height": 2460,
+    "bytes": 339552,
+    "originalBytes": 4210551,
+    "insertion": "第 4 章 / 五、从预训练到后训练：能力不是一次形成的 / 4. 蒸馏：用已有模型产生的信号帮助训练另一个模型",
+    "alt": "DeepSeek-R1 固定 README 的 Model Summary 与 Model Downloads 原文局部组合，保留 R1-Zero 直接 RL、R1 两阶段 SFT 与 RL、蒸馏说明和 DeepSeek-V3-Base 基础说明，以及六个蒸馏模型的下载表。",
+    "displayWidth": 780,
+    "sourceUrls": [
+      "https://github.com/deepseek-ai/DeepSeek-R1/blob/0cf78561f1d51c84a21b2190626b21116d5c68bb/README.md"
+    ],
+    "retirementReason": "与图 1-4 的 README 证据及图 4-7 的形成路径重复；固定原文链接继续保留在正文。",
+    "retiredOn": "2026-10-29"
+  }
+]

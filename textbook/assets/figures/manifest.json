@@ -262,17 +262,18 @@
   {
     "id": "4-1",
     "title": "模型形成的基本要素",
-    "file": "AIOS101_Fig-04-01_v02.webp",
+    "file": "AIOS101_Fig-04-01_v03.webp",
     "width": 1600,
-    "height": 1100,
-    "bytes": 100956,
+    "height": 1020,
+    "bytes": 106502,
     "insertion": "第 4 章 / 二、模型形成需要哪些要素 / 5. 算力：让学习过程实际发生",
-    "alt": "数据、结构、学习算法与算力共同支持训练；图中突出训练形成或更新的参数。训练也会使用初始参数或已有参数。",
+    "alt": "数据和学习规则进入训练工作台，模型结构容纳初始或已有参数，算力与软件环境支持计算。训练改变参数状态，结构与参数共同构成可运行模型的核心。",
     "displayWidth": 780,
     "sourceUrls": [],
-    "vector": "vector/AIOS101_Fig-04-01_v02.svg",
+    "vector": "vector/AIOS101_Fig-04-01_v03.svg",
     "revision": "2026-10-29",
-    "zoomFile": "vector/AIOS101_Fig-04-01_v02.svg"
+    "zoomFile": "vector/AIOS101_Fig-04-01_v03.svg",
+    "sourceRecord": "sources/visual-learning-2026-10-29.md"
   },
   {
     "id": "4-2",
@@ -293,7 +294,7 @@
   },
   {
     "id": "4-3",
-    "title": "FineWeb 论文 v2 图 9 原图",
+    "title": "FineWeb：数据处理的累计对照（论文图 9）",
     "file": "AIOS101_Fig-04-03_v01.webp",
     "width": 1600,
     "height": 1530,
@@ -324,32 +325,34 @@
   {
     "id": "4-5",
     "title": "一次训练迭代的基本循环",
-    "file": "AIOS101_Fig-04-05_v01.webp",
+    "file": "AIOS101_Fig-04-05_v02.webp",
     "width": 1600,
-    "height": 1040,
-    "bytes": 82682,
-    "originalBytes": 369089,
+    "height": 1130,
+    "bytes": 128028,
     "insertion": "第 4 章 / 四、模型怎样从数据中学习 / 3. 梯度与反向传播：怎样确定参数调整方向",
-    "alt": "读取一批样本，使用当前参数处理输入，得到候选分布，计算损失，通过反向传播估计梯度，由优化器按学习率等设置更新参数，再进入下一批样本，形成循环。",
+    "alt": "输入2、目标6的乘法模型中，参数从2示意更新为2.5，预测从4变5，平方损失从4变1。精确曲线同时标出参数3的损失0和参数4的损失4；反向传播计算梯度，优化器执行更新，再进入下一批样本。",
     "displayWidth": 780,
     "sourceUrls": [],
-    "vector": "vector/AIOS101_Fig-04-05_v01.svg",
-    "zoomFile": "vector/AIOS101_Fig-04-05_v01.svg"
+    "vector": "vector/AIOS101_Fig-04-05_v02.svg",
+    "zoomFile": "vector/AIOS101_Fig-04-05_v02.svg",
+    "revision": "2026-10-29",
+    "sourceRecord": "sources/visual-learning-2026-10-29.md"
   },
   {
     "id": "4-6",
     "title": "批次、迭代、训练轮次与检查点",
-    "file": "AIOS101_Fig-04-06_v02.webp",
+    "file": "AIOS101_Fig-04-06_v03.webp",
     "width": 1600,
-    "height": 1520,
-    "bytes": 116160,
+    "height": 1020,
+    "bytes": 128778,
     "insertion": "第 4 章 / 四、模型怎样从数据中学习 / 3. 梯度与反向传播：怎样确定参数调整方向",
-    "alt": "一轮完整处理训练集构成一个 epoch；检查点可按训练步骤等策略保存，不必等到一轮结束，也不自动等于最佳模型。图中按一批一次更新简化说明。",
+    "alt": "100个样本，每批10个，每批一次更新。第一轮10批对应累计更新1至10，第二轮对应11至20。检查点示意保存在更新4和13之后，均在轮次内部；检查点不等于最佳模型。",
     "displayWidth": 780,
     "sourceUrls": [],
-    "vector": "vector/AIOS101_Fig-04-06_v02.svg",
+    "vector": "vector/AIOS101_Fig-04-06_v03.svg",
     "revision": "2026-10-29",
-    "zoomFile": "vector/AIOS101_Fig-04-06_v02.svg"
+    "zoomFile": "vector/AIOS101_Fig-04-06_v03.svg",
+    "sourceRecord": "sources/visual-learning-2026-10-29.md"
   },
   {
     "id": "4-7",
@@ -367,21 +370,6 @@
     ],
     "vector": "vector/AIOS101_Fig-04-07_v01.svg",
     "zoomFile": "vector/AIOS101_Fig-04-07_v01.svg"
-  },
-  {
-    "id": "4-8",
-    "title": "DeepSeek-R1 形成路径的原始证据",
-    "file": "AIOS101_Fig-04-08_v01.webp",
-    "width": 1600,
-    "height": 2460,
-    "bytes": 339552,
-    "originalBytes": 4210551,
-    "insertion": "第 4 章 / 五、从预训练到后训练：能力不是一次形成的 / 4. 蒸馏：用已有模型产生的信号帮助训练另一个模型",
-    "alt": "DeepSeek-R1 固定 README 的 Model Summary 与 Model Downloads 原文局部组合，保留 R1-Zero 直接 RL、R1 两阶段 SFT 与 RL、蒸馏说明和 DeepSeek-V3-Base 基础说明，以及六个蒸馏模型的下载表。",
-    "displayWidth": 780,
-    "sourceUrls": [
-      "https://github.com/deepseek-ai/DeepSeek-R1/blob/0cf78561f1d51c84a21b2190626b21116d5c68bb/README.md"
-    ]
   },
   {
     "id": "4-9",

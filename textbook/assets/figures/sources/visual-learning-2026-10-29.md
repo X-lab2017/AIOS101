@@ -36,3 +36,10 @@ Input image 1 is style reference only: retain sophisticated colored-pencil/graph
 Composition: landscape 3:2, almost overhead view, like a beautifully arranged natural-history field notebook but populated with real-world computing and documentary objects. One large indigo archival folder opens diagonally across the center, containing a compact model matrix sheet, a modest code notebook, source documents and small file tabs. Around it are four distinct observational tools, asymmetrically balanced: upper left a magnifying glass reveals the texture and separateness of model/data/document cards; upper right several threads connect document tabs to other clearly separate folders, with a question-tag reminding us that links require interpretation; lower left human hands from different contributors pass a correction sheet with a pencil and compare a previous revision; lower right a brass key rests on a large permission document beside a dated revision notebook. Everything belongs to a single coherent still-life on a reading table. No floating UI, no rounded infographic boxes, no robot, no brain, no neon network, no fake technical dashboard.
 Only four large readable Chinese labels, integrated as restrained marginal pencil annotations: “资产”, “关系”, “参与者”, “规则”. Exactly these labels and no other readable text, no dates, no numerical data, no title or figure number. The relationships are purely conceptual threads with no arrowheads, not actual measured dependencies. Leave soft ivory breathing room around edges. Professional publication quality, tactile and thoughtful, amusingly investigative, visually different from a classroom scene or history portraits.
 ```
+
+## 图 4-1、4-5、4-6：可复算的教学图
+
+- 作者绘制的原生 SVG；生成程序 `scripts/figures/self_study.py 4`，不使用生成图像绘制数字或曲线。
+- 内容依据本书 4.2、4.4 节；输入 2、目标 6、损失 (2w−6)² 的曲线与四个表格点完全对应。w=2→2.5 仅作更新示意，不声明具体优化器或学习率。
+- 批次图严格按 100/10=10、两轮 20 次绘制；第 4 和 13 步保存为教学设定。
+- 图 4-1 参数格子无实际数值或实验含义。新图无新增第三方素材；WebP 质量 91，SVG 用于放大。
