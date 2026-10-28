@@ -18,8 +18,9 @@
 8. [第 2 章 v0.5](textbook/chapters/CH02-open-source-mechanisms.md)：以真实仓库和社区记录解释开放、复用、协作与公共价值；
 9. [第 3 章 v0.2](textbook/chapters/CH03-ai-open-source-ecosystem.md)：以资产、关系、参与者与规则建立 AI 开源生态全景；
 10. [第 4 章 v0.1](textbook/chapters/CH04-data-to-models.md)：以 FineWeb 和 DeepSeek-R1 解释数据、训练过程与模型能力的形成；
-11. [第 5 章 v0.1](textbook/chapters/CH05-training-to-inference.md)：从生成过程、推理系统与最小评价理解模型运行及证据；
-12. [附录 A](textbook/appendices/APP-A-repository-snapshots.md)：仓库、提交号与固定版本的共同访问指南。
+11. [第 5 章 v0.2](textbook/chapters/CH05-training-to-inference.md)：以通识化解释、生成过程、推理系统与最小评价理解模型运行及证据；
+12. [第 6 章 v0.1](textbook/chapters/CH06-model-to-agents.md)：以真实材料和模拟轨迹理解 RAG、工具调用、智能体循环与人机责任；
+13. [附录 A](textbook/appendices/APP-A-repository-snapshots.md)：仓库、提交号与固定版本的共同访问指南。
 
 当前规格和章节处于草稿或实施阶段，不代表教材内容或课程实施已经完成验收。
 
@@ -66,13 +67,13 @@ python scripts/check_repo.py
 - [课程专属视觉识别 v1.0.0](specs/course-identity-spec.md)
 - [序言与系统探索活动设计](specs/website-activities.md)
 - [网站开发与 GitHub Pages 发布说明](site/README.md)
-- [学习体验与活动规格 v0.7](specs/learning-experience-spec.md)
+- [学习体验与活动规格 v0.8](specs/learning-experience-spec.md)
 - [学习版核验记录](specs/learning-review-record.md)
 - [早期原型核验记录](specs/website-review-record.md)
 
 [进入 AIOS101 课程网站](https://www.x-lab.info/AIOS101/) · [课程视觉方案](https://www.x-lab.info/AIOS101/#/identity)
 
-当前为 v0.4 交互学习打样，教学验收待评审。绪论、前五章和附录 A 已接入完整阅读；三个案例观察窗与四项分步活动支持笔记、草稿、人工反馈、修订快照和导出恢复。第三章至第五章草稿已自动接入阅读，配套活动待制作；CH06—CH12 随教材逐步上线。
+当前为 v0.4 交互学习打样，教学验收待评审。绪论、前六章和附录 A 已接入完整阅读；三个案例观察窗与四项分步活动支持笔记、草稿、人工反馈、修订快照和导出恢复。第三章至第六章草稿已自动接入阅读，配套活动待制作；CH07—CH12 随教材逐步上线。
 
 公开预览发布范围与实际核验记录见 [Pages 发布记录](specs/pages-release-record.md)。
 
