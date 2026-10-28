@@ -127,15 +127,18 @@
   {
     "id": "3-1",
     "title": "AI 开源生态的四个观察维度",
-    "file": "AIOS101_Fig-03-01_ecosystem-dimensions_v01.webp",
-    "width": 2520,
-    "height": 1815,
-    "bytes": 349480,
-    "originalBytes": 1131684,
+    "file": "AIOS101_Fig-03-01_ecosystem-dimensions_v02.webp",
+    "width": 1536,
+    "height": 1024,
+    "bytes": 561834,
+    "originalBytes": 3733340,
     "insertion": "第三章／一",
-    "alt": "AI 开源生态的四个观察维度",
+    "alt": "资料夹中的四个观察位置：放大镜检查材料，线索板提示关系，修改文稿的双手表示参与者，钥匙与许可文件提示规则。线索和人物均为概念示意，不表示真实项目依赖或具体人物。",
     "displayWidth": 780,
-    "sourceUrls": []
+    "sourceUrls": [],
+    "kind": "concept-illustration",
+    "sourceRecord": "sources/visual-learning-2026-10-29.md",
+    "revision": "2026-10-29"
   },
   {
     "id": "3-2",
@@ -175,7 +178,7 @@
   },
   {
     "id": "3-4",
-    "title": "区分生态关系与证据",
+    "title": "功能分层与五类生态关系",
     "file": "AIOS101_Fig-03-04_ecosystem-relations_v01.webp",
     "width": 2520,
     "height": 1680,
@@ -190,7 +193,7 @@
   },
   {
     "id": "3-5",
-    "title": "DeepSeek-R1 的资产与关系",
+    "title": "DeepSeek-R1：有证据的资产与关系",
     "file": "AIOS101_Fig-03-05_deepseek-asset-relations_v01.webp",
     "width": 2520,
     "height": 1620,
@@ -207,7 +210,7 @@
   },
   {
     "id": "3-6",
-    "title": "AI 大模型任务与能力全景",
+    "title": "AI 模型任务与能力全景",
     "file": "AIOS101_Fig-03-06_model-task-landscape_v01.webp",
     "width": 2520,
     "height": 2018,
@@ -243,7 +246,7 @@
   },
   {
     "id": "3-8",
-    "title": "OpenDipper 开源星系界面",
+    "title": "OpenDipper 开源星系：从连线阅读证据",
     "file": "AIOS101_Fig-03-08_opendipper-open-galaxy_v01.webp",
     "width": 2520,
     "height": 2670,
