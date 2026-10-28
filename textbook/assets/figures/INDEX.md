@@ -5,6 +5,8 @@
 | 图号 | 统一图题 | 正文插入位置 | 当前文件 | 大图源 |
 |---|---|---|---|---|
 | 图 0-3 | 一次回答背后的工作 | 序言　从一次提问，看见一个开放的世界 / 一次提问，如何连接一个世界 | [WebP](AIOS101_Fig-00-03_behind-the-answer_v01.webp) | 原像素图 |
+| 图 0-4 | OpenDipper 全球观测：从分布追问口径 | 序言　从一次提问，看见一个开放的世界 / 从全球地图与开源星系，学习观察与判断 | [WebP](AIOS101_Fig-00-04_opendipper-global_v01.webp) | [SVG](AIOS101_Fig-00-04_opendipper-global_v01.svg) |
+| 图 0-5 | OpenDipper 开源星系：从连线追问证据 | 序言　从一次提问，看见一个开放的世界 / 从全球地图与开源星系，学习观察与判断 | [WebP](AIOS101_Fig-00-05_opendipper-galaxy_v01.webp) | [SVG](AIOS101_Fig-00-05_opendipper-galaxy_v01.svg) |
 | 图 1-1 | 使用、理解与创造：三种学习位置 | 第 1 章　智能时代为什么需要 AI 开源通识 / 1.1.1　使用、理解与创造 | [WebP](AIOS101_Fig-01-01_learning-positions_v01.webp) | 原像素图 |
 | 图 1-2 | 软件开源的三个历史坐标 | 第 1 章　智能时代为什么需要 AI 开源通识 / 1.3.3　OSI 与开源定义：怎样形成共同语言 | [WebP](AIOS101_Fig-01-02_open-source-history_v02.webp) | 原像素图 |
 | 图 1-3 | 理解 AI 开放的六类材料 | 第 1 章　智能时代为什么需要 AI 开源通识 / 1.4.1　六类开放材料分别能回答什么 | [WebP](AIOS101_Fig-01-03_ai-open-materials_v01.webp) | 原像素图 |

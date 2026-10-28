@@ -1,0 +1,38 @@
+[
+  {
+    "id": "0-4",
+    "attachment": "image(20261028-230617).png",
+    "originalSHA256": "e3aaf36f2d253611fb6e3f1f0cc8df6ee987628d38080a6cad9ef607e272f0f4",
+    "screenshot": "OpenDipper_global_user-snapshot_2026-10-29.webp",
+    "screenshotBytes": 684334,
+    "dimensions": [
+      2048,
+      1280
+    ],
+    "decodedPixelsIdentical": true,
+    "screenshotSHA256": "38a2e553e9ce3562dcd0be733592ad1fcbadceb75f4013777da671331c34d47b",
+    "mountOriginal": "exec-d21b779c-3804-4847-b555-c5ffa8f63c8e.png",
+    "mount": "OpenDipper_global_handdrawn-mount_v01.webp",
+    "mountBytes": 66104,
+    "figureBytes": 324342,
+    "svgBytes": 1038663
+  },
+  {
+    "id": "0-5",
+    "attachment": "image(20261028-230625).png",
+    "originalSHA256": "7b99873ed3cb14a3d6d11febc6e9e299c1fb0ad2b838a3dddd887b8eb1c3ae66",
+    "screenshot": "OpenDipper_galaxy_user-snapshot_2026-10-29.webp",
+    "screenshotBytes": 1435064,
+    "dimensions": [
+      2048,
+      1272
+    ],
+    "decodedPixelsIdentical": true,
+    "screenshotSHA256": "4ce80f5fe2325ca57f92154a5cf1f15ef7b06d77ea79be5bf4820f8d8a4524d7",
+    "mountOriginal": "exec-0ffc6e3a-fbd0-4c87-a258-5e731f5ec2d9.png",
+    "mount": "OpenDipper_galaxy_handdrawn-mount_v01.webp",
+    "mountBytes": 46518,
+    "figureBytes": 363856,
+    "svgBytes": 2013469
+  }
+]

@@ -16,6 +16,52 @@
     "sourceRecord": "sources/visual-learning-2026-10-29.md"
   },
   {
+    "id": "0-4",
+    "title": "OpenDipper 全球观测：从分布追问口径",
+    "file": "AIOS101_Fig-00-04_opendipper-global_v01.webp",
+    "width": 2000,
+    "height": 1660,
+    "bytes": 324342,
+    "originalBytes": 1478084,
+    "insertion": "序言 / 从全球地图与开源星系，学习观察与判断",
+    "alt": "OpenDipper 全球观测真实界面：左侧选择对象图层，中间查看地图和图例，右侧核对指标、来源与观察期。原图的模拟标签保留；外围为手绘装帧。",
+    "displayWidth": 920,
+    "sourceUrls": [
+      "https://www.x-lab.info/open-dipper/",
+      "https://github.com/X-lab2017/open-dipper/blob/dcfcb8367ed8d883613e854cc36cd3c718e94df5/docs/DATA_EVIDENCE.md"
+    ],
+    "kind": "annotated-screenshot",
+    "revision": "2026-10-29",
+    "zoomFile": "AIOS101_Fig-00-04_opendipper-global_v01.svg",
+    "staticSnapshot": true,
+    "originalFile": "sources/OpenDipper_global_user-snapshot_2026-10-29.webp",
+    "zoomHint": "图题和导读为矢量文字，界面保留原始截图。下方可打开原始截图核对细节。",
+    "sourceRecord": "sources/preface-opendipper-2026-10-29.md"
+  },
+  {
+    "id": "0-5",
+    "title": "OpenDipper 开源星系：从连线追问证据",
+    "file": "AIOS101_Fig-00-05_opendipper-galaxy_v01.webp",
+    "width": 2000,
+    "height": 1660,
+    "bytes": 363856,
+    "originalBytes": 2716936,
+    "insertion": "序言 / 从全球地图与开源星系，学习观察与判断",
+    "alt": "OpenDipper 开源星系真实界面：左侧是开源软件仓库网络，右侧是模型、数据等对象的网络。导读提示辨认节点类型、核对关系记录并保留结论边界；外围为手绘装帧。",
+    "displayWidth": 920,
+    "sourceUrls": [
+      "https://www.x-lab.info/open-dipper/#ecosystem",
+      "https://github.com/X-lab2017/open-dipper/blob/dcfcb8367ed8d883613e854cc36cd3c718e94df5/docs/OPEN_GALAXY.md"
+    ],
+    "kind": "annotated-screenshot",
+    "revision": "2026-10-29",
+    "zoomFile": "AIOS101_Fig-00-05_opendipper-galaxy_v01.svg",
+    "staticSnapshot": true,
+    "originalFile": "sources/OpenDipper_galaxy_user-snapshot_2026-10-29.webp",
+    "zoomHint": "图题和导读为矢量文字，界面保留原始截图。下方可打开原始截图核对细节。",
+    "sourceRecord": "sources/preface-opendipper-2026-10-29.md"
+  },
+  {
     "id": "1-1",
     "title": "使用、理解与创造：三种学习位置",
     "file": "AIOS101_Fig-01-01_learning-positions_v01.webp",

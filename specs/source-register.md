@@ -46,6 +46,10 @@
 | SRC-2026-028 | 官方技术教程 | Optimizing Model Parameters | PyTorch 项目 | [官方教程](https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html) | Loss Function、Optimizer、Full Implementation | 持续更新网页，读取时教程页 | 2026-10-29 | 官方技术文档；仅事实重述与链接，不复制代码或图表 | 已核验 | CH04：损失、反向传播计算梯度、优化器更新参数的区别 | 未执行教程；正文乘法模型与数值表为编写者构造，非教程实验结果 |
 | SRC-2026-029 | 官方技术文档 | Common pitfalls and recommended practices | scikit-learn 项目 | [1.4 文档](https://scikit-learn.org/1.4/common_pitfalls.html) | 10.1 Inconsistent preprocessing；10.2 Data leakage | scikit-learn 1.4.2 文档 | 2026-10-29 | 官方技术文档；仅事实重述与链接，不复制代码或图表 | 已核验 | CH04：一致预处理与不当学习测试集统计信息的区别 | 仅核对概念边界；未运行示例，不把所有预处理一概称为数据泄漏 |
 
+| SRC-2026-030 | 维护者提供的界面截图 | OpenDipper 全球观测 | X-lab / OpenDipper | [归档与加工说明](../textbook/assets/figures/sources/preface-opendipper-2026-10-29.md) | 完整 2048×1280 画面 | 提供日期 2026-10-29；不推断捕获时刻 | 2026-10-29 | 维护者明确授权课程仓库与 Pages 复用；不改变上游通用许可 | 部分核验 | 序言图 0-4：对象、地域分布、指标口径与模拟标签 | 原图像素完整保留，增加手绘装帧；未复算图中数据 |
+| SRC-2026-031 | 维护者提供的界面截图 | OpenDipper 开源星系 | X-lab / OpenDipper | [归档与加工说明](../textbook/assets/figures/sources/preface-opendipper-2026-10-29.md) | 完整 2048×1272 双网络画面 | 提供日期 2026-10-29；不推断捕获时刻 | 2026-10-29 | 维护者明确授权课程仓库与 Pages 复用；不改变上游通用许可 | 部分核验 | 序言图 0-5：辨认节点、追问关系与说明边界 | 原图像素完整保留，未生成或改变节点及连线，未逐条审计 |
+| SRC-2026-032 | 项目文档与模块契约 | OpenDipper README、Open Galaxy 与数据证据说明 | X-lab / OpenDipper | [README](https://github.com/X-lab2017/open-dipper/blob/dcfcb8367ed8d883613e854cc36cd3c718e94df5/README.md)；[星系契约](https://github.com/X-lab2017/open-dipper/blob/dcfcb8367ed8d883613e854cc36cd3c718e94df5/docs/OPEN_GALAXY.md)；[数据证据](https://github.com/X-lab2017/open-dipper/blob/dcfcb8367ed8d883613e854cc36cd3c718e94df5/docs/DATA_EVIDENCE.md) | 模块范围、关系类型、独立归一化、观察期与未知项 | 固定提交 dcfcb83 | 2026-10-29 | 仅事实重述与链接 | 已核验 | 序言 v0.7：地图与关系网络的不同用途、记录与推断、大小不可跨网比较 | 文档提交不等同于两张所供截图的捕获版本；未宣称运行或复算 |
+
 ## 3. 数据与版本补充记录
 
 对于数据、模型、代码仓库和在线平台，应在备注或关联记录中补充：

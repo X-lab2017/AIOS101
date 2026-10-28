@@ -89,6 +89,13 @@ for f in figures:
     assert '<p class="figure-caption">图 '+f['id']+'　' in page
     if f.get('zoomFile'):
         assert '<svg' in page and (root/'dist/textbook/assets/figures'/f['zoomFile']).is_file()
+    if f.get('originalFile'):
+        import base64
+        original = root/'dist/textbook/assets/figures'/f['originalFile']
+        assert original.is_file() and '查看原始截图</a>' in page
+        assert '../textbook/assets/figures/'+f['originalFile'] in page
+        assert base64.b64encode(original.read_bytes()).decode() in page
+        assert f['zoomHint'] in page
     assert (root/'textbook/assets/figures'/f['file']).stat().st_size == f['bytes']
 for ch in range(1,7):
     path = next((root/'textbook/chapters').glob(f'CH{ch:02}-*.md'))
