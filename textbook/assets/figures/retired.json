@@ -1,0 +1,54 @@
+[
+  {
+    "id": "4-8",
+    "title": "DeepSeek-R1 形成路径的原始证据",
+    "file": "AIOS101_Fig-04-08_v01.webp",
+    "width": 1600,
+    "height": 2460,
+    "bytes": 339552,
+    "originalBytes": 4210551,
+    "insertion": "第 4 章 / 五、从预训练到后训练：能力不是一次形成的 / 4. 蒸馏：用已有模型产生的信号帮助训练另一个模型",
+    "alt": "DeepSeek-R1 固定 README 的 Model Summary 与 Model Downloads 原文局部组合，保留 R1-Zero 直接 RL、R1 两阶段 SFT 与 RL、蒸馏说明和 DeepSeek-V3-Base 基础说明，以及六个蒸馏模型的下载表。",
+    "displayWidth": 780,
+    "sourceUrls": [
+      "https://github.com/deepseek-ai/DeepSeek-R1/blob/0cf78561f1d51c84a21b2190626b21116d5c68bb/README.md"
+    ],
+    "retirementReason": "与图 1-4 的 README 证据及图 4-7 的形成路径重复；固定原文链接继续保留在正文。",
+    "retiredOn": "2026-10-29"
+  },
+  {
+    "id": "5-4",
+    "title": "从候选分布到输出结束的主要生成条件",
+    "file": "AIOS101_Fig-05-04_v01.webp",
+    "width": 1600,
+    "height": 1220,
+    "bytes": 84956,
+    "originalBytes": 374799,
+    "insertion": "第 5 章 / 三、从候选分布到具体文字：生成策略怎样影响输出 / 4. 最大生成长度与停止条件：输出在哪里结束",
+    "alt": "候选概率、温度、top-k、top-p、随机种子与实现环境共同影响生成策略与 token 选择；最大生成长度与停止条件影响何时结束。任何单个参数都不能保证真实性。",
+    "displayWidth": 780,
+    "sourceUrls": [],
+    "vector": "vector/AIOS101_Fig-05-04_v01.svg",
+    "zoomFile": "vector/AIOS101_Fig-05-04_v01.svg",
+    "retirementReason": "与图 5-1、5-2、5-3 及 5.3 节说明重复；停止条件文字保留。",
+    "retiredOn": "2026-10-29"
+  },
+  {
+    "id": "6-9",
+    "title": "MCP 2025-06-18 工具规范与安全原则局部截图",
+    "file": "AIOS101_Fig-06-09_v01.webp",
+    "width": 1600,
+    "height": 1540,
+    "bytes": 172578,
+    "originalBytes": 1507342,
+    "insertion": "第 6 章 / 八、能力越强，边界越要清楚：风险与人机协作 / 3. 隐私、错误传播与费用",
+    "alt": "MCP 2025-06-18 工具规范与安全原则三处原文局部组合：技术安全建议、用户同意与隐私、工具安全，包含敏感操作确认、工具输入展示、校验、超时和日志。",
+    "displayWidth": 780,
+    "sourceUrls": [
+      "https://modelcontextprotocol.io/specification/2025-06-18/server/tools",
+      "https://modelcontextprotocol.io/specification/2025-06-18"
+    ],
+    "retirementReason": "英文规范长截图打断初学者阅读；正文已有角色、控制说明及图 6-10，保留固定规范链接供核查。",
+    "retiredOn": "2026-10-29"
+  }
+]

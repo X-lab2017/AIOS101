@@ -9,8 +9,9 @@ def build_figure_pages(root, out, commit):
     folder=out/'figures'; folder.mkdir(exist_ok=True)
     records=json.loads((root/'textbook/assets/figures/manifest.json').read_text())
     for record in records:
-        number=record['id']; chapter='CH'+number.split('-')[0].zfill(2)
-        path=next((root/'textbook/chapters').glob(chapter+'-*.md'))
+        number=record['id']; chapter='PREFACE' if number.startswith('0-') else 'CH'+number.split('-')[0].zfill(2)
+        path=root/'textbook/preface.md' if chapter=='PREFACE' else next((root/'textbook/chapters').glob(chapter+'-*.md'))
+        return_label='返回序言' if chapter=='PREFACE' else '返回第 '+number.split('-')[0]+' 章'
         caption=re.search(r'^图 '+re.escape(number)+r'　(.+)$',path.read_text(),re.M)
         if not caption: raise ValueError('Missing figure caption '+number)
         title='图 '+number+'　'+record['title']
@@ -24,6 +25,11 @@ def build_figure_pages(root, out, commit):
             if re.search(r'<script|<foreignObject|\bon\w+\s*=|(?:href|url)=["\']https?:',svg,re.I):
                 raise ValueError('Non-local SVG content '+vector)
             svg=re.sub(r'<\?xml[^>]*>|<!DOCTYPE[^>]*>', '',svg)
+            # Name even imported report SVGs from the same canonical figure record.
+            def name_svg(match):
+                attributes=re.sub(r'\s+(?:role|aria-label)="[^"]*"', '',match[1])
+                return '<svg'+attributes+' role="img" aria-label="'+html.escape(title,quote=True)+'">'
+            svg=re.sub(r'<svg([^>]*)>',name_svg,svg,count=1)
             if snapshot:
                 # Exported report controls are pixels/text, not working course controls.
                 svg=re.sub(r'\s+(?:tabindex|aria-pressed|aria-expanded|aria-controls|aria-haspopup)="[^"]*"', '', svg)
@@ -34,7 +40,7 @@ def build_figure_pages(root, out, commit):
         page='''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>'''+html.escape(title)+''' · AIOS101</title>
 <link rel="stylesheet" href="../figure-viewer.css?v='''+commit+'''"></head><body>
-<header><a href="../#/learn/'''+chapter+'''">← 返回第'''+number.split('-')[0]+'''章</a><span>AIOS101 · X-lab</span></header>
+<header><a href="../#/learn/'''+chapter+'''">← '''+return_label+'''</a><span>AIOS101 · X-lab</span></header>
 <main><h1>'''+html.escape(title)+'''</h1><div class="figure-controls" role="group" aria-label="图片缩放">
 <button type="button" data-scale="fit" aria-pressed="true">适应屏幕</button>
 <button type="button" data-scale="1" aria-pressed="false">原尺寸</button>
