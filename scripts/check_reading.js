@@ -56,6 +56,9 @@ context.location.hash='#/learn/CH02?section='+context.payload.units.CH02.section
 const main=context.document.querySelector('#main');main.innerHTML='retained article';
 vm.runInContext('render()',context);
 assert.equal(main.innerHTML,'retained article');assert(scrolled&&focused);
+let scrollOptions;context.window.scrollTo=options=>{scrollOptions=options;};
+context.location.hash='#/learn/CH02';vm.runInContext('render()',context);
+assert.equal(scrollOptions.top,0);assert.equal(scrollOptions.behavior,'instant');
 vm.runInContext('renderedUnit=null;shell()',context);
 assert(context.document.querySelector('#nav').innerHTML.includes('https://github.com/X-lab2017/AIOS101'));
 assert(!context.document.querySelector('#nav').innerHTML.includes('aria-current="page"'));

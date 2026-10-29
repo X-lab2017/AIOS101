@@ -76,11 +76,11 @@ function render(scroll=true){if(!data)return;const raw=(location.hash||'#/').sli
  if(legacy[path]||path.startsWith('activity/')){location.replace('#/'+(legacy[path]||'map'));return;}
  const id=path.startsWith('learn/')?path.split('/')[1]:null;
  // Same-chapter anchors preserve the article, loaded images and reading controls.
- if(scroll&&id===renderedUnit&&data.units[id]){if(params.has('section'))jumpToSection(id,params);else window.scrollTo(0,0);return;}
+ if(scroll&&id===renderedUnit&&data.units[id]){if(params.has('section'))jumpToSection(id,params);else window.scrollTo({top:0,left:0,behavior:'instant'});return;}
  observer?.disconnect();renderedUnit=id&&data.units[id]?id:null;
  shell();$('#main').innerHTML=id?reader(id,params):path==='map'?mapPage():home();setMenu(false);
  $('#course-search')?.addEventListener('input',e=>{mapQuery=e.target.value;$('#catalog-results').innerHTML=catalogResults();$('#search-status').textContent=mapQuery.trim()?T('找到 '+searchMatches().length+' 个阅读单元','Found '+searchMatches().length+' reading units'):T('显示完整目录','Showing all contents');});
- if(scroll)window.scrollTo(0,0);if(renderedUnit)bindReader(id,params);
+ if(scroll)window.scrollTo({top:0,left:0,behavior:'instant'});if(renderedUnit)bindReader(id,params);
  document.title=`AIOS101 · ${id?data.units[id]?.title||T('教材目录','Contents'):path==='map'?T('教材目录','Contents'):T('AI 开源通识','AI & Open Source Literacy')} · X-lab`;
 }
 $('#lang').onclick=()=>{lang=lang==='zh'?'en':'zh';prefs();render(false);};$('#theme').onclick=()=>{theme=theme==='light'?'dark':'light';prefs();shell();};$('#menu').onclick=()=>setMenu(!$('#nav').classList.contains('open'));$('.skip-link').onclick=e=>{e.preventDefault();$('#main').focus();};
