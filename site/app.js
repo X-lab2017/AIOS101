@@ -61,7 +61,14 @@ function bindReader(id,params){
  function resizeFont(delta){const sections=$$('[data-reading-section]');const anchor=sections.find(s=>s.getBoundingClientRect().bottom>130);const before=anchor?.getBoundingClientRect().top;fontSize=Math.max(16,Math.min(22,fontSize+delta));prefs();document.documentElement.style.setProperty('--reading-size',fontSize+'px');if(anchor)window.scrollBy({top:anchor.getBoundingClientRect().top-before,behavior:'instant'});$('#font-down').disabled=fontSize===16;$('#font-up').disabled=fontSize===22;}
  $('#font-down').onclick=()=>resizeFont(-2);$('#font-up').onclick=()=>resizeFont(2);$('#font-down').disabled=fontSize===16;$('#font-up').disabled=fontSize===22;
  jumpToSection(id,params);
- observer=new IntersectionObserver(entries=>{const first=entries.filter(e=>e.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top)[0];if(first)setActive(first.target.dataset.readingSection);},{rootMargin:'-110px 0px -60% 0px',threshold:0});$$('[data-reading-section]').forEach(e=>observer.observe(e));
+ observeSections();
+}
+function observeSections(){
+ observer?.disconnect();const sections=$$('[data-reading-section]');if(!sections.length)return;
+ // Observe one reading line just below sticky controls. A tall preceding section
+ // must not win merely because its bottom still touches a broad observer band.
+ const line=parseFloat(window.getComputedStyle(sections[0]).scrollMarginTop)+2;
+ observer=new IntersectionObserver(entries=>{const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.boundingClientRect.top-a.boundingClientRect.top)[0];if(visible)setActive(visible.target.dataset.readingSection);},{rootMargin:`-${line}px 0px -${Math.max(0,window.innerHeight-line-1)}px 0px`,threshold:0});sections.forEach(e=>observer.observe(e));
 }
 function jumpToSection(id,params){const target=params.get('section');if(target&&data.units[id].sections.some(s=>s.id===target)){if($('.mobile-toc'))$('.mobile-toc').open=false;requestAnimationFrame(()=>{const el=document.getElementById(target);el?.scrollIntoView({block:'start',behavior:'instant'});setActive(target);el?.focus({preventScroll:true});});}}
 function render(scroll=true){if(!data)return;const raw=(location.hash||'#/').slice(2),[path,query='']=raw.split('?'),params=new URLSearchParams(query);
@@ -78,5 +85,6 @@ function render(scroll=true){if(!data)return;const raw=(location.hash||'#/').sli
 }
 $('#lang').onclick=()=>{lang=lang==='zh'?'en':'zh';prefs();render(false);};$('#theme').onclick=()=>{theme=theme==='light'?'dark':'light';prefs();shell();};$('#menu').onclick=()=>setMenu(!$('#nav').classList.contains('open'));$('.skip-link').onclick=e=>{e.preventDefault();$('#main').focus();};
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('#nav').classList.contains('open')){setMenu(false);$('#menu').focus();}});
+window.addEventListener('resize',()=>{if(renderedUnit)observeSections();});
 window.addEventListener('hashchange',()=>{render();$('#main').focus({preventScroll:true});});
 fetch('content.json').then(r=>{if(!r.ok)throw Error(r.status);return r.json();}).then(c=>{data=c;render();}).catch(()=>{$('#main').innerHTML=`<div class="wrap empty-state"><h1>${T('教材暂未载入','The textbook did not load')}</h1><p>${T('请刷新重试，或在仓库阅读正文。','Reload, or read the canonical text in the repository.')}</p><a class="btn primary" href="${repo}/tree/main/textbook">${T('打开教材','Open textbook')}</a></div>`;shell();});
