@@ -30,6 +30,7 @@ for(const id of Object.keys(context.payload.units)){
 assert(home.includes('class="btn primary" href="#/learn/PREFACE"'));
 assert.deepEqual(Array.from(vm.runInContext('readingOrder()',context)),['PREFACE','CH01','CH02','CH03','CH04','CH05','CH06','ABOUT']);
 assert(vm.runInContext('allUnits()',context).includes('APP-A'));
+assert(!vm.runInContext('reader("APP-A",new URLSearchParams())',context).includes('`0cf7856`'));
 const end=vm.runInContext('reader("CH06",new URLSearchParams())',context);
 assert(end.includes('class="page-next" href="#/learn/ABOUT"'));
 assert(vm.runInContext('reader("ABOUT",new URLSearchParams())',context).includes('class="page-next" href="#/map"'));

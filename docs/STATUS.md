@@ -35,7 +35,7 @@
 
 ## 最近已核验的内容发布
 
-- 阅读路径与关于页：提交 [`f825676`](https://github.com/X-lab2017/AIOS101/commit/f825676c415f6ea8a0735e81b0d731c9d8b66d6e)，[Pages #51](https://github.com/X-lab2017/AIOS101/actions/runs/40792839035) 成功；桌面与窄屏检查、随后发现的目录提示修正见[本轮记录](reading-path-review-2026-10-29.md)和交接 Issue。
+- 阅读路径与关于页：提交 [`f825676`](https://github.com/X-lab2017/AIOS101/commit/f825676c415f6ea8a0735e81b0d731c9d8b66d6e)，[Pages #51](https://github.com/X-lab2017/AIOS101/actions/runs/40792839035) 成功；目录提示修正 [`7dec83b`](https://github.com/X-lab2017/AIOS101/commit/7dec83b992bb2acfefc7fe6b4455c034578cb7cd) 的 [Pages #52](https://github.com/X-lab2017/AIOS101/actions/runs/40793554977) 也已成功。桌面与窄屏检查见[本轮记录](reading-path-review-2026-10-29.md)和交接 Issue。
 
 - 序言 OpenDipper 双图及字号修正：提交 [`b17a9b8`](https://github.com/X-lab2017/AIOS101/commit/b17a9b8ecfb973d53c970a55e93c1341f568e60b)，[Pages #49](https://github.com/X-lab2017/AIOS101/actions/runs/40787715014) 成功。
 - 两张真实截图保留原始像素，手绘处理用于外围装帧；正文提供导读、图注与原图入口。细节见[交付记录](history/preface-opendipper-review-2026-10-29.md)。
