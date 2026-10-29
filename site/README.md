@@ -4,13 +4,14 @@
 
 ## 内容与路由
 
-教材 Markdown 是唯一正文，`scripts/build_site.py` 生成 `dist/`。序言、六章与附录完整接入；后六章保留规划状态。
+教材 Markdown 是唯一正文，`scripts/build_site.py` 生成 `dist/`。序言、六章、附录与关于完整接入；后六章保留规划状态。
 
 | 路由 | 用途 |
 |---|---|
 | `#/` | 前六章图文入口与序言 |
 | `#/map` | 四篇十二章目录和正文检索 |
-| `#/learn/PREFACE`、`CH01`—`CH06`、`APP-A` | 完整阅读、目录、字号、上下章和来源 |
+| `#/learn/PREFACE`、`CH01`—`CH06`、`APP-A`、`ABOUT` | 完整阅读、目录、字号、上下篇和来源 |
+| `#/about` | 关于页别名，转到 `#/learn/ABOUT` |
 | `figures/0-4.html` 等 | 当前图号的大图、缩放、来源与可用原图 |
 | `review/narrow.html?chapter=PREFACE` | 320px／390px 布局核验，亦可用 `?figure=0-4` |
 

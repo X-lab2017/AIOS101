@@ -6,6 +6,7 @@
 - [内容迭代指南](content-iteration-guide.md)：正文、图版、发布与协作流程。
 - [ADR-0001 关键决策](decisions/ADR-0001-reading-and-evidence-baseline.md)：阅读优先、单一正本、插图风格与证据保真。
 - [本轮仓库整理记录](repository-maintenance-2026-10-29.md)：移除和归档依据、核验与恢复方法。
+- [阅读路径与关于页整理](reading-path-review-2026-10-29.md)：本轮读者体验、验证和上线记录。
 - [网站开发说明](../site/README.md)与[脚本说明](../scripts/README.md)。
 
 ## 按需回查

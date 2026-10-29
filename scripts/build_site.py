@@ -37,7 +37,7 @@ rows = re.findall(r'^\| (CH\d\d) \| (.*?) \| (.*?) \| (.*?) \|$', course, re.M)
 if [r[0] for r in rows] != [f'CH{i:02d}' for i in range(1,13)]: raise SystemExit('Invalid chapter matrix')
 questions = re.findall(r'^\| 第 \d+ 章 \| .*? \| (.*?) \| .*? \|$', constitution, re.M)
 english = ['Why AI and open source literacy?', 'Openness, reuse and collaboration', 'The AI open source ecosystem', 'From data to models', 'Inference, systems and evaluation', 'Retrieval, tools and agents', 'How open is a model?', 'From public to reproducible', 'Investigating ecosystems with data', 'From participation to contribution', 'Creating responsibly with open AI', 'Projects, review and continued contribution']
-paths = {'PREFACE':ROOT/'textbook/preface.md','APP-A':ROOT/'textbook/appendices/APP-A-repository-snapshots.md'}
+paths = {'ABOUT':ROOT/'textbook/about.md','PREFACE':ROOT/'textbook/preface.md','APP-A':ROOT/'textbook/appendices/APP-A-repository-snapshots.md'}
 chapters = []
 for i,r in enumerate(rows):
     c = dict(id=r[0],title=r[1],en=english[i],part=i//3,outcomes=r[2],evidence=r[3],question=questions[i],status='planned',worksheets=[])
@@ -60,7 +60,7 @@ for key,u in units.items():
     for sec in u['sections']:
         if sec['title']=='关键术语':
             for term,meaning in re.findall(r'^- \*\*(.+?)\*\*：(.+)$',sec['markdown'],re.M):glossary.append({'term':term,'meaning':meaning,'unit':key,'section':sec['id']})
-content = dict(figureCount=len(figure_records),figureCatalog={r["id"]: {k:r[k] for k in ("file","title","width","height")} for r in figure_records},version='0.7.0-self-study',date='2026-10-29',sourceCommit=commit,visualVersion='1.0.0',brandCommit='373d61f0d6e334f0b85af0dd5d8ef9b9095bcc37',chapters=chapters,units=units,worksheets=worksheets,glossary=glossary,preface=units['PREFACE']['markdown'],sources=(ROOT/'specs/source-register.md').read_text())
+content = dict(figureCount=len(figure_records),figureCatalog={r["id"]: {k:r[k] for k in ("file","title","width","height")} for r in figure_records},version='0.8.0-reading-path',date='2026-10-29',sourceCommit=commit,visualVersion='1.0.0',brandCommit='373d61f0d6e334f0b85af0dd5d8ef9b9095bcc37',chapters=chapters,units=units,worksheets=worksheets,glossary=glossary,preface=units['PREFACE']['markdown'],sources=(ROOT/'specs/source-register.md').read_text())
 (OUT/'content.json').write_text(json.dumps(content,ensure_ascii=False),encoding='utf-8')
 (OUT/'resources').mkdir()
 resources = [(u['sourcePath'],key+'.md') for key,u in units.items()] + [(v['path'],key+'.md') for key,v in worksheets.items()] + [('specs/'+x+'.md',x+'.md') for x in ['website-spec','learning-experience-spec','course-identity-spec','source-register']]

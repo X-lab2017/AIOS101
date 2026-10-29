@@ -33,3 +33,7 @@
 ## 附录
 
 [附录 A　仓库、提交号与固定版本访问指南](appendices/APP-A-repository-snapshots.md)
+
+## 关于
+
+[关于本教材：理念、方法与建设过程](about.md)

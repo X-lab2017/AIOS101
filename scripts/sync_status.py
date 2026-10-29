@@ -20,6 +20,7 @@ def baseline():
         if matches:
             paths.append((f'CH{n:02}', matches[0].relative_to(ROOT).as_posix(), str(n)))
     paths.append(('APP-A', 'textbook/appendices/APP-A-repository-snapshots.md', 'A'))
+    paths.append(('ABOUT', 'textbook/about.md', 'ABOUT'))
     lines = [START, '', '## 正本版本与图版（自动核对）', '',
              '| 单元 | 正文版本 | 当前图数 | 唯一正本 |', '|---|---|---|---|']
     for label, path, prefix in paths:

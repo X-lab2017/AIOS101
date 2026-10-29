@@ -4,7 +4,7 @@
 
 ## 当前可用范围
 
-- [Pages](https://www.x-lab.info/AIOS101/)：序言、CH01—CH06 与附录 A 可完整阅读，处于自学图文评审阶段。
+- [Pages](https://www.x-lab.info/AIOS101/)：序言、CH01—CH06、附录 A 与关于本教材可完整阅读，处于自学图文评审阶段。
 - 四篇十二章蓝图完整；CH07—CH12 正文尚未进入主分支。
 - 当前公开体验为安静阅读：正文、目录、检索、字号、深浅主题、图片放大与固定版本来源。旧工坊、手账和活动路由回退到目录或对应正文。
 - Open Folio / VIS-AIOS101 v1.0.0 是已批准的数字视觉基线。教材版本独立于品牌版本；英文界面不等于已有英文教材。
@@ -23,12 +23,15 @@
 | CH05 | v0.6 | 8 | [CH05-training-to-inference.md](../textbook/chapters/CH05-training-to-inference.md) |
 | CH06 | v0.5 | 9 | [CH06-model-to-agents.md](../textbook/chapters/CH06-model-to-agents.md) |
 | APP-A | v0.2 | 0 | [APP-A-repository-snapshots.md](../textbook/appendices/APP-A-repository-snapshots.md) |
+| ABOUT | v0.1 | 0 | [about.md](../textbook/about.md) |
 
-合计 **8 个阅读单元、44 幅正文图、29 幅 SVG 放大版、30 份折叠 Mermaid 源码**。
+合计 **9 个阅读单元、44 幅正文图、29 幅 SVG 放大版、30 份折叠 Mermaid 源码**。
 
 <!-- END GENERATED BASELINE -->
 
 以上表格由 `python scripts/sync_status.py --write` 从正本和图版清单生成；CI 检查它是否过时。图号与图题完整列表见[图版索引](../textbook/assets/figures/INDEX.md)。
+
+本轮在线阅读路径与关于页的范围、验证和发布证据见[阅读体验记录](reading-path-review-2026-10-29.md)。
 
 ## 最近已核验的内容发布
 

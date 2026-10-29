@@ -26,6 +26,40 @@ for(const id of Object.keys(context.payload.units)){
  const expected=(context.payload.units[id].markdown.match(/!\[图 /g)||[]).length;assert.equal((html.match(/class="textbook-figure"/g)||[]).length,expected);
  assert(html.includes('source-trail')&&html.includes('chapter-pagination'));
 }
+// A clear beginning and end, while the appendix remains available on demand.
+assert(home.includes('class="btn primary" href="#/learn/PREFACE"'));
+assert.deepEqual(Array.from(vm.runInContext('readingOrder()',context)),['PREFACE','CH01','CH02','CH03','CH04','CH05','CH06','ABOUT']);
+assert(vm.runInContext('allUnits()',context).includes('APP-A'));
+const end=vm.runInContext('reader("CH06",new URLSearchParams())',context);
+assert(end.includes('class="page-next" href="#/learn/ABOUT"'));
+assert(vm.runInContext('reader("ABOUT",new URLSearchParams())',context).includes('class="page-next" href="#/map"'));
+for(const [q,expected] of [['假设你想向新生介绍自己的专业','PREFACE'],['提交号','APP-A'],['早期尝试过学习记录与活动入口','ABOUT']]){
+ context.query=q;vm.runInContext('mapQuery=query',context);
+ const results=vm.runInContext('searchMatches()',context);
+ assert(results.some(r=>r.id===expected),'Search includes '+expected);
+ assert(vm.runInContext('catalogResults()',context).includes('?section='));
+}
+vm.runInContext('mapQuery="  提交号  "',context);
+assert(vm.runInContext('searchMatches()',context).some(r=>r.id==='APP-A'));
+assert(!vm.runInContext('snippet("[许可](https://example.org) `模型`", "许可")',context).includes('https://'));
+vm.runInContext('mapQuery="不存在的关键词987654321"',context);
+assert(vm.runInContext('catalogResults()',context).includes('找到 0 个阅读单元'));
+vm.runInContext('mapQuery=""',context);
+assert(vm.runInContext('catalogResults()',context).includes('#/learn/ABOUT'));
+// A same-chapter deep link must not replace the article or lose loaded figures.
+let scrolled=false,focused=false;
+context.requestAnimationFrame=fn=>fn();
+context.document.getElementById=()=>({scrollIntoView(){scrolled=true;},focus(){focused=true;}});
+vm.runInContext('renderedUnit="CH02"',context);
+context.location.hash='#/learn/CH02?section='+context.payload.units.CH02.sections[1].id;
+const main=context.document.querySelector('#main');main.innerHTML='retained article';
+vm.runInContext('render()',context);
+assert.equal(main.innerHTML,'retained article');assert(scrolled&&focused);
+vm.runInContext('renderedUnit=null;shell()',context);
+assert(context.document.querySelector('#nav').innerHTML.includes('https://github.com/X-lab2017/AIOS101'));
+assert(!context.document.querySelector('#nav').innerHTML.includes('aria-current="page"'));
+context.location.hash='#/map';vm.runInContext('shell()',context);
+assert(context.document.querySelector('#nav').innerHTML.includes('href="#/map" aria-current="page"'));
 const index=fs.readFileSync('site/index.html','utf8');
 for(const unused of ['learning-core.js','learning-data.js','brand.js','import-file','app-dialog'])assert(!index.includes(unused));
 assert(reads.every(k=>k==='aios101.preferences.v1'));assert.equal(writes.length,0);
@@ -33,4 +67,4 @@ for(const route of ['#/notebook','#/workshop','#/activity/ACT-CH01-01','#/identi
  let redirect='';context.location.hash=route;context.location.replace=v=>{redirect=v;};vm.runInContext('render()',context);assert(redirect==='#/map'||redirect==='#/learn/CH01');
 }
 assert(fs.readFileSync('dist/index.html','utf8').includes('app.js?v='));
-console.log('PASS: reading-only home and all units, canonical figure counts, complete canonical sections, retired route fallback, old records untouched, release-bound assets');
+console.log('PASS: reading-only home and all units, canonical figure counts, complete canonical sections, search and same-chapter navigation, About path, retired route fallback, old records untouched, release-bound assets');
